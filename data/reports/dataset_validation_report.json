@@ -1,0 +1,68 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-11-06 14:14:14",
+  "validation_duration_seconds": 0.35,
+  "dataset": {
+    "name": "Stanford Cars (Cars196)",
+    "root_directory": "D:\\CV\\Stanford Dataset",
+    "train_directory": "D:\\CV\\Stanford Dataset\\cars_train\\cars_train",
+    "test_directory": "D:\\CV\\Stanford Dataset\\cars_test\\cars_test",
+    "devkit_directory": "D:\\CV\\Stanford Dataset\\car_devkit\\devkit",
+    "total_images": 16185,
+    "train_images": 8144,
+    "test_images": 8041,
+    "corrupted_images": 0,
+    "grayscale_images_in_sample": 2,
+    "resolution_range": {
+      "min": [
+        78,
+        58
+      ],
+      "max": [
+        3817,
+        2880
+      ]
+    }
+  },
+  "annotations": {
+    "format": "MATLAB (.mat) + Normalized CSV/JSON",
+    "files_present": {
+      "cars_meta.mat": true,
+      "cars_train_annos.mat": true,
+      "cars_test_annos.mat": true
+    },
+    "total_records": 16185,
+    "train_labeled_records": 8144,
+    "test_unlabeled_records": 8041,
+    "all_bounding_boxes_valid": true,
+    "duplicate_image_pairs": 0
+  },
+  "taxonomy": {
+    "num_classes": 196,
+    "num_makes": 49,
+    "num_models": 189,
+    "make_model_year_parsed": true,
+    "multiword_makes_handled": true,
+    "note": "Stanford Cars provides fine-grained image-level class labels and bounding boxes. Make/model/year are mapped deterministically from class names."
+  },
+  "hardware": {
+    "os": "Windows 10 (10.0.26200)",
+    "python_version": "3.11.9",
+    "cpu_model": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cpu_cores_physical": 14,
+    "cpu_cores_logical": 20,
+    "ram_total_gb": 15.78,
+    "ram_available_gb": 2.77,
+    "ram_percent_used": 82.5,
+    "cuda_available": true,
+    "torch_version": "2.5.1+cu121",
+    "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "gpu_compute_capability": "8.6",
+    "gpu_total_vram_gb": 6.0,
+    "gpu_free_vram_gb": 5.04,
+    "gpu_allocated_vram_gb": 0.0,
+    "cuda_version": "12.1",
+    "cudnn_enabled": true,
+    "cudnn_version": 90100
+  }
+}

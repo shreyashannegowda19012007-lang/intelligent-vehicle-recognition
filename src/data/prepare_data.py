@@ -95,10 +95,16 @@ names:
     print(f"       Config YAML:         {yaml_path}")
 
 
-def prepare_dataset(workspace_dir: str = "D:/CV", random_seed: int = 42) -> None:
+def prepare_dataset(
+    workspace_dir: str | Path | None = None, random_seed: int = 42
+) -> None:
     """
     Main orchestration routine for Phase 1 data preparation.
     """
+    if workspace_dir is None:
+        workspace_dir = str(Path(__file__).resolve().parent.parent.parent)
+    else:
+        workspace_dir = str(workspace_dir)
     meta_path = os.path.join(
         workspace_dir, "Stanford Dataset", "car_devkit", "devkit", "cars_meta.mat"
     )

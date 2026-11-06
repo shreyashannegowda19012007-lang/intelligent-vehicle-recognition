@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8958
+  },
+  "low_light": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8924
+  },
+  "mild_blur": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8948
+  },
+  "partial_occlusion": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8672
+  },
+  "multiple_vehicles": {
+    "detected_count": 20,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8629
+  },
+  "cropped_vehicle": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8287
+  },
+  "small_vehicle": {
+    "detected_count": 5,
+    "detection_rate": 0.5,
+    "mean_confidence": 0.5196
+  },
+  "low_resolution_320x240": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8977
+  },
+  "high_resolution_1280x720": {
+    "detected_count": 10,
+    "detection_rate": 1.0,
+    "mean_confidence": 0.8805
+  }
+}

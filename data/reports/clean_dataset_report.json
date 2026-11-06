@@ -1,0 +1,29 @@
+{
+  "status": "CLEAN",
+  "timestamp": "2026-11-06 17:11:11",
+  "audit_duration_seconds": 1.03,
+  "total_images_scanned": 500,
+  "total_images_in_dataset": 16185,
+  "corrupted_or_unreadable_count": 0,
+  "unreadable_files": [],
+  "zero_byte_count": 0,
+  "zero_byte_files": [],
+  "invalid_format_count": 0,
+  "invalid_format_files": [],
+  "grayscale_count": 2,
+  "grayscale_files": [
+    "Stanford Dataset/cars_train/cars_train/04577.jpg",
+    "Stanford Dataset/cars_test/cars_test/04209.jpg"
+  ],
+  "cryptographic_duplicate_groups": 0,
+  "cryptographic_duplicate_pairs": 0,
+  "duplicate_groups": {},
+  "resolution_range": {
+    "min_width": 78,
+    "min_height": 58,
+    "max_width": 3817,
+    "max_height": 2880
+  },
+  "suspicious_dimensions_count": 0,
+  "suspicious_dimensions": []
+}

@@ -1,56 +1,142 @@
-# Python virtual environments
+# =============================================================================
+# Python Environments & Bytecode
+# =============================================================================
 .venv/
 venv/
 env/
 ENV/
-*.venv
-
-# Dataset archives and raw data
-Stanford_Cars.zip
-*.zip
-*.tar
-*.tar.gz
-*.tgz
-Stanford Dataset/
-Stanford Dataset/**
-cars_train/
-cars_test/
-car_devkit/
-*.mat
-
-# Processed data cache (keep classes.json and splits metadata, ignore bulky generated image crops/yolo copies)
-data/yolo/images/
-data/yolo/labels/
-data/crops/
-data/processed/
-
-# Model weights, checkpoints, artifacts
-*.pt
-*.pth
-*.onnx
-*.engine
-*.bin
-weights/
-runs/
-checkpoints/
-artifacts/
-
-# Python bytecode & cache
+*.venv/
+env.bak/
+venv.bak/
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =============================================================================
+# Testing & Code Quality Caches
+# =============================================================================
 .pytest_cache/
+.ruff_cache/
+.mypy_cache/
 .coverage
 htmlcov/
-.mypy_cache/
-.ruff_cache/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
 
-# OS and Editor files
-.DS_Store
-Thumbs.db
-desktop.ini
+# =============================================================================
+# IDE, Editor & OS Files
+# =============================================================================
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+
+# =============================================================================
+# Credentials & Local Environment
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+
+# =============================================================================
+# Dataset Archives & Raw Images (Stanford Cars)
+# =============================================================================
+Stanford Dataset/
+Stanford Dataset/**
+Stanford_Cars.zip
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+cars_train/
+cars_test/
+car_devkit/
+*.mat
+cars_train.tgz
+cars_test.tgz
+car_devkit.tgz
+
+# Generated image datasets & image crops
+data/cache/
+data/yolo/
+data/crops/
+data/processed/detection/
+data/reports/visualizations/
+data/*.json
+data/processed/metadata/vehicle_manifest.json
+
+# Preserve metadata, small class mappings, split manifests and validation reports
+!data/metadata/
+!data/metadata/*.csv
+!data/processed/class_mapping.json
+!data/processed/class_mapping.csv
+!data/processed/annotations/
+!data/processed/annotations/normalized_annotations.csv
+!data/processed/metadata/
+!data/processed/metadata/vehicle_manifest.csv
+!data/splits/
+!data/splits/*.csv
+!data/splits/split_summary.json
+!data/reports/
+!data/reports/*.json
+
+# =============================================================================
+# Model Weights, Binary Checkpoints & Training Runs
+# =============================================================================
+*.pt
+*.pth
+*.joblib
+*.onnx
+*.engine
+*.bin
+yolov8n.pt
+weights/
+runs/
+checkpoints/
+artifacts/
+
+# Ignore large training visualizations inside model directories
+models/**/*.png
+models/**/*.jpg
+models/**/*.jpeg
+models/**/*.joblib
+models/**/*.pt
+
+# Reference PDF documents
+Computer Vision Hackathon 2026.pdf
+
+# =============================================================================
+# Temporary Files, Logs & Outputs
+# =============================================================================
+*.log
+logs/
+outputs/**/visualizations/
+outputs/**/predictions/

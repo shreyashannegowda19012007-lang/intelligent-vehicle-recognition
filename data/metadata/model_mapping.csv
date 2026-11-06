@@ -1,0 +1,190 @@
+model_id,model,clean_model,make,body_type,class_count,sample_count
+0,1 Series Convertible,1 Series,BMW,Convertible,1,36
+1,1 Series Coupe,1 Series,BMW,Coupe,1,41
+2,100 Sedan,100,Audi,Sedan,1,41
+3,100 Wagon,100,Audi,Wagon,1,43
+4,240 Sedan,240,Volvo,Sedan,1,46
+5,240SX Coupe,240SX,Nissan,Coupe,1,46
+6,3 Series Sedan,3 Series,BMW,Sedan,1,43
+7,3 Series Wagon,3 Series,BMW,Wagon,1,42
+8,300 SRT-8,300 SRT-8,Chrysler,Sedan,1,49
+9,300-Class Convertible,300-Class,Mercedes-Benz,Convertible,1,48
+10,458 Italia Convertible,458 Italia,Ferrari,Convertible,1,40
+11,458 Italia Coupe,458 Italia,Ferrari,Coupe,1,43
+12,4Runner SUV,4Runner,Toyota,SUV,1,41
+13,500 Abarth,500 Abarth,FIAT,Hatchback,1,28
+14,500 Convertible,500,FIAT,Convertible,1,34
+15,6 Series Convertible,6 Series,BMW,Convertible,1,44
+16,A5 Coupe,A5,Audi,Coupe,1,41
+17,Acadia SUV,Acadia,GMC,SUV,1,45
+18,Accent Sedan,Accent,Hyundai,Sedan,1,24
+19,Accord Coupe,Accord,Honda,Coupe,1,39
+20,Accord Sedan,Accord,Honda,Sedan,1,39
+21,ActiveHybrid 5 Sedan,ActiveHybrid 5,BMW,Sedan,1,34
+22,Aerio Sedan,Aerio,Suzuki,Sedan,1,38
+23,Arnage Sedan,Arnage,Bentley,Sedan,1,39
+24,Ascender SUV,Ascender,Isuzu,SUV,1,40
+25,Aspen SUV,Aspen,Chrysler,SUV,1,44
+26,Avalanche Crew Cab,Avalanche,Chevrolet,Crew Cab,1,45
+27,Aventador Coupe,Aventador,Lamborghini,Coupe,1,44
+28,Azera Sedan,Azera,Hyundai,Sedan,1,42
+29,Beetle Hatchback,Beetle,Volkswagen,Hatchback,1,43
+30,C-Class Sedan,C-Class,Mercedes-Benz,Sedan,1,46
+31,C/V Cargo Van Minivan,C/V Cargo Van,Ram,Minivan,1,41
+32,C30 Hatchback,C30,Volvo,Hatchback,1,42
+33,C8 Convertible,C8,Spyker,Convertible,1,45
+34,C8 Coupe,C8,Spyker,Coupe,1,43
+35,CTS-V Sedan,CTS-V,Cadillac,Sedan,1,43
+36,Caliber Wagon,Caliber,Dodge,Wagon,2,83
+37,California Convertible,California,Ferrari,Convertible,1,39
+38,Camaro Convertible,Camaro,Chevrolet,Convertible,1,45
+39,Camry Sedan,Camry,Toyota,Sedan,1,44
+40,Canyon Extended Cab,Canyon,GMC,Extended Cab,1,40
+41,Caravan Minivan,Caravan,Dodge,Minivan,1,44
+42,Challenger SRT8,Challenger SRT8,Dodge,Coupe,1,39
+43,Charger SRT-8,Charger SRT-8,Dodge,Sedan,1,42
+44,Charger Sedan,Charger,Dodge,Sedan,1,41
+45,Cobalt SS,Cobalt SS,Chevrolet,Coupe,1,42
+46,Compass SUV,Compass,Jeep,SUV,1,43
+47,Continental Flying Spur Sedan,Continental Flying Spur,Bentley,Sedan,1,45
+48,Continental GT Coupe,Continental GT,Bentley,Coupe,2,81
+49,Continental Supersports Conv. Convertible,Continental Supersports Conv.,Bentley,Convertible,1,37
+50,Cooper Roadster Convertible,Cooper Roadster,MINI,Convertible,1,37
+51,Corolla Sedan,Corolla,Toyota,Sedan,1,44
+52,Corvette Convertible,Corvette,Chevrolet,Convertible,1,40
+53,Corvette Ron Fellows Edition Z06,Corvette Ron Fellows Edition Z06,Chevrolet,Coupe,1,38
+54,Corvette ZR1,Corvette ZR1,Chevrolet,Coupe,1,47
+55,Crossfire Convertible,Crossfire,Chrysler,Convertible,1,43
+56,Dakota Club Cab,Dakota,Dodge,Club Cab,1,39
+57,Dakota Crew Cab,Dakota,Dodge,Crew Cab,1,41
+58,Diablo Coupe,Diablo,Lamborghini,Coupe,1,45
+59,Durango SUV,Durango,Dodge,SUV,2,90
+60,E-Class Sedan,E-Class,Mercedes-Benz,Sedan,1,44
+61,E-Series Wagon Van,E-Series Van,Ford,Wagon,1,38
+62,Edge SUV,Edge,Ford,SUV,1,43
+63,Elantra Sedan,Elantra,Hyundai,Sedan,1,42
+64,Elantra Touring Hatchback,Elantra Touring,Hyundai,Hatchback,1,43
+65,Enclave SUV,Enclave,Buick,SUV,1,42
+66,Escalade EXT Crew Cab,Escalade EXT,Cadillac,Crew Cab,1,45
+67,Expedition EL SUV,Expedition EL,Ford,SUV,1,45
+68,Express Cargo Van,Express Cargo,Chevrolet,Van,1,30
+69,Express Van,Express,Chevrolet,Van,1,35
+70,F-150 Regular Cab,F-150,Ford,Regular Cab,2,88
+71,F-450 Super Duty Crew Cab,F-450 Super Duty,Ford,Crew Cab,1,42
+72,FF Coupe,FF,Ferrari,Coupe,1,42
+73,Fiesta Sedan,Fiesta,Ford,Sedan,1,43
+74,Focus Sedan,Focus,Ford,Sedan,1,45
+75,Freestar Minivan,Freestar,Ford,Minivan,1,44
+76,G Coupe IPL,G IPL,Infiniti,Coupe,1,34
+77,GT Coupe,GT,Ford,Coupe,1,46
+78,Gallardo LP 570-4 Superleggera,Gallardo LP 570-4 Superleggera,Lamborghini,Coupe,1,36
+79,Genesis Sedan,Genesis,Hyundai,Sedan,1,44
+80,Ghost Sedan,Ghost,Rolls-Royce,Sedan,1,39
+81,Golf Hatchback,Golf,Volkswagen,Hatchback,2,89
+82,Grand Cherokee SUV,Grand Cherokee,Jeep,SUV,1,45
+83,H2 SUT Crew Cab,H2 SUT,HUMMER,Crew Cab,1,44
+84,H3T Crew Cab,H3T,HUMMER,Crew Cab,1,39
+85,HHR SS,HHR SS,Chevrolet,SUV,1,37
+86,Hummer SUV,Hummer,AM General,SUV,1,45
+87,Impala Sedan,Impala,Chevrolet,Sedan,1,43
+88,Integra Type R,Integra Type R,Acura,Coupe,1,45
+89,Journey SUV,Journey,Dodge,SUV,1,44
+90,Juke Hatchback,Juke,Nissan,Hatchback,1,44
+91,Karma Sedan,Karma,Fisker,Sedan,1,44
+92,Kizashi Sedan,Kizashi,Suzuki,Sedan,1,46
+93,LR2 SUV,LR2,Land Rover,SUV,1,43
+94,Lancer Sedan,Lancer,Mitsubishi,Sedan,1,48
+95,Landaulet Convertible,Landaulet,Maybach,Convertible,1,29
+96,Leaf Hatchback,Leaf,Nissan,Hatchback,1,42
+97,Liberty SUV,Liberty,Jeep,SUV,1,45
+98,M3 Coupe,M3,BMW,Coupe,1,45
+99,M5 Sedan,M5,BMW,Sedan,1,41
+100,M6 Convertible,M6,BMW,Convertible,1,41
+101,MP4-12C Coupe,MP4-12C,McLaren,Coupe,1,44
+102,Magnum Wagon,Magnum,Dodge,Wagon,1,40
+103,Malibu Hybrid Sedan,Malibu Hybrid,Chevrolet,Sedan,1,39
+104,Malibu Sedan,Malibu,Chevrolet,Sedan,1,45
+105,Metro Convertible,Metro,Geo,Convertible,1,45
+106,Model S Sedan,Model S,Tesla,Sedan,1,39
+107,Monte Carlo Coupe,Monte Carlo,Chevrolet,Coupe,1,45
+108,Mulsanne Sedan,Mulsanne,Bentley,Sedan,1,36
+109,Mustang Convertible,Mustang,Ford,Convertible,1,45
+110,NV Passenger Van,NV Passenger,Nissan,Van,1,39
+111,Neon Coupe,Neon,Plymouth,Coupe,1,44
+112,Nubira Wagon,Nubira,Daewoo,Wagon,1,45
+113,Odyssey Minivan,Odyssey,Honda,Minivan,2,83
+114,PT Cruiser Convertible,PT Cruiser,Chrysler,Convertible,1,45
+115,Panamera Sedan,Panamera,Porsche,Sedan,1,44
+116,Patriot SUV,Patriot,Jeep,SUV,1,44
+117,Phantom Drophead Coupe Convertible,Phantom Drophead Coupe,Rolls-Royce,Convertible,1,31
+118,Phantom Sedan,Phantom,Rolls-Royce,Sedan,1,44
+119,QX56 SUV,QX56,Infiniti,SUV,1,33
+120,R8 Coupe,R8,Audi,Coupe,1,43
+121,RL Sedan,RL,Acura,Sedan,1,32
+122,RS 4 Convertible,RS 4,Audi,Convertible,1,37
+123,Rainier SUV,Rainier,Buick,SUV,1,43
+124,Ram Pickup 3500 Crew Cab,Ram Pickup 3500,Dodge,Crew Cab,1,43
+125,Ram Pickup 3500 Quad Cab,Ram Pickup 3500,Dodge,Quad Cab,1,44
+126,Range Rover SUV,Range Rover,Land Rover,SUV,1,43
+127,Ranger SuperCab,Ranger,Ford,SuperCab,1,42
+128,Regal GS,Regal GS,Buick,Sedan,1,35
+129,Reventon Coupe,Reventon,Lamborghini,Coupe,1,36
+130,S-Class Sedan,S-Class,Mercedes-Benz,Sedan,1,45
+131,S4 Sedan,S4,Audi,Sedan,2,85
+132,S5 Convertible,S5,Audi,Convertible,1,42
+133,S5 Coupe,S5,Audi,Coupe,1,43
+134,S6 Sedan,S6,Audi,Sedan,1,46
+135,SL-Class Coupe,SL-Class,Mercedes-Benz,Coupe,1,37
+136,SRX SUV,SRX,Cadillac,SUV,1,41
+137,SX4 Hatchback,SX4,Suzuki,Hatchback,1,42
+138,SX4 Sedan,SX4,Suzuki,Sedan,1,41
+139,Santa Fe SUV,Santa Fe,Hyundai,SUV,1,42
+140,Savana Van,Savana,GMC,Van,1,68
+141,Sebring Convertible,Sebring,Chrysler,Convertible,1,41
+142,Sequoia SUV,Sequoia,Toyota,SUV,1,39
+143,Silverado 1500 Classic Extended Cab,Silverado 1500 Classic,Chevrolet,Extended Cab,1,43
+144,Silverado 1500 Extended Cab,Silverado 1500,Chevrolet,Extended Cab,1,44
+145,Silverado 1500 Hybrid Crew Cab,Silverado 1500 Hybrid,Chevrolet,Crew Cab,1,40
+146,Silverado 1500 Regular Cab,Silverado 1500,Chevrolet,Regular Cab,1,44
+147,Silverado 2500HD Regular Cab,Silverado 2500HD,Chevrolet,Regular Cab,1,38
+148,Sonata Hybrid Sedan,Sonata Hybrid,Hyundai,Sedan,1,34
+149,Sonata Sedan,Sonata,Hyundai,Sedan,1,40
+150,Sonic Sedan,Sonic,Chevrolet,Sedan,1,44
+151,Sprinter Cargo Van,Sprinter Cargo,Dodge,Van,1,40
+152,Sprinter Van,Sprinter,Mercedes-Benz,Van,1,41
+153,TL Sedan,TL,Acura,Sedan,1,43
+154,TL Type-S,TL Type-S,Acura,Sedan,1,42
+155,TSX Sedan,TSX,Acura,Sedan,1,41
+156,TT Hatchback,TT,Audi,Hatchback,1,41
+157,TT RS Coupe,TT RS,Audi,Coupe,1,40
+158,TTS Coupe,TTS,Audi,Coupe,1,43
+159,Tahoe Hybrid SUV,Tahoe Hybrid,Chevrolet,SUV,1,37
+160,Talon Hatchback,Talon,Eagle,Hatchback,1,46
+161,Terrain SUV,Terrain,GMC,SUV,1,42
+162,Town Car Sedan,Town Car,Lincoln,Sedan,1,39
+163,Town and Country Minivan,Town and Country,Chrysler,Minivan,1,38
+164,TrailBlazer SS,TrailBlazer SS,Chevrolet,SUV,1,40
+165,Traverse SUV,Traverse,Chevrolet,SUV,1,44
+166,Tribute SUV,Tribute,Mazda,SUV,1,36
+167,Tucson SUV,Tucson,Hyundai,SUV,1,44
+168,V8 Sedan,V8,Audi,Sedan,1,44
+169,V8 Vantage Convertible,V8 Vantage,Aston Martin,Convertible,1,45
+170,V8 Vantage Coupe,V8 Vantage,Aston Martin,Coupe,1,41
+171,Veloster Hatchback,Veloster,Hyundai,Hatchback,1,41
+172,Veracruz SUV,Veracruz,Hyundai,SUV,1,42
+173,Verano Sedan,Verano,Buick,Sedan,1,38
+174,Veyron 16.4 Convertible,Veyron 16.4,Bugatti,Convertible,1,33
+175,Veyron 16.4 Coupe,Veyron 16.4,Bugatti,Coupe,1,44
+176,Virage Convertible,Virage,Aston Martin,Convertible,1,33
+177,Virage Coupe,Virage,Aston Martin,Coupe,1,38
+178,Wrangler SUV,Wrangler,Jeep,SUV,1,43
+179,X3 SUV,X3,BMW,SUV,1,39
+180,X5 SUV,X5,BMW,SUV,1,42
+181,X6 SUV,X6,BMW,SUV,1,42
+182,XC90 SUV,XC90,Volvo,SUV,1,43
+183,XK XKR,XK XKR,Jaguar,Coupe,1,47
+184,Yukon Hybrid SUV,Yukon Hybrid,GMC,SUV,1,43
+185,Z4 Convertible,Z4,BMW,Convertible,1,41
+186,ZDX Hatchback,ZDX,Acura,Hatchback,1,39
+187,fortwo Convertible,fortwo,smart,Convertible,1,40
+188,xD Hatchback,xD,Scion,Hatchback,1,42

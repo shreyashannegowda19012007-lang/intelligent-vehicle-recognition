@@ -1,0 +1,35 @@
+{
+  "model_size_mb": 6.2,
+  "parameter_count": 3138003,
+  "device": "cuda:0",
+  "fp32_single_image_ms": 12.93,
+  "fp16_single_image_ms": 13.7,
+  "fp16_speedup_pct": -6.0,
+  "resolution_latency_ms": {
+    "640x640": 10.42,
+    "480x480": 8.84,
+    "320x320": 8.87
+  },
+  "batch_throughput": {
+    "batch_1": {
+      "total_time_ms": 14.78,
+      "per_image_ms": 14.78,
+      "fps": 67.7
+    },
+    "batch_4": {
+      "total_time_ms": 111.32,
+      "per_image_ms": 27.83,
+      "fps": 35.9
+    },
+    "batch_8": {
+      "total_time_ms": 81.21,
+      "per_image_ms": 10.15,
+      "fps": 98.5
+    },
+    "batch_16": {
+      "total_time_ms": 125.19,
+      "per_image_ms": 7.82,
+      "fps": 127.9
+    }
+  }
+}

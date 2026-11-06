@@ -1,0 +1,210 @@
+{
+  "status": "SUCCESS",
+  "timestamp": "2026-11-06 17:14:42",
+  "duration_seconds": 0.11,
+  "dataset_summary": {
+    "total_classes": 196,
+    "train_samples": 6922,
+    "val_samples": 1222,
+    "test_samples": 8041
+  },
+  "class_distribution_metrics": {
+    "min_samples_per_class": 20,
+    "max_samples_per_class": 58,
+    "mean_samples_per_class": 35.32,
+    "median_samples_per_class": 36.0,
+    "std_dev_samples": 3.69,
+    "imbalance_ratio": 2.9
+  },
+  "rare_classes": {
+    "threshold_10th_percentile": 31.0,
+    "count": 27,
+    "classes": [
+      {
+        "class_id": 1,
+        "class_name": "Acura RL Sedan 2012",
+        "make": "Acura",
+        "sample_count": 27
+      },
+      {
+        "class_id": 9,
+        "class_name": "Aston Martin Virage Convertible 2012",
+        "make": "Aston Martin",
+        "sample_count": 28
+      },
+      {
+        "class_id": 11,
+        "class_name": "Audi RS 4 Convertible 2008",
+        "make": "Audi",
+        "sample_count": 31
+      },
+      {
+        "class_id": 25,
+        "class_name": "BMW ActiveHybrid 5 Sedan 2012",
+        "make": "BMW",
+        "sample_count": 29
+      },
+      {
+        "class_id": 26,
+        "class_name": "BMW 1 Series Convertible 2012",
+        "make": "BMW",
+        "sample_count": 31
+      },
+      {
+        "class_id": 38,
+        "class_name": "Bentley Continental Supersports Conv. Convertible 2012",
+        "make": "Bentley",
+        "sample_count": 31
+      },
+      {
+        "class_id": 40,
+        "class_name": "Bentley Mulsanne Sedan 2011",
+        "make": "Bentley",
+        "sample_count": 31
+      },
+      {
+        "class_id": 41,
+        "class_name": "Bentley Continental GT Coupe 2012",
+        "make": "Bentley",
+        "sample_count": 30
+      },
+      {
+        "class_id": 44,
+        "class_name": "Bugatti Veyron 16.4 Convertible 2009",
+        "make": "Bugatti",
+        "sample_count": 28
+      },
+      {
+        "class_id": 46,
+        "class_name": "Buick Regal GS 2012",
+        "make": "Buick",
+        "sample_count": 30
+      }
+    ]
+  },
+  "dominant_classes": {
+    "threshold_90th_percentile": 38.0,
+    "count": 40,
+    "classes": [
+      {
+        "class_id": 0,
+        "class_name": "AM General Hummer SUV 2000",
+        "make": "AM General",
+        "sample_count": 38
+      },
+      {
+        "class_id": 5,
+        "class_name": "Acura Integra Type R 2001",
+        "make": "Acura",
+        "sample_count": 38
+      },
+      {
+        "class_id": 7,
+        "class_name": "Aston Martin V8 Vantage Convertible 2012",
+        "make": "Aston Martin",
+        "sample_count": 38
+      },
+      {
+        "class_id": 19,
+        "class_name": "Audi S6 Sedan 2011",
+        "make": "Audi",
+        "sample_count": 39
+      },
+      {
+        "class_id": 23,
+        "class_name": "Audi S4 Sedan 2007",
+        "make": "Audi",
+        "sample_count": 38
+      },
+      {
+        "class_id": 33,
+        "class_name": "BMW M3 Coupe 2012",
+        "make": "BMW",
+        "sample_count": 38
+      },
+      {
+        "class_id": 42,
+        "class_name": "Bentley Continental GT Coupe 2007",
+        "make": "Bentley",
+        "sample_count": 39
+      },
+      {
+        "class_id": 43,
+        "class_name": "Bentley Continental Flying Spur Sedan 2007",
+        "make": "Bentley",
+        "sample_count": 38
+      },
+      {
+        "class_id": 52,
+        "class_name": "Cadillac Escalade EXT Crew Cab 2007",
+        "make": "Cadillac",
+        "sample_count": 38
+      },
+      {
+        "class_id": 55,
+        "class_name": "Chevrolet Corvette ZR1 2012",
+        "make": "Chevrolet",
+        "sample_count": 40
+      }
+    ]
+  },
+  "manufacturer_distribution": {
+    "num_makes": 49,
+    "top_5_makes": {
+      "Chevrolet": 766,
+      "Dodge": 535,
+      "Audi": 502,
+      "BMW": 453,
+      "Ford": 443
+    },
+    "bottom_5_makes": {
+      "Tesla": 33,
+      "Lincoln": 33,
+      "Mazda": 31,
+      "MINI": 31,
+      "Maybach": 25
+    }
+  },
+  "year_distribution": {
+    "1991": 39,
+    "1993": 118,
+    "1994": 109,
+    "1997": 37,
+    "1998": 78,
+    "1999": 37,
+    "2000": 38,
+    "2001": 76,
+    "2002": 38,
+    "2006": 39,
+    "2007": 899,
+    "2008": 241,
+    "2009": 457,
+    "2010": 352,
+    "2011": 266,
+    "2012": 4098
+  },
+  "coverage": {
+    "train_classes_count": 196,
+    "val_classes_count": 196,
+    "missing_in_train": [],
+    "missing_in_val": [],
+    "all_196_classes_in_train": true,
+    "all_196_classes_in_val": true
+  },
+  "class_weights": {
+    "method_balanced_sample": {
+      "0": 0.9184,
+      "1": 1.2926,
+      "2": 0.9432,
+      "3": 0.9694,
+      "4": 0.9971
+    },
+    "method_effective_samples": {
+      "0": 0.9198,
+      "1": 1.2875,
+      "2": 0.9442,
+      "3": 0.97,
+      "4": 0.9972
+    }
+  }
+}

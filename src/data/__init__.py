@@ -1,8 +1,131 @@
 """
-Data preprocessing, annotation parsing, and PyTorch dataset modules.
+Data preprocessing, annotation parsing, manifest, augmentation, and PyTorch dataset modules.
 """
 
-from .dataset import StanfordCarsDataset
+from .annotation_parser import (
+    ALL_49_MAKES,
+    BODY_TYPE_OVERRIDES,
+    KNOWN_BODY_TYPES,
+    KNOWN_MULTIWORD_MAKES,
+    AnnotationParser,
+    NormalizedAnnotationRecord,
+    TaxonomyParser,
+    detect_duplicates,
+    export_normalized_dataset_and_metadata,
+    find_project_root,
+    load_normalized_annotations,
+    validate_annotation_integrity,
+)
+from .augmentation import (
+    ALBUMENTATIONS_AVAILABLE,
+    IMAGENET_MEAN,
+    IMAGENET_STD,
+    get_albumentations_train_transforms,
+    get_albumentations_val_transforms,
+    get_torchvision_train_transforms,
+    get_torchvision_val_transforms,
+)
+from .classification_dataset import (
+    StanfordCarsClassificationDataset,
+    create_classification_dataloaders,
+)
+from .data_module import StanfordCarsDataModule
+from .dataset import StanfordCarsDataset, build_dataloaders
+from .dataset_parser import (
+    ENV_STANFORD_CARS_DIR,
+    ENV_STANFORD_DATASET_ROOT,
+    DatasetManifest,
+    StanfordCarsDatasetParser,
+    resolve_dataset_root,
+)
+from .detection_dataset import (
+    VEHICLE_DETECTION_CLASS_ID,
+    VEHICLE_DETECTION_CLASS_NAME,
+    StanfordCarsDetectionDataset,
+    collate_detection_batch,
+    create_detection_dataloaders,
+)
+from .manifest import (
+    ManifestBBox,
+    ManifestRecord,
+    build_unified_manifest,
+    load_manifest,
+    load_manifest_df,
+)
 from .parser import parse_annotations, parse_cars_meta
+from .preprocessing import (
+    apply_clahe,
+    bgr_to_rgb,
+    compute_image_quality_metrics,
+    denoise_bilateral,
+    denoise_gaussian,
+    detect_edges_canny,
+    estimate_blur,
+    load_image,
+    measure_brightness,
+    measure_contrast,
+    normalize_image,
+    preprocess_pipeline,
+    resize_image,
+    rgb_to_bgr,
+    to_grayscale,
+)
 
-__all__ = ["StanfordCarsDataset", "parse_annotations", "parse_cars_meta"]
+__all__ = [
+    "ALBUMENTATIONS_AVAILABLE",
+    "ALL_49_MAKES",
+    "BODY_TYPE_OVERRIDES",
+    "ENV_STANFORD_CARS_DIR",
+    "ENV_STANFORD_DATASET_ROOT",
+    "IMAGENET_MEAN",
+    "IMAGENET_STD",
+    "KNOWN_BODY_TYPES",
+    "KNOWN_MULTIWORD_MAKES",
+    "VEHICLE_DETECTION_CLASS_ID",
+    "VEHICLE_DETECTION_CLASS_NAME",
+    "AnnotationParser",
+    "DatasetManifest",
+    "ManifestBBox",
+    "ManifestRecord",
+    "NormalizedAnnotationRecord",
+    "StanfordCarsClassificationDataset",
+    "StanfordCarsDataModule",
+    "StanfordCarsDataset",
+    "StanfordCarsDatasetParser",
+    "StanfordCarsDetectionDataset",
+    "TaxonomyParser",
+    "apply_clahe",
+    "bgr_to_rgb",
+    "build_dataloaders",
+    "build_unified_manifest",
+    "collate_detection_batch",
+    "compute_image_quality_metrics",
+    "create_classification_dataloaders",
+    "create_detection_dataloaders",
+    "denoise_bilateral",
+    "denoise_gaussian",
+    "detect_duplicates",
+    "detect_edges_canny",
+    "estimate_blur",
+    "export_normalized_dataset_and_metadata",
+    "find_project_root",
+    "get_albumentations_train_transforms",
+    "get_albumentations_val_transforms",
+    "get_torchvision_train_transforms",
+    "get_torchvision_val_transforms",
+    "load_image",
+    "load_manifest",
+    "load_manifest_df",
+    "load_normalized_annotations",
+    "measure_brightness",
+    "measure_contrast",
+    "normalize_image",
+    "parse_annotations",
+    "parse_cars_meta",
+    "preprocess_pipeline",
+    "resize_image",
+    "resolve_dataset_root",
+    "rgb_to_bgr",
+    "to_grayscale",
+    "validate_annotation_integrity",
+]

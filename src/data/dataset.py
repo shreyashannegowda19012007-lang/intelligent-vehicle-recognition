@@ -68,13 +68,18 @@ class StanfordCarsDataset(Dataset):
     def _resolve_image_path(self, record: dict[str, Any]) -> str:
         """Resolve absolute path to image file."""
         if self.image_root:
-            return os.path.join(self.image_root, record["filename"])
+            fname = record.get("filename", record.get("original_filename", ""))
+            return os.path.join(self.image_root, fname)
         if "file_path" in record and os.path.exists(record["file_path"]):
             return record["file_path"]
+        if "image_path" in record and os.path.exists(record["image_path"]):
+            return record["image_path"]
         # Fallback to current working directory relative path
         if "relative_path" in record and os.path.exists(record["relative_path"]):
             return record["relative_path"]
-        return record.get("file_path", record.get("filename", ""))
+        return record.get(
+            "image_path", record.get("file_path", record.get("filename", ""))
+        )
 
     def __getitem__(self, idx: int) -> tuple[Any, Any] | Any:
         record = self.records[idx]
@@ -88,9 +93,24 @@ class StanfordCarsDataset(Dataset):
             img = raw_img.convert("RGB")
 
             # Crop bounding box if requested
-            if self.crop_bbox and "bbox_crop" in record:
-                crop_box = tuple(record["bbox_crop"])  # [left, top, right, bottom]
-                img = img.crop(crop_box)
+            if self.crop_bbox:
+                if "bbox_crop" in record:
+                    crop_box = tuple(record["bbox_crop"])  # [left, top, right, bottom]
+                    img = img.crop(crop_box)
+                elif (
+                    "bbox_xmin" in record
+                    and "bbox_ymin" in record
+                    and "bbox_xmax" in record
+                    and "bbox_ymax" in record
+                ):
+                    # Half-open crop box [left, top, right, bottom] for PIL
+                    crop_box = (
+                        int(record["bbox_xmin"]),
+                        int(record["bbox_ymin"]),
+                        int(record["bbox_xmax"]) + 1,
+                        int(record["bbox_ymax"]) + 1,
+                    )
+                    img = img.crop(crop_box)
 
         # Apply transformation
         if self.transform is not None:
@@ -104,8 +124,13 @@ class StanfordCarsDataset(Dataset):
             else:
                 img = self.transform(img)
 
+        fname = record.get(
+            "filename",
+            record.get("original_filename", Path(record.get("image_path", "")).name),
+        )
+
         if self.is_test:
-            return img, record["filename"]
+            return img, fname
 
         # Build target according to target_type
         if self.target_type == "class":
@@ -126,6 +151,15 @@ class StanfordCarsDataset(Dataset):
             target = torch.tensor(record.get("body_type_id", 0), dtype=torch.long)
             return img, target
         else:  # 'multi'
+            bbox_vals = record.get(
+                "bbox_pixel_inc",
+                [
+                    record.get("bbox_xmin", 0),
+                    record.get("bbox_ymin", 0),
+                    record.get("bbox_xmax", 0),
+                    record.get("bbox_ymax", 0),
+                ],
+            )
             targets = {
                 "class_id": torch.tensor(
                     record.get("class_id_0", record.get("class_id", 0)),
@@ -137,13 +171,11 @@ class StanfordCarsDataset(Dataset):
                 "body_type_id": torch.tensor(
                     record.get("body_type_id", 0), dtype=torch.long
                 ),
-                "bbox": torch.tensor(
-                    record.get("bbox_pixel_inc", [0, 0, 0, 0]), dtype=torch.float32
-                ),
+                "bbox": torch.tensor(bbox_vals, dtype=torch.float32),
                 "bbox_yolo": torch.tensor(
                     record.get("bbox_yolo", [0.0, 0.0, 0.0, 0.0]), dtype=torch.float32
                 ),
-                "filename": record["filename"],
+                "filename": fname,
                 "index": idx,
             }
             return img, targets

@@ -1,0 +1,197 @@
+class_id,original_class_id,class_name,make,model,clean_model,year,body_type,sample_count,is_ambiguous,review_flag
+0,1,AM General Hummer SUV 2000,AM General,Hummer SUV,Hummer,2000,SUV,45,False,OK
+1,2,Acura RL Sedan 2012,Acura,RL Sedan,RL,2012,Sedan,32,False,OK
+2,3,Acura TL Sedan 2012,Acura,TL Sedan,TL,2012,Sedan,43,False,OK
+3,4,Acura TL Type-S 2008,Acura,TL Type-S,TL Type-S,2008,Sedan,42,False,OK
+4,5,Acura TSX Sedan 2012,Acura,TSX Sedan,TSX,2012,Sedan,41,False,OK
+5,6,Acura Integra Type R 2001,Acura,Integra Type R,Integra Type R,2001,Coupe,45,False,OK
+6,7,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,ZDX,2012,Hatchback,39,False,OK
+7,8,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,V8 Vantage,2012,Convertible,45,False,OK
+8,9,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,V8 Vantage,2012,Coupe,41,False,OK
+9,10,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,Virage,2012,Convertible,33,False,OK
+10,11,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,Virage,2012,Coupe,38,False,OK
+11,12,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,RS 4,2008,Convertible,37,False,OK
+12,13,Audi A5 Coupe 2012,Audi,A5 Coupe,A5,2012,Coupe,41,False,OK
+13,14,Audi TTS Coupe 2012,Audi,TTS Coupe,TTS,2012,Coupe,43,False,OK
+14,15,Audi R8 Coupe 2012,Audi,R8 Coupe,R8,2012,Coupe,43,False,OK
+15,16,Audi V8 Sedan 1994,Audi,V8 Sedan,V8,1994,Sedan,44,False,OK
+16,17,Audi 100 Sedan 1994,Audi,100 Sedan,100,1994,Sedan,41,False,OK
+17,18,Audi 100 Wagon 1994,Audi,100 Wagon,100,1994,Wagon,43,False,OK
+18,19,Audi TT Hatchback 2011,Audi,TT Hatchback,TT,2011,Hatchback,41,False,OK
+19,20,Audi S6 Sedan 2011,Audi,S6 Sedan,S6,2011,Sedan,46,False,OK
+20,21,Audi S5 Convertible 2012,Audi,S5 Convertible,S5,2012,Convertible,42,False,OK
+21,22,Audi S5 Coupe 2012,Audi,S5 Coupe,S5,2012,Coupe,43,False,OK
+22,23,Audi S4 Sedan 2012,Audi,S4 Sedan,S4,2012,Sedan,40,False,OK
+23,24,Audi S4 Sedan 2007,Audi,S4 Sedan,S4,2007,Sedan,45,False,OK
+24,25,Audi TT RS Coupe 2012,Audi,TT RS Coupe,TT RS,2012,Coupe,40,False,OK
+25,26,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,ActiveHybrid 5,2012,Sedan,34,False,OK
+26,27,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,1 Series,2012,Convertible,36,False,OK
+27,28,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,1 Series,2012,Coupe,41,False,OK
+28,29,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,3 Series,2012,Sedan,43,False,OK
+29,30,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,3 Series,2012,Wagon,42,False,OK
+30,31,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,6 Series,2007,Convertible,44,False,OK
+31,32,BMW X5 SUV 2007,BMW,X5 SUV,X5,2007,SUV,42,False,OK
+32,33,BMW X6 SUV 2012,BMW,X6 SUV,X6,2012,SUV,42,False,OK
+33,34,BMW M3 Coupe 2012,BMW,M3 Coupe,M3,2012,Coupe,45,False,OK
+34,35,BMW M5 Sedan 2010,BMW,M5 Sedan,M5,2010,Sedan,41,False,OK
+35,36,BMW M6 Convertible 2010,BMW,M6 Convertible,M6,2010,Convertible,41,False,OK
+36,37,BMW X3 SUV 2012,BMW,X3 SUV,X3,2012,SUV,39,False,OK
+37,38,BMW Z4 Convertible 2012,BMW,Z4 Convertible,Z4,2012,Convertible,41,False,OK
+38,39,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,Continental Supersports Conv.,2012,Convertible,37,False,OK
+39,40,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,Arnage,2009,Sedan,39,False,OK
+40,41,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,Mulsanne,2011,Sedan,36,False,OK
+41,42,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,Continental GT,2012,Coupe,35,False,OK
+42,43,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,Continental GT,2007,Coupe,46,False,OK
+43,44,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,Continental Flying Spur,2007,Sedan,45,False,OK
+44,45,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,Veyron 16.4,2009,Convertible,33,False,OK
+45,46,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,Veyron 16.4,2009,Coupe,44,False,OK
+46,47,Buick Regal GS 2012,Buick,Regal GS,Regal GS,2012,Sedan,35,False,OK
+47,48,Buick Rainier SUV 2007,Buick,Rainier SUV,Rainier,2007,SUV,43,False,OK
+48,49,Buick Verano Sedan 2012,Buick,Verano Sedan,Verano,2012,Sedan,38,False,OK
+49,50,Buick Enclave SUV 2012,Buick,Enclave SUV,Enclave,2012,SUV,42,False,OK
+50,51,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,CTS-V,2012,Sedan,43,False,OK
+51,52,Cadillac SRX SUV 2012,Cadillac,SRX SUV,SRX,2012,SUV,41,False,OK
+52,53,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,Escalade EXT,2007,Crew Cab,45,False,OK
+53,54,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,Silverado 1500 Hybrid,2012,Crew Cab,40,False,OK
+54,55,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,Corvette,2012,Convertible,40,False,OK
+55,56,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,Corvette ZR1,2012,Coupe,47,False,OK
+56,57,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,Corvette Ron Fellows Edition Z06,2007,Coupe,38,False,OK
+57,58,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,Traverse,2012,SUV,44,False,OK
+58,59,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,Camaro,2012,Convertible,45,False,OK
+59,60,Chevrolet HHR SS 2010,Chevrolet,HHR SS,HHR SS,2010,SUV,37,False,OK
+60,61,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,Impala,2007,Sedan,43,False,OK
+61,62,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,Tahoe Hybrid,2012,SUV,37,False,OK
+62,63,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,Sonic,2012,Sedan,44,False,OK
+63,64,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,Express Cargo,2007,Van,30,False,OK
+64,65,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,Avalanche,2012,Crew Cab,45,False,OK
+65,66,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,Cobalt SS,2010,Coupe,42,False,OK
+66,67,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,Malibu Hybrid,2010,Sedan,39,False,OK
+67,68,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,TrailBlazer SS,2009,SUV,40,False,OK
+68,69,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,Silverado 2500HD,2012,Regular Cab,38,False,OK
+69,70,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,Silverado 1500 Classic,2007,Extended Cab,43,False,OK
+70,71,Chevrolet Express Van 2007,Chevrolet,Express Van,Express,2007,Van,35,False,OK
+71,72,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,Monte Carlo,2007,Coupe,45,False,OK
+72,73,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,Malibu,2007,Sedan,45,False,OK
+73,74,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,Silverado 1500,2012,Extended Cab,44,False,OK
+74,75,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,Silverado 1500,2012,Regular Cab,44,False,OK
+75,76,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,Aspen,2009,SUV,44,False,OK
+76,77,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,Sebring,2010,Convertible,41,False,OK
+77,78,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,Town and Country,2012,Minivan,38,False,OK
+78,79,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,300 SRT-8,2010,Sedan,49,False,OK
+79,80,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,Crossfire,2008,Convertible,43,False,OK
+80,81,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,PT Cruiser,2008,Convertible,45,False,OK
+81,82,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,Nubira,2002,Wagon,45,False,OK
+82,83,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,Caliber,2012,Wagon,41,False,OK
+83,84,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,Caliber,2007,Wagon,42,False,OK
+84,85,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,Caravan,1997,Minivan,44,False,OK
+85,86,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,Ram Pickup 3500,2010,Crew Cab,43,False,OK
+86,87,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,Ram Pickup 3500,2009,Quad Cab,44,False,OK
+87,88,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,Sprinter Cargo,2009,Van,40,False,OK
+88,89,Dodge Journey SUV 2012,Dodge,Journey SUV,Journey,2012,SUV,44,False,OK
+89,90,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,Dakota,2010,Crew Cab,41,False,OK
+90,91,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,Dakota,2007,Club Cab,39,False,OK
+91,92,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,Magnum,2008,Wagon,40,False,OK
+92,93,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,Challenger SRT8,2011,Coupe,39,False,OK
+93,94,Dodge Durango SUV 2012,Dodge,Durango SUV,Durango,2012,SUV,44,False,OK
+94,95,Dodge Durango SUV 2007,Dodge,Durango SUV,Durango,2007,SUV,46,False,OK
+95,96,Dodge Charger Sedan 2012,Dodge,Charger Sedan,Charger,2012,Sedan,41,False,OK
+96,97,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,Charger SRT-8,2009,Sedan,42,False,OK
+97,98,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,Talon,1998,Hatchback,46,False,OK
+98,99,FIAT 500 Abarth 2012,FIAT,500 Abarth,500 Abarth,2012,Hatchback,28,False,OK
+99,100,FIAT 500 Convertible 2012,FIAT,500 Convertible,500,2012,Convertible,34,False,OK
+100,101,Ferrari FF Coupe 2012,Ferrari,FF Coupe,FF,2012,Coupe,42,False,OK
+101,102,Ferrari California Convertible 2012,Ferrari,California Convertible,California,2012,Convertible,39,False,OK
+102,103,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,458 Italia,2012,Convertible,40,False,OK
+103,104,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,458 Italia,2012,Coupe,43,False,OK
+104,105,Fisker Karma Sedan 2012,Fisker,Karma Sedan,Karma,2012,Sedan,44,False,OK
+105,106,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,F-450 Super Duty,2012,Crew Cab,42,False,OK
+106,107,Ford Mustang Convertible 2007,Ford,Mustang Convertible,Mustang,2007,Convertible,45,False,OK
+107,108,Ford Freestar Minivan 2007,Ford,Freestar Minivan,Freestar,2007,Minivan,44,False,OK
+108,109,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,Expedition EL,2009,SUV,45,False,OK
+109,110,Ford Edge SUV 2012,Ford,Edge SUV,Edge,2012,SUV,43,False,OK
+110,111,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,Ranger,2011,SuperCab,42,False,OK
+111,112,Ford GT Coupe 2006,Ford,GT Coupe,GT,2006,Coupe,46,False,OK
+112,113,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,F-150,2012,Regular Cab,43,False,OK
+113,114,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,F-150,2007,Regular Cab,45,False,OK
+114,115,Ford Focus Sedan 2007,Ford,Focus Sedan,Focus,2007,Sedan,45,False,OK
+115,116,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,E-Series Van,2012,Wagon,38,False,OK
+116,117,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,Fiesta,2012,Sedan,43,False,OK
+117,118,GMC Terrain SUV 2012,GMC,Terrain SUV,Terrain,2012,SUV,42,False,OK
+118,119,GMC Savana Van 2012,GMC,Savana Van,Savana,2012,Van,68,False,OK
+119,120,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,Yukon Hybrid,2012,SUV,43,False,OK
+120,121,GMC Acadia SUV 2012,GMC,Acadia SUV,Acadia,2012,SUV,45,False,OK
+121,122,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,Canyon,2012,Extended Cab,40,False,OK
+122,123,Geo Metro Convertible 1993,Geo,Metro Convertible,Metro,1993,Convertible,45,False,OK
+123,124,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,H3T,2010,Crew Cab,39,False,OK
+124,125,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,H2 SUT,2009,Crew Cab,44,False,OK
+125,126,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,Odyssey,2012,Minivan,42,False,OK
+126,127,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,Odyssey,2007,Minivan,41,False,OK
+127,128,Honda Accord Coupe 2012,Honda,Accord Coupe,Accord,2012,Coupe,39,False,OK
+128,129,Honda Accord Sedan 2012,Honda,Accord Sedan,Accord,2012,Sedan,39,False,OK
+129,130,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,Veloster,2012,Hatchback,41,False,OK
+130,131,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,Santa Fe,2012,SUV,42,False,OK
+131,132,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,Tucson,2012,SUV,44,False,OK
+132,133,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,Veracruz,2012,SUV,42,False,OK
+133,134,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,Sonata Hybrid,2012,Sedan,34,False,OK
+134,135,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,Elantra,2007,Sedan,42,False,OK
+135,136,Hyundai Accent Sedan 2012,Hyundai,Accent Sedan,Accent,2012,Sedan,24,False,OK
+136,137,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,Genesis,2012,Sedan,44,False,OK
+137,138,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,Sonata,2012,Sedan,40,False,OK
+138,139,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,Elantra Touring,2012,Hatchback,43,False,OK
+139,140,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,Azera,2012,Sedan,42,False,OK
+140,141,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,G IPL,2012,Coupe,34,False,OK
+141,142,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,QX56,2011,SUV,33,False,OK
+142,143,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,Ascender,2008,SUV,40,False,OK
+143,144,Jaguar XK XKR 2012,Jaguar,XK XKR,XK XKR,2012,Coupe,47,False,OK
+144,145,Jeep Patriot SUV 2012,Jeep,Patriot SUV,Patriot,2012,SUV,44,False,OK
+145,146,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,Wrangler,2012,SUV,43,False,OK
+146,147,Jeep Liberty SUV 2012,Jeep,Liberty SUV,Liberty,2012,SUV,45,False,OK
+147,148,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,Grand Cherokee,2012,SUV,45,False,OK
+148,149,Jeep Compass SUV 2012,Jeep,Compass SUV,Compass,2012,SUV,43,False,OK
+149,150,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,Reventon,2008,Coupe,36,False,OK
+150,151,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,Aventador,2012,Coupe,44,False,OK
+151,152,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,Gallardo LP 570-4 Superleggera,2012,Coupe,36,False,OK
+152,153,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,Diablo,2001,Coupe,45,False,OK
+153,154,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,Range Rover,2012,SUV,43,False,OK
+154,155,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,LR2,2012,SUV,43,False,OK
+155,156,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,Town Car,2011,Sedan,39,False,OK
+156,157,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,Cooper Roadster,2012,Convertible,37,False,OK
+157,158,Maybach Landaulet Convertible 2012,Maybach,Landaulet Convertible,Landaulet,2012,Convertible,29,False,OK
+158,159,Mazda Tribute SUV 2011,Mazda,Tribute SUV,Tribute,2011,SUV,36,False,OK
+159,160,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,MP4-12C,2012,Coupe,44,False,OK
+160,161,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,300-Class,1993,Convertible,48,False,OK
+161,162,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,C-Class,2012,Sedan,46,False,OK
+162,163,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,SL-Class,2009,Coupe,37,False,OK
+163,164,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,E-Class,2012,Sedan,44,False,OK
+164,165,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,S-Class,2012,Sedan,45,False,OK
+165,166,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,Sprinter,2012,Van,41,False,OK
+166,167,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,Lancer,2012,Sedan,48,False,OK
+167,168,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,Leaf,2012,Hatchback,42,False,OK
+168,169,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,NV Passenger,2012,Van,39,False,OK
+169,170,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,Juke,2012,Hatchback,44,False,OK
+170,171,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,240SX,1998,Coupe,46,False,OK
+171,172,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,Neon,1999,Coupe,44,False,OK
+172,173,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,Panamera,2012,Sedan,44,False,OK
+173,174,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,C/V Cargo Van,2012,Minivan,41,False,OK
+174,175,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,Phantom Drophead Coupe,2012,Convertible,31,False,OK
+175,176,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,Ghost,2012,Sedan,39,False,OK
+176,177,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,Phantom,2012,Sedan,44,False,OK
+177,178,Scion xD Hatchback 2012,Scion,xD Hatchback,xD,2012,Hatchback,42,False,OK
+178,179,Spyker C8 Convertible 2009,Spyker,C8 Convertible,C8,2009,Convertible,45,False,OK
+179,180,Spyker C8 Coupe 2009,Spyker,C8 Coupe,C8,2009,Coupe,43,False,OK
+180,181,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,Aerio,2007,Sedan,38,False,OK
+181,182,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,Kizashi,2012,Sedan,46,False,OK
+182,183,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,SX4,2012,Hatchback,42,False,OK
+183,184,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,SX4,2012,Sedan,41,False,OK
+184,185,Tesla Model S Sedan 2012,Tesla,Model S Sedan,Model S,2012,Sedan,39,False,OK
+185,186,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,Sequoia,2012,SUV,39,False,OK
+186,187,Toyota Camry Sedan 2012,Toyota,Camry Sedan,Camry,2012,Sedan,44,False,OK
+187,188,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,Corolla,2012,Sedan,44,False,OK
+188,189,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,4Runner,2012,SUV,41,False,OK
+189,190,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,Golf,2012,Hatchback,43,False,OK
+190,191,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,Golf,1991,Hatchback,46,False,OK
+191,192,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,Beetle,2012,Hatchback,43,False,OK
+192,193,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,C30,2012,Hatchback,42,False,OK
+193,194,Volvo 240 Sedan 1993,Volvo,240 Sedan,240,1993,Sedan,46,False,OK
+194,195,Volvo XC90 SUV 2007,Volvo,XC90 SUV,XC90,2007,SUV,43,False,OK
+195,196,smart fortwo Convertible 2012,smart,fortwo Convertible,fortwo,2012,Convertible,40,False,OK

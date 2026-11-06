@@ -1,3 +1,1 @@
-"""
-Hybrid integration pipeline coupling classical CV features with deep features.
-"""
+"""Hybrid fusion package: classical + deep feature fusion heads."""

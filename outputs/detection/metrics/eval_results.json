@@ -1,0 +1,115 @@
+{
+  "ultralytics_validation": {
+    "split": "val",
+    "precision": 0.9967,
+    "recall": 0.9953,
+    "f1_score": 0.996,
+    "mAP50": 0.9948,
+    "mAP50-95": 0.8706,
+    "inference_latency_ms": 3.57,
+    "preprocess_latency_ms": 0.3,
+    "postprocess_latency_ms": 0.8,
+    "peak_vram_gb": 0.362,
+    "model_specs": {
+      "model_path": "D:\\CV\\models\\detection\\best.pt",
+      "size_mb": 6.2,
+      "parameter_count": 3138003,
+      "device": "cuda:0",
+      "num_classes": 1
+    }
+  },
+  "ground_truth_matching": {
+    "total_evaluated": 100,
+    "true_positives": 100,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.9901,
+    "recall": 1.0,
+    "f1_score": 0.995,
+    "mean_iou": 0.906,
+    "mean_inference_latency_ms": 15.91,
+    "iou_threshold": 0.5
+  },
+  "robustness_diagnostics": {
+    "baseline": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8958
+    },
+    "low_light": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8924
+    },
+    "mild_blur": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8948
+    },
+    "partial_occlusion": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8672
+    },
+    "multiple_vehicles": {
+      "detected_count": 20,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8629
+    },
+    "cropped_vehicle": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8287
+    },
+    "small_vehicle": {
+      "detected_count": 5,
+      "detection_rate": 0.5,
+      "mean_confidence": 0.5196
+    },
+    "low_resolution_320x240": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8977
+    },
+    "high_resolution_1280x720": {
+      "detected_count": 10,
+      "detection_rate": 1.0,
+      "mean_confidence": 0.8805
+    }
+  },
+  "optimization_diagnostics": {
+    "model_size_mb": 6.2,
+    "parameter_count": 3138003,
+    "device": "cuda:0",
+    "fp32_single_image_ms": 12.93,
+    "fp16_single_image_ms": 13.7,
+    "fp16_speedup_pct": -6.0,
+    "resolution_latency_ms": {
+      "640x640": 10.42,
+      "480x480": 8.84,
+      "320x320": 8.87
+    },
+    "batch_throughput": {
+      "batch_1": {
+        "total_time_ms": 14.78,
+        "per_image_ms": 14.78,
+        "fps": 67.7
+      },
+      "batch_4": {
+        "total_time_ms": 111.32,
+        "per_image_ms": 27.83,
+        "fps": 35.9
+      },
+      "batch_8": {
+        "total_time_ms": 81.21,
+        "per_image_ms": 10.15,
+        "fps": 98.5
+      },
+      "batch_16": {
+        "total_time_ms": 125.19,
+        "per_image_ms": 7.82,
+        "fps": 127.9
+      }
+    }
+  }
+}

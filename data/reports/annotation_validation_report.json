@@ -1,0 +1,42 @@
+{
+  "status": "VALID",
+  "timestamp": "2026-11-06 17:28:30",
+  "duration_seconds": 18.92,
+  "manifest_path": "data/processed/metadata/vehicle_manifest.csv",
+  "total_records": 16185,
+  "splits": {
+    "train_count": 8144,
+    "test_count": 8041
+  },
+  "labels": {
+    "train_labeled_count": 8144,
+    "train_missing_class": 0,
+    "train_missing_make": 0,
+    "train_missing_year": 0,
+    "test_unlabeled_count": 8041,
+    "unique_classes_in_train": 196,
+    "class_id_range": [
+      0,
+      195
+    ],
+    "invalid_class_ids": []
+  },
+  "bounding_boxes": {
+    "all_valid": true,
+    "invalid_bbox_count": 0,
+    "invalid_bboxes": []
+  },
+  "taxonomy": {
+    "unique_makes": 49,
+    "unknown_makes": [],
+    "invalid_years_count": 0,
+    "invalid_years": []
+  },
+  "files_and_dimensions": {
+    "checked_files": 16185,
+    "missing_files_count": 0,
+    "missing_files": [],
+    "dimension_mismatch_count": 0,
+    "dimension_mismatches": []
+  }
+}

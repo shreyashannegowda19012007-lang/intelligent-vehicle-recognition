@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETED",
+  "duration_seconds": 377.45,
+  "epochs_completed": 3,
+  "batch_size": 16,
+  "image_size": 640,
+  "device": "0",
+  "best_checkpoint": "models/detection/yolov8n_vehicle/weights/best.pt",
+  "last_checkpoint": "models/detection/yolov8n_vehicle/weights/last.pt",
+  "convenience_checkpoint": "models/detection/best.pt",
+  "results_dict": {
+    "metrics/precision(B)": 0.9950904521748221,
+    "metrics/recall(B)": 0.9951788486067445,
+    "metrics/mAP50(B)": 0.9948149958715644,
+    "metrics/mAP50-95(B)": 0.870570622765268,
+    "fitness": 0.870570622765268
+  },
+  "precision": 0.9951,
+  "recall": 0.9952,
+  "mAP50": 0.9948,
+  "mAP50-95": 0.8706
+}

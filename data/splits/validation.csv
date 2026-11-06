@@ -1,0 +1,1223 @@
+image_path,image_id,split,class_id,class_name,make,model,year,image_width,image_height,is_valid,bbox_x1,bbox_y1,bbox_x2,bbox_y2
+Stanford Dataset/cars_train/cars_train/07936.jpg,train_07936,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,2816,1476,True,52,274,2768,1377
+Stanford Dataset/cars_train/cars_train/07445.jpg,train_07445,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,500,375,True,68,7,431,324
+Stanford Dataset/cars_train/cars_train/05639.jpg,train_05639,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,259,194,True,5,6,252,178
+Stanford Dataset/cars_train/cars_train/01640.jpg,train_01640,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,544,408,True,21,205,513,362
+Stanford Dataset/cars_train/cars_train/00518.jpg,train_00518,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,259,194,True,33,56,236,177
+Stanford Dataset/cars_train/cars_train/02219.jpg,train_02219,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,695,430,True,33,32,662,400
+Stanford Dataset/cars_train/cars_train/07921.jpg,train_07921,val,46,Buick Regal GS 2012,Buick,Regal GS,2012.0,500,342,True,31,121,485,285
+Stanford Dataset/cars_train/cars_train/03054.jpg,train_03054,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,590,446,True,19,215,561,390
+Stanford Dataset/cars_train/cars_train/03652.jpg,train_03652,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,200,117,True,8,18,195,113
+Stanford Dataset/cars_train/cars_train/02200.jpg,train_02200,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,600,450,True,69,116,460,329
+Stanford Dataset/cars_train/cars_train/07190.jpg,train_07190,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,1024,768,True,109,184,831,607
+Stanford Dataset/cars_train/cars_train/02235.jpg,train_02235,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,3264,2448,True,202,496,2791,1958
+Stanford Dataset/cars_train/cars_train/01562.jpg,train_01562,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,552,245,True,105,0,551,241
+Stanford Dataset/cars_train/cars_train/06733.jpg,train_06733,val,133,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,2012.0,480,360,True,96,103,284,209
+Stanford Dataset/cars_train/cars_train/06163.jpg,train_06163,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,400,300,True,18,92,381,266
+Stanford Dataset/cars_train/cars_train/06509.jpg,train_06509,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,275,183,True,0,13,274,170
+Stanford Dataset/cars_train/cars_train/04712.jpg,train_04712,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,500,362,True,174,147,487,344
+Stanford Dataset/cars_train/cars_train/04341.jpg,train_04341,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,400,266,True,47,33,399,242
+Stanford Dataset/cars_train/cars_train/03673.jpg,train_03673,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,640,480,True,84,42,600,409
+Stanford Dataset/cars_train/cars_train/01768.jpg,train_01768,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,640,480,True,25,148,625,424
+Stanford Dataset/cars_train/cars_train/04016.jpg,train_04016,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,480,341,True,179,122,422,267
+Stanford Dataset/cars_train/cars_train/05996.jpg,train_05996,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,400,300,True,11,101,389,279
+Stanford Dataset/cars_train/cars_train/00794.jpg,train_00794,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,424,360,True,22,101,407,264
+Stanford Dataset/cars_train/cars_train/00468.jpg,train_00468,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,300,166,True,0,17,299,146
+Stanford Dataset/cars_train/cars_train/05984.jpg,train_05984,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,640,480,True,32,35,592,427
+Stanford Dataset/cars_train/cars_train/03029.jpg,train_03029,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,440,330,True,20,108,424,235
+Stanford Dataset/cars_train/cars_train/00377.jpg,train_00377,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,640,480,True,19,47,623,452
+Stanford Dataset/cars_train/cars_train/05873.jpg,train_05873,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,440,275,True,53,74,358,238
+Stanford Dataset/cars_train/cars_train/00135.jpg,train_00135,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,3264,2448,True,18,734,2668,2191
+Stanford Dataset/cars_train/cars_train/04237.jpg,train_04237,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,2100,1575,True,142,98,1965,1496
+Stanford Dataset/cars_train/cars_train/03679.jpg,train_03679,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,259,194,True,44,30,231,160
+Stanford Dataset/cars_train/cars_train/01079.jpg,train_01079,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,794,552,True,50,150,731,429
+Stanford Dataset/cars_train/cars_train/01141.jpg,train_01141,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1920,1200,True,18,228,1800,1143
+Stanford Dataset/cars_train/cars_train/02837.jpg,train_02837,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,250,130,True,6,25,249,121
+Stanford Dataset/cars_train/cars_train/00968.jpg,train_00968,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,800,600,True,7,66,799,510
+Stanford Dataset/cars_train/cars_train/03927.jpg,train_03927,val,158,Mazda Tribute SUV 2011,Mazda,Tribute SUV,2011.0,400,200,True,13,11,382,192
+Stanford Dataset/cars_train/cars_train/06231.jpg,train_06231,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,424,360,True,19,81,398,293
+Stanford Dataset/cars_train/cars_train/04964.jpg,train_04964,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,300,225,True,2,11,299,210
+Stanford Dataset/cars_train/cars_train/06295.jpg,train_06295,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,450,300,True,67,71,423,229
+Stanford Dataset/cars_train/cars_train/07525.jpg,train_07525,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,600,399,True,16,111,575,313
+Stanford Dataset/cars_train/cars_train/05058.jpg,train_05058,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,625,416,True,17,54,624,388
+Stanford Dataset/cars_train/cars_train/06353.jpg,train_06353,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,450,338,True,5,58,446,309
+Stanford Dataset/cars_train/cars_train/05085.jpg,train_05085,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,267,189,True,16,43,255,173
+Stanford Dataset/cars_train/cars_train/07819.jpg,train_07819,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,1024,768,True,140,60,879,714
+Stanford Dataset/cars_train/cars_train/06039.jpg,train_06039,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,2012,1108,True,42,141,1983,1053
+Stanford Dataset/cars_train/cars_train/00428.jpg,train_00428,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,640,480,True,32,101,594,428
+Stanford Dataset/cars_train/cars_train/02791.jpg,train_02791,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,470,265,True,58,44,413,227
+Stanford Dataset/cars_train/cars_train/04816.jpg,train_04816,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,606,404,True,78,83,527,326
+Stanford Dataset/cars_train/cars_train/07699.jpg,train_07699,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,640,480,True,11,44,638,420
+Stanford Dataset/cars_train/cars_train/05747.jpg,train_05747,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,264,198,True,2,50,262,158
+Stanford Dataset/cars_train/cars_train/06569.jpg,train_06569,val,141,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,2011.0,424,360,True,0,86,397,256
+Stanford Dataset/cars_train/cars_train/01499.jpg,train_01499,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,640,480,True,18,114,626,329
+Stanford Dataset/cars_train/cars_train/02045.jpg,train_02045,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,592,373,True,134,85,462,299
+Stanford Dataset/cars_train/cars_train/06060.jpg,train_06060,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,640,427,True,41,62,587,366
+Stanford Dataset/cars_train/cars_train/06536.jpg,train_06536,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,400,200,True,21,29,382,180
+Stanford Dataset/cars_train/cars_train/06091.jpg,train_06091,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,480,640,True,0,107,478,470
+Stanford Dataset/cars_train/cars_train/03676.jpg,train_03676,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,476,317,True,46,54,393,250
+Stanford Dataset/cars_train/cars_train/01550.jpg,train_01550,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,640,427,True,155,191,571,335
+Stanford Dataset/cars_train/cars_train/03024.jpg,train_03024,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,640,480,True,64,40,545,451
+Stanford Dataset/cars_train/cars_train/07805.jpg,train_07805,val,26,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,2012.0,259,194,True,10,29,248,164
+Stanford Dataset/cars_train/cars_train/00852.jpg,train_00852,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,1600,1067,True,29,307,1510,974
+Stanford Dataset/cars_train/cars_train/05393.jpg,train_05393,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,275,183,True,8,60,273,154
+Stanford Dataset/cars_train/cars_train/00735.jpg,train_00735,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,900,599,True,9,59,893,505
+Stanford Dataset/cars_train/cars_train/07571.jpg,train_07571,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,640,360,True,71,226,454,359
+Stanford Dataset/cars_train/cars_train/03189.jpg,train_03189,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,200,149,True,6,45,194,147
+Stanford Dataset/cars_train/cars_train/05898.jpg,train_05898,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,736,392,True,59,80,628,375
+Stanford Dataset/cars_train/cars_train/08039.jpg,train_08039,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,2100,1386,True,416,31,1663,1261
+Stanford Dataset/cars_train/cars_train/04948.jpg,train_04948,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,1024,626,True,112,301,667,526
+Stanford Dataset/cars_train/cars_train/07810.jpg,train_07810,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,640,426,True,49,88,574,382
+Stanford Dataset/cars_train/cars_train/05715.jpg,train_05715,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,600,382,True,32,155,563,344
+Stanford Dataset/cars_train/cars_train/04769.jpg,train_04769,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,480,360,True,5,86,209,163
+Stanford Dataset/cars_train/cars_train/04465.jpg,train_04465,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,600,450,True,51,42,533,424
+Stanford Dataset/cars_train/cars_train/04051.jpg,train_04051,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,400,300,True,21,59,376,259
+Stanford Dataset/cars_train/cars_train/00240.jpg,train_00240,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,300,225,True,44,59,250,170
+Stanford Dataset/cars_train/cars_train/02954.jpg,train_02954,val,158,Mazda Tribute SUV 2011,Mazda,Tribute SUV,2011.0,500,375,True,29,77,497,374
+Stanford Dataset/cars_train/cars_train/01882.jpg,train_01882,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,625,468,True,7,102,619,367
+Stanford Dataset/cars_train/cars_train/06328.jpg,train_06328,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,300,183,True,14,13,277,170
+Stanford Dataset/cars_train/cars_train/07108.jpg,train_07108,val,44,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,2009.0,500,333,True,41,109,455,291
+Stanford Dataset/cars_train/cars_train/05460.jpg,train_05460,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,675,450,True,89,107,578,377
+Stanford Dataset/cars_train/cars_train/07356.jpg,train_07356,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,630,354,True,33,88,567,349
+Stanford Dataset/cars_train/cars_train/02899.jpg,train_02899,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,520,230,True,99,19,473,215
+Stanford Dataset/cars_train/cars_train/01526.jpg,train_01526,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,804,386,True,239,45,739,301
+Stanford Dataset/cars_train/cars_train/07131.jpg,train_07131,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,259,194,True,37,13,224,159
+Stanford Dataset/cars_train/cars_train/01980.jpg,train_01980,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,1024,768,True,96,192,922,630
+Stanford Dataset/cars_train/cars_train/05976.jpg,train_05976,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,800,600,True,17,113,703,497
+Stanford Dataset/cars_train/cars_train/01829.jpg,train_01829,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,615,346,True,35,102,588,324
+Stanford Dataset/cars_train/cars_train/02568.jpg,train_02568,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,300,225,True,29,40,266,178
+Stanford Dataset/cars_train/cars_train/02802.jpg,train_02802,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,440,317,True,20,92,418,296
+Stanford Dataset/cars_train/cars_train/07090.jpg,train_07090,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,480,360,True,7,52,461,251
+Stanford Dataset/cars_train/cars_train/00475.jpg,train_00475,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,808,454,True,20,84,792,388
+Stanford Dataset/cars_train/cars_train/06563.jpg,train_06563,val,70,Chevrolet Express Van 2007,Chevrolet,Express Van,2007.0,424,360,True,3,50,421,313
+Stanford Dataset/cars_train/cars_train/03701.jpg,train_03701,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,259,194,True,5,25,253,164
+Stanford Dataset/cars_train/cars_train/00052.jpg,train_00052,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,808,424,True,38,28,773,394
+Stanford Dataset/cars_train/cars_train/05981.jpg,train_05981,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,640,454,True,8,11,625,449
+Stanford Dataset/cars_train/cars_train/04110.jpg,train_04110,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,750,469,True,70,32,617,410
+Stanford Dataset/cars_train/cars_train/00564.jpg,train_00564,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,640,427,True,44,85,599,354
+Stanford Dataset/cars_train/cars_train/02086.jpg,train_02086,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,640,480,True,50,67,594,380
+Stanford Dataset/cars_train/cars_train/06911.jpg,train_06911,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,480,360,True,69,44,435,270
+Stanford Dataset/cars_train/cars_train/04927.jpg,train_04927,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,569,355,True,138,129,466,274
+Stanford Dataset/cars_train/cars_train/05125.jpg,train_05125,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,640,425,True,41,169,590,388
+Stanford Dataset/cars_train/cars_train/03311.jpg,train_03311,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,500,334,True,21,141,473,325
+Stanford Dataset/cars_train/cars_train/01228.jpg,train_01228,val,44,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,2009.0,1024,768,True,330,298,701,561
+Stanford Dataset/cars_train/cars_train/01124.jpg,train_01124,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,600,450,True,38,123,576,318
+Stanford Dataset/cars_train/cars_train/06925.jpg,train_06925,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,620,280,True,24,33,587,253
+Stanford Dataset/cars_train/cars_train/00972.jpg,train_00972,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,620,388,True,186,90,508,314
+Stanford Dataset/cars_train/cars_train/01855.jpg,train_01855,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,640,480,True,80,170,581,451
+Stanford Dataset/cars_train/cars_train/00007.jpg,train_00007,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,480,True,87,79,540,396
+Stanford Dataset/cars_train/cars_train/07787.jpg,train_07787,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,640,480,True,23,124,635,439
+Stanford Dataset/cars_train/cars_train/01722.jpg,train_01722,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,440,317,True,9,60,434,281
+Stanford Dataset/cars_train/cars_train/03330.jpg,train_03330,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,1600,1200,True,129,276,1266,858
+Stanford Dataset/cars_train/cars_train/06211.jpg,train_06211,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,640,480,True,116,52,512,438
+Stanford Dataset/cars_train/cars_train/04837.jpg,train_04837,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,1600,1200,True,39,72,1560,963
+Stanford Dataset/cars_train/cars_train/05481.jpg,train_05481,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,445,335,True,12,130,430,290
+Stanford Dataset/cars_train/cars_train/03980.jpg,train_03980,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,640,480,True,23,50,611,434
+Stanford Dataset/cars_train/cars_train/04442.jpg,train_04442,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,300,225,True,3,17,292,206
+Stanford Dataset/cars_train/cars_train/01560.jpg,train_01560,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,640,480,True,88,70,605,463
+Stanford Dataset/cars_train/cars_train/05917.jpg,train_05917,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,640,480,True,29,116,614,364
+Stanford Dataset/cars_train/cars_train/02404.jpg,train_02404,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,575,431,True,22,88,555,326
+Stanford Dataset/cars_train/cars_train/00452.jpg,train_00452,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,300,225,True,58,41,255,164
+Stanford Dataset/cars_train/cars_train/04062.jpg,train_04062,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,440,330,True,37,2,417,327
+Stanford Dataset/cars_train/cars_train/08093.jpg,train_08093,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,750,469,True,84,272,492,424
+Stanford Dataset/cars_train/cars_train/07117.jpg,train_07117,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,424,360,True,14,92,416,287
+Stanford Dataset/cars_train/cars_train/04706.jpg,train_04706,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,1024,682,True,143,75,830,662
+Stanford Dataset/cars_train/cars_train/07947.jpg,train_07947,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,480,True,91,86,592,382
+Stanford Dataset/cars_train/cars_train/04076.jpg,train_04076,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,800,533,True,40,51,756,489
+Stanford Dataset/cars_train/cars_train/07570.jpg,train_07570,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,514,223,True,49,49,468,206
+Stanford Dataset/cars_train/cars_train/04329.jpg,train_04329,val,99,FIAT 500 Convertible 2012,FIAT,500 Convertible,2012.0,640,400,True,126,169,475,336
+Stanford Dataset/cars_train/cars_train/05371.jpg,train_05371,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,800,533,True,160,103,797,414
+Stanford Dataset/cars_train/cars_train/04297.jpg,train_04297,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,1777,1333,True,230,327,1690,1123
+Stanford Dataset/cars_train/cars_train/06862.jpg,train_06862,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,600,350,True,27,84,576,308
+Stanford Dataset/cars_train/cars_train/02366.jpg,train_02366,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,700,381,True,46,75,555,374
+Stanford Dataset/cars_train/cars_train/04874.jpg,train_04874,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,160,120,True,8,0,151,102
+Stanford Dataset/cars_train/cars_train/01403.jpg,train_01403,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,424,360,True,15,40,398,299
+Stanford Dataset/cars_train/cars_train/07537.jpg,train_07537,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,262,193,True,46,64,248,179
+Stanford Dataset/cars_train/cars_train/06366.jpg,train_06366,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,640,480,True,28,210,618,409
+Stanford Dataset/cars_train/cars_train/04321.jpg,train_04321,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,700,336,True,97,14,629,293
+Stanford Dataset/cars_train/cars_train/07383.jpg,train_07383,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,260,260,True,18,99,244,171
+Stanford Dataset/cars_train/cars_train/07751.jpg,train_07751,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,646,396,True,138,147,472,332
+Stanford Dataset/cars_train/cars_train/04483.jpg,train_04483,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,880,380,True,135,1,759,378
+Stanford Dataset/cars_train/cars_train/05213.jpg,train_05213,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,1024,768,True,98,123,960,664
+Stanford Dataset/cars_train/cars_train/00009.jpg,train_00009,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,1280,843,True,19,125,1268,770
+Stanford Dataset/cars_train/cars_train/07835.jpg,train_07835,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,1500,938,True,258,70,1257,832
+Stanford Dataset/cars_train/cars_train/00268.jpg,train_00268,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,640,426,True,48,52,595,397
+Stanford Dataset/cars_train/cars_train/07317.jpg,train_07317,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,424,360,True,7,72,415,283
+Stanford Dataset/cars_train/cars_train/03050.jpg,train_03050,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,560,270,True,93,20,461,260
+Stanford Dataset/cars_train/cars_train/07560.jpg,train_07560,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,580,393,True,10,86,563,333
+Stanford Dataset/cars_train/cars_train/03088.jpg,train_03088,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,640,480,True,16,40,595,430
+Stanford Dataset/cars_train/cars_train/05723.jpg,train_05723,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,1024,768,True,36,73,993,614
+Stanford Dataset/cars_train/cars_train/04634.jpg,train_04634,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,301,205,True,24,54,290,186
+Stanford Dataset/cars_train/cars_train/02968.jpg,train_02968,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,1280,1024,True,61,376,1219,837
+Stanford Dataset/cars_train/cars_train/05164.jpg,train_05164,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,640,480,True,14,106,623,362
+Stanford Dataset/cars_train/cars_train/02553.jpg,train_02553,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,640,480,True,50,192,592,380
+Stanford Dataset/cars_train/cars_train/04575.jpg,train_04575,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,588,441,True,6,226,544,408
+Stanford Dataset/cars_train/cars_train/03358.jpg,train_03358,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,590,395,True,7,158,465,356
+Stanford Dataset/cars_train/cars_train/02974.jpg,train_02974,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,771,454,True,7,8,767,449
+Stanford Dataset/cars_train/cars_train/07769.jpg,train_07769,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,440,354,True,16,61,424,313
+Stanford Dataset/cars_train/cars_train/06962.jpg,train_06962,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,480,320,True,3,72,479,237
+Stanford Dataset/cars_train/cars_train/02057.jpg,train_02057,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,640,480,True,35,160,610,354
+Stanford Dataset/cars_train/cars_train/00174.jpg,train_00174,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,259,194,True,12,28,248,158
+Stanford Dataset/cars_train/cars_train/00893.jpg,train_00893,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,480,360,True,27,133,409,315
+Stanford Dataset/cars_train/cars_train/06047.jpg,train_06047,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,300,184,True,23,19,282,162
+Stanford Dataset/cars_train/cars_train/06177.jpg,train_06177,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,800,533,True,120,77,729,448
+Stanford Dataset/cars_train/cars_train/06393.jpg,train_06393,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,2592,1728,True,168,254,2491,1243
+Stanford Dataset/cars_train/cars_train/04092.jpg,train_04092,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,1024,768,True,136,102,908,666
+Stanford Dataset/cars_train/cars_train/04204.jpg,train_04204,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,640,480,True,26,72,634,424
+Stanford Dataset/cars_train/cars_train/07754.jpg,train_07754,val,41,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,2012.0,300,225,True,13,31,262,189
+Stanford Dataset/cars_train/cars_train/03722.jpg,train_03722,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,300,168,True,31,25,182,146
+Stanford Dataset/cars_train/cars_train/00166.jpg,train_00166,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,424,360,True,3,68,401,244
+Stanford Dataset/cars_train/cars_train/02101.jpg,train_02101,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,259,194,True,16,38,236,155
+Stanford Dataset/cars_train/cars_train/01196.jpg,train_01196,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,300,199,True,114,92,245,150
+Stanford Dataset/cars_train/cars_train/08036.jpg,train_08036,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,1024,768,True,40,391,983,718
+Stanford Dataset/cars_train/cars_train/06485.jpg,train_06485,val,9,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,2012.0,600,396,True,73,105,482,318
+Stanford Dataset/cars_train/cars_train/04286.jpg,train_04286,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,640,480,True,114,88,590,415
+Stanford Dataset/cars_train/cars_train/02442.jpg,train_02442,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,1024,768,True,62,152,991,647
+Stanford Dataset/cars_train/cars_train/03301.jpg,train_03301,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,1024,768,True,0,31,766,687
+Stanford Dataset/cars_train/cars_train/00420.jpg,train_00420,val,98,FIAT 500 Abarth 2012,FIAT,500 Abarth,2012.0,500,333,True,70,63,424,327
+Stanford Dataset/cars_train/cars_train/03256.jpg,train_03256,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,2576,1840,True,382,796,2406,1753
+Stanford Dataset/cars_train/cars_train/04692.jpg,train_04692,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,223,121,True,3,0,222,119
+Stanford Dataset/cars_train/cars_train/00305.jpg,train_00305,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,200,134,True,36,20,168,121
+Stanford Dataset/cars_train/cars_train/06487.jpg,train_06487,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,640,480,True,23,31,608,396
+Stanford Dataset/cars_train/cars_train/03041.jpg,train_03041,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,630,378,True,15,68,605,322
+Stanford Dataset/cars_train/cars_train/04219.jpg,train_04219,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,640,480,True,33,107,594,409
+Stanford Dataset/cars_train/cars_train/05147.jpg,train_05147,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,588,392,True,52,113,576,298
+Stanford Dataset/cars_train/cars_train/07312.jpg,train_07312,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,300,198,True,2,30,298,179
+Stanford Dataset/cars_train/cars_train/03481.jpg,train_03481,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,575,558,True,29,64,544,505
+Stanford Dataset/cars_train/cars_train/07782.jpg,train_07782,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,480,360,True,4,22,473,323
+Stanford Dataset/cars_train/cars_train/01036.jpg,train_01036,val,26,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,2012.0,275,183,True,23,49,257,170
+Stanford Dataset/cars_train/cars_train/05076.jpg,train_05076,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,300,187,True,38,72,260,136
+Stanford Dataset/cars_train/cars_train/02906.jpg,train_02906,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,640,480,True,53,76,602,384
+Stanford Dataset/cars_train/cars_train/07511.jpg,train_07511,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,1600,1067,True,13,269,1592,894
+Stanford Dataset/cars_train/cars_train/06086.jpg,train_06086,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,500,330,True,30,111,476,270
+Stanford Dataset/cars_train/cars_train/08054.jpg,train_08054,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,576,352,True,30,70,540,283
+Stanford Dataset/cars_train/cars_train/06660.jpg,train_06660,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,600,401,True,45,85,556,286
+Stanford Dataset/cars_train/cars_train/00766.jpg,train_00766,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,575,314,True,17,91,531,296
+Stanford Dataset/cars_train/cars_train/00825.jpg,train_00825,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,460,345,True,2,56,454,286
+Stanford Dataset/cars_train/cars_train/06977.jpg,train_06977,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,640,480,True,82,130,535,367
+Stanford Dataset/cars_train/cars_train/05064.jpg,train_05064,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,562,421,True,84,78,529,400
+Stanford Dataset/cars_train/cars_train/01996.jpg,train_01996,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,888,498,True,127,125,766,436
+Stanford Dataset/cars_train/cars_train/06292.jpg,train_06292,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,1024,768,True,35,184,989,628
+Stanford Dataset/cars_train/cars_train/02804.jpg,train_02804,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,500,375,True,55,159,475,342
+Stanford Dataset/cars_train/cars_train/00232.jpg,train_00232,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,600,444,True,14,109,543,380
+Stanford Dataset/cars_train/cars_train/01736.jpg,train_01736,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,434,326,True,19,55,418,264
+Stanford Dataset/cars_train/cars_train/02042.jpg,train_02042,val,26,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,2012.0,1920,1200,True,180,123,1779,1056
+Stanford Dataset/cars_train/cars_train/05643.jpg,train_05643,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,259,194,True,8,32,252,173
+Stanford Dataset/cars_train/cars_train/06695.jpg,train_06695,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,220,152,True,3,36,219,118
+Stanford Dataset/cars_train/cars_train/04639.jpg,train_04639,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,259,194,True,23,89,245,187
+Stanford Dataset/cars_train/cars_train/05983.jpg,train_05983,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,500,285,True,26,51,476,284
+Stanford Dataset/cars_train/cars_train/06193.jpg,train_06193,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,300,224,True,33,122,266,208
+Stanford Dataset/cars_train/cars_train/05287.jpg,train_05287,val,151,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,2012.0,300,183,True,109,74,271,150
+Stanford Dataset/cars_train/cars_train/05284.jpg,train_05284,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,300,199,True,14,12,293,194
+Stanford Dataset/cars_train/cars_train/07148.jpg,train_07148,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,480,360,True,7,49,474,328
+Stanford Dataset/cars_train/cars_train/05881.jpg,train_05881,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,280,140,True,1,6,272,132
+Stanford Dataset/cars_train/cars_train/04661.jpg,train_04661,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,1024,687,True,71,302,845,635
+Stanford Dataset/cars_train/cars_train/06121.jpg,train_06121,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,200,150,True,4,36,175,105
+Stanford Dataset/cars_train/cars_train/00066.jpg,train_00066,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,259,194,True,29,38,220,124
+Stanford Dataset/cars_train/cars_train/05514.jpg,train_05514,val,25,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,2012.0,600,450,True,78,75,489,379
+Stanford Dataset/cars_train/cars_train/00279.jpg,train_00279,val,46,Buick Regal GS 2012,Buick,Regal GS,2012.0,576,352,True,15,30,552,296
+Stanford Dataset/cars_train/cars_train/03230.jpg,train_03230,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,3474,1560,True,35,121,3432,1517
+Stanford Dataset/cars_train/cars_train/00533.jpg,train_00533,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,500,312,True,39,67,486,262
+Stanford Dataset/cars_train/cars_train/02108.jpg,train_02108,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,1024,577,True,52,121,992,552
+Stanford Dataset/cars_train/cars_train/04330.jpg,train_04330,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,1024,768,True,71,84,985,645
+Stanford Dataset/cars_train/cars_train/02252.jpg,train_02252,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,300,207,True,34,52,271,189
+Stanford Dataset/cars_train/cars_train/04010.jpg,train_04010,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,1024,683,True,90,131,929,654
+Stanford Dataset/cars_train/cars_train/04620.jpg,train_04620,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,520,390,True,29,182,502,382
+Stanford Dataset/cars_train/cars_train/04669.jpg,train_04669,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,512,384,True,60,97,457,375
+Stanford Dataset/cars_train/cars_train/00655.jpg,train_00655,val,174,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,2012.0,1024,768,True,81,184,927,578
+Stanford Dataset/cars_train/cars_train/06591.jpg,train_06591,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,259,195,True,37,42,224,155
+Stanford Dataset/cars_train/cars_train/05602.jpg,train_05602,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,424,360,True,27,45,382,314
+Stanford Dataset/cars_train/cars_train/00598.jpg,train_00598,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,300,221,True,24,83,279,197
+Stanford Dataset/cars_train/cars_train/03359.jpg,train_03359,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,480,360,True,16,41,468,343
+Stanford Dataset/cars_train/cars_train/07533.jpg,train_07533,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,259,194,True,37,56,219,152
+Stanford Dataset/cars_train/cars_train/04154.jpg,train_04154,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,640,480,True,13,109,618,431
+Stanford Dataset/cars_train/cars_train/05285.jpg,train_05285,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,640,480,True,66,101,563,367
+Stanford Dataset/cars_train/cars_train/03674.jpg,train_03674,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,2652,1484,True,63,74,2623,1391
+Stanford Dataset/cars_train/cars_train/03808.jpg,train_03808,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,640,480,True,102,233,598,401
+Stanford Dataset/cars_train/cars_train/01266.jpg,train_01266,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,600,450,True,19,86,599,390
+Stanford Dataset/cars_train/cars_train/05270.jpg,train_05270,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,1024,768,True,84,106,937,607
+Stanford Dataset/cars_train/cars_train/08109.jpg,train_08109,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,450,300,True,51,134,421,283
+Stanford Dataset/cars_train/cars_train/06945.jpg,train_06945,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,1024,683,True,101,190,972,558
+Stanford Dataset/cars_train/cars_train/06416.jpg,train_06416,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,540,295,True,64,14,467,263
+Stanford Dataset/cars_train/cars_train/01944.jpg,train_01944,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,300,225,True,16,53,287,188
+Stanford Dataset/cars_train/cars_train/01098.jpg,train_01098,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1200,800,True,36,314,1180,726
+Stanford Dataset/cars_train/cars_train/03663.jpg,train_03663,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,800,600,True,69,236,708,566
+Stanford Dataset/cars_train/cars_train/03704.jpg,train_03704,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,1024,768,True,90,67,933,601
+Stanford Dataset/cars_train/cars_train/02407.jpg,train_02407,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,259,194,True,48,41,199,166
+Stanford Dataset/cars_train/cars_train/02881.jpg,train_02881,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,264,176,True,27,7,244,170
+Stanford Dataset/cars_train/cars_train/04797.jpg,train_04797,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,196,146,True,3,12,188,131
+Stanford Dataset/cars_train/cars_train/02988.jpg,train_02988,val,46,Buick Regal GS 2012,Buick,Regal GS,2012.0,1000,650,True,33,286,567,583
+Stanford Dataset/cars_train/cars_train/01397.jpg,train_01397,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,640,480,True,40,38,601,455
+Stanford Dataset/cars_train/cars_train/04138.jpg,train_04138,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,259,194,True,29,47,221,143
+Stanford Dataset/cars_train/cars_train/07014.jpg,train_07014,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,259,194,True,37,31,242,166
+Stanford Dataset/cars_train/cars_train/05153.jpg,train_05153,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,640,450,True,27,93,613,388
+Stanford Dataset/cars_train/cars_train/00519.jpg,train_00519,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,264,198,True,6,38,253,176
+Stanford Dataset/cars_train/cars_train/00360.jpg,train_00360,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,259,194,True,11,22,244,175
+Stanford Dataset/cars_train/cars_train/00365.jpg,train_00365,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,666,500,True,16,81,629,495
+Stanford Dataset/cars_train/cars_train/02679.jpg,train_02679,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,400,300,True,31,50,359,261
+Stanford Dataset/cars_train/cars_train/01867.jpg,train_01867,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,580,290,True,107,7,465,267
+Stanford Dataset/cars_train/cars_train/03770.jpg,train_03770,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,612,405,True,35,80,563,338
+Stanford Dataset/cars_train/cars_train/01588.jpg,train_01588,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,630,378,True,20,76,589,338
+Stanford Dataset/cars_train/cars_train/01532.jpg,train_01532,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,700,500,True,75,36,651,499
+Stanford Dataset/cars_train/cars_train/03820.jpg,train_03820,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1280,782,True,32,24,1236,720
+Stanford Dataset/cars_train/cars_train/02172.jpg,train_02172,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,259,194,True,48,48,202,163
+Stanford Dataset/cars_train/cars_train/03430.jpg,train_03430,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,1600,1200,True,27,180,1584,960
+Stanford Dataset/cars_train/cars_train/02064.jpg,train_02064,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,300,225,True,1,21,295,198
+Stanford Dataset/cars_train/cars_train/02150.jpg,train_02150,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,600,400,True,54,81,563,337
+Stanford Dataset/cars_train/cars_train/00818.jpg,train_00818,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,730,545,True,56,219,672,467
+Stanford Dataset/cars_train/cars_train/01517.jpg,train_01517,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,1200,800,True,130,260,1070,732
+Stanford Dataset/cars_train/cars_train/06836.jpg,train_06836,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,440,317,True,9,121,431,242
+Stanford Dataset/cars_train/cars_train/02656.jpg,train_02656,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,250,187,True,37,29,239,137
+Stanford Dataset/cars_train/cars_train/03048.jpg,train_03048,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,450,225,True,39,26,390,204
+Stanford Dataset/cars_train/cars_train/00581.jpg,train_00581,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,1280,863,True,309,321,1120,690
+Stanford Dataset/cars_train/cars_train/00304.jpg,train_00304,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,264,191,True,13,28,234,167
+Stanford Dataset/cars_train/cars_train/04478.jpg,train_04478,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,259,194,True,20,65,250,173
+Stanford Dataset/cars_train/cars_train/01708.jpg,train_01708,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,448,298,True,79,168,365,253
+Stanford Dataset/cars_train/cars_train/01210.jpg,train_01210,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,640,480,True,18,122,617,353
+Stanford Dataset/cars_train/cars_train/01393.jpg,train_01393,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,519,390,True,3,117,518,320
+Stanford Dataset/cars_train/cars_train/03264.jpg,train_03264,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,1600,1200,True,162,318,1587,1026
+Stanford Dataset/cars_train/cars_train/07483.jpg,train_07483,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,800,600,True,42,159,773,540
+Stanford Dataset/cars_train/cars_train/06749.jpg,train_06749,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,1024,768,True,67,86,908,630
+Stanford Dataset/cars_train/cars_train/01709.jpg,train_01709,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,640,425,True,235,132,471,318
+Stanford Dataset/cars_train/cars_train/01637.jpg,train_01637,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,550,343,True,77,104,497,254
+Stanford Dataset/cars_train/cars_train/01605.jpg,train_01605,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,259,194,True,29,28,215,149
+Stanford Dataset/cars_train/cars_train/06765.jpg,train_06765,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,800,600,True,30,85,757,500
+Stanford Dataset/cars_train/cars_train/00840.jpg,train_00840,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,700,407,True,104,103,625,311
+Stanford Dataset/cars_train/cars_train/06978.jpg,train_06978,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,1024,768,True,40,104,972,605
+Stanford Dataset/cars_train/cars_train/05269.jpg,train_05269,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,275,183,True,39,9,240,161
+Stanford Dataset/cars_train/cars_train/01516.jpg,train_01516,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,259,194,True,23,46,238,159
+Stanford Dataset/cars_train/cars_train/03472.jpg,train_03472,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,724,1023,True,66,481,637,900
+Stanford Dataset/cars_train/cars_train/04216.jpg,train_04216,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,300,189,True,29,80,273,162
+Stanford Dataset/cars_train/cars_train/07408.jpg,train_07408,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,440,275,True,87,110,320,221
+Stanford Dataset/cars_train/cars_train/02483.jpg,train_02483,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,400,300,True,16,32,388,280
+Stanford Dataset/cars_train/cars_train/06220.jpg,train_06220,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,259,194,True,2,42,258,177
+Stanford Dataset/cars_train/cars_train/05406.jpg,train_05406,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,300,225,True,2,24,294,213
+Stanford Dataset/cars_train/cars_train/03924.jpg,train_03924,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,1024,768,True,146,50,895,685
+Stanford Dataset/cars_train/cars_train/03495.jpg,train_03495,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,640,480,True,82,145,604,437
+Stanford Dataset/cars_train/cars_train/00962.jpg,train_00962,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,1500,938,True,188,63,1362,882
+Stanford Dataset/cars_train/cars_train/04827.jpg,train_04827,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,310,233,True,6,3,276,179
+Stanford Dataset/cars_train/cars_train/07654.jpg,train_07654,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,888,592,True,0,143,884,545
+Stanford Dataset/cars_train/cars_train/06921.jpg,train_06921,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,276,183,True,11,57,247,149
+Stanford Dataset/cars_train/cars_train/04404.jpg,train_04404,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,320,240,True,36,41,289,200
+Stanford Dataset/cars_train/cars_train/07969.jpg,train_07969,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,1024,681,True,172,138,959,575
+Stanford Dataset/cars_train/cars_train/01130.jpg,train_01130,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,640,427,True,107,227,557,414
+Stanford Dataset/cars_train/cars_train/01421.jpg,train_01421,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,600,269,True,3,16,592,268
+Stanford Dataset/cars_train/cars_train/04414.jpg,train_04414,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,259,194,True,7,47,248,162
+Stanford Dataset/cars_train/cars_train/01514.jpg,train_01514,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,500,333,True,17,58,443,291
+Stanford Dataset/cars_train/cars_train/05868.jpg,train_05868,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,300,212,True,45,75,251,167
+Stanford Dataset/cars_train/cars_train/06827.jpg,train_06827,val,141,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,2011.0,470,265,True,31,16,426,249
+Stanford Dataset/cars_train/cars_train/06762.jpg,train_06762,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,259,194,True,22,23,236,176
+Stanford Dataset/cars_train/cars_train/02604.jpg,train_02604,val,174,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,2012.0,300,204,True,33,3,263,194
+Stanford Dataset/cars_train/cars_train/06704.jpg,train_06704,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,680,368,True,171,136,500,357
+Stanford Dataset/cars_train/cars_train/01361.jpg,train_01361,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,300,183,True,73,72,238,157
+Stanford Dataset/cars_train/cars_train/04560.jpg,train_04560,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,480,360,True,32,64,452,302
+Stanford Dataset/cars_train/cars_train/01951.jpg,train_01951,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,687,519,True,54,48,668,293
+Stanford Dataset/cars_train/cars_train/02818.jpg,train_02818,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,640,480,True,31,40,613,439
+Stanford Dataset/cars_train/cars_train/01369.jpg,train_01369,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,259,194,True,68,35,258,154
+Stanford Dataset/cars_train/cars_train/05133.jpg,train_05133,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,300,199,True,36,71,280,186
+Stanford Dataset/cars_train/cars_train/04711.jpg,train_04711,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,640,480,True,44,113,556,372
+Stanford Dataset/cars_train/cars_train/04546.jpg,train_04546,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,1024,640,True,368,250,944,528
+Stanford Dataset/cars_train/cars_train/07053.jpg,train_07053,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,217,130,True,48,33,189,108
+Stanford Dataset/cars_train/cars_train/07999.jpg,train_07999,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,640,480,True,0,95,630,362
+Stanford Dataset/cars_train/cars_train/05124.jpg,train_05124,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,640,480,True,25,146,628,385
+Stanford Dataset/cars_train/cars_train/07139.jpg,train_07139,val,63,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,2007.0,625,469,True,0,19,624,383
+Stanford Dataset/cars_train/cars_train/05392.jpg,train_05392,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,259,194,True,3,20,235,159
+Stanford Dataset/cars_train/cars_train/02991.jpg,train_02991,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,200,150,True,7,33,181,101
+Stanford Dataset/cars_train/cars_train/01522.jpg,train_01522,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,275,183,True,15,55,257,172
+Stanford Dataset/cars_train/cars_train/04056.jpg,train_04056,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,720,303,True,27,47,662,301
+Stanford Dataset/cars_train/cars_train/06908.jpg,train_06908,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,350,263,True,36,31,336,239
+Stanford Dataset/cars_train/cars_train/02971.jpg,train_02971,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,233,175,True,4,17,227,174
+Stanford Dataset/cars_train/cars_train/06351.jpg,train_06351,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,1200,900,True,2,9,1181,880
+Stanford Dataset/cars_train/cars_train/01413.jpg,train_01413,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,300,199,True,23,45,289,187
+Stanford Dataset/cars_train/cars_train/04901.jpg,train_04901,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,700,467,True,144,75,580,352
+Stanford Dataset/cars_train/cars_train/02723.jpg,train_02723,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,400,200,True,0,20,399,175
+Stanford Dataset/cars_train/cars_train/05491.jpg,train_05491,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,215,121,True,0,12,188,120
+Stanford Dataset/cars_train/cars_train/06280.jpg,train_06280,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,429,262,True,25,16,395,256
+Stanford Dataset/cars_train/cars_train/03183.jpg,train_03183,val,140,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,2012.0,800,534,True,67,174,783,491
+Stanford Dataset/cars_train/cars_train/05822.jpg,train_05822,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,640,480,True,47,128,576,384
+Stanford Dataset/cars_train/cars_train/07332.jpg,train_07332,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,950,582,True,33,71,918,553
+Stanford Dataset/cars_train/cars_train/00912.jpg,train_00912,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,623,389,True,81,32,541,233
+Stanford Dataset/cars_train/cars_train/03899.jpg,train_03899,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,794,584,True,89,64,720,502
+Stanford Dataset/cars_train/cars_train/02989.jpg,train_02989,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,2100,1386,True,584,348,1516,1136
+Stanford Dataset/cars_train/cars_train/03554.jpg,train_03554,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,259,194,True,21,83,251,167
+Stanford Dataset/cars_train/cars_train/03756.jpg,train_03756,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,480,360,True,25,97,427,308
+Stanford Dataset/cars_train/cars_train/01059.jpg,train_01059,val,25,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,2012.0,600,472,True,24,111,578,288
+Stanford Dataset/cars_train/cars_train/00621.jpg,train_00621,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,800,535,True,9,27,790,519
+Stanford Dataset/cars_train/cars_train/04900.jpg,train_04900,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,640,346,True,110,22,526,314
+Stanford Dataset/cars_train/cars_train/04522.jpg,train_04522,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,600,402,True,32,80,579,332
+Stanford Dataset/cars_train/cars_train/05399.jpg,train_05399,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,700,467,True,67,101,462,429
+Stanford Dataset/cars_train/cars_train/02289.jpg,train_02289,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,259,194,True,53,18,232,146
+Stanford Dataset/cars_train/cars_train/03825.jpg,train_03825,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,735,278,True,158,0,553,258
+Stanford Dataset/cars_train/cars_train/02382.jpg,train_02382,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,640,480,True,0,130,630,364
+Stanford Dataset/cars_train/cars_train/04135.jpg,train_04135,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,1024,768,True,54,129,988,712
+Stanford Dataset/cars_train/cars_train/00979.jpg,train_00979,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,1024,768,True,36,125,962,733
+Stanford Dataset/cars_train/cars_train/06098.jpg,train_06098,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,607,456,True,19,60,587,375
+Stanford Dataset/cars_train/cars_train/01540.jpg,train_01540,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,192,140,True,8,26,186,119
+Stanford Dataset/cars_train/cars_train/06498.jpg,train_06498,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,400,266,True,38,90,379,233
+Stanford Dataset/cars_train/cars_train/07824.jpg,train_07824,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,640,425,True,24,100,614,296
+Stanford Dataset/cars_train/cars_train/06115.jpg,train_06115,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,600,350,True,74,2,531,349
+Stanford Dataset/cars_train/cars_train/02546.jpg,train_02546,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,259,194,True,11,39,250,166
+Stanford Dataset/cars_train/cars_train/04894.jpg,train_04894,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,400,200,True,55,10,345,185
+Stanford Dataset/cars_train/cars_train/03928.jpg,train_03928,val,40,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,2011.0,275,183,True,0,45,272,167
+Stanford Dataset/cars_train/cars_train/06829.jpg,train_06829,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,586,391,True,27,35,569,284
+Stanford Dataset/cars_train/cars_train/04055.jpg,train_04055,val,99,FIAT 500 Convertible 2012,FIAT,500 Convertible,2012.0,800,500,True,199,146,614,464
+Stanford Dataset/cars_train/cars_train/04519.jpg,train_04519,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,300,168,True,41,38,253,142
+Stanford Dataset/cars_train/cars_train/02888.jpg,train_02888,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,250,188,True,45,45,192,159
+Stanford Dataset/cars_train/cars_train/01787.jpg,train_01787,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,107,80,True,10,25,97,67
+Stanford Dataset/cars_train/cars_train/00717.jpg,train_00717,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,640,480,True,20,30,608,358
+Stanford Dataset/cars_train/cars_train/00451.jpg,train_00451,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,623,389,True,65,89,506,384
+Stanford Dataset/cars_train/cars_train/07308.jpg,train_07308,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,300,225,True,24,39,268,208
+Stanford Dataset/cars_train/cars_train/07886.jpg,train_07886,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,750,469,True,69,99,656,323
+Stanford Dataset/cars_train/cars_train/06309.jpg,train_06309,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,480,320,True,24,54,455,278
+Stanford Dataset/cars_train/cars_train/04085.jpg,train_04085,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,1200,800,True,102,360,1074,718
+Stanford Dataset/cars_train/cars_train/04878.jpg,train_04878,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,1200,868,True,50,98,1159,753
+Stanford Dataset/cars_train/cars_train/03451.jpg,train_03451,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,495,320,True,36,30,440,317
+Stanford Dataset/cars_train/cars_train/02785.jpg,train_02785,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,1024,768,True,23,54,981,568
+Stanford Dataset/cars_train/cars_train/06183.jpg,train_06183,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,600,400,True,104,90,527,337
+Stanford Dataset/cars_train/cars_train/03206.jpg,train_03206,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,640,425,True,137,44,601,286
+Stanford Dataset/cars_train/cars_train/01151.jpg,train_01151,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,300,225,True,31,47,271,195
+Stanford Dataset/cars_train/cars_train/05369.jpg,train_05369,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,480,360,True,26,41,456,341
+Stanford Dataset/cars_train/cars_train/03844.jpg,train_03844,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,590,447,True,58,175,548,415
+Stanford Dataset/cars_train/cars_train/04071.jpg,train_04071,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,924,693,True,80,156,861,598
+Stanford Dataset/cars_train/cars_train/03667.jpg,train_03667,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,275,183,True,25,19,250,162
+Stanford Dataset/cars_train/cars_train/02705.jpg,train_02705,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,175,148,True,11,30,156,115
+Stanford Dataset/cars_train/cars_train/00031.jpg,train_00031,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,1024,768,True,54,317,445,563
+Stanford Dataset/cars_train/cars_train/04004.jpg,train_04004,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,420,315,True,17,67,394,227
+Stanford Dataset/cars_train/cars_train/02619.jpg,train_02619,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,680,451,True,3,88,679,378
+Stanford Dataset/cars_train/cars_train/01011.jpg,train_01011,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,623,389,True,247,146,553,322
+Stanford Dataset/cars_train/cars_train/00444.jpg,train_00444,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,808,295,True,3,3,376,276
+Stanford Dataset/cars_train/cars_train/00640.jpg,train_00640,val,149,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,2008.0,608,455,True,32,176,582,421
+Stanford Dataset/cars_train/cars_train/05853.jpg,train_05853,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,260,194,True,2,81,259,175
+Stanford Dataset/cars_train/cars_train/01088.jpg,train_01088,val,158,Mazda Tribute SUV 2011,Mazda,Tribute SUV,2011.0,480,360,True,69,56,428,266
+Stanford Dataset/cars_train/cars_train/03127.jpg,train_03127,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,480,360,True,24,55,449,315
+Stanford Dataset/cars_train/cars_train/03347.jpg,train_03347,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,507,297,True,151,114,468,226
+Stanford Dataset/cars_train/cars_train/04019.jpg,train_04019,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,640,400,True,39,15,606,379
+Stanford Dataset/cars_train/cars_train/04285.jpg,train_04285,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,259,194,True,5,29,252,151
+Stanford Dataset/cars_train/cars_train/06028.jpg,train_06028,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,1857,954,True,38,76,1789,918
+Stanford Dataset/cars_train/cars_train/04061.jpg,train_04061,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,259,194,True,11,47,251,168
+Stanford Dataset/cars_train/cars_train/06502.jpg,train_06502,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,150,112,True,8,23,133,101
+Stanford Dataset/cars_train/cars_train/07338.jpg,train_07338,val,46,Buick Regal GS 2012,Buick,Regal GS,2012.0,1200,840,True,151,376,1086,802
+Stanford Dataset/cars_train/cars_train/03470.jpg,train_03470,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,700,500,True,15,90,675,399
+Stanford Dataset/cars_train/cars_train/03827.jpg,train_03827,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,1600,1200,True,39,87,1596,1026
+Stanford Dataset/cars_train/cars_train/03254.jpg,train_03254,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,500,332,True,200,153,446,303
+Stanford Dataset/cars_train/cars_train/01664.jpg,train_01664,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,500,279,True,20,15,492,261
+Stanford Dataset/cars_train/cars_train/00016.jpg,train_00016,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,640,480,True,26,48,610,395
+Stanford Dataset/cars_train/cars_train/07651.jpg,train_07651,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,640,480,True,54,110,599,419
+Stanford Dataset/cars_train/cars_train/01839.jpg,train_01839,val,25,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,2012.0,1100,566,True,123,42,954,405
+Stanford Dataset/cars_train/cars_train/05542.jpg,train_05542,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,630,362,True,33,85,596,279
+Stanford Dataset/cars_train/cars_train/07831.jpg,train_07831,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,259,194,True,3,33,249,147
+Stanford Dataset/cars_train/cars_train/03977.jpg,train_03977,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,640,480,True,22,142,630,386
+Stanford Dataset/cars_train/cars_train/07943.jpg,train_07943,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,433,280,True,12,74,420,242
+Stanford Dataset/cars_train/cars_train/06331.jpg,train_06331,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,751,320,True,251,18,493,297
+Stanford Dataset/cars_train/cars_train/00170.jpg,train_00170,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,640,480,True,47,70,614,452
+Stanford Dataset/cars_train/cars_train/02745.jpg,train_02745,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,1280,734,True,190,144,759,613
+Stanford Dataset/cars_train/cars_train/07919.jpg,train_07919,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,625,468,True,0,1,475,414
+Stanford Dataset/cars_train/cars_train/05430.jpg,train_05430,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,300,199,True,36,120,286,191
+Stanford Dataset/cars_train/cars_train/05046.jpg,train_05046,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,1600,1200,True,186,336,1437,861
+Stanford Dataset/cars_train/cars_train/05989.jpg,train_05989,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,1024,768,True,48,171,981,680
+Stanford Dataset/cars_train/cars_train/01903.jpg,train_01903,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,1600,1200,True,153,276,1452,978
+Stanford Dataset/cars_train/cars_train/01412.jpg,train_01412,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,750,499,True,40,70,553,457
+Stanford Dataset/cars_train/cars_train/03421.jpg,train_03421,val,44,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,2009.0,640,426,True,47,71,589,377
+Stanford Dataset/cars_train/cars_train/01390.jpg,train_01390,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,259,194,True,15,23,247,187
+Stanford Dataset/cars_train/cars_train/03896.jpg,train_03896,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,400,300,True,40,51,345,235
+Stanford Dataset/cars_train/cars_train/02633.jpg,train_02633,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,424,360,True,0,55,401,250
+Stanford Dataset/cars_train/cars_train/05618.jpg,train_05618,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,1600,957,True,139,172,1357,761
+Stanford Dataset/cars_train/cars_train/00432.jpg,train_00432,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,500,375,True,53,127,428,352
+Stanford Dataset/cars_train/cars_train/01423.jpg,train_01423,val,26,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,2012.0,640,480,True,50,114,605,398
+Stanford Dataset/cars_train/cars_train/07181.jpg,train_07181,val,135,Hyundai Accent Sedan 2012,Hyundai,Accent Sedan,2012.0,300,300,True,8,67,297,226
+Stanford Dataset/cars_train/cars_train/07300.jpg,train_07300,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,1024,768,True,60,205,995,620
+Stanford Dataset/cars_train/cars_train/05432.jpg,train_05432,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,1024,768,True,92,134,912,678
+Stanford Dataset/cars_train/cars_train/01817.jpg,train_01817,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,460,311,True,31,13,436,286
+Stanford Dataset/cars_train/cars_train/08005.jpg,train_08005,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,600,399,True,130,123,536,328
+Stanford Dataset/cars_train/cars_train/07622.jpg,train_07622,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,562,420,True,65,137,485,325
+Stanford Dataset/cars_train/cars_train/08074.jpg,train_08074,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,1600,1067,True,69,501,976,950
+Stanford Dataset/cars_train/cars_train/05438.jpg,train_05438,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,480,360,True,14,141,460,295
+Stanford Dataset/cars_train/cars_train/04241.jpg,train_04241,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,1280,782,True,57,139,1208,669
+Stanford Dataset/cars_train/cars_train/00615.jpg,train_00615,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,1024,768,True,75,134,964,664
+Stanford Dataset/cars_train/cars_train/02291.jpg,train_02291,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,640,480,True,16,52,606,442
+Stanford Dataset/cars_train/cars_train/03017.jpg,train_03017,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,1024,768,True,31,117,987,708
+Stanford Dataset/cars_train/cars_train/06876.jpg,train_06876,val,70,Chevrolet Express Van 2007,Chevrolet,Express Van,2007.0,480,360,True,7,35,454,317
+Stanford Dataset/cars_train/cars_train/07125.jpg,train_07125,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,1600,1200,True,108,195,1482,1086
+Stanford Dataset/cars_train/cars_train/03705.jpg,train_03705,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,625,468,True,35,92,480,343
+Stanford Dataset/cars_train/cars_train/05657.jpg,train_05657,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,96,72,True,4,7,90,58
+Stanford Dataset/cars_train/cars_train/01193.jpg,train_01193,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,320,160,True,4,18,319,138
+Stanford Dataset/cars_train/cars_train/01699.jpg,train_01699,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,264,198,True,18,17,253,197
+Stanford Dataset/cars_train/cars_train/05108.jpg,train_05108,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,300,153,True,4,14,297,138
+Stanford Dataset/cars_train/cars_train/03201.jpg,train_03201,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,625,416,True,133,161,501,353
+Stanford Dataset/cars_train/cars_train/06713.jpg,train_06713,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,468,314,True,27,83,452,281
+Stanford Dataset/cars_train/cars_train/05344.jpg,train_05344,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,1280,782,True,49,327,776,724
+Stanford Dataset/cars_train/cars_train/02932.jpg,train_02932,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,800,533,True,89,0,798,525
+Stanford Dataset/cars_train/cars_train/03622.jpg,train_03622,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1024,768,True,25,301,804,561
+Stanford Dataset/cars_train/cars_train/06637.jpg,train_06637,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,400,300,True,0,132,399,284
+Stanford Dataset/cars_train/cars_train/04852.jpg,train_04852,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,1024,766,True,48,151,942,620
+Stanford Dataset/cars_train/cars_train/04471.jpg,train_04471,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,2048,1536,True,12,492,1943,1394
+Stanford Dataset/cars_train/cars_train/01760.jpg,train_01760,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,212,159,True,37,30,179,111
+Stanford Dataset/cars_train/cars_train/05849.jpg,train_05849,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1600,1066,True,207,322,1278,886
+Stanford Dataset/cars_train/cars_train/06054.jpg,train_06054,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,300,166,True,7,11,293,159
+Stanford Dataset/cars_train/cars_train/00995.jpg,train_00995,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,1024,681,True,74,185,595,570
+Stanford Dataset/cars_train/cars_train/03743.jpg,train_03743,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,590,442,True,15,46,556,316
+Stanford Dataset/cars_train/cars_train/01632.jpg,train_01632,val,151,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,2012.0,586,421,True,117,52,216,229
+Stanford Dataset/cars_train/cars_train/06705.jpg,train_06705,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,300,128,True,58,24,259,126
+Stanford Dataset/cars_train/cars_train/07017.jpg,train_07017,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,400,266,True,11,51,390,230
+Stanford Dataset/cars_train/cars_train/00083.jpg,train_00083,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,300,225,True,54,47,293,204
+Stanford Dataset/cars_train/cars_train/06982.jpg,train_06982,val,141,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,2011.0,1280,850,True,87,121,1199,771
+Stanford Dataset/cars_train/cars_train/06491.jpg,train_06491,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,440,330,True,5,65,408,277
+Stanford Dataset/cars_train/cars_train/08050.jpg,train_08050,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,640,480,True,78,190,594,475
+Stanford Dataset/cars_train/cars_train/01653.jpg,train_01653,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,275,183,True,5,29,269,161
+Stanford Dataset/cars_train/cars_train/07403.jpg,train_07403,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,1600,1200,True,126,147,1443,930
+Stanford Dataset/cars_train/cars_train/00891.jpg,train_00891,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,1280,850,True,92,105,1159,798
+Stanford Dataset/cars_train/cars_train/07920.jpg,train_07920,val,140,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,2012.0,376,282,True,9,121,370,255
+Stanford Dataset/cars_train/cars_train/01256.jpg,train_01256,val,70,Chevrolet Express Van 2007,Chevrolet,Express Van,2007.0,285,213,True,7,27,278,200
+Stanford Dataset/cars_train/cars_train/05646.jpg,train_05646,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,308,163,True,25,29,294,146
+Stanford Dataset/cars_train/cars_train/01584.jpg,train_01584,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,1600,1200,True,150,336,1314,1062
+Stanford Dataset/cars_train/cars_train/07472.jpg,train_07472,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,1200,803,True,132,201,1004,721
+Stanford Dataset/cars_train/cars_train/05040.jpg,train_05040,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,986,603,True,380,292,862,511
+Stanford Dataset/cars_train/cars_train/02269.jpg,train_02269,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,2048,1536,True,12,123,1966,1463
+Stanford Dataset/cars_train/cars_train/02667.jpg,train_02667,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,800,600,True,0,26,798,599
+Stanford Dataset/cars_train/cars_train/01503.jpg,train_01503,val,140,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,2012.0,727,344,True,83,78,667,312
+Stanford Dataset/cars_train/cars_train/01343.jpg,train_01343,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,900,540,True,59,143,777,462
+Stanford Dataset/cars_train/cars_train/00597.jpg,train_00597,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,640,480,True,61,161,606,457
+Stanford Dataset/cars_train/cars_train/05317.jpg,train_05317,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,520,345,True,34,63,486,305
+Stanford Dataset/cars_train/cars_train/03955.jpg,train_03955,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,215,121,True,17,30,214,110
+Stanford Dataset/cars_train/cars_train/04466.jpg,train_04466,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,260,194,True,16,40,234,145
+Stanford Dataset/cars_train/cars_train/08124.jpg,train_08124,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,385,241,True,9,53,373,211
+Stanford Dataset/cars_train/cars_train/07363.jpg,train_07363,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,655,411,True,30,30,560,323
+Stanford Dataset/cars_train/cars_train/00209.jpg,train_00209,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,1000,667,True,57,135,972,635
+Stanford Dataset/cars_train/cars_train/06127.jpg,train_06127,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,640,480,True,73,95,571,393
+Stanford Dataset/cars_train/cars_train/06674.jpg,train_06674,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,424,360,True,75,177,352,327
+Stanford Dataset/cars_train/cars_train/04109.jpg,train_04109,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,480,320,True,20,39,444,294
+Stanford Dataset/cars_train/cars_train/04545.jpg,train_04545,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,1200,668,True,94,97,1131,588
+Stanford Dataset/cars_train/cars_train/03177.jpg,train_03177,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,720,538,True,104,83,650,471
+Stanford Dataset/cars_train/cars_train/05396.jpg,train_05396,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,640,480,True,25,90,614,410
+Stanford Dataset/cars_train/cars_train/05749.jpg,train_05749,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,480,360,True,77,48,443,234
+Stanford Dataset/cars_train/cars_train/02610.jpg,train_02610,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,640,480,True,40,121,600,351
+Stanford Dataset/cars_train/cars_train/05249.jpg,train_05249,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,500,333,True,117,127,461,265
+Stanford Dataset/cars_train/cars_train/06443.jpg,train_06443,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,500,375,True,33,89,451,351
+Stanford Dataset/cars_train/cars_train/02713.jpg,train_02713,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,281,179,True,72,68,270,139
+Stanford Dataset/cars_train/cars_train/00206.jpg,train_00206,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,640,480,True,116,221,557,433
+Stanford Dataset/cars_train/cars_train/01507.jpg,train_01507,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,800,362,True,36,48,772,324
+Stanford Dataset/cars_train/cars_train/07809.jpg,train_07809,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,640,480,True,23,97,589,342
+Stanford Dataset/cars_train/cars_train/00025.jpg,train_00025,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,604,453,True,33,86,566,342
+Stanford Dataset/cars_train/cars_train/06071.jpg,train_06071,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,380,228,True,36,33,346,206
+Stanford Dataset/cars_train/cars_train/05694.jpg,train_05694,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,400,300,True,11,85,393,275
+Stanford Dataset/cars_train/cars_train/07634.jpg,train_07634,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,1024,768,True,194,146,858,620
+Stanford Dataset/cars_train/cars_train/00441.jpg,train_00441,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,400,265,True,29,34,381,234
+Stanford Dataset/cars_train/cars_train/00419.jpg,train_00419,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,640,480,True,49,88,583,386
+Stanford Dataset/cars_train/cars_train/02078.jpg,train_02078,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,1920,1200,True,81,306,1368,1035
+Stanford Dataset/cars_train/cars_train/00311.jpg,train_00311,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,280,280,True,0,68,279,227
+Stanford Dataset/cars_train/cars_train/04380.jpg,train_04380,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,510,347,True,6,90,462,295
+Stanford Dataset/cars_train/cars_train/04865.jpg,train_04865,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,1024,768,True,75,261,943,660
+Stanford Dataset/cars_train/cars_train/01735.jpg,train_01735,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,500,500,True,29,223,461,395
+Stanford Dataset/cars_train/cars_train/06499.jpg,train_06499,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,630,473,True,95,186,565,356
+Stanford Dataset/cars_train/cars_train/04515.jpg,train_04515,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,500,315,True,5,41,492,295
+Stanford Dataset/cars_train/cars_train/04130.jpg,train_04130,val,157,Maybach Landaulet Convertible 2012,Maybach,Landaulet Convertible,2012.0,300,225,True,117,74,285,201
+Stanford Dataset/cars_train/cars_train/02292.jpg,train_02292,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,89,66,True,1,14,82,60
+Stanford Dataset/cars_train/cars_train/01821.jpg,train_01821,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,900,540,True,86,128,757,357
+Stanford Dataset/cars_train/cars_train/03258.jpg,train_03258,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,628,419,True,82,81,538,373
+Stanford Dataset/cars_train/cars_train/04268.jpg,train_04268,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,728,546,True,61,12,665,500
+Stanford Dataset/cars_train/cars_train/03117.jpg,train_03117,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,480,360,True,70,182,431,307
+Stanford Dataset/cars_train/cars_train/07462.jpg,train_07462,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,480,360,True,13,111,456,359
+Stanford Dataset/cars_train/cars_train/06206.jpg,train_06206,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,408,272,True,2,59,403,214
+Stanford Dataset/cars_train/cars_train/05583.jpg,train_05583,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,800,412,True,39,46,525,393
+Stanford Dataset/cars_train/cars_train/00981.jpg,train_00981,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,1998,1066,True,27,67,1977,1037
+Stanford Dataset/cars_train/cars_train/03579.jpg,train_03579,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,1280,847,True,79,264,1179,781
+Stanford Dataset/cars_train/cars_train/00338.jpg,train_00338,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,480,360,True,13,128,440,359
+Stanford Dataset/cars_train/cars_train/03777.jpg,train_03777,val,63,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,2007.0,640,480,True,52,0,596,438
+Stanford Dataset/cars_train/cars_train/04151.jpg,train_04151,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,640,480,True,46,144,607,365
+Stanford Dataset/cars_train/cars_train/07752.jpg,train_07752,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,640,485,True,17,148,620,353
+Stanford Dataset/cars_train/cars_train/04751.jpg,train_04751,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,1024,683,True,143,213,635,521
+Stanford Dataset/cars_train/cars_train/02551.jpg,train_02551,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,212,159,True,31,42,185,123
+Stanford Dataset/cars_train/cars_train/04419.jpg,train_04419,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,424,360,True,13,58,407,289
+Stanford Dataset/cars_train/cars_train/01509.jpg,train_01509,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,631,300,True,66,96,495,271
+Stanford Dataset/cars_train/cars_train/03407.jpg,train_03407,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,275,183,True,7,27,262,141
+Stanford Dataset/cars_train/cars_train/06059.jpg,train_06059,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,630,419,True,106,192,551,347
+Stanford Dataset/cars_train/cars_train/01060.jpg,train_01060,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,440,248,True,11,33,422,238
+Stanford Dataset/cars_train/cars_train/07814.jpg,train_07814,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,630,388,True,13,66,615,352
+Stanford Dataset/cars_train/cars_train/04843.jpg,train_04843,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,640,480,True,46,68,602,452
+Stanford Dataset/cars_train/cars_train/04788.jpg,train_04788,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,1024,768,True,54,83,975,678
+Stanford Dataset/cars_train/cars_train/04828.jpg,train_04828,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,297,204,True,14,42,286,169
+Stanford Dataset/cars_train/cars_train/04863.jpg,train_04863,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,640,480,True,25,79,624,448
+Stanford Dataset/cars_train/cars_train/03317.jpg,train_03317,val,1,Acura RL Sedan 2012,Acura,RL Sedan,2012.0,480,445,True,31,31,437,393
+Stanford Dataset/cars_train/cars_train/01157.jpg,train_01157,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,489,345,True,31,134,465,265
+Stanford Dataset/cars_train/cars_train/01816.jpg,train_01816,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,726,500,True,110,91,644,434
+Stanford Dataset/cars_train/cars_train/03462.jpg,train_03462,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,640,480,True,7,94,622,374
+Stanford Dataset/cars_train/cars_train/07606.jpg,train_07606,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1024,683,True,117,396,681,618
+Stanford Dataset/cars_train/cars_train/02907.jpg,train_02907,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,550,365,True,22,80,534,338
+Stanford Dataset/cars_train/cars_train/07865.jpg,train_07865,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,300,189,True,6,50,289,180
+Stanford Dataset/cars_train/cars_train/05400.jpg,train_05400,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,259,194,True,13,36,243,164
+Stanford Dataset/cars_train/cars_train/02363.jpg,train_02363,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,300,183,True,25,24,282,156
+Stanford Dataset/cars_train/cars_train/03642.jpg,train_03642,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1280,782,True,432,258,956,612
+Stanford Dataset/cars_train/cars_train/08000.jpg,train_08000,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,1200,813,True,98,199,1102,667
+Stanford Dataset/cars_train/cars_train/00478.jpg,train_00478,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,112,84,True,8,6,97,80
+Stanford Dataset/cars_train/cars_train/03954.jpg,train_03954,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,1024,768,True,38,211,981,682
+Stanford Dataset/cars_train/cars_train/00440.jpg,train_00440,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,480,360,True,11,59,455,305
+Stanford Dataset/cars_train/cars_train/02592.jpg,train_02592,val,63,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,2007.0,640,480,True,22,64,623,414
+Stanford Dataset/cars_train/cars_train/03313.jpg,train_03313,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,300,225,True,20,54,282,222
+Stanford Dataset/cars_train/cars_train/02582.jpg,train_02582,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,818,630,True,102,214,666,474
+Stanford Dataset/cars_train/cars_train/02620.jpg,train_02620,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,800,440,True,4,41,796,405
+Stanford Dataset/cars_train/cars_train/04153.jpg,train_04153,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,653,352,True,22,8,640,351
+Stanford Dataset/cars_train/cars_train/03475.jpg,train_03475,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,1024,1122,True,196,597,957,1004
+Stanford Dataset/cars_train/cars_train/06099.jpg,train_06099,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,625,469,True,68,82,543,371
+Stanford Dataset/cars_train/cars_train/03028.jpg,train_03028,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,750,562,True,1,55,738,454
+Stanford Dataset/cars_train/cars_train/04386.jpg,train_04386,val,9,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,2012.0,560,300,True,36,37,539,244
+Stanford Dataset/cars_train/cars_train/03551.jpg,train_03551,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,640,480,True,58,128,593,452
+Stanford Dataset/cars_train/cars_train/02170.jpg,train_02170,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,320,240,True,11,5,313,201
+Stanford Dataset/cars_train/cars_train/04140.jpg,train_04140,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,264,148,True,60,23,205,143
+Stanford Dataset/cars_train/cars_train/07388.jpg,train_07388,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,900,675,True,89,221,851,582
+Stanford Dataset/cars_train/cars_train/00783.jpg,train_00783,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,1293,969,True,155,254,954,618
+Stanford Dataset/cars_train/cars_train/00219.jpg,train_00219,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,640,359,True,88,0,596,315
+Stanford Dataset/cars_train/cars_train/03638.jpg,train_03638,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,1024,768,True,36,225,958,553
+Stanford Dataset/cars_train/cars_train/07291.jpg,train_07291,val,98,FIAT 500 Abarth 2012,FIAT,500 Abarth,2012.0,1600,1200,True,30,30,1542,1017
+Stanford Dataset/cars_train/cars_train/04397.jpg,train_04397,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,320,214,True,22,23,306,202
+Stanford Dataset/cars_train/cars_train/05904.jpg,train_05904,val,174,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,2012.0,300,200,True,8,98,295,190
+Stanford Dataset/cars_train/cars_train/00988.jpg,train_00988,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,1920,1200,True,393,378,1623,1032
+Stanford Dataset/cars_train/cars_train/03333.jpg,train_03333,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,263,197,True,15,36,218,167
+Stanford Dataset/cars_train/cars_train/01095.jpg,train_01095,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,1280,861,True,127,271,1149,784
+Stanford Dataset/cars_train/cars_train/03624.jpg,train_03624,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,715,470,True,1,98,598,429
+Stanford Dataset/cars_train/cars_train/02449.jpg,train_02449,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,640,427,True,60,149,594,377
+Stanford Dataset/cars_train/cars_train/07851.jpg,train_07851,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1280,782,True,76,276,1159,762
+Stanford Dataset/cars_train/cars_train/02444.jpg,train_02444,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,800,576,True,69,59,736,540
+Stanford Dataset/cars_train/cars_train/02707.jpg,train_02707,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,640,480,True,64,152,600,415
+Stanford Dataset/cars_train/cars_train/04459.jpg,train_04459,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,600,383,True,45,27,563,369
+Stanford Dataset/cars_train/cars_train/08091.jpg,train_08091,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,700,500,True,54,90,613,438
+Stanford Dataset/cars_train/cars_train/05466.jpg,train_05466,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,1000,750,True,79,184,878,613
+Stanford Dataset/cars_train/cars_train/00681.jpg,train_00681,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,590,365,True,4,31,587,339
+Stanford Dataset/cars_train/cars_train/06881.jpg,train_06881,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,640,360,True,27,74,617,289
+Stanford Dataset/cars_train/cars_train/06469.jpg,train_06469,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,259,194,True,5,23,253,154
+Stanford Dataset/cars_train/cars_train/08014.jpg,train_08014,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,400,267,True,5,39,399,245
+Stanford Dataset/cars_train/cars_train/03819.jpg,train_03819,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,800,600,True,20,87,761,507
+Stanford Dataset/cars_train/cars_train/00213.jpg,train_00213,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,300,225,True,36,61,260,190
+Stanford Dataset/cars_train/cars_train/03785.jpg,train_03785,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,500,333,True,55,119,455,251
+Stanford Dataset/cars_train/cars_train/01016.jpg,train_01016,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1600,1066,True,481,133,1381,738
+Stanford Dataset/cars_train/cars_train/00683.jpg,train_00683,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,592,315,True,107,0,549,294
+Stanford Dataset/cars_train/cars_train/03752.jpg,train_03752,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,640,480,True,50,73,632,360
+Stanford Dataset/cars_train/cars_train/02255.jpg,train_02255,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,399,186,True,59,40,364,168
+Stanford Dataset/cars_train/cars_train/03469.jpg,train_03469,val,41,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,2012.0,1920,1200,True,324,189,1626,996
+Stanford Dataset/cars_train/cars_train/05796.jpg,train_05796,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,885,354,True,48,3,824,312
+Stanford Dataset/cars_train/cars_train/06947.jpg,train_06947,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,951,456,True,13,60,937,405
+Stanford Dataset/cars_train/cars_train/00431.jpg,train_00431,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,640,480,True,46,200,533,425
+Stanford Dataset/cars_train/cars_train/01505.jpg,train_01505,val,157,Maybach Landaulet Convertible 2012,Maybach,Landaulet Convertible,2012.0,245,106,True,37,2,228,94
+Stanford Dataset/cars_train/cars_train/02892.jpg,train_02892,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,640,480,True,28,77,533,414
+Stanford Dataset/cars_train/cars_train/05470.jpg,train_05470,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,160,108,True,7,34,153,91
+Stanford Dataset/cars_train/cars_train/05179.jpg,train_05179,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,640,480,True,1,62,624,401
+Stanford Dataset/cars_train/cars_train/01066.jpg,train_01066,val,149,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,2008.0,700,525,True,32,138,658,389
+Stanford Dataset/cars_train/cars_train/05693.jpg,train_05693,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,262,99,True,10,33,170,90
+Stanford Dataset/cars_train/cars_train/05867.jpg,train_05867,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,1599,1037,True,205,47,1384,887
+Stanford Dataset/cars_train/cars_train/03843.jpg,train_03843,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,1024,692,True,85,189,950,559
+Stanford Dataset/cars_train/cars_train/08098.jpg,train_08098,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,450,300,True,9,11,444,250
+Stanford Dataset/cars_train/cars_train/06754.jpg,train_06754,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,800,600,True,21,60,773,516
+Stanford Dataset/cars_train/cars_train/06213.jpg,train_06213,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,640,603,True,39,18,598,401
+Stanford Dataset/cars_train/cars_train/07726.jpg,train_07726,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,1024,768,True,134,207,981,616
+Stanford Dataset/cars_train/cars_train/07690.jpg,train_07690,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,600,366,True,51,48,448,242
+Stanford Dataset/cars_train/cars_train/03327.jpg,train_03327,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,434,326,True,52,141,384,249
+Stanford Dataset/cars_train/cars_train/01478.jpg,train_01478,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,700,500,True,91,121,665,456
+Stanford Dataset/cars_train/cars_train/06946.jpg,train_06946,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,260,173,True,16,47,233,153
+Stanford Dataset/cars_train/cars_train/04609.jpg,train_04609,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,1024,605,True,116,133,788,537
+Stanford Dataset/cars_train/cars_train/01818.jpg,train_01818,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,588,391,True,24,61,554,329
+Stanford Dataset/cars_train/cars_train/08048.jpg,train_08048,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,500,500,True,30,85,455,409
+Stanford Dataset/cars_train/cars_train/06638.jpg,train_06638,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,1280,800,True,30,4,1246,798
+Stanford Dataset/cars_train/cars_train/03625.jpg,train_03625,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,800,600,True,90,62,725,551
+Stanford Dataset/cars_train/cars_train/00684.jpg,train_00684,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,750,469,True,67,36,697,445
+Stanford Dataset/cars_train/cars_train/05157.jpg,train_05157,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,970,540,True,171,21,759,468
+Stanford Dataset/cars_train/cars_train/06464.jpg,train_06464,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,1024,768,True,4,102,1018,689
+Stanford Dataset/cars_train/cars_train/02229.jpg,train_02229,val,157,Maybach Landaulet Convertible 2012,Maybach,Landaulet Convertible,2012.0,1024,768,True,106,444,883,664
+Stanford Dataset/cars_train/cars_train/07856.jpg,train_07856,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,1600,1200,True,141,396,1476,834
+Stanford Dataset/cars_train/cars_train/00704.jpg,train_00704,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,640,480,True,10,28,630,434
+Stanford Dataset/cars_train/cars_train/01077.jpg,train_01077,val,44,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,2009.0,800,532,True,80,257,716,464
+Stanford Dataset/cars_train/cars_train/06716.jpg,train_06716,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,300,300,True,10,78,294,222
+Stanford Dataset/cars_train/cars_train/04183.jpg,train_04183,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1024,883,True,15,108,980,693
+Stanford Dataset/cars_train/cars_train/02106.jpg,train_02106,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,720,405,True,128,93,501,381
+Stanford Dataset/cars_train/cars_train/00448.jpg,train_00448,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,640,480,True,36,66,616,436
+Stanford Dataset/cars_train/cars_train/00010.jpg,train_00010,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,640,480,True,20,109,622,366
+Stanford Dataset/cars_train/cars_train/06852.jpg,train_06852,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,500,350,True,19,121,464,306
+Stanford Dataset/cars_train/cars_train/03670.jpg,train_03670,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,500,326,True,145,72,485,235
+Stanford Dataset/cars_train/cars_train/02213.jpg,train_02213,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,1301,867,True,500,442,1087,705
+Stanford Dataset/cars_train/cars_train/06140.jpg,train_06140,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,1600,1200,True,27,375,1563,984
+Stanford Dataset/cars_train/cars_train/04097.jpg,train_04097,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,665,450,True,160,205,552,376
+Stanford Dataset/cars_train/cars_train/07264.jpg,train_07264,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,640,480,True,32,62,611,433
+Stanford Dataset/cars_train/cars_train/04391.jpg,train_04391,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,950,506,True,128,73,796,450
+Stanford Dataset/cars_train/cars_train/05937.jpg,train_05937,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,259,194,True,30,26,208,166
+Stanford Dataset/cars_train/cars_train/07813.jpg,train_07813,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,424,360,True,26,94,394,273
+Stanford Dataset/cars_train/cars_train/08140.jpg,train_08140,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,424,360,True,2,43,422,335
+Stanford Dataset/cars_train/cars_train/02285.jpg,train_02285,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,396,213,True,0,4,395,212
+Stanford Dataset/cars_train/cars_train/02183.jpg,train_02183,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,640,424,True,27,1,607,422
+Stanford Dataset/cars_train/cars_train/06752.jpg,train_06752,val,26,BMW 1 Series Convertible 2012,BMW,1 Series Convertible,2012.0,1600,1200,True,21,159,1359,738
+Stanford Dataset/cars_train/cars_train/07845.jpg,train_07845,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,1024,683,True,77,184,932,504
+Stanford Dataset/cars_train/cars_train/01983.jpg,train_01983,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,800,600,True,101,162,722,453
+Stanford Dataset/cars_train/cars_train/06158.jpg,train_06158,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,800,564,True,86,234,739,516
+Stanford Dataset/cars_train/cars_train/00838.jpg,train_00838,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,1024,768,True,19,223,987,643
+Stanford Dataset/cars_train/cars_train/03587.jpg,train_03587,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,400,300,True,44,25,392,262
+Stanford Dataset/cars_train/cars_train/06930.jpg,train_06930,val,141,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,2011.0,640,480,True,62,79,556,420
+Stanford Dataset/cars_train/cars_train/01628.jpg,train_01628,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,500,333,True,23,75,441,321
+Stanford Dataset/cars_train/cars_train/00984.jpg,train_00984,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,1024,685,True,127,249,898,570
+Stanford Dataset/cars_train/cars_train/05028.jpg,train_05028,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,281,179,True,51,14,273,141
+Stanford Dataset/cars_train/cars_train/02338.jpg,train_02338,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,275,183,True,30,39,182,153
+Stanford Dataset/cars_train/cars_train/04604.jpg,train_04604,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,640,480,True,31,73,616,406
+Stanford Dataset/cars_train/cars_train/07549.jpg,train_07549,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,213,160,True,30,7,182,146
+Stanford Dataset/cars_train/cars_train/03118.jpg,train_03118,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,259,194,True,19,18,242,174
+Stanford Dataset/cars_train/cars_train/00666.jpg,train_00666,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,750,562,True,126,136,672,351
+Stanford Dataset/cars_train/cars_train/04282.jpg,train_04282,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,1920,1200,True,345,228,1566,882
+Stanford Dataset/cars_train/cars_train/06786.jpg,train_06786,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,640,480,True,59,78,575,400
+Stanford Dataset/cars_train/cars_train/01272.jpg,train_01272,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,1200,900,True,110,65,983,799
+Stanford Dataset/cars_train/cars_train/01034.jpg,train_01034,val,1,Acura RL Sedan 2012,Acura,RL Sedan,2012.0,960,347,True,114,62,816,323
+Stanford Dataset/cars_train/cars_train/06851.jpg,train_06851,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,1280,960,True,90,257,1078,824
+Stanford Dataset/cars_train/cars_train/04366.jpg,train_04366,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,650,350,True,95,68,583,302
+Stanford Dataset/cars_train/cars_train/04700.jpg,train_04700,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,750,469,True,18,88,729,443
+Stanford Dataset/cars_train/cars_train/03395.jpg,train_03395,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,1600,1060,True,278,257,1389,885
+Stanford Dataset/cars_train/cars_train/03855.jpg,train_03855,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,600,400,True,60,150,480,355
+Stanford Dataset/cars_train/cars_train/06149.jpg,train_06149,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,599,400,True,27,69,575,366
+Stanford Dataset/cars_train/cars_train/07292.jpg,train_07292,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,500,333,True,25,52,473,292
+Stanford Dataset/cars_train/cars_train/07942.jpg,train_07942,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,300,213,True,1,5,299,212
+Stanford Dataset/cars_train/cars_train/05579.jpg,train_05579,val,9,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,2012.0,600,400,True,35,115,570,311
+Stanford Dataset/cars_train/cars_train/02110.jpg,train_02110,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,640,480,True,115,140,534,366
+Stanford Dataset/cars_train/cars_train/05914.jpg,train_05914,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,640,480,True,59,184,586,437
+Stanford Dataset/cars_train/cars_train/03829.jpg,train_03829,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,800,600,True,20,170,780,552
+Stanford Dataset/cars_train/cars_train/00635.jpg,train_00635,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,800,533,True,59,90,726,404
+Stanford Dataset/cars_train/cars_train/06314.jpg,train_06314,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,500,333,True,10,74,489,325
+Stanford Dataset/cars_train/cars_train/07157.jpg,train_07157,val,41,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,2012.0,400,300,True,44,130,275,258
+Stanford Dataset/cars_train/cars_train/03810.jpg,train_03810,val,149,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,2008.0,1680,1050,True,257,210,1408,867
+Stanford Dataset/cars_train/cars_train/05119.jpg,train_05119,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,800,533,True,51,117,742,512
+Stanford Dataset/cars_train/cars_train/02192.jpg,train_02192,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,808,554,True,60,44,751,501
+Stanford Dataset/cars_train/cars_train/07354.jpg,train_07354,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,652,337,True,33,35,621,304
+Stanford Dataset/cars_train/cars_train/00034.jpg,train_00034,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,640,480,True,36,62,613,396
+Stanford Dataset/cars_train/cars_train/03839.jpg,train_03839,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,300,204,True,14,39,280,168
+Stanford Dataset/cars_train/cars_train/04026.jpg,train_04026,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,480,360,True,7,16,467,296
+Stanford Dataset/cars_train/cars_train/05855.jpg,train_05855,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,960,540,True,182,135,813,483
+Stanford Dataset/cars_train/cars_train/05198.jpg,train_05198,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,800,533,True,243,152,631,396
+Stanford Dataset/cars_train/cars_train/00692.jpg,train_00692,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,720,360,True,47,44,588,319
+Stanford Dataset/cars_train/cars_train/05342.jpg,train_05342,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,120,89,True,9,0,101,84
+Stanford Dataset/cars_train/cars_train/07801.jpg,train_07801,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,1024,768,True,86,169,941,682
+Stanford Dataset/cars_train/cars_train/03335.jpg,train_03335,val,41,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,2012.0,623,389,True,119,104,527,309
+Stanford Dataset/cars_train/cars_train/03285.jpg,train_03285,val,40,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,2011.0,640,393,True,79,120,580,328
+Stanford Dataset/cars_train/cars_train/07464.jpg,train_07464,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,159,119,True,42,49,136,106
+Stanford Dataset/cars_train/cars_train/04346.jpg,train_04346,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,1024,768,True,67,94,973,628
+Stanford Dataset/cars_train/cars_train/01629.jpg,train_01629,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,630,420,True,77,33,584,403
+Stanford Dataset/cars_train/cars_train/00307.jpg,train_00307,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,1280,960,True,170,62,1186,893
+Stanford Dataset/cars_train/cars_train/01315.jpg,train_01315,val,188,Toyota 4Runner SUV 2012,Toyota,4Runner SUV,2012.0,450,225,True,30,11,420,208
+Stanford Dataset/cars_train/cars_train/01897.jpg,train_01897,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,1024,768,True,27,171,960,766
+Stanford Dataset/cars_train/cars_train/00757.jpg,train_00757,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,450,341,True,84,117,378,289
+Stanford Dataset/cars_train/cars_train/07553.jpg,train_07553,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,316,237,True,29,58,286,176
+Stanford Dataset/cars_train/cars_train/07152.jpg,train_07152,val,63,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,2007.0,1024,768,True,38,159,1018,670
+Stanford Dataset/cars_train/cars_train/01320.jpg,train_01320,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,600,340,True,88,41,460,287
+Stanford Dataset/cars_train/cars_train/07248.jpg,train_07248,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,640,480,True,66,110,595,437
+Stanford Dataset/cars_train/cars_train/00053.jpg,train_00053,val,14,Audi R8 Coupe 2012,Audi,R8 Coupe,2012.0,500,375,True,160,190,424,306
+Stanford Dataset/cars_train/cars_train/02168.jpg,train_02168,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,800,600,True,53,245,677,552
+Stanford Dataset/cars_train/cars_train/02128.jpg,train_02128,val,133,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,2012.0,1280,850,True,62,327,1222,754
+Stanford Dataset/cars_train/cars_train/07405.jpg,train_07405,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,1600,1200,True,36,378,1578,1179
+Stanford Dataset/cars_train/cars_train/01482.jpg,train_01482,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,275,183,True,2,21,268,164
+Stanford Dataset/cars_train/cars_train/04060.jpg,train_04060,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,640,480,True,17,76,564,438
+Stanford Dataset/cars_train/cars_train/04024.jpg,train_04024,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,424,360,True,51,40,376,306
+Stanford Dataset/cars_train/cars_train/05082.jpg,train_05082,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,430,287,True,35,34,400,240
+Stanford Dataset/cars_train/cars_train/00720.jpg,train_00720,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,160,120,True,9,61,151,116
+Stanford Dataset/cars_train/cars_train/04896.jpg,train_04896,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,450,300,True,26,70,422,242
+Stanford Dataset/cars_train/cars_train/07576.jpg,train_07576,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,640,480,True,66,73,557,403
+Stanford Dataset/cars_train/cars_train/06408.jpg,train_06408,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,434,326,True,41,94,369,228
+Stanford Dataset/cars_train/cars_train/05834.jpg,train_05834,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,800,533,True,103,67,709,498
+Stanford Dataset/cars_train/cars_train/05926.jpg,train_05926,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,640,480,True,101,71,527,376
+Stanford Dataset/cars_train/cars_train/02922.jpg,train_02922,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,500,290,True,16,74,480,278
+Stanford Dataset/cars_train/cars_train/04513.jpg,train_04513,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,400,250,True,20,30,381,227
+Stanford Dataset/cars_train/cars_train/04599.jpg,train_04599,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,500,275,True,56,107,440,243
+Stanford Dataset/cars_train/cars_train/04261.jpg,train_04261,val,99,FIAT 500 Convertible 2012,FIAT,500 Convertible,2012.0,512,341,True,78,130,274,316
+Stanford Dataset/cars_train/cars_train/04309.jpg,train_04309,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,600,400,True,15,105,583,378
+Stanford Dataset/cars_train/cars_train/04745.jpg,train_04745,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,283,178,True,2,30,282,144
+Stanford Dataset/cars_train/cars_train/00670.jpg,train_00670,val,1,Acura RL Sedan 2012,Acura,RL Sedan,2012.0,550,366,True,96,48,454,325
+Stanford Dataset/cars_train/cars_train/03303.jpg,train_03303,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,620,465,True,22,144,602,409
+Stanford Dataset/cars_train/cars_train/00755.jpg,train_00755,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,800,300,True,29,31,592,295
+Stanford Dataset/cars_train/cars_train/03352.jpg,train_03352,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,427,250,True,39,80,393,226
+Stanford Dataset/cars_train/cars_train/01879.jpg,train_01879,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,640,393,True,24,43,607,291
+Stanford Dataset/cars_train/cars_train/00526.jpg,train_00526,val,107,Ford Freestar Minivan 2007,Ford,Freestar Minivan,2007.0,259,194,True,25,77,244,160
+Stanford Dataset/cars_train/cars_train/04621.jpg,train_04621,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,1024,768,True,92,238,906,660
+Stanford Dataset/cars_train/cars_train/01129.jpg,train_01129,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,441,221,True,29,33,410,181
+Stanford Dataset/cars_train/cars_train/01216.jpg,train_01216,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,600,399,True,42,69,583,320
+Stanford Dataset/cars_train/cars_train/05817.jpg,train_05817,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,592,373,True,67,78,398,357
+Stanford Dataset/cars_train/cars_train/01401.jpg,train_01401,val,41,Bentley Continental GT Coupe 2012,Bentley,Continental GT Coupe,2012.0,725,415,True,94,56,680,359
+Stanford Dataset/cars_train/cars_train/07983.jpg,train_07983,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,480,280,True,22,32,466,231
+Stanford Dataset/cars_train/cars_train/07817.jpg,train_07817,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,1600,1067,True,69,331,1547,1043
+Stanford Dataset/cars_train/cars_train/04566.jpg,train_04566,val,53,Chevrolet Silverado 1500 Hybrid Crew Cab 2012,Chevrolet,Silverado 1500 Hybrid Crew Cab,2012.0,259,194,True,4,53,247,165
+Stanford Dataset/cars_train/cars_train/05905.jpg,train_05905,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,259,194,True,10,13,248,181
+Stanford Dataset/cars_train/cars_train/05208.jpg,train_05208,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,1600,1066,True,99,239,1576,967
+Stanford Dataset/cars_train/cars_train/02694.jpg,train_02694,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,500,375,True,30,90,440,367
+Stanford Dataset/cars_train/cars_train/07316.jpg,train_07316,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,259,194,True,13,40,243,145
+Stanford Dataset/cars_train/cars_train/01820.jpg,train_01820,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1024,773,True,87,232,955,619
+Stanford Dataset/cars_train/cars_train/03320.jpg,train_03320,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,264,175,True,23,52,240,150
+Stanford Dataset/cars_train/cars_train/03431.jpg,train_03431,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,112,84,True,4,17,110,72
+Stanford Dataset/cars_train/cars_train/02547.jpg,train_02547,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,550,450,True,69,164,541,308
+Stanford Dataset/cars_train/cars_train/04645.jpg,train_04645,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,680,510,True,166,112,547,377
+Stanford Dataset/cars_train/cars_train/01850.jpg,train_01850,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,1024,645,True,308,189,969,505
+Stanford Dataset/cars_train/cars_train/06448.jpg,train_06448,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,400,239,True,32,18,346,198
+Stanford Dataset/cars_train/cars_train/06391.jpg,train_06391,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1024,768,True,56,353,966,634
+Stanford Dataset/cars_train/cars_train/01156.jpg,train_01156,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,300,225,True,37,59,290,219
+Stanford Dataset/cars_train/cars_train/03816.jpg,train_03816,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1921,1279,True,473,233,1573,1020
+Stanford Dataset/cars_train/cars_train/02830.jpg,train_02830,val,112,Ford F-150 Regular Cab 2012,Ford,F-150 Regular Cab,2012.0,260,194,True,22,53,236,170
+Stanford Dataset/cars_train/cars_train/03774.jpg,train_03774,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,640,480,True,19,113,601,354
+Stanford Dataset/cars_train/cars_train/01965.jpg,train_01965,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,300,225,True,37,9,254,198
+Stanford Dataset/cars_train/cars_train/03448.jpg,train_03448,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,500,282,True,10,44,486,245
+Stanford Dataset/cars_train/cars_train/07899.jpg,train_07899,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,1280,850,True,54,180,1236,582
+Stanford Dataset/cars_train/cars_train/07923.jpg,train_07923,val,94,Dodge Durango SUV 2007,Dodge,Durango SUV,2007.0,1200,900,True,43,281,1150,866
+Stanford Dataset/cars_train/cars_train/05638.jpg,train_05638,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,300,200,True,80,48,262,156
+Stanford Dataset/cars_train/cars_train/01327.jpg,train_01327,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,400,267,True,38,115,352,249
+Stanford Dataset/cars_train/cars_train/03751.jpg,train_03751,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,450,299,True,24,25,435,280
+Stanford Dataset/cars_train/cars_train/04517.jpg,train_04517,val,151,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,2012.0,275,183,True,3,79,246,155
+Stanford Dataset/cars_train/cars_train/04830.jpg,train_04830,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,640,480,True,60,166,588,463
+Stanford Dataset/cars_train/cars_train/07318.jpg,train_07318,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,1024,768,True,111,161,845,616
+Stanford Dataset/cars_train/cars_train/06717.jpg,train_06717,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,800,600,True,166,53,609,550
+Stanford Dataset/cars_train/cars_train/00337.jpg,train_00337,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,550,368,True,44,54,529,307
+Stanford Dataset/cars_train/cars_train/00059.jpg,train_00059,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,640,480,True,67,90,606,353
+Stanford Dataset/cars_train/cars_train/04735.jpg,train_04735,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,620,389,True,113,58,506,332
+Stanford Dataset/cars_train/cars_train/03350.jpg,train_03350,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,275,183,True,37,41,262,146
+Stanford Dataset/cars_train/cars_train/06940.jpg,train_06940,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,750,469,True,30,73,688,410
+Stanford Dataset/cars_train/cars_train/05511.jpg,train_05511,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,648,307,True,54,25,594,306
+Stanford Dataset/cars_train/cars_train/01299.jpg,train_01299,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,640,480,True,40,139,590,355
+Stanford Dataset/cars_train/cars_train/03951.jpg,train_03951,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,400,276,True,22,58,385,246
+Stanford Dataset/cars_train/cars_train/05729.jpg,train_05729,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,287,175,True,16,48,279,143
+Stanford Dataset/cars_train/cars_train/04527.jpg,train_04527,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,1024,683,True,231,294,946,635
+Stanford Dataset/cars_train/cars_train/03800.jpg,train_03800,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,459,213,True,33,4,392,210
+Stanford Dataset/cars_train/cars_train/02821.jpg,train_02821,val,57,Chevrolet Traverse SUV 2012,Chevrolet,Traverse SUV,2012.0,1080,720,True,32,31,1078,695
+Stanford Dataset/cars_train/cars_train/06134.jpg,train_06134,val,87,Dodge Sprinter Cargo Van 2009,Dodge,Sprinter Cargo Van,2009.0,640,480,True,150,43,484,421
+Stanford Dataset/cars_train/cars_train/01642.jpg,train_01642,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,500,302,True,12,121,479,285
+Stanford Dataset/cars_train/cars_train/07277.jpg,train_07277,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,480,360,True,69,126,378,263
+Stanford Dataset/cars_train/cars_train/02418.jpg,train_02418,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,150,112,True,3,14,145,92
+Stanford Dataset/cars_train/cars_train/01905.jpg,train_01905,val,68,Chevrolet Silverado 2500HD Regular Cab 2012,Chevrolet,Silverado 2500HD Regular Cab,2012.0,640,480,True,24,97,616,385
+Stanford Dataset/cars_train/cars_train/00814.jpg,train_00814,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,259,194,True,16,34,233,166
+Stanford Dataset/cars_train/cars_train/03537.jpg,train_03537,val,1,Acura RL Sedan 2012,Acura,RL Sedan,2012.0,478,319,True,44,67,425,252
+Stanford Dataset/cars_train/cars_train/00061.jpg,train_00061,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,1023,764,True,10,103,1010,741
+Stanford Dataset/cars_train/cars_train/07198.jpg,train_07198,val,103,Ferrari 458 Italia Coupe 2012,Ferrari,458 Italia Coupe,2012.0,300,199,True,16,33,284,170
+Stanford Dataset/cars_train/cars_train/03151.jpg,train_03151,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1024,683,True,159,131,907,558
+Stanford Dataset/cars_train/cars_train/04422.jpg,train_04422,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,1024,768,True,60,96,966,689
+Stanford Dataset/cars_train/cars_train/04295.jpg,train_04295,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,482,380,True,73,223,447,367
+Stanford Dataset/cars_train/cars_train/07488.jpg,train_07488,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,550,450,True,34,178,521,377
+Stanford Dataset/cars_train/cars_train/02084.jpg,train_02084,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,1920,1080,True,327,259,1609,934
+Stanford Dataset/cars_train/cars_train/05871.jpg,train_05871,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,618,418,True,23,109,596,355
+Stanford Dataset/cars_train/cars_train/06430.jpg,train_06430,val,180,Suzuki Aerio Sedan 2007,Suzuki,Aerio Sedan,2007.0,259,194,True,31,17,231,172
+Stanford Dataset/cars_train/cars_train/05483.jpg,train_05483,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,1280,857,True,131,126,1056,752
+Stanford Dataset/cars_train/cars_train/03132.jpg,train_03132,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,300,225,True,44,13,260,190
+Stanford Dataset/cars_train/cars_train/00967.jpg,train_00967,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,640,426,True,56,107,550,399
+Stanford Dataset/cars_train/cars_train/00132.jpg,train_00132,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,480,True,98,77,556,388
+Stanford Dataset/cars_train/cars_train/06476.jpg,train_06476,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,259,194,True,5,31,249,190
+Stanford Dataset/cars_train/cars_train/06336.jpg,train_06336,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,300,147,True,13,32,287,143
+Stanford Dataset/cars_train/cars_train/02918.jpg,train_02918,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,450,360,True,14,73,438,288
+Stanford Dataset/cars_train/cars_train/02352.jpg,train_02352,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,600,401,True,35,88,568,381
+Stanford Dataset/cars_train/cars_train/00624.jpg,train_00624,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,512,288,True,51,57,445,230
+Stanford Dataset/cars_train/cars_train/04191.jpg,train_04191,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,576,369,True,42,103,549,298
+Stanford Dataset/cars_train/cars_train/03968.jpg,train_03968,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,2048,1536,True,227,622,1812,1321
+Stanford Dataset/cars_train/cars_train/00561.jpg,train_00561,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,640,480,True,150,168,572,424
+Stanford Dataset/cars_train/cars_train/06345.jpg,train_06345,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,533,400,True,9,66,527,351
+Stanford Dataset/cars_train/cars_train/04163.jpg,train_04163,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,259,194,True,22,30,237,139
+Stanford Dataset/cars_train/cars_train/07226.jpg,train_07226,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,640,480,True,50,60,594,356
+Stanford Dataset/cars_train/cars_train/07263.jpg,train_07263,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,640,480,True,35,55,619,432
+Stanford Dataset/cars_train/cars_train/01276.jpg,train_01276,val,8,Aston Martin V8 Vantage Coupe 2012,Aston Martin,V8 Vantage Coupe,2012.0,640,480,True,66,101,566,356
+Stanford Dataset/cars_train/cars_train/06332.jpg,train_06332,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,2048,1536,True,42,511,1993,1398
+Stanford Dataset/cars_train/cars_train/02822.jpg,train_02822,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,800,431,True,9,3,796,430
+Stanford Dataset/cars_train/cars_train/02770.jpg,train_02770,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,300,225,True,13,95,289,204
+Stanford Dataset/cars_train/cars_train/03737.jpg,train_03737,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,1600,1200,True,153,222,1377,1029
+Stanford Dataset/cars_train/cars_train/05337.jpg,train_05337,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,1280,782,True,50,134,1246,735
+Stanford Dataset/cars_train/cars_train/03419.jpg,train_03419,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,343,216,True,24,18,323,182
+Stanford Dataset/cars_train/cars_train/01251.jpg,train_01251,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,800,600,True,205,95,735,364
+Stanford Dataset/cars_train/cars_train/06610.jpg,train_06610,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,200,116,True,2,2,199,113
+Stanford Dataset/cars_train/cars_train/02488.jpg,train_02488,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,750,499,True,34,200,729,465
+Stanford Dataset/cars_train/cars_train/05291.jpg,train_05291,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,480,True,66,55,605,426
+Stanford Dataset/cars_train/cars_train/04388.jpg,train_04388,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,641,427,True,40,154,618,415
+Stanford Dataset/cars_train/cars_train/06696.jpg,train_06696,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,424,360,True,41,74,381,272
+Stanford Dataset/cars_train/cars_train/04677.jpg,train_04677,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,1417,948,True,83,183,1278,874
+Stanford Dataset/cars_train/cars_train/03749.jpg,train_03749,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,2244,1496,True,52,385,2173,1242
+Stanford Dataset/cars_train/cars_train/05666.jpg,train_05666,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,629,417,True,42,195,577,374
+Stanford Dataset/cars_train/cars_train/07666.jpg,train_07666,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,640,480,True,88,127,514,360
+Stanford Dataset/cars_train/cars_train/04082.jpg,train_04082,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,429,262,True,8,28,415,254
+Stanford Dataset/cars_train/cars_train/03081.jpg,train_03081,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,259,194,True,25,36,240,165
+Stanford Dataset/cars_train/cars_train/06389.jpg,train_06389,val,140,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,2012.0,560,302,True,1,49,530,240
+Stanford Dataset/cars_train/cars_train/03268.jpg,train_03268,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,450,300,True,42,127,408,283
+Stanford Dataset/cars_train/cars_train/06397.jpg,train_06397,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,1024,768,True,71,12,1020,609
+Stanford Dataset/cars_train/cars_train/05929.jpg,train_05929,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,500,375,True,19,17,466,304
+Stanford Dataset/cars_train/cars_train/00689.jpg,train_00689,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,424,360,True,58,62,368,292
+Stanford Dataset/cars_train/cars_train/00081.jpg,train_00081,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,550,301,True,9,54,539,270
+Stanford Dataset/cars_train/cars_train/05519.jpg,train_05519,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,642,600,True,21,207,617,524
+Stanford Dataset/cars_train/cars_train/03466.jpg,train_03466,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,644,323,True,19,67,617,299
+Stanford Dataset/cars_train/cars_train/07667.jpg,train_07667,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,1024,768,True,19,200,1006,649
+Stanford Dataset/cars_train/cars_train/01146.jpg,train_01146,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,284,177,True,41,54,263,151
+Stanford Dataset/cars_train/cars_train/01324.jpg,train_01324,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,267,189,True,31,92,249,183
+Stanford Dataset/cars_train/cars_train/06335.jpg,train_06335,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,275,183,True,26,37,261,151
+Stanford Dataset/cars_train/cars_train/03198.jpg,train_03198,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,300,225,True,33,35,265,181
+Stanford Dataset/cars_train/cars_train/02021.jpg,train_02021,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,447,337,True,6,58,389,327
+Stanford Dataset/cars_train/cars_train/02631.jpg,train_02631,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,640,480,True,24,49,622,416
+Stanford Dataset/cars_train/cars_train/00701.jpg,train_00701,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,300,199,True,21,48,275,180
+Stanford Dataset/cars_train/cars_train/03240.jpg,train_03240,val,105,Ford F-450 Super Duty Crew Cab 2012,Ford,F-450 Super Duty Crew Cab,2012.0,257,101,True,2,6,256,100
+Stanford Dataset/cars_train/cars_train/05686.jpg,train_05686,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,575,431,True,68,135,509,346
+Stanford Dataset/cars_train/cars_train/07749.jpg,train_07749,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,375,250,True,14,33,349,202
+Stanford Dataset/cars_train/cars_train/07712.jpg,train_07712,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1024,768,True,35,17,1008,766
+Stanford Dataset/cars_train/cars_train/07915.jpg,train_07915,val,135,Hyundai Accent Sedan 2012,Hyundai,Accent Sedan,2012.0,805,453,True,47,170,677,399
+Stanford Dataset/cars_train/cars_train/00368.jpg,train_00368,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,320,240,True,13,75,291,194
+Stanford Dataset/cars_train/cars_train/05677.jpg,train_05677,val,165,Mercedes-Benz Sprinter Van 2012,Mercedes-Benz,Sprinter Van,2012.0,730,440,True,61,8,681,426
+Stanford Dataset/cars_train/cars_train/04298.jpg,train_04298,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,640,480,True,66,151,572,463
+Stanford Dataset/cars_train/cars_train/03386.jpg,train_03386,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,600,428,True,24,9,583,403
+Stanford Dataset/cars_train/cars_train/06858.jpg,train_06858,val,179,Spyker C8 Coupe 2009,Spyker,C8 Coupe,2009.0,639,425,True,183,184,570,313
+Stanford Dataset/cars_train/cars_train/03008.jpg,train_03008,val,0,AM General Hummer SUV 2000,AM General,Hummer SUV,2000.0,2048,1536,True,12,234,2020,1252
+Stanford Dataset/cars_train/cars_train/05757.jpg,train_05757,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,450,299,True,13,55,441,291
+Stanford Dataset/cars_train/cars_train/08107.jpg,train_08107,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,1280,852,True,94,173,1214,769
+Stanford Dataset/cars_train/cars_train/01485.jpg,train_01485,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,800,600,True,77,87,746,465
+Stanford Dataset/cars_train/cars_train/02037.jpg,train_02037,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,1400,701,True,114,163,1341,668
+Stanford Dataset/cars_train/cars_train/01395.jpg,train_01395,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,1024,640,True,38,75,968,592
+Stanford Dataset/cars_train/cars_train/08101.jpg,train_08101,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,635,418,True,62,84,586,393
+Stanford Dataset/cars_train/cars_train/03297.jpg,train_03297,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,1024,640,True,110,259,635,523
+Stanford Dataset/cars_train/cars_train/01846.jpg,train_01846,val,149,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,2008.0,1024,768,True,136,390,925,674
+Stanford Dataset/cars_train/cars_train/04876.jpg,train_04876,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,500,375,True,20,29,467,319
+Stanford Dataset/cars_train/cars_train/06972.jpg,train_06972,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,490,360,True,6,102,455,279
+Stanford Dataset/cars_train/cars_train/07307.jpg,train_07307,val,11,Audi RS 4 Convertible 2008,Audi,RS 4 Convertible,2008.0,900,598,True,34,118,873,537
+Stanford Dataset/cars_train/cars_train/04362.jpg,train_04362,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,786,492,True,107,80,738,387
+Stanford Dataset/cars_train/cars_train/05940.jpg,train_05940,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,640,480,True,83,56,594,401
+Stanford Dataset/cars_train/cars_train/06560.jpg,train_06560,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,800,600,True,40,58,784,430
+Stanford Dataset/cars_train/cars_train/01847.jpg,train_01847,val,54,Chevrolet Corvette Convertible 2012,Chevrolet,Corvette Convertible,2012.0,1600,1200,True,159,207,1464,1017
+Stanford Dataset/cars_train/cars_train/00139.jpg,train_00139,val,183,Suzuki SX4 Sedan 2012,Suzuki,SX4 Sedan,2012.0,800,535,True,71,214,627,480
+Stanford Dataset/cars_train/cars_train/03324.jpg,train_03324,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,720,480,True,73,96,647,392
+Stanford Dataset/cars_train/cars_train/06538.jpg,train_06538,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,600,450,True,18,125,597,420
+Stanford Dataset/cars_train/cars_train/05375.jpg,train_05375,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,500,375,True,12,127,494,358
+Stanford Dataset/cars_train/cars_train/07211.jpg,train_07211,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,625,468,True,9,85,583,400
+Stanford Dataset/cars_train/cars_train/05722.jpg,train_05722,val,40,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,2011.0,1280,850,True,217,145,1090,769
+Stanford Dataset/cars_train/cars_train/05250.jpg,train_05250,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,640,480,True,30,37,630,437
+Stanford Dataset/cars_train/cars_train/03618.jpg,train_03618,val,98,FIAT 500 Abarth 2012,FIAT,500 Abarth,2012.0,864,648,True,114,132,714,568
+Stanford Dataset/cars_train/cars_train/02835.jpg,train_02835,val,25,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,2012.0,500,333,True,25,58,472,305
+Stanford Dataset/cars_train/cars_train/07826.jpg,train_07826,val,151,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,2012.0,400,280,True,16,111,389,237
+Stanford Dataset/cars_train/cars_train/06451.jpg,train_06451,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,640,480,True,16,71,601,385
+Stanford Dataset/cars_train/cars_train/03934.jpg,train_03934,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,625,467,True,110,194,480,393
+Stanford Dataset/cars_train/cars_train/00934.jpg,train_00934,val,22,Audi S4 Sedan 2012,Audi,S4 Sedan,2012.0,941,714,True,89,30,921,698
+Stanford Dataset/cars_train/cars_train/07005.jpg,train_07005,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,1333,888,True,2,107,1332,886
+Stanford Dataset/cars_train/cars_train/05357.jpg,train_05357,val,118,GMC Savana Van 2012,GMC,Savana Van,2012.0,640,480,True,28,92,629,479
+Stanford Dataset/cars_train/cars_train/01213.jpg,train_01213,val,133,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,2012.0,1000,589,True,37,126,641,411
+Stanford Dataset/cars_train/cars_train/03157.jpg,train_03157,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,1024,768,True,27,179,987,693
+Stanford Dataset/cars_train/cars_train/02714.jpg,train_02714,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,764,1023,True,18,164,708,606
+Stanford Dataset/cars_train/cars_train/02132.jpg,train_02132,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,1024,764,True,25,289,995,609
+Stanford Dataset/cars_train/cars_train/05650.jpg,train_05650,val,28,BMW 3 Series Sedan 2012,BMW,3 Series Sedan,2012.0,429,262,True,47,94,381,216
+Stanford Dataset/cars_train/cars_train/02570.jpg,train_02570,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,640,480,True,80,101,595,418
+Stanford Dataset/cars_train/cars_train/02056.jpg,train_02056,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,480,360,True,31,10,455,306
+Stanford Dataset/cars_train/cars_train/02420.jpg,train_02420,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,640,480,True,23,54,606,426
+Stanford Dataset/cars_train/cars_train/06306.jpg,train_06306,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,500,325,True,5,126,482,297
+Stanford Dataset/cars_train/cars_train/01750.jpg,train_01750,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,640,480,True,50,56,589,401
+Stanford Dataset/cars_train/cars_train/04421.jpg,train_04421,val,153,Land Rover Range Rover SUV 2012,Land Rover,Range Rover SUV,2012.0,1024,768,True,35,0,1004,766
+Stanford Dataset/cars_train/cars_train/01278.jpg,train_01278,val,79,Chrysler Crossfire Convertible 2008,Chrysler,Crossfire Convertible,2008.0,300,167,True,24,47,293,141
+Stanford Dataset/cars_train/cars_train/03714.jpg,train_03714,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,440,317,True,1,49,435,310
+Stanford Dataset/cars_train/cars_train/00658.jpg,train_00658,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1500,1000,True,191,234,1259,877
+Stanford Dataset/cars_train/cars_train/06024.jpg,train_06024,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,500,230,True,4,4,497,210
+Stanford Dataset/cars_train/cars_train/00782.jpg,train_00782,val,100,Ferrari FF Coupe 2012,Ferrari,FF Coupe,2012.0,640,360,True,67,94,592,318
+Stanford Dataset/cars_train/cars_train/03055.jpg,train_03055,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,203,128,True,0,25,200,111
+Stanford Dataset/cars_train/cars_train/00347.jpg,train_00347,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,1024,768,True,99,189,906,690
+Stanford Dataset/cars_train/cars_train/01291.jpg,train_01291,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,550,355,True,103,154,458,321
+Stanford Dataset/cars_train/cars_train/07924.jpg,train_07924,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,1024,768,True,6,142,993,732
+Stanford Dataset/cars_train/cars_train/05410.jpg,train_05410,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,424,360,True,33,87,395,273
+Stanford Dataset/cars_train/cars_train/00199.jpg,train_00199,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,1600,1200,True,150,297,1284,834
+Stanford Dataset/cars_train/cars_train/04441.jpg,train_04441,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,930,620,True,33,31,871,567
+Stanford Dataset/cars_train/cars_train/03112.jpg,train_03112,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,640,480,True,118,185,506,380
+Stanford Dataset/cars_train/cars_train/06758.jpg,train_06758,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,300,168,True,56,3,268,160
+Stanford Dataset/cars_train/cars_train/04795.jpg,train_04795,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,259,194,True,31,40,238,152
+Stanford Dataset/cars_train/cars_train/01148.jpg,train_01148,val,9,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,2012.0,610,352,True,31,108,574,266
+Stanford Dataset/cars_train/cars_train/00724.jpg,train_00724,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,300,182,True,99,26,237,124
+Stanford Dataset/cars_train/cars_train/02598.jpg,train_02598,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,259,195,True,39,37,223,154
+Stanford Dataset/cars_train/cars_train/05089.jpg,train_05089,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,1280,782,True,67,286,1227,666
+Stanford Dataset/cars_train/cars_train/01159.jpg,train_01159,val,194,Volvo XC90 SUV 2007,Volvo,XC90 SUV,2007.0,400,266,True,29,22,389,255
+Stanford Dataset/cars_train/cars_train/03158.jpg,train_03158,val,70,Chevrolet Express Van 2007,Chevrolet,Express Van,2007.0,400,300,True,15,146,376,286
+Stanford Dataset/cars_train/cars_train/07379.jpg,train_07379,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,450,300,True,19,128,430,276
+Stanford Dataset/cars_train/cars_train/07735.jpg,train_07735,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,1024,768,True,27,33,1021,755
+Stanford Dataset/cars_train/cars_train/05706.jpg,train_05706,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,500,332,True,51,99,449,295
+Stanford Dataset/cars_train/cars_train/07216.jpg,train_07216,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,220,165,True,2,29,216,140
+Stanford Dataset/cars_train/cars_train/02637.jpg,train_02637,val,77,Chrysler Town and Country Minivan 2012,Chrysler,Town and Country Minivan,2012.0,640,480,True,62,104,596,419
+Stanford Dataset/cars_train/cars_train/02008.jpg,train_02008,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,640,480,True,30,145,614,443
+Stanford Dataset/cars_train/cars_train/03113.jpg,train_03113,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,424,360,True,27,60,408,265
+Stanford Dataset/cars_train/cars_train/06426.jpg,train_06426,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,500,334,True,67,166,436,324
+Stanford Dataset/cars_train/cars_train/07087.jpg,train_07087,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,640,480,True,53,127,563,419
+Stanford Dataset/cars_train/cars_train/04384.jpg,train_04384,val,174,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,2012.0,300,200,True,16,54,284,165
+Stanford Dataset/cars_train/cars_train/02712.jpg,train_02712,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,441,221,True,30,7,414,220
+Stanford Dataset/cars_train/cars_train/08130.jpg,train_08130,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,600,450,True,45,30,571,416
+Stanford Dataset/cars_train/cars_train/02824.jpg,train_02824,val,45,Bugatti Veyron 16.4 Coupe 2009,Bugatti,Veyron 16.4 Coupe,2009.0,800,550,True,34,171,759,488
+Stanford Dataset/cars_train/cars_train/02641.jpg,train_02641,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,640,450,True,70,34,586,374
+Stanford Dataset/cars_train/cars_train/00882.jpg,train_00882,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,1100,654,True,139,121,1058,495
+Stanford Dataset/cars_train/cars_train/08069.jpg,train_08069,val,154,Land Rover LR2 SUV 2012,Land Rover,LR2 SUV,2012.0,425,318,True,41,32,389,275
+Stanford Dataset/cars_train/cars_train/07697.jpg,train_07697,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,640,480,True,35,79,621,440
+Stanford Dataset/cars_train/cars_train/03703.jpg,train_03703,val,18,Audi TT Hatchback 2011,Audi,TT Hatchback,2011.0,300,195,True,12,23,275,179
+Stanford Dataset/cars_train/cars_train/02443.jpg,train_02443,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,640,480,True,73,61,616,410
+Stanford Dataset/cars_train/cars_train/06247.jpg,train_06247,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,1600,1200,True,114,111,1470,1086
+Stanford Dataset/cars_train/cars_train/00712.jpg,train_00712,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,1600,1067,True,456,413,1307,950
+Stanford Dataset/cars_train/cars_train/00214.jpg,train_00214,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,1024,768,True,69,77,914,639
+Stanford Dataset/cars_train/cars_train/03436.jpg,train_03436,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,580,407,True,19,95,563,340
+Stanford Dataset/cars_train/cars_train/02690.jpg,train_02690,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,640,480,True,59,168,587,466
+Stanford Dataset/cars_train/cars_train/05355.jpg,train_05355,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,560,315,True,32,73,530,282
+Stanford Dataset/cars_train/cars_train/07498.jpg,train_07498,val,63,Chevrolet Express Cargo Van 2007,Chevrolet,Express Cargo Van,2007.0,640,480,True,100,62,606,450
+Stanford Dataset/cars_train/cars_train/08105.jpg,train_08105,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,1750,755,True,29,79,1739,693
+Stanford Dataset/cars_train/cars_train/07908.jpg,train_07908,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,600,400,True,78,149,530,325
+Stanford Dataset/cars_train/cars_train/00303.jpg,train_00303,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,300,225,True,5,46,296,192
+Stanford Dataset/cars_train/cars_train/02455.jpg,train_02455,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,640,480,True,78,96,562,352
+Stanford Dataset/cars_train/cars_train/00294.jpg,train_00294,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,640,480,True,10,140,628,385
+Stanford Dataset/cars_train/cars_train/01139.jpg,train_01139,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,640,360,True,46,33,594,325
+Stanford Dataset/cars_train/cars_train/07625.jpg,train_07625,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,800,502,True,51,132,744,451
+Stanford Dataset/cars_train/cars_train/05945.jpg,train_05945,val,62,Chevrolet Sonic Sedan 2012,Chevrolet,Sonic Sedan,2012.0,5616,3744,True,1647,1507,5204,3388
+Stanford Dataset/cars_train/cars_train/03348.jpg,train_03348,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,259,194,True,6,29,252,166
+Stanford Dataset/cars_train/cars_train/03356.jpg,train_03356,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,960,720,True,50,196,936,562
+Stanford Dataset/cars_train/cars_train/04676.jpg,train_04676,val,21,Audi S5 Coupe 2012,Audi,S5 Coupe,2012.0,580,309,True,25,65,558,285
+Stanford Dataset/cars_train/cars_train/03916.jpg,train_03916,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,640,397,True,25,14,606,308
+Stanford Dataset/cars_train/cars_train/04315.jpg,train_04315,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,400,300,True,5,61,380,276
+Stanford Dataset/cars_train/cars_train/06077.jpg,train_06077,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,259,194,True,14,3,233,171
+Stanford Dataset/cars_train/cars_train/04978.jpg,train_04978,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,800,538,True,124,164,573,468
+Stanford Dataset/cars_train/cars_train/02010.jpg,train_02010,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,640,466,True,65,45,544,425
+Stanford Dataset/cars_train/cars_train/07772.jpg,train_07772,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,1024,768,True,54,0,684,530
+Stanford Dataset/cars_train/cars_train/05805.jpg,train_05805,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,300,225,True,23,54,284,187
+Stanford Dataset/cars_train/cars_train/06128.jpg,train_06128,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,434,326,True,15,66,420,248
+Stanford Dataset/cars_train/cars_train/04687.jpg,train_04687,val,102,Ferrari 458 Italia Convertible 2012,Ferrari,458 Italia Convertible,2012.0,553,369,True,17,144,539,295
+Stanford Dataset/cars_train/cars_train/04390.jpg,train_04390,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,924,693,True,68,144,854,580
+Stanford Dataset/cars_train/cars_train/01202.jpg,train_01202,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,800,600,True,51,288,750,504
+Stanford Dataset/cars_train/cars_train/02928.jpg,train_02928,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,625,381,True,61,113,578,326
+Stanford Dataset/cars_train/cars_train/04159.jpg,train_04159,val,149,Lamborghini Reventon Coupe 2008,Lamborghini,Reventon Coupe,2008.0,600,402,True,20,62,576,323
+Stanford Dataset/cars_train/cars_train/07268.jpg,train_07268,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,630,363,True,11,94,611,323
+Stanford Dataset/cars_train/cars_train/05882.jpg,train_05882,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,400,300,True,36,71,384,258
+Stanford Dataset/cars_train/cars_train/00028.jpg,train_00028,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,620,412,True,44,114,584,381
+Stanford Dataset/cars_train/cars_train/07705.jpg,train_07705,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,640,480,True,54,62,576,397
+Stanford Dataset/cars_train/cars_train/00489.jpg,train_00489,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,500,313,True,54,77,453,271
+Stanford Dataset/cars_train/cars_train/06046.jpg,train_06046,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,480,360,True,14,12,463,359
+Stanford Dataset/cars_train/cars_train/02231.jpg,train_02231,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,400,266,True,47,65,362,209
+Stanford Dataset/cars_train/cars_train/05903.jpg,train_05903,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,640,500,True,25,89,611,424
+Stanford Dataset/cars_train/cars_train/06994.jpg,train_06994,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,324,222,True,10,15,323,202
+Stanford Dataset/cars_train/cars_train/04713.jpg,train_04713,val,64,Chevrolet Avalanche Crew Cab 2012,Chevrolet,Avalanche Crew Cab,2012.0,640,480,True,23,113,617,365
+Stanford Dataset/cars_train/cars_train/00414.jpg,train_00414,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,1600,939,True,315,343,1268,890
+Stanford Dataset/cars_train/cars_train/05107.jpg,train_05107,val,151,Lamborghini Gallardo LP 570-4 Superleggera 2012,Lamborghini,Gallardo LP 570-4 Superleggera,2012.0,400,266,True,30,43,378,249
+Stanford Dataset/cars_train/cars_train/02559.jpg,train_02559,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,700,500,True,15,25,689,461
+Stanford Dataset/cars_train/cars_train/03780.jpg,train_03780,val,142,Isuzu Ascender SUV 2008,Isuzu,Ascender SUV,2008.0,640,480,True,58,120,552,392
+Stanford Dataset/cars_train/cars_train/07791.jpg,train_07791,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,1024,768,True,56,163,1004,503
+Stanford Dataset/cars_train/cars_train/03280.jpg,train_03280,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,625,394,True,30,19,591,351
+Stanford Dataset/cars_train/cars_train/08077.jpg,train_08077,val,65,Chevrolet Cobalt SS 2010,Chevrolet,Cobalt SS,2010.0,589,341,True,43,89,549,297
+Stanford Dataset/cars_train/cars_train/01318.jpg,train_01318,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,640,421,True,166,84,579,306
+Stanford Dataset/cars_train/cars_train/04040.jpg,train_04040,val,20,Audi S5 Convertible 2012,Audi,S5 Convertible,2012.0,1024,768,True,67,353,991,668
+Stanford Dataset/cars_train/cars_train/04184.jpg,train_04184,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,240,99,True,0,0,239,98
+Stanford Dataset/cars_train/cars_train/03815.jpg,train_03815,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,1024,768,True,23,182,937,543
+Stanford Dataset/cars_train/cars_train/01404.jpg,train_01404,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,1600,1200,True,435,573,1464,939
+Stanford Dataset/cars_train/cars_train/06548.jpg,train_06548,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,480,True,62,86,574,439
+Stanford Dataset/cars_train/cars_train/07540.jpg,train_07540,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,3264,2448,True,416,496,2980,2087
+Stanford Dataset/cars_train/cars_train/05758.jpg,train_05758,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,640,480,True,60,25,577,479
+Stanford Dataset/cars_train/cars_train/07808.jpg,train_07808,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,454,299,True,31,127,422,286
+Stanford Dataset/cars_train/cars_train/00269.jpg,train_00269,val,184,Tesla Model S Sedan 2012,Tesla,Model S Sedan,2012.0,640,480,True,28,191,604,390
+Stanford Dataset/cars_train/cars_train/07863.jpg,train_07863,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,1024,768,True,33,115,954,588
+Stanford Dataset/cars_train/cars_train/01836.jpg,train_01836,val,86,Dodge Ram Pickup 3500 Quad Cab 2009,Dodge,Ram Pickup 3500 Quad Cab,2009.0,640,480,True,80,86,580,347
+Stanford Dataset/cars_train/cars_train/05755.jpg,train_05755,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,750,469,True,70,88,687,422
+Stanford Dataset/cars_train/cars_train/01798.jpg,train_01798,val,170,Nissan 240SX Coupe 1998,Nissan,240SX Coupe,1998.0,575,431,True,41,157,495,354
+Stanford Dataset/cars_train/cars_train/04209.jpg,train_04209,val,95,Dodge Charger Sedan 2012,Dodge,Charger Sedan,2012.0,2000,1328,True,106,561,1912,1202
+Stanford Dataset/cars_train/cars_train/07060.jpg,train_07060,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,750,469,True,206,200,532,373
+Stanford Dataset/cars_train/cars_train/04733.jpg,train_04733,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,584,328,True,0,65,583,321
+Stanford Dataset/cars_train/cars_train/02453.jpg,train_02453,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,480,360,True,23,60,449,305
+Stanford Dataset/cars_train/cars_train/01235.jpg,train_01235,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,500,375,True,28,115,463,310
+Stanford Dataset/cars_train/cars_train/00258.jpg,train_00258,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,259,194,True,33,85,226,165
+Stanford Dataset/cars_train/cars_train/01070.jpg,train_01070,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,480,360,True,51,58,437,287
+Stanford Dataset/cars_train/cars_train/03661.jpg,train_03661,val,181,Suzuki Kizashi Sedan 2012,Suzuki,Kizashi Sedan,2012.0,640,480,True,29,102,613,377
+Stanford Dataset/cars_train/cars_train/04418.jpg,train_04418,val,160,Mercedes-Benz 300-Class Convertible 1993,Mercedes-Benz,300-Class Convertible,1993.0,640,480,True,55,37,604,414
+Stanford Dataset/cars_train/cars_train/07792.jpg,train_07792,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,640,480,True,60,72,586,404
+Stanford Dataset/cars_train/cars_train/07111.jpg,train_07111,val,125,Honda Odyssey Minivan 2012,Honda,Odyssey Minivan,2012.0,500,315,True,4,87,499,256
+Stanford Dataset/cars_train/cars_train/07859.jpg,train_07859,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,1024,766,True,48,172,990,619
+Stanford Dataset/cars_train/cars_train/03037.jpg,train_03037,val,155,Lincoln Town Car Sedan 2011,Lincoln,Town Car Sedan,2011.0,200,101,True,6,2,193,100
+Stanford Dataset/cars_train/cars_train/04195.jpg,train_04195,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,640,426,True,26,153,604,354
+Stanford Dataset/cars_train/cars_train/03155.jpg,train_03155,val,119,GMC Yukon Hybrid SUV 2012,GMC,Yukon Hybrid SUV,2012.0,544,408,True,27,153,434,377
+Stanford Dataset/cars_train/cars_train/01579.jpg,train_01579,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,3543,2362,True,189,779,3348,1955
+Stanford Dataset/cars_train/cars_train/06938.jpg,train_06938,val,78,Chrysler 300 SRT-8 2010,Chrysler,300 SRT-8,2010.0,640,480,True,22,107,612,354
+Stanford Dataset/cars_train/cars_train/03084.jpg,train_03084,val,97,Eagle Talon Hatchback 1998,Eagle,Talon Hatchback,1998.0,575,431,True,2,1,573,428
+Stanford Dataset/cars_train/cars_train/06184.jpg,train_06184,val,114,Ford Focus Sedan 2007,Ford,Focus Sedan,2007.0,630,473,True,46,210,622,425
+Stanford Dataset/cars_train/cars_train/07036.jpg,train_07036,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,400,243,True,6,93,396,222
+Stanford Dataset/cars_train/cars_train/05418.jpg,train_05418,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,259,194,True,50,14,216,163
+Stanford Dataset/cars_train/cars_train/07640.jpg,train_07640,val,150,Lamborghini Aventador Coupe 2012,Lamborghini,Aventador Coupe,2012.0,231,112,True,22,12,230,111
+Stanford Dataset/cars_train/cars_train/03141.jpg,train_03141,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,600,450,True,65,122,522,394
+Stanford Dataset/cars_train/cars_train/05433.jpg,train_05433,val,108,Ford Expedition EL SUV 2009,Ford,Expedition EL SUV,2009.0,300,189,True,4,17,294,177
+Stanford Dataset/cars_train/cars_train/07230.jpg,train_07230,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,259,194,True,7,23,258,165
+Stanford Dataset/cars_train/cars_train/07530.jpg,train_07530,val,46,Buick Regal GS 2012,Buick,Regal GS,2012.0,640,400,True,69,68,609,390
+Stanford Dataset/cars_train/cars_train/05414.jpg,train_05414,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,640,480,True,184,122,502,358
+Stanford Dataset/cars_train/cars_train/02390.jpg,train_02390,val,145,Jeep Wrangler SUV 2012,Jeep,Wrangler SUV,2012.0,2100,1575,True,130,95,1961,1469
+Stanford Dataset/cars_train/cars_train/05486.jpg,train_05486,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,1024,768,True,73,405,975,685
+Stanford Dataset/cars_train/cars_train/05820.jpg,train_05820,val,50,Cadillac CTS-V Sedan 2012,Cadillac,CTS-V Sedan,2012.0,478,326,True,90,92,448,299
+Stanford Dataset/cars_train/cars_train/08058.jpg,train_08058,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,300,225,True,9,47,291,218
+Stanford Dataset/cars_train/cars_train/06942.jpg,train_06942,val,133,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,2012.0,960,540,True,215,213,815,446
+Stanford Dataset/cars_train/cars_train/02345.jpg,train_02345,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,400,302,True,24,73,367,281
+Stanford Dataset/cars_train/cars_train/03657.jpg,train_03657,val,80,Chrysler PT Cruiser Convertible 2008,Chrysler,PT Cruiser Convertible,2008.0,500,375,True,18,53,489,349
+Stanford Dataset/cars_train/cars_train/02143.jpg,train_02143,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,3648,2736,True,7,75,3639,2674
+Stanford Dataset/cars_train/cars_train/02636.jpg,train_02636,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,1600,1060,True,120,286,1499,897
+Stanford Dataset/cars_train/cars_train/03484.jpg,train_03484,val,66,Chevrolet Malibu Hybrid Sedan 2010,Chevrolet,Malibu Hybrid Sedan,2010.0,400,200,True,15,51,387,190
+Stanford Dataset/cars_train/cars_train/01330.jpg,train_01330,val,52,Cadillac Escalade EXT Crew Cab 2007,Cadillac,Escalade EXT Crew Cab,2007.0,300,225,True,8,10,289,199
+Stanford Dataset/cars_train/cars_train/03181.jpg,train_03181,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,500,333,True,27,38,472,323
+Stanford Dataset/cars_train/cars_train/03306.jpg,train_03306,val,109,Ford Edge SUV 2012,Ford,Edge SUV,2012.0,424,360,True,23,42,397,324
+Stanford Dataset/cars_train/cars_train/01121.jpg,train_01121,val,190,Volkswagen Golf Hatchback 1991,Volkswagen,Golf Hatchback,1991.0,1024,576,True,156,58,837,484
+Stanford Dataset/cars_train/cars_train/00030.jpg,train_00030,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,896,592,True,81,108,873,520
+Stanford Dataset/cars_train/cars_train/06265.jpg,train_06265,val,25,BMW ActiveHybrid 5 Sedan 2012,BMW,ActiveHybrid 5 Sedan,2012.0,495,320,True,77,122,434,282
+Stanford Dataset/cars_train/cars_train/06865.jpg,train_06865,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,300,225,True,39,47,286,190
+Stanford Dataset/cars_train/cars_train/05048.jpg,train_05048,val,9,Aston Martin Virage Convertible 2012,Aston Martin,Virage Convertible,2012.0,600,401,True,39,69,561,349
+Stanford Dataset/cars_train/cars_train/01880.jpg,train_01880,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,1024,768,True,119,323,889,730
+Stanford Dataset/cars_train/cars_train/05493.jpg,train_05493,val,81,Daewoo Nubira Wagon 2002,Daewoo,Nubira Wagon,2002.0,600,400,True,48,0,520,399
+Stanford Dataset/cars_train/cars_train/03147.jpg,train_03147,val,129,Hyundai Veloster Hatchback 2012,Hyundai,Veloster Hatchback,2012.0,500,289,True,33,47,470,273
+Stanford Dataset/cars_train/cars_train/03034.jpg,train_03034,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,1024,768,True,119,83,889,657
+Stanford Dataset/cars_train/cars_train/00876.jpg,train_00876,val,74,Chevrolet Silverado 1500 Regular Cab 2012,Chevrolet,Silverado 1500 Regular Cab,2012.0,640,480,True,50,120,587,386
+Stanford Dataset/cars_train/cars_train/06950.jpg,train_06950,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,1024,682,True,58,290,962,639
+Stanford Dataset/cars_train/cars_train/06050.jpg,train_06050,val,67,Chevrolet TrailBlazer SS 2009,Chevrolet,TrailBlazer SS,2009.0,400,300,True,37,44,387,277
+Stanford Dataset/cars_train/cars_train/01179.jpg,train_01179,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,533,394,True,84,199,462,343
+Stanford Dataset/cars_train/cars_train/02015.jpg,train_02015,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,600,435,True,34,113,549,326
+Stanford Dataset/cars_train/cars_train/05304.jpg,train_05304,val,7,Aston Martin V8 Vantage Convertible 2012,Aston Martin,V8 Vantage Convertible,2012.0,275,183,True,10,30,270,178
+Stanford Dataset/cars_train/cars_train/06116.jpg,train_06116,val,69,Chevrolet Silverado 1500 Classic Extended Cab 2007,Chevrolet,Silverado 1500 Classic Extended Cab,2007.0,172,129,True,12,19,162,103
+Stanford Dataset/cars_train/cars_train/07451.jpg,train_07451,val,44,Bugatti Veyron 16.4 Convertible 2009,Bugatti,Veyron 16.4 Convertible,2009.0,1280,782,True,188,223,1114,622
+Stanford Dataset/cars_train/cars_train/05688.jpg,train_05688,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,800,600,True,20,189,749,554
+Stanford Dataset/cars_train/cars_train/04800.jpg,train_04800,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,500,230,True,37,51,482,221
+Stanford Dataset/cars_train/cars_train/00067.jpg,train_00067,val,110,Ford Ranger SuperCab 2011,Ford,Ranger SuperCab,2011.0,640,480,True,128,88,593,431
+Stanford Dataset/cars_train/cars_train/03027.jpg,train_03027,val,98,FIAT 500 Abarth 2012,FIAT,500 Abarth,2012.0,1366,768,True,197,94,1223,762
+Stanford Dataset/cars_train/cars_train/00204.jpg,train_00204,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,300,169,True,10,60,283,150
+Stanford Dataset/cars_train/cars_train/07521.jpg,train_07521,val,128,Honda Accord Sedan 2012,Honda,Accord Sedan,2012.0,300,200,True,26,82,283,175
+Stanford Dataset/cars_train/cars_train/02354.jpg,train_02354,val,61,Chevrolet Tahoe Hybrid SUV 2012,Chevrolet,Tahoe Hybrid SUV,2012.0,290,217,True,11,80,279,187
+Stanford Dataset/cars_train/cars_train/04726.jpg,train_04726,val,186,Toyota Camry Sedan 2012,Toyota,Camry Sedan,2012.0,1024,640,True,157,232,872,528
+Stanford Dataset/cars_train/cars_train/00207.jpg,train_00207,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,470,372,True,30,118,437,257
+Stanford Dataset/cars_train/cars_train/03422.jpg,train_03422,val,24,Audi TT RS Coupe 2012,Audi,TT RS Coupe,2012.0,625,416,True,206,176,580,342
+Stanford Dataset/cars_train/cars_train/06460.jpg,train_06460,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,427,True,94,34,552,389
+Stanford Dataset/cars_train/cars_train/04063.jpg,train_04063,val,113,Ford F-150 Regular Cab 2007,Ford,F-150 Regular Cab,2007.0,640,480,True,76,65,595,428
+Stanford Dataset/cars_train/cars_train/06907.jpg,train_06907,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,480,360,True,104,67,392,268
+Stanford Dataset/cars_train/cars_train/05096.jpg,train_05096,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,400,300,True,1,81,380,186
+Stanford Dataset/cars_train/cars_train/05547.jpg,train_05547,val,34,BMW M5 Sedan 2010,BMW,M5 Sedan,2010.0,300,225,True,18,50,282,188
+Stanford Dataset/cars_train/cars_train/05521.jpg,train_05521,val,140,Infiniti G Coupe IPL 2012,Infiniti,G Coupe IPL,2012.0,1080,720,True,56,176,952,490
+Stanford Dataset/cars_train/cars_train/06018.jpg,train_06018,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,307,164,True,12,73,286,157
+Stanford Dataset/cars_train/cars_train/07631.jpg,train_07631,val,85,Dodge Ram Pickup 3500 Crew Cab 2010,Dodge,Ram Pickup 3500 Crew Cab,2010.0,480,360,True,42,42,431,270
+Stanford Dataset/cars_train/cars_train/03946.jpg,train_03946,val,71,Chevrolet Monte Carlo Coupe 2007,Chevrolet,Monte Carlo Coupe,2007.0,1024,768,True,0,96,960,645
+Stanford Dataset/cars_train/cars_train/03836.jpg,train_03836,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,470,265,True,18,40,448,227
+Stanford Dataset/cars_train/cars_train/04077.jpg,train_04077,val,127,Honda Accord Coupe 2012,Honda,Accord Coupe,2012.0,274,184,True,31,35,260,153
+Stanford Dataset/cars_train/cars_train/06732.jpg,train_06732,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,750,469,True,25,30,680,411
+Stanford Dataset/cars_train/cars_train/02212.jpg,train_02212,val,73,Chevrolet Silverado 1500 Extended Cab 2012,Chevrolet,Silverado 1500 Extended Cab,2012.0,588,441,True,44,115,546,392
+Stanford Dataset/cars_train/cars_train/04175.jpg,train_04175,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,625,468,True,35,46,610,462
+Stanford Dataset/cars_train/cars_train/05230.jpg,train_05230,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,740,300,True,222,65,551,260
+Stanford Dataset/cars_train/cars_train/02006.jpg,train_02006,val,33,BMW M3 Coupe 2012,BMW,M3 Coupe,2012.0,203,128,True,56,42,193,126
+Stanford Dataset/cars_train/cars_train/06603.jpg,train_06603,val,6,Acura ZDX Hatchback 2012,Acura,ZDX Hatchback,2012.0,628,405,True,38,126,594,359
+Stanford Dataset/cars_train/cars_train/08024.jpg,train_08024,val,158,Mazda Tribute SUV 2011,Mazda,Tribute SUV,2011.0,786,492,True,151,194,594,445
+Stanford Dataset/cars_train/cars_train/02051.jpg,train_02051,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,1506,894,True,53,134,1460,821
+Stanford Dataset/cars_train/cars_train/00907.jpg,train_00907,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,480,360,True,20,72,463,293
+Stanford Dataset/cars_train/cars_train/06387.jpg,train_06387,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,520,382,True,52,160,469,321
+Stanford Dataset/cars_train/cars_train/01358.jpg,train_01358,val,58,Chevrolet Camaro Convertible 2012,Chevrolet,Camaro Convertible,2012.0,600,357,True,9,0,562,305
+Stanford Dataset/cars_train/cars_train/02283.jpg,train_02283,val,185,Toyota Sequoia SUV 2012,Toyota,Sequoia SUV,2012.0,300,225,True,7,47,295,193
+Stanford Dataset/cars_train/cars_train/01707.jpg,train_01707,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,823,649,True,78,164,743,555
+Stanford Dataset/cars_train/cars_train/01697.jpg,train_01697,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,580,435,True,111,30,495,347
+Stanford Dataset/cars_train/cars_train/07578.jpg,train_07578,val,51,Cadillac SRX SUV 2012,Cadillac,SRX SUV,2012.0,300,225,True,34,78,256,213
+Stanford Dataset/cars_train/cars_train/02754.jpg,train_02754,val,138,Hyundai Elantra Touring Hatchback 2012,Hyundai,Elantra Touring Hatchback,2012.0,640,480,True,38,116,596,416
+Stanford Dataset/cars_train/cars_train/00386.jpg,train_00386,val,55,Chevrolet Corvette ZR1 2012,Chevrolet,Corvette ZR1,2012.0,1280,1024,True,64,320,1231,827
+Stanford Dataset/cars_train/cars_train/07877.jpg,train_07877,val,159,McLaren MP4-12C Coupe 2012,McLaren,MP4-12C Coupe,2012.0,1680,1050,True,249,171,1593,979
+Stanford Dataset/cars_train/cars_train/02663.jpg,train_02663,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,640,480,True,13,83,626,397
+Stanford Dataset/cars_train/cars_train/01835.jpg,train_01835,val,90,Dodge Dakota Club Cab 2007,Dodge,Dakota Club Cab,2007.0,630,473,True,71,93,576,396
+Stanford Dataset/cars_train/cars_train/08065.jpg,train_08065,val,147,Jeep Grand Cherokee SUV 2012,Jeep,Grand Cherokee SUV,2012.0,650,366,True,133,14,529,316
+Stanford Dataset/cars_train/cars_train/05994.jpg,train_05994,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,750,469,True,274,79,656,350
+Stanford Dataset/cars_train/cars_train/00570.jpg,train_00570,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,259,194,True,9,43,238,192
+Stanford Dataset/cars_train/cars_train/03456.jpg,train_03456,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,1024,768,True,46,86,972,588
+Stanford Dataset/cars_train/cars_train/03036.jpg,train_03036,val,93,Dodge Durango SUV 2012,Dodge,Durango SUV,2012.0,640,480,True,32,40,612,422
+Stanford Dataset/cars_train/cars_train/04553.jpg,train_04553,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,800,600,True,39,225,767,489
+Stanford Dataset/cars_train/cars_train/07311.jpg,train_07311,val,31,BMW X5 SUV 2007,BMW,X5 SUV,2007.0,300,222,True,9,0,291,212
+Stanford Dataset/cars_train/cars_train/02100.jpg,train_02100,val,88,Dodge Journey SUV 2012,Dodge,Journey SUV,2012.0,640,427,True,65,63,597,384
+Stanford Dataset/cars_train/cars_train/06161.jpg,train_06161,val,148,Jeep Compass SUV 2012,Jeep,Compass SUV,2012.0,1600,1200,True,111,264,1506,1098
+Stanford Dataset/cars_train/cars_train/01785.jpg,train_01785,val,72,Chevrolet Malibu Sedan 2007,Chevrolet,Malibu Sedan,2007.0,259,194,True,21,68,230,153
+Stanford Dataset/cars_train/cars_train/07058.jpg,train_07058,val,47,Buick Rainier SUV 2007,Buick,Rainier SUV,2007.0,1600,1200,True,201,180,1512,1119
+Stanford Dataset/cars_train/cars_train/07764.jpg,train_07764,val,35,BMW M6 Convertible 2010,BMW,M6 Convertible,2010.0,500,369,True,48,128,457,333
+Stanford Dataset/cars_train/cars_train/02373.jpg,train_02373,val,166,Mitsubishi Lancer Sedan 2012,Mitsubishi,Lancer Sedan,2012.0,1024,695,True,26,130,956,590
+Stanford Dataset/cars_train/cars_train/04849.jpg,train_04849,val,176,Rolls-Royce Phantom Sedan 2012,Rolls-Royce,Phantom Sedan,2012.0,445,334,True,12,47,441,256
+Stanford Dataset/cars_train/cars_train/05782.jpg,train_05782,val,99,FIAT 500 Convertible 2012,FIAT,500 Convertible,2012.0,604,372,True,30,50,567,356
+Stanford Dataset/cars_train/cars_train/07776.jpg,train_07776,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,480,360,True,50,117,464,359
+Stanford Dataset/cars_train/cars_train/03693.jpg,train_03693,val,135,Hyundai Accent Sedan 2012,Hyundai,Accent Sedan,2012.0,625,354,True,90,31,522,316
+Stanford Dataset/cars_train/cars_train/06845.jpg,train_06845,val,13,Audi TTS Coupe 2012,Audi,TTS Coupe,2012.0,704,425,True,89,39,627,364
+Stanford Dataset/cars_train/cars_train/07717.jpg,train_07717,val,156,MINI Cooper Roadster Convertible 2012,MINI,Cooper Roadster Convertible,2012.0,500,333,True,51,71,332,283
+Stanford Dataset/cars_train/cars_train/06621.jpg,train_06621,val,144,Jeep Patriot SUV 2012,Jeep,Patriot SUV,2012.0,671,348,True,53,91,470,333
+Stanford Dataset/cars_train/cars_train/07597.jpg,train_07597,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,700,500,True,34,83,683,446
+Stanford Dataset/cars_train/cars_train/06599.jpg,train_06599,val,91,Dodge Magnum Wagon 2008,Dodge,Magnum Wagon,2008.0,1600,1027,True,80,82,1523,850
+Stanford Dataset/cars_train/cars_train/01089.jpg,train_01089,val,29,BMW 3 Series Wagon 2012,BMW,3 Series Wagon,2012.0,1500,938,True,195,171,1395,889
+Stanford Dataset/cars_train/cars_train/03831.jpg,train_03831,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,640,480,True,67,89,578,409
+Stanford Dataset/cars_train/cars_train/03115.jpg,train_03115,val,37,BMW Z4 Convertible 2012,BMW,Z4 Convertible,2012.0,275,183,True,66,30,211,146
+Stanford Dataset/cars_train/cars_train/06425.jpg,train_06425,val,137,Hyundai Sonata Sedan 2012,Hyundai,Sonata Sedan,2012.0,640,480,True,12,98,630,424
+Stanford Dataset/cars_train/cars_train/01518.jpg,train_01518,val,193,Volvo 240 Sedan 1993,Volvo,240 Sedan,1993.0,575,431,True,23,97,572,351
+Stanford Dataset/cars_train/cars_train/02501.jpg,train_02501,val,157,Maybach Landaulet Convertible 2012,Maybach,Landaulet Convertible,2012.0,400,300,True,0,158,399,285
+Stanford Dataset/cars_train/cars_train/02676.jpg,train_02676,val,152,Lamborghini Diablo Coupe 2001,Lamborghini,Diablo Coupe,2001.0,800,600,True,12,153,797,465
+Stanford Dataset/cars_train/cars_train/00714.jpg,train_00714,val,59,Chevrolet HHR SS 2010,Chevrolet,HHR SS,2010.0,640,400,True,74,120,602,369
+Stanford Dataset/cars_train/cars_train/07461.jpg,train_07461,val,175,Rolls-Royce Ghost Sedan 2012,Rolls-Royce,Ghost Sedan,2012.0,450,600,True,32,309,386,528
+Stanford Dataset/cars_train/cars_train/07975.jpg,train_07975,val,174,Rolls-Royce Phantom Drophead Coupe Convertible 2012,Rolls-Royce,Phantom Drophead Coupe Convertible,2012.0,432,378,True,73,149,369,323
+Stanford Dataset/cars_train/cars_train/00210.jpg,train_00210,val,172,Porsche Panamera Sedan 2012,Porsche,Panamera Sedan,2012.0,640,480,True,7,79,638,365
+Stanford Dataset/cars_train/cars_train/06951.jpg,train_06951,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,640,480,True,182,112,505,366
+Stanford Dataset/cars_train/cars_train/02814.jpg,train_02814,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,1700,1113,True,132,218,1546,961
+Stanford Dataset/cars_train/cars_train/07171.jpg,train_07171,val,5,Acura Integra Type R 2001,Acura,Integra Type R,2001.0,640,426,True,281,153,591,335
+Stanford Dataset/cars_train/cars_train/02075.jpg,train_02075,val,76,Chrysler Sebring Convertible 2010,Chrysler,Sebring Convertible,2010.0,300,166,True,8,15,293,155
+Stanford Dataset/cars_train/cars_train/07453.jpg,train_07453,val,83,Dodge Caliber Wagon 2007,Dodge,Caliber Wagon,2007.0,259,194,True,19,12,246,186
+Stanford Dataset/cars_train/cars_train/00180.jpg,train_00180,val,141,Infiniti QX56 SUV 2011,Infiniti,QX56 SUV,2011.0,300,189,True,2,39,296,156
+Stanford Dataset/cars_train/cars_train/04564.jpg,train_04564,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,380,285,True,46,37,354,226
+Stanford Dataset/cars_train/cars_train/03097.jpg,train_03097,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,1600,1200,True,18,240,1575,1128
+Stanford Dataset/cars_train/cars_train/02278.jpg,train_02278,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,800,600,True,98,92,689,476
+Stanford Dataset/cars_train/cars_train/05532.jpg,train_05532,val,121,GMC Canyon Extended Cab 2012,GMC,Canyon Extended Cab,2012.0,1600,1064,True,178,380,1482,915
+Stanford Dataset/cars_train/cars_train/01531.jpg,train_01531,val,187,Toyota Corolla Sedan 2012,Toyota,Corolla Sedan,2012.0,259,194,True,14,27,250,180
+Stanford Dataset/cars_train/cars_train/05239.jpg,train_05239,val,99,FIAT 500 Convertible 2012,FIAT,500 Convertible,2012.0,510,340,True,54,35,425,313
+Stanford Dataset/cars_train/cars_train/02635.jpg,train_02635,val,163,Mercedes-Benz E-Class Sedan 2012,Mercedes-Benz,E-Class Sedan,2012.0,1500,1086,True,38,171,1450,901
+Stanford Dataset/cars_train/cars_train/07015.jpg,train_07015,val,132,Hyundai Veracruz SUV 2012,Hyundai,Veracruz SUV,2012.0,640,480,True,36,49,608,401
+Stanford Dataset/cars_train/cars_train/03975.jpg,train_03975,val,42,Bentley Continental GT Coupe 2007,Bentley,Continental GT Coupe,2007.0,640,483,True,25,191,627,388
+Stanford Dataset/cars_train/cars_train/02346.jpg,train_02346,val,101,Ferrari California Convertible 2012,Ferrari,California Convertible,2012.0,500,179,True,13,21,255,161
+Stanford Dataset/cars_train/cars_train/06578.jpg,train_06578,val,124,HUMMER H2 SUT Crew Cab 2009,HUMMER,H2 SUT Crew Cab,2009.0,400,200,True,30,14,377,184
+Stanford Dataset/cars_train/cars_train/03502.jpg,train_03502,val,10,Aston Martin Virage Coupe 2012,Aston Martin,Virage Coupe,2012.0,1200,885,True,199,520,985,788
+Stanford Dataset/cars_train/cars_train/07469.jpg,train_07469,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,78,58,True,2,12,75,51
+Stanford Dataset/cars_train/cars_train/01143.jpg,train_01143,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,585,392,True,56,123,557,380
+Stanford Dataset/cars_train/cars_train/01955.jpg,train_01955,val,139,Hyundai Azera Sedan 2012,Hyundai,Azera Sedan,2012.0,1600,1067,True,333,550,1259,1013
+Stanford Dataset/cars_train/cars_train/05627.jpg,train_05627,val,146,Jeep Liberty SUV 2012,Jeep,Liberty SUV,2012.0,1280,782,True,100,29,1191,780
+Stanford Dataset/cars_train/cars_train/01209.jpg,train_01209,val,173,Ram C/V Cargo Van Minivan 2012,Ram,C/V Cargo Van Minivan,2012.0,120,120,True,0,23,119,102
+Stanford Dataset/cars_train/cars_train/00447.jpg,train_00447,val,161,Mercedes-Benz C-Class Sedan 2012,Mercedes-Benz,C-Class Sedan,2012.0,500,328,True,42,109,461,295
+Stanford Dataset/cars_train/cars_train/00039.jpg,train_00039,val,104,Fisker Karma Sedan 2012,Fisker,Karma Sedan,2012.0,640,425,True,52,112,613,349
+Stanford Dataset/cars_train/cars_train/01828.jpg,train_01828,val,48,Buick Verano Sedan 2012,Buick,Verano Sedan,2012.0,500,333,True,69,104,442,284
+Stanford Dataset/cars_train/cars_train/03660.jpg,train_03660,val,49,Buick Enclave SUV 2012,Buick,Enclave SUV,2012.0,640,480,True,102,163,554,425
+Stanford Dataset/cars_train/cars_train/02249.jpg,train_02249,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,700,409,True,113,78,599,355
+Stanford Dataset/cars_train/cars_train/02277.jpg,train_02277,val,136,Hyundai Genesis Sedan 2012,Hyundai,Genesis Sedan,2012.0,584,251,True,95,45,486,185
+Stanford Dataset/cars_train/cars_train/03878.jpg,train_03878,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,900,597,True,151,96,779,552
+Stanford Dataset/cars_train/cars_train/01408.jpg,train_01408,val,189,Volkswagen Golf Hatchback 2012,Volkswagen,Golf Hatchback,2012.0,264,198,True,26,51,252,150
+Stanford Dataset/cars_train/cars_train/07678.jpg,train_07678,val,32,BMW X6 SUV 2012,BMW,X6 SUV,2012.0,2000,1481,True,518,437,1459,1151
+Stanford Dataset/cars_train/cars_train/06872.jpg,train_06872,val,177,Scion xD Hatchback 2012,Scion,xD Hatchback,2012.0,640,425,True,19,37,614,393
+Stanford Dataset/cars_train/cars_train/07928.jpg,train_07928,val,158,Mazda Tribute SUV 2011,Mazda,Tribute SUV,2011.0,1024,768,True,115,121,968,620
+Stanford Dataset/cars_train/cars_train/00742.jpg,train_00742,val,4,Acura TSX Sedan 2012,Acura,TSX Sedan,2012.0,272,186,True,4,24,270,176
+Stanford Dataset/cars_train/cars_train/05865.jpg,train_05865,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,283,178,True,23,14,228,145
+Stanford Dataset/cars_train/cars_train/00697.jpg,train_00697,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,600,450,True,15,54,559,381
+Stanford Dataset/cars_train/cars_train/04914.jpg,train_04914,val,96,Dodge Charger SRT-8 2009,Dodge,Charger SRT-8,2009.0,1024,768,True,23,215,1020,653
+Stanford Dataset/cars_train/cars_train/00858.jpg,train_00858,val,1,Acura RL Sedan 2012,Acura,RL Sedan,2012.0,2100,1575,True,138,415,1953,1148
+Stanford Dataset/cars_train/cars_train/02958.jpg,train_02958,val,19,Audi S6 Sedan 2011,Audi,S6 Sedan,2011.0,640,480,True,28,53,614,419
+Stanford Dataset/cars_train/cars_train/07065.jpg,train_07065,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,620,490,True,201,120,560,383
+Stanford Dataset/cars_train/cars_train/01834.jpg,train_01834,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,588,441,True,142,90,555,369
+Stanford Dataset/cars_train/cars_train/01831.jpg,train_01831,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,646,485,True,42,68,607,451
+Stanford Dataset/cars_train/cars_train/07285.jpg,train_07285,val,40,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,2011.0,520,392,True,25,142,495,351
+Stanford Dataset/cars_train/cars_train/05918.jpg,train_05918,val,2,Acura TL Sedan 2012,Acura,TL Sedan,2012.0,300,183,True,24,54,276,149
+Stanford Dataset/cars_train/cars_train/03529.jpg,train_03529,val,84,Dodge Caravan Minivan 1997,Dodge,Caravan Minivan,1997.0,625,469,True,73,80,475,430
+Stanford Dataset/cars_train/cars_train/03031.jpg,train_03031,val,162,Mercedes-Benz SL-Class Coupe 2009,Mercedes-Benz,SL-Class Coupe,2009.0,639,425,True,119,248,493,389
+Stanford Dataset/cars_train/cars_train/02734.jpg,train_02734,val,168,Nissan NV Passenger Van 2012,Nissan,NV Passenger Van,2012.0,640,480,True,35,102,622,396
+Stanford Dataset/cars_train/cars_train/03607.jpg,train_03607,val,3,Acura TL Type-S 2008,Acura,TL Type-S,2008.0,986,603,True,57,145,942,552
+Stanford Dataset/cars_train/cars_train/04461.jpg,train_04461,val,38,Bentley Continental Supersports Conv. Convertible 2012,Bentley,Continental Supersports Conv. Convertible,2012.0,640,426,True,19,169,597,358
+Stanford Dataset/cars_train/cars_train/05663.jpg,train_05663,val,115,Ford E-Series Wagon Van 2012,Ford,E-Series Wagon Van,2012.0,805,453,True,64,58,769,418
+Stanford Dataset/cars_train/cars_train/01050.jpg,train_01050,val,131,Hyundai Tucson SUV 2012,Hyundai,Tucson SUV,2012.0,800,600,True,156,171,692,440
+Stanford Dataset/cars_train/cars_train/07460.jpg,train_07460,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1280,960,True,43,331,1255,794
+Stanford Dataset/cars_train/cars_train/03284.jpg,train_03284,val,182,Suzuki SX4 Hatchback 2012,Suzuki,SX4 Hatchback,2012.0,800,600,True,51,266,543,525
+Stanford Dataset/cars_train/cars_train/02781.jpg,train_02781,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,640,477,True,38,93,619,439
+Stanford Dataset/cars_train/cars_train/02385.jpg,train_02385,val,123,HUMMER H3T Crew Cab 2010,HUMMER,H3T Crew Cab,2010.0,450,299,True,18,134,438,287
+Stanford Dataset/cars_train/cars_train/06110.jpg,train_06110,val,40,Bentley Mulsanne Sedan 2011,Bentley,Mulsanne Sedan,2011.0,263,263,True,7,75,253,195
+Stanford Dataset/cars_train/cars_train/02399.jpg,train_02399,val,120,GMC Acadia SUV 2012,GMC,Acadia SUV,2012.0,640,480,True,11,89,623,422
+Stanford Dataset/cars_train/cars_train/08041.jpg,train_08041,val,164,Mercedes-Benz S-Class Sedan 2012,Mercedes-Benz,S-Class Sedan,2012.0,259,194,True,13,43,240,153
+Stanford Dataset/cars_train/cars_train/00667.jpg,train_00667,val,134,Hyundai Elantra Sedan 2007,Hyundai,Elantra Sedan,2007.0,500,375,True,20,43,452,317
+Stanford Dataset/cars_train/cars_train/01873.jpg,train_01873,val,106,Ford Mustang Convertible 2007,Ford,Mustang Convertible,2007.0,1600,1200,True,222,159,1419,906
+Stanford Dataset/cars_train/cars_train/01915.jpg,train_01915,val,135,Hyundai Accent Sedan 2012,Hyundai,Accent Sedan,2012.0,480,320,True,50,116,440,287
+Stanford Dataset/cars_train/cars_train/03984.jpg,train_03984,val,89,Dodge Dakota Crew Cab 2010,Dodge,Dakota Crew Cab,2010.0,300,225,True,7,18,288,179
+Stanford Dataset/cars_train/cars_train/03960.jpg,train_03960,val,126,Honda Odyssey Minivan 2007,Honda,Odyssey Minivan,2007.0,640,480,True,41,148,602,413
+Stanford Dataset/cars_train/cars_train/07594.jpg,train_07594,val,195,smart fortwo Convertible 2012,smart,fortwo Convertible,2012.0,400,300,True,28,33,380,272
+Stanford Dataset/cars_train/cars_train/04378.jpg,train_04378,val,143,Jaguar XK XKR 2012,Jaguar,XK XKR,2012.0,750,469,True,79,72,705,437
+Stanford Dataset/cars_train/cars_train/05429.jpg,train_05429,val,23,Audi S4 Sedan 2007,Audi,S4 Sedan,2007.0,500,288,True,15,25,459,257
+Stanford Dataset/cars_train/cars_train/06308.jpg,train_06308,val,36,BMW X3 SUV 2012,BMW,X3 SUV,2012.0,550,366,True,38,187,331,341
+Stanford Dataset/cars_train/cars_train/07662.jpg,train_07662,val,130,Hyundai Santa Fe SUV 2012,Hyundai,Santa Fe SUV,2012.0,1024,768,True,19,10,1006,716
+Stanford Dataset/cars_train/cars_train/04304.jpg,train_04304,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,640,480,True,86,53,580,390
+Stanford Dataset/cars_train/cars_train/07399.jpg,train_07399,val,171,Plymouth Neon Coupe 1999,Plymouth,Neon Coupe,1999.0,600,449,True,25,54,558,374
+Stanford Dataset/cars_train/cars_train/01317.jpg,train_01317,val,191,Volkswagen Beetle Hatchback 2012,Volkswagen,Beetle Hatchback,2012.0,640,480,True,90,128,532,398
+Stanford Dataset/cars_train/cars_train/06799.jpg,train_06799,val,111,Ford GT Coupe 2006,Ford,GT Coupe,2006.0,1024,768,True,71,113,1018,691
+Stanford Dataset/cars_train/cars_train/06871.jpg,train_06871,val,17,Audi 100 Wagon 1994,Audi,100 Wagon,1994.0,198,148,True,33,27,170,103
+Stanford Dataset/cars_train/cars_train/05875.jpg,train_05875,val,39,Bentley Arnage Sedan 2009,Bentley,Arnage Sedan,2009.0,1200,803,True,60,239,1153,702
+Stanford Dataset/cars_train/cars_train/01356.jpg,train_01356,val,167,Nissan Leaf Hatchback 2012,Nissan,Leaf Hatchback,2012.0,730,440,True,50,119,682,377
+Stanford Dataset/cars_train/cars_train/06568.jpg,train_06568,val,16,Audi 100 Sedan 1994,Audi,100 Sedan,1994.0,128,96,True,0,42,127,90
+Stanford Dataset/cars_train/cars_train/03792.jpg,train_03792,val,75,Chrysler Aspen SUV 2009,Chrysler,Aspen SUV,2009.0,400,300,True,11,23,341,277
+Stanford Dataset/cars_train/cars_train/01314.jpg,train_01314,val,122,Geo Metro Convertible 1993,Geo,Metro Convertible,1993.0,640,478,True,28,128,596,363
+Stanford Dataset/cars_train/cars_train/01114.jpg,train_01114,val,70,Chevrolet Express Van 2007,Chevrolet,Express Van,2007.0,500,375,True,77,30,434,328
+Stanford Dataset/cars_train/cars_train/03668.jpg,train_03668,val,192,Volvo C30 Hatchback 2012,Volvo,C30 Hatchback,2012.0,625,416,True,79,66,501,364
+Stanford Dataset/cars_train/cars_train/07955.jpg,train_07955,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,640,426,True,20,55,622,375
+Stanford Dataset/cars_train/cars_train/02719.jpg,train_02719,val,92,Dodge Challenger SRT8 2011,Dodge,Challenger SRT8,2011.0,645,349,True,11,54,629,313
+Stanford Dataset/cars_train/cars_train/05184.jpg,train_05184,val,82,Dodge Caliber Wagon 2012,Dodge,Caliber Wagon,2012.0,630,418,True,23,143,606,397
+Stanford Dataset/cars_train/cars_train/00721.jpg,train_00721,val,116,Ford Fiesta Sedan 2012,Ford,Fiesta Sedan,2012.0,480,360,True,73,230,417,359
+Stanford Dataset/cars_train/cars_train/06076.jpg,train_06076,val,43,Bentley Continental Flying Spur Sedan 2007,Bentley,Continental Flying Spur Sedan,2007.0,500,361,True,36,21,471,336
+Stanford Dataset/cars_train/cars_train/03310.jpg,train_03310,val,178,Spyker C8 Convertible 2009,Spyker,C8 Convertible,2009.0,800,586,True,29,89,763,539
+Stanford Dataset/cars_train/cars_train/08021.jpg,train_08021,val,27,BMW 1 Series Coupe 2012,BMW,1 Series Coupe,2012.0,1024,768,True,48,263,975,668
+Stanford Dataset/cars_train/cars_train/03221.jpg,train_03221,val,12,Audi A5 Coupe 2012,Audi,A5 Coupe,2012.0,800,400,True,111,12,689,390
+Stanford Dataset/cars_train/cars_train/02257.jpg,train_02257,val,56,Chevrolet Corvette Ron Fellows Edition Z06 2007,Chevrolet,Corvette Ron Fellows Edition Z06,2007.0,1024,386,True,5,41,1021,365
+Stanford Dataset/cars_train/cars_train/00026.jpg,train_00026,val,133,Hyundai Sonata Hybrid Sedan 2012,Hyundai,Sonata Hybrid Sedan,2012.0,628,417,True,29,173,597,378
+Stanford Dataset/cars_train/cars_train/00654.jpg,train_00654,val,60,Chevrolet Impala Sedan 2007,Chevrolet,Impala Sedan,2007.0,800,600,True,54,60,798,444
+Stanford Dataset/cars_train/cars_train/06519.jpg,train_06519,val,169,Nissan Juke Hatchback 2012,Nissan,Juke Hatchback,2012.0,1709,1366,True,164,150,1479,1291
+Stanford Dataset/cars_train/cars_train/02496.jpg,train_02496,val,117,GMC Terrain SUV 2012,GMC,Terrain SUV,2012.0,640,480,True,40,94,606,378
+Stanford Dataset/cars_train/cars_train/03716.jpg,train_03716,val,30,BMW 6 Series Convertible 2007,BMW,6 Series Convertible,2007.0,640,426,True,55,0,587,257
+Stanford Dataset/cars_train/cars_train/07535.jpg,train_07535,val,15,Audi V8 Sedan 1994,Audi,V8 Sedan,1994.0,584,328,True,6,106,574,300

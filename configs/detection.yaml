@@ -1,0 +1,73 @@
+# YOLO Vehicle Detection Configuration
+# Computer Vision Hackathon 2026 - Phase 4: Object Detection & Localization
+
+model:
+  architecture: "yolov8n"
+  pretrained_checkpoint: "yolov8n.pt"
+  num_classes: 1
+  class_names:
+    - "car"
+  input_size: [640, 640]
+
+data:
+  dataset_yaml: "data/processed/detection/dataset.yaml"
+  detection_dir: "data/processed/detection"
+  manifest_csv: "data/processed/metadata/vehicle_manifest.csv"
+
+training:
+  epochs: 10
+  batch_size: 16
+  imgsz: 640
+  device: "cuda:0"
+  workers: 2
+  optimizer: "AdamW"
+  lr0: 0.001
+  lrf: 0.01
+  weight_decay: 0.0005
+  patience: 5
+  save_period: 1
+  project: "models/detection"
+  name: "yolov8n_vehicle"
+  exist_ok: true
+  pretrained: true
+  amp: true
+  freeze: 0
+  plots: true
+  val: true
+
+augmentation:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 10.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0          # Strictly 0.0: vertical flip disabled for vehicle detection
+  fliplr: 0.5          # Horizontal flip
+  mosaic: 1.0
+  mixup: 0.0
+  copy_paste: 0.0
+
+inference:
+  model_checkpoint: "models/detection/best.pt"
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  max_det: 100
+  half: false
+  device: "auto"
+  classes: null        # null = automatic mapping to vehicle/car
+
+roi:
+  target_size: [224, 224]
+  padding_ratio: 0.05
+  keep_aspect_ratio: true
+
+paths:
+  checkpoints_dir: "models/detection"
+  outputs_dir: "outputs/detection"
+  metrics_dir: "outputs/detection/metrics"
+  visualizations_dir: "outputs/detection/visualizations"
+  predictions_dir: "outputs/detection/predictions"
+  reports_dir: "outputs/detection/reports"

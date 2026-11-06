@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Unit Tests & Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Pre-install CPU-only PyTorch to avoid heavy CUDA binaries in CI
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+
+      - name: Verify Package Imports
+        run: |
+          python -c "import src; import src.classical_cv; import src.data; import src.detection; import src.utils; print('Core modules imported successfully.')"
+
+      - name: Run Lightweight Unit Tests
+        run: |
+          # Executes tests that do not depend on the Stanford Cars raw dataset or GPU
+          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -v
+

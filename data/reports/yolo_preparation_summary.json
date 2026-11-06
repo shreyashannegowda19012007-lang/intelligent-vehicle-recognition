@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "duration_seconds": 13.28,
+  "detection_dir": "data/processed/detection",
+  "yaml_file": "data/processed/detection/dataset.yaml",
+  "splits": {
+    "train": {
+      "total": 6922,
+      "valid_labels": 6922
+    },
+    "val": {
+      "total": 1222,
+      "valid_labels": 1222
+    },
+    "test": {
+      "total": 8041,
+      "valid_labels": 8041
+    }
+  },
+  "total_labels_generated": 16185,
+  "all_labels_valid": true
+}
