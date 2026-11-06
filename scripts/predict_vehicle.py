@@ -15,6 +15,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+from src.classification.inference import VehicleClassifier
 from src.detection.detector import VehicleDetector
 from src.detection.visualizer import VehicleVisualizer
 
@@ -35,6 +36,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", type=str, default="auto", help="Inference device ('auto', 'cuda', 'cpu')")
     parser.add_argument("--save-vis", type=str, default="outputs/detection/visualizations", help="Directory to save visual overlays")
     parser.add_argument("--save-rois", type=str, default="outputs/detection/visualizations/rois", help="Directory to save ROI crops")
+    parser.add_argument("--classifier", type=str, default=None, help="Optional path to classification checkpoint (e.g. outputs/classification/checkpoints/best_checkpoint.pt)")
+    parser.add_argument("--classifier-only", action="store_true", default=False, help="Run pure fine-grained classification directly on the input image(s) without YOLO detection")
     parser.add_argument("--output-json", type=str, default=None, help="Optional output JSON path")
     return parser.parse_args()
 
@@ -51,6 +54,28 @@ def main() -> int:
         logger.error("Input path does not exist: %s", input_path)
         return 1
 
+    if args.classifier_only:
+        classifier = VehicleClassifier(
+            checkpoint_path=args.classifier,
+            device=args.device,
+        )
+        all_results = []
+        for img_p in image_files:
+            logger.info("Classifying %s...", img_p.name)
+            res = classifier.predict(img_p)
+            res["image"] = str(img_p.relative_to(PROJECT_ROOT) if img_p.is_relative_to(PROJECT_ROOT) else img_p).replace("\\", "/")
+            all_results.append(res)
+
+        if args.output_json:
+            out_json_p = PROJECT_ROOT / args.output_json
+            out_json_p.parent.mkdir(parents=True, exist_ok=True)
+            with open(out_json_p, "w", encoding="utf-8") as f:
+                json.dump(all_results if len(all_results) > 1 else all_results[0], f, indent=2)
+            logger.info("Saved prediction results to %s", out_json_p)
+        else:
+            print(json.dumps(all_results if len(all_results) > 1 else all_results[0], indent=2))
+        return 0
+
     detector = VehicleDetector(
         model_path=args.model,
         conf_threshold=args.conf,
@@ -58,6 +83,12 @@ def main() -> int:
         device=args.device,
     )
     visualizer = VehicleVisualizer()
+    classifier = None
+    if args.classifier:
+        classifier = VehicleClassifier(
+            checkpoint_path=args.classifier,
+            device=args.device,
+        )
 
     vis_dir = PROJECT_ROOT / args.save_vis
     roi_dir = PROJECT_ROOT / args.save_rois
@@ -75,11 +106,17 @@ def main() -> int:
         vis_save_path = vis_dir / f"pred_{img_p.name}"
         visualizer.save_image(annotated, vis_save_path)
 
-        # Save ROI crops
+        # Save ROI crops and classify
         for idx, det in enumerate(pred["detections"]):
             if det["roi"] is not None:
                 roi_save_path = roi_dir / f"{img_p.stem}_roi_{idx+1}.jpg"
                 visualizer.save_image(det["roi"], roi_save_path)
+                if classifier is not None:
+                    cls_out = classifier.predict(det["roi"])
+                    det["classification"] = cls_out
+            elif classifier is not None:
+                # If no ROI, classify full image
+                det["classification"] = classifier.predict(img_p)
 
         # Serialized output dict (remove numpy array for JSON)
         serializable_dets = []

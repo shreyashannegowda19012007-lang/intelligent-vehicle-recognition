@@ -172,6 +172,12 @@ class VehicleDetector:
         if p_sub.is_file():
             return p_sub.resolve()
 
+        # Fallback to yolov8n.pt if candidate not found on disk
+        yolo_fallback = self.root / "yolov8n.pt"
+        if yolo_fallback.is_file():
+            logger.warning("Checkpoint '%s' not found on disk; falling back to %s", model_path, yolo_fallback)
+            return yolo_fallback.resolve()
+
         # If it's a standard Ultralytics name (e.g. 'yolov8n.pt'), allow Ultralytics to resolve/download
         return p
 

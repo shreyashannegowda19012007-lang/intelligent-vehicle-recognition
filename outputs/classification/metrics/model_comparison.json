@@ -1,0 +1,32 @@
+[
+  {
+    "architecture": "resnet50",
+    "total_parameters": 23909636,
+    "trainable_parameters": 23909636,
+    "estimated_checkpoint_mb": 91.21,
+    "avg_latency_ms": 55.56,
+    "std_latency_ms": 5.5,
+    "p95_latency_ms": 61.55,
+    "device": "cpu"
+  },
+  {
+    "architecture": "efficientnet_b0",
+    "total_parameters": 4258624,
+    "trainable_parameters": 4258624,
+    "estimated_checkpoint_mb": 16.25,
+    "avg_latency_ms": 20.11,
+    "std_latency_ms": 1.29,
+    "p95_latency_ms": 21.9,
+    "device": "cpu"
+  },
+  {
+    "architecture": "resnet18",
+    "total_parameters": 11277060,
+    "trainable_parameters": 11277060,
+    "estimated_checkpoint_mb": 43.02,
+    "avg_latency_ms": 22.74,
+    "std_latency_ms": 1.37,
+    "p95_latency_ms": 24.46,
+    "device": "cpu"
+  }
+]

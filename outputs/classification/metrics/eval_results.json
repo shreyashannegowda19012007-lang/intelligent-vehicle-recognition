@@ -1,0 +1,302 @@
+{
+  "total_samples": 1222,
+  "top1_accuracy": 0.0049,
+  "top5_accuracy": 0.0237,
+  "macro_precision": 0.0,
+  "weighted_precision": 0.0,
+  "macro_recall": 0.0051,
+  "weighted_recall": 0.0049,
+  "macro_f1": 0.0,
+  "weighted_f1": 0.0,
+  "attribute_metrics": {
+    "make_accuracy": 0.0712,
+    "model_accuracy": 0.0106,
+    "year_accuracy": 0.5892,
+    "derivation_note": "Attribute-level metrics (Make, Model, Year) are strictly decoded from the primary 196-class predictions using the verified class mapping, not independently trained attribute heads."
+  },
+  "confidence_statistics": {
+    "mean_confidence": 0.007027455139905214,
+    "std_confidence": 0.0,
+    "median_confidence": 0.007027455139905214,
+    "min_confidence": 0.007027455139905214,
+    "max_confidence": 0.007027455139905214,
+    "percentiles": {
+      "25": 0.007027455139905214,
+      "50": 0.007027455139905214,
+      "75": 0.007027455139905214,
+      "90": 0.007027455139905214,
+      "95": 0.007027455139905214
+    }
+  },
+  "top_confused_classes": [
+    {
+      "true_class_id": 118,
+      "true_class_name": "GMC Savana Van 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 10
+    },
+    {
+      "true_class_id": 0,
+      "true_class_name": "AM General Hummer SUV 2000",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 5,
+      "true_class_name": "Acura Integra Type R 2001",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 7,
+      "true_class_name": "Aston Martin V8 Vantage Convertible 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 15,
+      "true_class_name": "Audi V8 Sedan 1994",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 19,
+      "true_class_name": "Audi S6 Sedan 2011",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 23,
+      "true_class_name": "Audi S4 Sedan 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 30,
+      "true_class_name": "BMW 6 Series Convertible 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 33,
+      "true_class_name": "BMW M3 Coupe 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 42,
+      "true_class_name": "Bentley Continental GT Coupe 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 43,
+      "true_class_name": "Bentley Continental Flying Spur Sedan 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 45,
+      "true_class_name": "Bugatti Veyron 16.4 Coupe 2009",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 52,
+      "true_class_name": "Cadillac Escalade EXT Crew Cab 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 55,
+      "true_class_name": "Chevrolet Corvette ZR1 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 57,
+      "true_class_name": "Chevrolet Traverse SUV 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 58,
+      "true_class_name": "Chevrolet Camaro Convertible 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 62,
+      "true_class_name": "Chevrolet Sonic Sedan 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 64,
+      "true_class_name": "Chevrolet Avalanche Crew Cab 2012",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 71,
+      "true_class_name": "Chevrolet Monte Carlo Coupe 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    },
+    {
+      "true_class_id": 72,
+      "true_class_name": "Chevrolet Malibu Sedan 2007",
+      "pred_class_id": 22,
+      "pred_class_name": "Audi S4 Sedan 2012",
+      "count": 7
+    }
+  ],
+  "per_class_accuracy_summary": {
+    "evaluated_classes": 196,
+    "mean_per_class_acc": 0.0051
+  },
+  "architecture": "resnet50",
+  "device": "cpu",
+  "inference_latency_ms_per_image": 72.14,
+  "checkpoint_path": "outputs\\classification\\checkpoints\\best_checkpoint.pt",
+  "sample_diagnostics": {
+    "correct_samples_count": 6,
+    "incorrect_samples_count": 1216,
+    "sample_correct": [
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/05085.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/00825.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/03472.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/03206.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/00988.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/00934.jpg",
+        "true_class_id": 22,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": true
+      }
+    ],
+    "sample_errors": [
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+        "true_class_id": 166,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+        "true_class_id": 3,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/05639.jpg",
+        "true_class_id": 64,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/01640.jpg",
+        "true_class_id": 11,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/00518.jpg",
+        "true_class_id": 108,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/02219.jpg",
+        "true_class_id": 148,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/07921.jpg",
+        "true_class_id": 46,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/03054.jpg",
+        "true_class_id": 4,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/03652.jpg",
+        "true_class_id": 72,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      },
+      {
+        "image_path": "Stanford Dataset/cars_train/cars_train/02200.jpg",
+        "true_class_id": 59,
+        "pred_class_id": 22,
+        "confidence": 0.007027455139905214,
+        "is_correct": false
+      }
+    ]
+  },
+  "confusion_matrix_path": "outputs/classification/metrics/confusion_matrix.csv"
+}
