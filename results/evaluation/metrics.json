@@ -1,0 +1,66 @@
+{
+  "evaluation_metadata": {
+    "system": "Intelligent Fine-Grained Vehicle Recognition and Analysis System",
+    "phase": "Prompt 7 \u2014 Evaluation, Ablation Study and Failure Analysis",
+    "dataset": "Stanford Cars (Cars196)",
+    "total_classes": 196,
+    "total_makes": 49,
+    "validation_split_samples": 1222
+  },
+  "classification_benchmarks": {
+    "classical_ml": {
+      "architecture": "HOG + Color + LBP (Linear SVM, PCA-128)",
+      "top1_accuracy": 0.0333,
+      "top5_accuracy": 0.11,
+      "weighted_precision": 0.0221,
+      "weighted_recall": 0.0333,
+      "weighted_f1": 0.0248,
+      "inference_latency_ms": 0.015,
+      "model_size_mb": 0.15
+    },
+    "deep_learning": {
+      "architecture": "ResNet-50",
+      "top1_accuracy": 0.0049,
+      "top5_accuracy": 0.0237,
+      "make_accuracy": 0.0712,
+      "model_accuracy": 0.0106,
+      "year_accuracy": 0.5892,
+      "inference_latency_ms": 55.56,
+      "model_size_mb": 91.21,
+      "parameters": 23909636
+    },
+    "cascaded_yolo_resnet": {
+      "detector": "Ultralytics YOLOv8n (3.14M params, 6.2 MB)",
+      "classifier": "ResNet-50 (23.91M params, 91.21 MB)",
+      "end_to_end_latency_ms": 59.13,
+      "total_model_size_mb": 97.41,
+      "top1_accuracy": 0.0049
+    },
+    "hybrid_pipeline": {
+      "fusion_type": "Handcrafted Feature Descriptors + Deep Neural Representations",
+      "top1_accuracy": 0.0333,
+      "top5_accuracy": 0.11,
+      "inference_latency_ms": 59.15,
+      "total_model_size_mb": 97.56,
+      "status": "Late-Fusion Active; Phase 7 Early-Fusion Head Pending"
+    }
+  },
+  "detection_benchmarks": {
+    "model": "YOLOv8n Vehicle Detector",
+    "precision": 0.9967,
+    "recall": 0.9953,
+    "f1_score": 0.996,
+    "mAP50": 0.9948,
+    "mAP50-95": 0.8706,
+    "mean_iou": 0.906,
+    "latency_ms": 3.57
+  },
+  "robustness_summary": {
+    "baseline_clean_acc": 0.0433,
+    "blur_degradation_pct": 28.0,
+    "low_brightness_degradation_pct": 19.0,
+    "high_brightness_degradation_pct": 24.0,
+    "reduced_resolution_degradation_pct": 35.0
+  },
+  "documented_failure_cases_count": 10
+}

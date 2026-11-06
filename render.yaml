@@ -1,0 +1,21 @@
+services:
+  # Render Web Service definition
+  - type: web
+    name: vehicle-recognition-app
+    runtime: python
+    buildCommand: |
+      pip install --upgrade pip
+      pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+      grep -v -E "^(torch==|torchvision==|--extra-index-url)" requirements.txt > requirements-render.txt
+      pip install -r requirements-render.txt
+    startCommand: streamlit run app/streamlit_app.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      - key: DEVICE
+        value: cpu
+    healthCheckPath: /_stcore/health
+    plan: free
+

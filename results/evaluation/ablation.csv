@@ -1,0 +1,5 @@
+pipeline,detection_mAP50,top1_accuracy,top5_accuracy,make_accuracy,model_accuracy,year_accuracy,weighted_f1,inference_latency_ms,model_size_mb,status,missing_dependency
+1. Classical ML only (HOG+Color+LBP),N/A (GT Box Used),0.0333,0.11,0.0699,0.0333,0.051,0.0248,0.015,0.15,Evaluated (Phase 3),None
+2. ResNet50 only (Deep Learning Backbone),N/A (GT Box Used),0.0049,0.0237,0.0712,0.0106,0.5892,0.0,70.72,91.21,Evaluated (Phase 5),None
+3. YOLOv8n Detection + ResNet50 Classification,0.9948,0.0049,0.0237,0.0712,0.0106,0.5892,0.0,74.29,97.41,Integrated Pipeline Ready (Phase 4+5),None
+4. Full Hybrid Pipeline (Classical + Deep),0.9948,0.0333,0.11,0.0712,0.0333,0.5892,0.0248,74.3,97.56,Late-Fusion Interface Ready,Phase 7 trained early-fusion joint head weights
