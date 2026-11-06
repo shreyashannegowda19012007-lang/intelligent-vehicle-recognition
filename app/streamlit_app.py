@@ -1,7 +1,7 @@
 """
 Intelligent Vehicle Recognition and Analysis System.
 Production-ready Streamlit web application interface for fine-grained vehicle recognition,
-object localization, and multi-model comparison (Classical ML, ResNet-50, and Hybrid Fusion).
+object localization, and multi-model comparison (Classical ML, ConvNeXt-Tiny, and Hybrid Fusion).
 """
 
 from __future__ import annotations
@@ -30,10 +30,11 @@ from src.classification.pipeline import VehicleRecognitionPipeline
 from src.hybrid.fusion_pipeline import HybridVehiclePipeline
 from src.utils.device import get_device
 
+logger = logging.getLogger(__name__)
+
 # Configure Streamlit page layout
 st.set_page_config(
     page_title="Intelligent Vehicle Recognition and Analysis System",
-    page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -42,62 +43,246 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .main-header {
-        font-size: 2.2rem;
+    /* Modern Automotive AI Analytics Theme */
+    .block-container {
+        padding-top: 1.8rem;
+        padding-bottom: 2.2rem;
+        max-width: 1380px;
+    }
+    .brand-eyebrow {
+        font-size: 0.72rem;
         font-weight: 700;
-        color: #1E293B;
-        margin-bottom: 0.2rem;
+        color: #2563EB;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 4px;
+    }
+    .main-header {
+        font-size: 2.15rem;
+        font-weight: 700;
+        color: #0F172A;
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+        margin-bottom: 0.3rem;
     }
     .sub-header {
-        font-size: 1.05rem;
-        color: #64748B;
+        font-size: 0.96rem;
+        color: #475569;
         margin-bottom: 1.5rem;
+        line-height: 1.5;
     }
-    .metric-card {
-        background: #F8FAFC;
+    .section-heading {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #0F172A;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid #E2E8F0;
+    }
+    .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-bottom: 1.25rem;
+    }
+    .kpi-card {
+        background: #FFFFFF;
         border: 1px solid #E2E8F0;
         border-radius: 8px;
-        padding: 16px;
-        margin-bottom: 12px;
+        padding: 14px 18px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+        transition: all 0.15s ease-in-out;
     }
-    .metric-title {
-        font-size: 0.85rem;
+    .kpi-card:hover {
+        border-color: #CBD5E1;
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+    .kpi-title {
+        font-size: 0.72rem;
         text-transform: uppercase;
         color: #64748B;
         font-weight: 600;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.06em;
+        margin-bottom: 4px;
     }
-    .metric-value {
+    .kpi-value {
         font-size: 1.6rem;
         font-weight: 700;
         color: #0F172A;
+        line-height: 1.15;
+    }
+    .prediction-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 8px;
+        padding: 18px 20px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+        margin-bottom: 16px;
+    }
+    .prediction-eyebrow {
+        font-size: 0.70rem;
+        font-weight: 700;
+        color: #2563EB;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 4px;
+    }
+    .prediction-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #0F172A;
+        letter-spacing: -0.015em;
+        margin-bottom: 12px;
+    }
+    .prediction-specs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 10px 14px;
+        background: #F8FAFC;
+        border-radius: 6px;
+        border: 1px solid #EDF2F7;
+        margin-bottom: 12px;
+    }
+    .spec-item {
+        font-size: 0.85rem;
+        color: #475569;
+    }
+    .spec-item strong {
+        color: #0F172A;
+    }
+    .confidence-metrics {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 0.84rem;
+        color: #64748B;
+    }
+    .confidence-metrics strong {
+        color: #0F172A;
+    }
+    .status-box-online {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #F0FDF4;
+        border: 1px solid #BBF7D0;
+        padding: 9px 12px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+    }
+    .status-dot-online {
+        height: 8px;
+        width: 8px;
+        background-color: #16A34A;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    .status-text-online {
+        font-weight: 600;
+        color: #166534;
+        font-size: 0.84rem;
+    }
+    .status-box-offline {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #EFF6FF;
+        border: 1px solid #BFDBFE;
+        padding: 9px 12px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+    }
+    .status-dot-offline {
+        height: 8px;
+        width: 8px;
+        background-color: #2563EB;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    .status-text-offline {
+        font-weight: 600;
+        color: #1E40AF;
+        font-size: 0.84rem;
+    }
+    .telemetry-card {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-bottom: 14px;
+    }
+    .telemetry-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        font-size: 0.82rem;
+        border-bottom: 1px solid #EDF2F7;
+    }
+    .telemetry-row:last-child {
+        border-bottom: none;
+    }
+    .telemetry-key {
+        color: #64748B;
+        font-weight: 500;
+    }
+    .telemetry-val {
+        color: #0F172A;
+        font-weight: 600;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
     .badge-consensus {
-        background-color: #DCFCE7;
-        color: #166534;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-size: 0.85rem;
+        background-color: #ECFDF5;
+        color: #065F46;
+        border: 1px solid #A7F3D0;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 0.80rem;
         font-weight: 600;
         display: inline-block;
     }
     .badge-disagree {
-        background-color: #FEE2E2;
+        background-color: #FEF2F2;
         color: #991B1B;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-size: 0.85rem;
+        border: 1px solid #FECACA;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 0.80rem;
         font-weight: 600;
         display: inline-block;
     }
     .badge-partial {
-        background-color: #FEF3C7;
+        background-color: #FFFBEB;
         color: #92400E;
-        padding: 4px 10px;
-        border-radius: 12px;
-        font-size: 0.85rem;
+        border: 1px solid #FDE68A;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 0.80rem;
         font-weight: 600;
         display: inline-block;
+    }
+    .upload-placeholder {
+        border: 2px dashed #CBD5E1;
+        border-radius: 8px;
+        padding: 42px 20px;
+        text-align: center;
+        background: #F8FAFC;
+        color: #64748B;
+        margin-top: 8px;
+    }
+    .upload-placeholder-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #334155;
+        margin-bottom: 4px;
+    }
+    .upload-placeholder-desc {
+        font-size: 0.82rem;
+        line-height: 1.4;
     }
     </style>
     """,
@@ -243,33 +428,78 @@ def run_inference_embedded(
 def main() -> None:
     # Sidebar: System telemetry & connection modes
     with st.sidebar:
-        st.title("⚙️ System Control")
+        st.markdown('<div class="brand-eyebrow">Control Center</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-heading" style="margin-bottom: 12px;">System Control</div>', unsafe_allow_html=True)
         api_available = check_api_server_status()
 
         if api_available:
-            st.success("🟢 FastAPI Backend: Connected")
+            st.markdown(
+                """
+                <div class="status-box-online">
+                    <span class="status-dot-online"></span>
+                    <span class="status-text-online">FastAPI Backend: Connected</span>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
             mode = "REST API (FastAPI)"
         else:
-            st.info("🔵 Engine: Standalone In-Process")
+            st.markdown(
+                """
+                <div class="status-box-offline">
+                    <span class="status-dot-offline"></span>
+                    <span class="status-text-offline">Engine: Standalone In-Process</span>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
             mode = "Embedded Pipeline"
 
         st.caption(f"Operational Mode: **{mode}**")
         st.divider()
 
-        st.subheader("Model Telemetry")
-        st.write(f"- **Detector**: YOLOv8n (0.995 mAP50)")
-        st.write(f"- **Classifier**: ConvNeXt-Tiny (196 classes)")
-        st.write(f"- **Classical**: HOG + Color + LBP (SVM)")
-        st.write(f"- **Fusion**: Hybrid Decision Fusion")
-        st.write(f"- **Device**: `{get_device('auto')}`")
+        st.markdown('<div class="section-heading" style="margin-bottom: 10px;">Model Telemetry</div>', unsafe_allow_html=True)
+        dev_name = str(get_device("auto"))
+        st.markdown(
+            f"""
+            <div class="telemetry-card">
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Object Detector</span>
+                    <span class="telemetry-val">YOLOv8n (0.995 mAP50)</span>
+                </div>
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Primary Classifier</span>
+                    <span class="telemetry-val">ConvNeXt-Tiny (196-cls)</span>
+                </div>
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Classical ML</span>
+                    <span class="telemetry-val">HOG + Color + LBP (SVM)</span>
+                </div>
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Decision Fusion</span>
+                    <span class="telemetry-val">Hybrid Agreement</span>
+                </div>
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Compute Engine</span>
+                    <span class="telemetry-val">{dev_name}</span>
+                </div>
+                <div class="telemetry-row">
+                    <span class="telemetry-key">Inference Resolution</span>
+                    <span class="telemetry-val">320 × 320 px</span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
         st.divider()
-        if st.button("🔄 Reset / Clear Session", use_container_width=True):
+        if st.button("Reset Session", use_container_width=True):
             st.session_state.clear()
             st.rerun()
 
     # Main header
-    st.markdown('<div class="main-header">🚗 Intelligent Vehicle Recognition and Analysis System</div>', unsafe_allow_html=True)
+    st.markdown('<div class="brand-eyebrow">Automotive Vision Intelligence Platform</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Intelligent Vehicle Recognition and Analysis System</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="sub-header">Fine-Grained Classification, Localization, and Multi-Model Comparison on Stanford Cars Taxonomy</div>',
         unsafe_allow_html=True,
@@ -279,17 +509,17 @@ def main() -> None:
     upload_col, preview_col = st.columns([1.1, 0.9], gap="large")
 
     with upload_col:
-        st.subheader("1. Upload Vehicle Image")
+        st.markdown('<div class="section-heading">01. Vehicle Image Ingestion</div>', unsafe_allow_html=True)
         uploaded_file = st.file_uploader(
-            "Choose a vehicle image (drag-and-drop supported)",
+            "Select or drop vehicle image (JPEG, PNG, WebP, BMP)",
             type=["jpg", "jpeg", "png", "webp", "bmp"],
-            help="Supported formats: JPEG, PNG, WebP, BMP",
+            help="Supported formats: JPEG, PNG, WebP, BMP (Max 25 MB)",
             key="vehicle_uploader",
         )
 
         col_btn1, col_btn2 = st.columns([1, 1])
         with col_btn1:
-            analyze_clicked = st.button("🔍 Analyze Vehicle", type="primary", use_container_width=True, disabled=uploaded_file is None)
+            analyze_clicked = st.button("Analyze Vehicle", type="primary", use_container_width=True, disabled=uploaded_file is None)
         with col_btn2:
             if st.button("Clear Image", use_container_width=True, disabled=uploaded_file is None):
                 st.session_state.clear()
@@ -302,15 +532,27 @@ def main() -> None:
             image_bytes = uploaded_file.getvalue()
             pil_image = decode_image_bytes(image_bytes)
             with preview_col:
-                st.subheader("Image Preview")
+                st.markdown('<div class="section-heading">Image Preview</div>', unsafe_allow_html=True)
                 st.image(pil_image, caption=f"{uploaded_file.name} ({pil_image.width} × {pil_image.height} px)", use_container_width=True)
         except Exception as e:
-            st.error(f"❌ Could not load uploaded image: {e}")
+            st.error(f"Could not load uploaded image: {e}")
             return
+    else:
+        with preview_col:
+            st.markdown('<div class="section-heading">Image Preview</div>', unsafe_allow_html=True)
+            st.markdown(
+                """
+                <div class="upload-placeholder">
+                    <div class="upload-placeholder-title">No Image Selected</div>
+                    <div class="upload-placeholder-desc">Upload a vehicle image to view localization bounding boxes, fine-grained taxonomy classification, and multi-model agreement analysis.</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
     # Trigger analysis
     if analyze_clicked and pil_image is not None:
-        with st.spinner("Analyzing image across detection, ResNet-50, and hybrid fusion pipelines..."):
+        with st.spinner("Analyzing image across detection, ConvNeXt-Tiny classification, and hybrid fusion pipelines..."):
             try:
                 if api_available and image_bytes is not None:
                     result = run_inference_via_api(image_bytes, uploaded_file.name)
@@ -320,7 +562,7 @@ def main() -> None:
                 st.session_state["analysis_result"] = result
                 st.session_state["original_image"] = pil_image
             except Exception as e:
-                st.error(f"❌ Analysis failed: {e}")
+                st.error(f"Analysis failed: {e}")
                 return
 
     # Display Analysis Results
@@ -329,19 +571,34 @@ def main() -> None:
         orig_img = st.session_state["original_image"]
 
         st.divider()
-        st.subheader("2. Analysis Results")
+        st.markdown('<div class="section-heading">02. Detection & Identification Telemetry</div>', unsafe_allow_html=True)
 
         # Top summary metrics bar
         num_vehicles = result.get("num_vehicles_detected", 0)
         total_latency = result.get("inference_latency_ms", 0.0)
+        img_dims = result.get("image_dimensions", {})
+        width_val = img_dims.get("width", orig_img.width if orig_img else 0)
+        height_val = img_dims.get("height", orig_img.height if orig_img else 0)
 
-        m_col1, m_col2, m_col3 = st.columns(3)
-        with m_col1:
-            st.metric("Detected Vehicles", f"{num_vehicles}")
-        with m_col2:
-            st.metric("Total Inference Latency", f"{total_latency:.1f} ms")
-        with m_col3:
-            st.metric("Image Resolution", f"{result.get('image_dimensions', {}).get('width', 0)} × {result.get('image_dimensions', {}).get('height', 0)}")
+        st.markdown(
+            f"""
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-title">Detected Vehicles</div>
+                    <div class="kpi-value">{num_vehicles}</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Total Inference Latency</div>
+                    <div class="kpi-value">{total_latency:.1f} ms</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Source Resolution</div>
+                    <div class="kpi-value">{width_val} × {height_val} px</div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
         # Detection annotated visualization
         vehicles = result.get("vehicles", [])
@@ -349,11 +606,11 @@ def main() -> None:
 
         vis_col, details_col = st.columns([1, 1], gap="large")
         with vis_col:
-            st.subheader("Vehicle Localization")
+            st.markdown('<div class="section-heading">Vehicle Localization</div>', unsafe_allow_html=True)
             st.image(annotated_img, caption="YOLOv8n Localization Bounding Boxes", use_container_width=True)
 
         with details_col:
-            st.subheader("Vehicle Identification Details")
+            st.markdown('<div class="section-heading">Vehicle Identification Details</div>', unsafe_allow_html=True)
             if not vehicles:
                 st.info("No vehicle detected in the scene.")
             else:
@@ -367,22 +624,23 @@ def main() -> None:
                     with tab:
                         primary = v.get("primary_prediction", {})
                         det_conf = v.get("detection_confidence", 0.0)
+                        pred_conf = float(primary.get("confidence", 0.0))
 
                         # Primary classification card
                         st.markdown(
                             f"""
-                            <div class="metric-card">
-                                <div class="metric-title">Predicted Vehicle</div>
-                                <div class="metric-value">{primary.get('predicted_class', 'Unknown')}</div>
-                                <p style="color: #475569; margin: 4px 0 0 0;">
-                                    <b>Make:</b> {primary.get('make', 'Unknown')} |
-                                    <b>Model:</b> {primary.get('model', 'Unknown')} |
-                                    <b>Year:</b> {primary.get('year', 'N/A')}
-                                </p>
-                                <p style="color: #64748B; font-size: 0.9rem; margin: 4px 0 0 0;">
-                                    Detection Confidence: <b>{det_conf*100:.1f}%</b> | 
-                                    Classification Confidence: <b>{primary.get('confidence', 0.0)*100:.1f}%</b>
-                                </p>
+                            <div class="prediction-card">
+                                <div class="prediction-eyebrow">Primary Prediction</div>
+                                <div class="prediction-name">{primary.get('predicted_class', 'Unknown')}</div>
+                                <div class="prediction-specs-grid">
+                                    <div class="spec-item"><strong>Make:</strong> {primary.get('make', 'Unknown')}</div>
+                                    <div class="spec-item"><strong>Model:</strong> {primary.get('model', 'Unknown')}</div>
+                                    <div class="spec-item"><strong>Year:</strong> {primary.get('year', 'N/A')}</div>
+                                </div>
+                                <div class="confidence-metrics">
+                                    <span>Detection Confidence: <strong>{det_conf*100:.1f}%</strong></span>
+                                    <span>Classification Confidence: <strong>{pred_conf*100:.1f}%</strong></span>
+                                </div>
                             </div>
                             """,
                             unsafe_allow_html=True,
@@ -400,11 +658,25 @@ def main() -> None:
                                 }
                                 for i, item in enumerate(top_5)
                             ])
-                            st.dataframe(df_top5, use_container_width=True, hide_index=True)
+                            st.dataframe(
+                                df_top5,
+                                use_container_width=True,
+                                hide_index=True,
+                                column_config={
+                                    "Rank": st.column_config.NumberColumn(width="small"),
+                                    "Vehicle Candidate": st.column_config.TextColumn(width="large"),
+                                    "Confidence (%)": st.column_config.ProgressColumn(
+                                        format="%.2f%%",
+                                        min_value=0.0,
+                                        max_value=100.0,
+                                        width="medium",
+                                    ),
+                                },
+                            )
 
         # Model Comparison Section
         st.divider()
-        st.subheader("3. Multi-Model Comparison & Agreement Analysis")
+        st.markdown('<div class="section-heading">03. Multi-Model Consensus & Comparison</div>', unsafe_allow_html=True)
 
         for v in vehicles:
             comp = v.get("model_comparison", {})
@@ -453,4 +725,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
