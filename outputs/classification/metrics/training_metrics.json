@@ -1,10 +1,10 @@
 {
   "status": "COMPLETED",
   "architecture": "resnet50",
-  "total_epochs_trained": 3,
-  "best_epoch": 3,
-  "best_val_top1": 0.0094,
-  "total_training_time_s": 183.46,
+  "total_epochs_trained": 29,
+  "best_epoch": 24,
+  "best_val_top1": 0.8101,
+  "total_training_time_s": 6259.3,
   "best_checkpoint_path": "outputs/classification/checkpoints/best_checkpoint.pt",
   "last_checkpoint_path": "outputs/classification/checkpoints/last_checkpoint.pt"
 }

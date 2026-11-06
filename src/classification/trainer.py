@@ -447,7 +447,7 @@ class ClassifierTrainer:
             )
 
             # Check if this is the best epoch
-            is_best = val_top1 > (self.best_val_acc + self.config.early_stopping_min_delta)
+            is_best = val_top1 > (self.best_val_acc + self.config.early_stopping_min_delta) or (epoch == 1 and not (self.root / self.config.best_checkpoint_path).is_file())
             if is_best:
                 self.best_val_acc = val_top1
                 self.best_epoch = epoch

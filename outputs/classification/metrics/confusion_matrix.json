@@ -203,144 +203,144 @@
   ],
   "top_confused_pairs": [
     {
-      "true_class_id": 118,
-      "true_class_name": "GMC Savana Van 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 10
+      "true_class_id": 12,
+      "true_class_name": "Audi A5 Coupe 2012",
+      "pred_class_id": 21,
+      "pred_class_name": "Audi S5 Coupe 2012",
+      "count": 3
     },
     {
-      "true_class_id": 0,
-      "true_class_name": "AM General Hummer SUV 2000",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 16,
+      "true_class_name": "Audi 100 Sedan 1994",
+      "pred_class_id": 17,
+      "pred_class_name": "Audi 100 Wagon 1994",
+      "count": 3
     },
     {
-      "true_class_id": 5,
-      "true_class_name": "Acura Integra Type R 2001",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 82,
+      "true_class_name": "Dodge Caliber Wagon 2012",
+      "pred_class_id": 83,
+      "pred_class_name": "Dodge Caliber Wagon 2007",
+      "count": 3
+    },
+    {
+      "true_class_id": 103,
+      "true_class_name": "Ferrari 458 Italia Coupe 2012",
+      "pred_class_id": 102,
+      "pred_class_name": "Ferrari 458 Italia Convertible 2012",
+      "count": 3
+    },
+    {
+      "true_class_id": 1,
+      "true_class_name": "Acura RL Sedan 2012",
+      "pred_class_id": 2,
+      "pred_class_name": "Acura TL Sedan 2012",
+      "count": 2
     },
     {
       "true_class_id": 7,
       "true_class_name": "Aston Martin V8 Vantage Convertible 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "pred_class_id": 8,
+      "pred_class_name": "Aston Martin V8 Vantage Coupe 2012",
+      "count": 2
+    },
+    {
+      "true_class_id": 13,
+      "true_class_name": "Audi TTS Coupe 2012",
+      "pred_class_id": 18,
+      "pred_class_name": "Audi TT Hatchback 2011",
+      "count": 2
     },
     {
       "true_class_id": 15,
       "true_class_name": "Audi V8 Sedan 1994",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "pred_class_id": 16,
+      "pred_class_name": "Audi 100 Sedan 1994",
+      "count": 2
     },
     {
-      "true_class_id": 19,
-      "true_class_name": "Audi S6 Sedan 2011",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 18,
+      "true_class_name": "Audi TT Hatchback 2011",
+      "pred_class_id": 24,
+      "pred_class_name": "Audi TT RS Coupe 2012",
+      "count": 2
     },
     {
       "true_class_id": 23,
       "true_class_name": "Audi S4 Sedan 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "pred_class_id": 11,
+      "pred_class_name": "Audi RS 4 Convertible 2008",
+      "count": 2
     },
     {
-      "true_class_id": 30,
-      "true_class_name": "BMW 6 Series Convertible 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 28,
+      "true_class_name": "BMW 3 Series Sedan 2012",
+      "pred_class_id": 27,
+      "pred_class_name": "BMW 1 Series Coupe 2012",
+      "count": 2
     },
     {
-      "true_class_id": 33,
-      "true_class_name": "BMW M3 Coupe 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 35,
+      "true_class_name": "BMW M6 Convertible 2010",
+      "pred_class_id": 30,
+      "pred_class_name": "BMW 6 Series Convertible 2007",
+      "count": 2
     },
     {
-      "true_class_id": 42,
-      "true_class_name": "Bentley Continental GT Coupe 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 36,
+      "true_class_name": "BMW X3 SUV 2012",
+      "pred_class_id": 32,
+      "pred_class_name": "BMW X6 SUV 2012",
+      "count": 2
     },
     {
-      "true_class_id": 43,
-      "true_class_name": "Bentley Continental Flying Spur Sedan 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 63,
+      "true_class_name": "Chevrolet Express Cargo Van 2007",
+      "pred_class_id": 70,
+      "pred_class_name": "Chevrolet Express Van 2007",
+      "count": 2
     },
     {
-      "true_class_id": 45,
-      "true_class_name": "Bugatti Veyron 16.4 Coupe 2009",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 68,
+      "true_class_name": "Chevrolet Silverado 2500HD Regular Cab 2012",
+      "pred_class_id": 123,
+      "pred_class_name": "HUMMER H3T Crew Cab 2010",
+      "count": 2
     },
     {
-      "true_class_id": 52,
-      "true_class_name": "Cadillac Escalade EXT Crew Cab 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 70,
+      "true_class_name": "Chevrolet Express Van 2007",
+      "pred_class_id": 63,
+      "pred_class_name": "Chevrolet Express Cargo Van 2007",
+      "count": 2
     },
     {
-      "true_class_id": 55,
-      "true_class_name": "Chevrolet Corvette ZR1 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 73,
+      "true_class_name": "Chevrolet Silverado 1500 Extended Cab 2012",
+      "pred_class_id": 53,
+      "pred_class_name": "Chevrolet Silverado 1500 Hybrid Crew Cab 2012",
+      "count": 2
     },
     {
-      "true_class_id": 57,
-      "true_class_name": "Chevrolet Traverse SUV 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 73,
+      "true_class_name": "Chevrolet Silverado 1500 Extended Cab 2012",
+      "pred_class_id": 68,
+      "pred_class_name": "Chevrolet Silverado 2500HD Regular Cab 2012",
+      "count": 2
     },
     {
-      "true_class_id": 58,
-      "true_class_name": "Chevrolet Camaro Convertible 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 73,
+      "true_class_name": "Chevrolet Silverado 1500 Extended Cab 2012",
+      "pred_class_id": 123,
+      "pred_class_name": "HUMMER H3T Crew Cab 2010",
+      "count": 2
     },
     {
-      "true_class_id": 62,
-      "true_class_name": "Chevrolet Sonic Sedan 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
-    },
-    {
-      "true_class_id": 64,
-      "true_class_name": "Chevrolet Avalanche Crew Cab 2012",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
-    },
-    {
-      "true_class_id": 71,
-      "true_class_name": "Chevrolet Monte Carlo Coupe 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
-    },
-    {
-      "true_class_id": 72,
-      "true_class_name": "Chevrolet Malibu Sedan 2007",
-      "pred_class_id": 22,
-      "pred_class_name": "Audi S4 Sedan 2012",
-      "count": 7
+      "true_class_id": 74,
+      "true_class_name": "Chevrolet Silverado 1500 Regular Cab 2012",
+      "pred_class_id": 53,
+      "pred_class_name": "Chevrolet Silverado 1500 Hybrid Crew Cab 2012",
+      "count": 2
     }
   ]
 }

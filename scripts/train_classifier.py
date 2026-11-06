@@ -41,7 +41,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--freeze-backbone", action="store_true", default=False, help="Freeze backbone weights during initial training")
     parser.add_argument("--max-train-batches", type=int, default=None, help="Optional maximum training batches per epoch (for fast debugging/CPU runs)")
     parser.add_argument("--max-val-batches", type=int, default=None, help="Optional maximum validation batches per epoch")
-    parser.add_argument("--num-workers", type=int, default=2, help="DataLoader worker processes")
+    parser.add_argument("--num-workers", type=int, default=0, help="DataLoader worker processes")
+    parser.add_argument("--patience", type=int, default=5, help="Early stopping patience")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     return parser.parse_args()
 
@@ -64,6 +65,7 @@ def main() -> int:
         max_train_batches=args.max_train_batches,
         max_val_batches=args.max_val_batches,
         num_workers=args.num_workers,
+        early_stopping_patience=args.patience,
         seed=args.seed,
     )
 
