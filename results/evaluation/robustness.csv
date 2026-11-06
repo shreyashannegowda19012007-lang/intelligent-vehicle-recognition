@@ -1,0 +1,6 @@
+condition,description,top1_accuracy,accuracy_drop,relative_drop_pct,resilience_status
+Baseline (Clean RGB),Standard unperturbed validation vehicle images,0.0433,0.0,0.0,Reference
+Gaussian Blur,"Defocus / optical motion blur (kernel 7x7, sigma 2.0)",0.0312,0.0121,28.0,Moderate Degradation
+Low Brightness,Dim illumination / nighttime camera feed (factor 0.5),0.0351,0.0082,19.0,Fair Resilience
+High Brightness,Direct solar glare / overexposure (factor 1.5),0.0329,0.0104,24.0,Moderate Degradation
+Reduced Resolution,Downsampling (0.5x scale factor) simulating distant traffic camera,0.0281,0.0152,35.0,Significant Degradation

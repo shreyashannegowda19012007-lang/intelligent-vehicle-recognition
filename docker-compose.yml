@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  # Mode 1: Unified Streamlit Web Dashboard (In-Process Pipeline)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vehicle_recognition_app
+    ports:
+      - "${STREAMLIT_SERVER_PORT:-8501}:${STREAMLIT_SERVER_PORT:-8501}"
+    environment:
+      - PORT=${STREAMLIT_SERVER_PORT:-8501}
+      - DEVICE=cpu
+      - ENVIRONMENT=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${STREAMLIT_SERVER_PORT:-8501}/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Mode 2: Decoupled FastAPI REST Engine
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vehicle_recognition_api
+    command: ["sh", "-c", "uvicorn app.api:app --host 0.0.0.0 --port ${PORT:-8000}"]
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    environment:
+      - PORT=${PORT:-8000}
+      - DEVICE=cpu
+      - ENVIRONMENT=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT:-8000}/health"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  # Decoupled Frontend connected to Backend API
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vehicle_recognition_frontend
+    command: ["sh", "-c", "streamlit run app/streamlit_app.py --server.port=${STREAMLIT_SERVER_PORT:-8501} --server.address=0.0.0.0"]
+    ports:
+      - "8502:${STREAMLIT_SERVER_PORT:-8501}"
+    environment:
+      - PORT=${STREAMLIT_SERVER_PORT:-8501}
+      - API_URL=http://api:8000
+      - BACKEND_URL=http://api:8000
+      - DEVICE=cpu
+    depends_on:
+      - api
+    restart: unless-stopped
+

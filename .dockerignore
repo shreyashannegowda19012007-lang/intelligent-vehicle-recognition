@@ -1,0 +1,45 @@
+# Git and Version Control
+.git/
+.gitignore
+.gitattributes
+.github/
+
+# Large Datasets & Raw Image Archives
+Stanford Dataset/
+car_devkit/
+car_devkit.tgz
+data/raw/
+data/cache/
+data/yolo/images/
+data/yolo/labels/
+data/processed/detection/images/
+data/processed/detection/labels/
+
+# Model Checkpoints (loaded dynamically or mounted)
+models/*.pt
+models/*.pth
+models/*.onnx
+outputs/classification/checkpoints/
+
+# Python Virtual Environments and Caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation & Brain Scratch
+docs/phase0/
+*.tmp
+

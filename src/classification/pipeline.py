@@ -44,7 +44,6 @@ class VehicleRecognitionPipeline:
             conf_threshold=conf_threshold,
             iou_threshold=iou_threshold,
             device=device,
-            extract_rois=True,
         )
         self.classifier = classifier or VehicleClassifier(
             checkpoint_path=classifier_checkpoint,

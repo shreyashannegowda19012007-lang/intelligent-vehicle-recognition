@@ -12,6 +12,7 @@ from src.hybrid.adapters import (
 from src.hybrid.config import DecisionStrategy, HybridConfig
 from src.hybrid.decision_engine import HybridDecisionEngine
 from src.hybrid.evaluator import HybridEvaluator
+from src.hybrid.fusion_pipeline import HybridVehiclePipeline as HybridFusionPipeline
 from src.hybrid.pipeline import HybridVehiclePipeline
 
 __all__ = [
@@ -23,5 +24,6 @@ __all__ = [
     "DetectorAdapter",
     "HybridDecisionEngine",
     "HybridVehiclePipeline",
+    "HybridFusionPipeline",
     "HybridEvaluator",
 ]

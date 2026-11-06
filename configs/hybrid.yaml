@@ -33,8 +33,8 @@ classification:
     top_k: 5
     temperature: 1.0
   classical:
-    model_path: "models/classical/linear_svm_model.joblib"
-    pipeline_path: null
+    model_path: "models/classical/svm/linear_svm_hog_color_lbp_pca128_model.joblib"
+    pipeline_path: "models/classical/scalers/linear_svm_hog_color_lbp_pca128_pipeline.joblib"
     feature_config: "hog_color_lbp"
     uncertainty_threshold: 0.30
 

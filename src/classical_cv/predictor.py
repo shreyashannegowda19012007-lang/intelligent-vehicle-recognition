@@ -65,9 +65,13 @@ class ClassicalVehiclePredictor:
             self.pipeline = stored_pipe
         else:
             # Look in default scalers dir based on model name
+            model_stem = self.model_path.stem.replace("_model", "")
             candidate = self.root / "models" / "classical" / "scalers" / f"{self.model_path.stem}_pipeline.joblib"
+            candidate_clean = self.root / "models" / "classical" / "scalers" / f"{model_stem}_pipeline.joblib"
             if candidate.is_file():
                 self.pipeline = FeatureFusionPipeline.load_pipeline(candidate)
+            elif candidate_clean.is_file():
+                self.pipeline = FeatureFusionPipeline.load_pipeline(candidate_clean)
             else:
                 logger.warning("No fitted pipeline found; creating default un-fitted pipeline")
                 self.pipeline = FeatureFusionPipeline()
@@ -76,8 +80,10 @@ class ClassicalVehiclePredictor:
         self.classes_ = getattr(self.classifier, "classes_", np.arange(196))
         self.is_calibrated = hasattr(self.classifier, "predict_proba")
 
-    def _ensure_image_array(self, image: np.ndarray | str | Path) -> np.ndarray:
+    def _ensure_image_array(self, image: np.ndarray | str | Path | Any) -> np.ndarray:
         """Ensure input is loaded RGB numpy array."""
+        if hasattr(image, "convert"):  # PIL Image or image-like object
+            return np.array(image.convert("RGB"), dtype=np.uint8)
         if isinstance(image, (str, Path)):
             p = Path(image)
             full_p = p if p.is_file() else self.root / p
