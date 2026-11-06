@@ -156,12 +156,13 @@ def calculate_classification_metrics(
             per_class_acc[cname] = round(acc, 4)
 
     # 5. Confusion Matrix & Top Confused Classes
-    cm = confusion_matrix(y_true_arr, y_pred_arr, labels=list(range(num_classes)))
+    cm_full = confusion_matrix(y_true_arr, y_pred_arr, labels=list(range(num_classes)))
+    cm_error = cm_full.copy()
+    np.fill_diagonal(cm_error, 0)  # zero diagonal to isolate errors
     confused_pairs = []
-    np.fill_diagonal(cm, 0)  # zero diagonal to isolate errors
-    error_indices = np.argwhere(cm > 0)
+    error_indices = np.argwhere(cm_error > 0)
     for true_id, pred_id in error_indices:
-        count = int(cm[true_id, pred_id])
+        count = int(cm_error[true_id, pred_id])
         confused_pairs.append({
             "true_class_id": int(true_id),
             "true_class_name": decoder.class_names[true_id] if true_id < len(decoder.class_names) else f"Class_{true_id}",
@@ -226,6 +227,7 @@ def calculate_classification_metrics(
         },
         "confidence_statistics": conf_stats,
         "top_confused_classes": confused_pairs[:20],
+        "confusion_matrix_raw": cm_full.tolist(),
         "per_class_accuracy_summary": {
             "evaluated_classes": len(per_class_acc),
             "mean_per_class_acc": round(float(np.mean(list(per_class_acc.values()))) if per_class_acc else 0.0, 4),

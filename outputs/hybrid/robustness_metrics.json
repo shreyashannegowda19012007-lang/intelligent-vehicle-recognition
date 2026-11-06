@@ -1,0 +1,62 @@
+{
+  "baseline": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "low_resolution_4x": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "mild_blur": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "low_light": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "overexposed": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "low_contrast": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "partial_occlusion": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "multiple_vehicles": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "detector_crop_error": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  },
+  "visually_similar_models": {
+    "samples_evaluated": 1,
+    "detected_count": 1,
+    "detection_rate": 1.0,
+    "accuracy": 1.0
+  }
+}

@@ -136,14 +136,59 @@ class VehicleClassifier:
     ) -> torch.Tensor:
         """
         Convert arbitrary input into normalized 4D tensor (1, 3, H, W).
+        Handles PIL Image, file paths, numpy arrays (grayscale, RGB, RGBA, float, uint8),
+        and PyTorch tensors (2D, 3D, 4D, channels-first or channels-last, unnormalized or normalized).
         """
         if isinstance(image_input, torch.Tensor):
-            if image_input.ndim == 3:
-                return image_input.unsqueeze(0).to(self.device)
-            elif image_input.ndim == 4:
-                return image_input.to(self.device)
+            t = image_input.detach().clone().float()
+            # 1. Dimension and channel alignment
+            if t.ndim == 2:  # (H, W) -> (1, 3, H, W)
+                t = t.unsqueeze(0).unsqueeze(0).repeat(1, 3, 1, 1)
+            elif t.ndim == 3:
+                if t.shape[0] == 1:  # (1, H, W) -> (1, 3, H, W)
+                    t = t.unsqueeze(0).repeat(1, 3, 1, 1)
+                elif t.shape[0] == 3:  # (3, H, W) -> (1, 3, H, W)
+                    t = t.unsqueeze(0)
+                elif t.shape[2] == 1:  # (H, W, 1) -> (1, 3, H, W)
+                    t = t.permute(2, 0, 1).unsqueeze(0).repeat(1, 3, 1, 1)
+                elif t.shape[2] == 3:  # (H, W, 3) -> (1, 3, H, W)
+                    t = t.permute(2, 0, 1).unsqueeze(0)
+                elif t.shape[2] == 4:  # (H, W, 4) RGBA -> (1, 3, H, W)
+                    t = t[:, :, :3].permute(2, 0, 1).unsqueeze(0)
+                else:
+                    raise ValueError(f"Unsupported 3D tensor shape: {image_input.shape}")
+            elif t.ndim == 4:
+                if t.shape[1] == 1:  # (B, 1, H, W) -> (B, 3, H, W)
+                    t = t.repeat(1, 3, 1, 1)
+                elif t.shape[1] == 3:  # (B, 3, H, W)
+                    pass
+                elif t.shape[3] == 3:  # (B, H, W, 3) -> (B, 3, H, W)
+                    t = t.permute(0, 3, 1, 2)
+                elif t.shape[3] == 4:  # (B, H, W, 4) -> (B, 3, H, W)
+                    t = t[:, :, :, :3].permute(0, 3, 1, 2)
+                else:
+                    raise ValueError(f"Unsupported 4D tensor shape: {image_input.shape}")
             else:
-                raise ValueError(f"Invalid tensor shape: {image_input.shape}")
+                raise ValueError(f"Unsupported tensor dimension: {image_input.ndim}")
+
+            # 2. Scale range to [0.0, 1.0] if pixel values in [0, 255]
+            if t.max() > 1.0 + 1e-4:
+                t = t / 255.0
+
+            # 3. Resize if spatial dimensions do not match target image_size
+            target_h, target_w = self.config.image_size
+            if t.shape[2] != target_h or t.shape[3] != target_w:
+                t = torch.nn.functional.interpolate(
+                    t, size=(target_h, target_w), mode="bilinear", align_corners=False
+                )
+
+            # 4. Standardize with ImageNet mean and std if in unnormalized [0, 1] range
+            if t.min() >= -1e-4 and t.max() <= 1.0 + 1e-4:
+                mean = torch.tensor(self.config.mean, dtype=t.dtype).view(1, 3, 1, 1)
+                std = torch.tensor(self.config.std, dtype=t.dtype).view(1, 3, 1, 1)
+                t = (t - mean) / std
+
+            return t.to(self.device)
 
         if isinstance(image_input, (str, Path)):
             p = Path(image_input)
@@ -215,13 +260,22 @@ class VehicleClassifier:
         """
         k = top_k or self.top_k
 
-        # Handle empty/invalid crops safely
+        # Handle empty/invalid crops and forward failures safely
         try:
             tensor = self._prepare_image(image)
+            t_start = time.perf_counter()
+            with torch.no_grad():
+                logits = self.model(tensor)
+                if self.temperature != 1.0:
+                    logits = logits / self.temperature
+                probs = torch.softmax(logits, dim=1).squeeze(0)
+            t_end = time.perf_counter()
+            latency_ms = round((t_end - t_start) * 1000.0, 2)
         except Exception as e:
-            logger.warning("Failed to prepare image for classification: %s", e)
+            logger.warning("Classification inference error: %s", e)
             return {
                 "predicted_class": "Unknown",
+                "class_id": -1,
                 "make": "Unknown",
                 "model": "Unknown",
                 "year": 0,
@@ -230,15 +284,6 @@ class VehicleClassifier:
                 "inference_time_ms": 0.0,
                 "error": str(e),
             }
-
-        t_start = time.perf_counter()
-        with torch.no_grad():
-            logits = self.model(tensor)
-            if self.temperature != 1.0:
-                logits = logits / self.temperature
-            probs = torch.softmax(logits, dim=1).squeeze(0)
-        t_end = time.perf_counter()
-        latency_ms = round((t_end - t_start) * 1000.0, 2)
 
         # Extract top-K rankings
         num_avail = probs.size(0)

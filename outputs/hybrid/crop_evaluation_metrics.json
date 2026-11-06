@@ -1,0 +1,77 @@
+{
+  "total_samples": 10,
+  "classifier_agreement_rate": 0.0,
+  "detector": {
+    "available": true,
+    "model_size_mb": 6.25
+  },
+  "classical_ml": {
+    "available": false,
+    "model_size_mb": 0.0,
+    "mean_latency_ms": 0.02
+  },
+  "deep_learning": {
+    "available": true,
+    "model_size_mb": 94.58,
+    "mean_latency_ms": 4420.34,
+    "top1_accuracy": 0.0,
+    "top5_accuracy": 0.0,
+    "make_accuracy": 0.0,
+    "model_accuracy": 0.0,
+    "year_accuracy": 0.8,
+    "macro_precision": 0.0,
+    "weighted_precision": 0.0,
+    "macro_recall": 0.0,
+    "weighted_recall": 0.0,
+    "macro_f1": 0.0,
+    "weighted_f1": 0.0,
+    "confusion_matrix_top_errors": []
+  },
+  "hybrid_strategies": {
+    "deep_learning_primary": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "make_accuracy": 0.0,
+      "model_accuracy": 0.0,
+      "year_accuracy": 0.8,
+      "macro_precision": 0.0,
+      "weighted_precision": 0.0,
+      "macro_recall": 0.0,
+      "weighted_recall": 0.0,
+      "macro_f1": 0.0,
+      "weighted_f1": 0.0,
+      "mean_confidence": 0.8444,
+      "confusion_matrix_top_errors": []
+    },
+    "agreement_based": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "make_accuracy": 0.0,
+      "model_accuracy": 0.0,
+      "year_accuracy": 0.8,
+      "macro_precision": 0.0,
+      "weighted_precision": 0.0,
+      "macro_recall": 0.0,
+      "weighted_recall": 0.0,
+      "macro_f1": 0.0,
+      "weighted_f1": 0.0,
+      "mean_confidence": 0.8444,
+      "confusion_matrix_top_errors": []
+    },
+    "score_fusion": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "make_accuracy": 0.0,
+      "model_accuracy": 0.0,
+      "year_accuracy": 0.8,
+      "macro_precision": 0.0,
+      "weighted_precision": 0.0,
+      "macro_recall": 0.0,
+      "weighted_recall": 0.0,
+      "macro_f1": 0.0,
+      "weighted_f1": 0.0,
+      "mean_confidence": 0.8444,
+      "confusion_matrix_top_errors": []
+    }
+  }
+}

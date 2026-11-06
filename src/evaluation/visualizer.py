@@ -15,7 +15,10 @@ matplotlib.use("Agg")  # Non-interactive backend safe for CI and headless server
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
+try:
+    import seaborn as sns
+except ImportError:
+    sns = None
 from sklearn.metrics import confusion_matrix
 
 from src.classification.metrics import ClassMappingDecoder
@@ -61,18 +64,33 @@ def plot_make_confusion_matrix(
     row_sums = cm.sum(axis=1, keepdims=True)
     cm_norm = np.divide(cm.astype(float), row_sums, out=np.zeros_like(cm, dtype=float), where=row_sums != 0) * 100.0
 
-    plt.figure(figsize=(14, 11))
-    sns.set_theme(style="white")
-    ax = sns.heatmap(
-        cm_norm,
-        annot=True,
-        fmt=".1f",
-        cmap="Blues",
-        xticklabels=labels,
-        yticklabels=labels,
-        cbar_kws={"label": "Normalized Accuracy (%)"},
-        linewidths=0.5,
-    )
+    if sns is not None:
+        plt.figure(figsize=(14, 11))
+        sns.set_theme(style="white")
+        ax = sns.heatmap(
+            cm_norm,
+            annot=True,
+            fmt=".1f",
+            cmap="Blues",
+            xticklabels=labels,
+            yticklabels=labels,
+            cbar_kws={"label": "Normalized Accuracy (%)"},
+            linewidths=0.5,
+        )
+    else:
+        fig, ax = plt.subplots(figsize=(14, 11))
+        im = ax.imshow(cm_norm, cmap="Blues", aspect="auto")
+        cbar = fig.colorbar(im, ax=ax)
+        cbar.set_label("Normalized Accuracy (%)")
+        ax.set_xticks(range(len(labels)))
+        ax.set_yticks(range(len(labels)))
+        ax.set_xticklabels(labels)
+        ax.set_yticklabels(labels)
+        for i in range(len(labels)):
+            for j in range(len(labels)):
+                val = cm_norm[i, j]
+                color = "white" if val > 50 else "black"
+                ax.text(j, i, f"{val:.1f}", ha="center", va="center", color=color, fontsize=8)
     plt.title(title, fontsize=15, pad=15, fontweight="bold")
     plt.xlabel("Predicted Make", fontsize=12, labelpad=10)
     plt.ylabel("Ground Truth Make", fontsize=12, labelpad=10)
@@ -125,18 +143,33 @@ def plot_class_confusion_matrix(
     row_sums = cm.sum(axis=1, keepdims=True)
     cm_norm = np.divide(cm.astype(float), row_sums, out=np.zeros_like(cm, dtype=float), where=row_sums != 0) * 100.0
 
-    plt.figure(figsize=(14, 11))
-    sns.set_theme(style="white")
-    ax = sns.heatmap(
-        cm_norm,
-        annot=True,
-        fmt=".1f",
-        cmap="mako",
-        xticklabels=labels_short,
-        yticklabels=labels_short,
-        cbar_kws={"label": "Normalized Recall (%)"},
-        linewidths=0.5,
-    )
+    if sns is not None:
+        plt.figure(figsize=(14, 11))
+        sns.set_theme(style="white")
+        ax = sns.heatmap(
+            cm_norm,
+            annot=True,
+            fmt=".1f",
+            cmap="mako",
+            xticklabels=labels_short,
+            yticklabels=labels_short,
+            cbar_kws={"label": "Normalized Recall (%)"},
+            linewidths=0.5,
+        )
+    else:
+        fig, ax = plt.subplots(figsize=(14, 11))
+        im = ax.imshow(cm_norm, cmap="viridis", aspect="auto")
+        cbar = fig.colorbar(im, ax=ax)
+        cbar.set_label("Normalized Recall (%)")
+        ax.set_xticks(range(len(labels_short)))
+        ax.set_yticks(range(len(labels_short)))
+        ax.set_xticklabels(labels_short)
+        ax.set_yticklabels(labels_short)
+        for i in range(len(labels_short)):
+            for j in range(len(labels_short)):
+                val = cm_norm[i, j]
+                color = "white" if val > 50 else "black"
+                ax.text(j, i, f"{val:.1f}", ha="center", va="center", color=color, fontsize=8)
     plt.title(title, fontsize=15, pad=15, fontweight="bold")
     plt.xlabel("Predicted Vehicle Class", fontsize=12, labelpad=10)
     plt.ylabel("Ground Truth Vehicle Class", fontsize=12, labelpad=10)

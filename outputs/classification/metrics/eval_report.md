@@ -4,7 +4,7 @@
 **Checkpoint:** `outputs\classification\checkpoints\best_checkpoint.pt`  
 **Device:** cpu  
 **Evaluated Samples:** 1222  
-**Average Latency:** 70.72 ms/image  
+**Average Latency:** 72.14 ms/image  
 
 ## 1. Classification Metrics (196 Stanford Cars Classes)
 
@@ -46,3 +46,11 @@
 | BMW 6 Series Convertible 2007 | Audi S4 Sedan 2012 | 7 |
 | BMW M3 Coupe 2012 | Audi S4 Sedan 2012 | 7 |
 | Bentley Continental GT Coupe 2007 | Audi S4 Sedan 2012 | 7 |
+
+## 5. Diagnostic Artifacts & Visualizations
+
+- **Full Confusion Matrix:** `outputs/classification/metrics/confusion_matrix.csv`
+- **Top Confused Plot:** `outputs/classification/plots/confusion_matrix_top20.png`
+- **Confidence Histogram:** `outputs/classification/plots/confidence_distribution.png`
+- **Training Curves:** `outputs/classification/plots/training_history.png`
+- **Sample Predictions:** `outputs/classification/predictions/sample_predictions.json`
