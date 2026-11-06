@@ -1,0 +1,56 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+*.venv
+
+# Dataset archives and raw data
+Stanford_Cars.zip
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+Stanford Dataset/
+Stanford Dataset/**
+cars_train/
+cars_test/
+car_devkit/
+*.mat
+
+# Processed data cache (keep classes.json and splits metadata, ignore bulky generated image crops/yolo copies)
+data/yolo/images/
+data/yolo/labels/
+data/crops/
+data/processed/
+
+# Model weights, checkpoints, artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+*.bin
+weights/
+runs/
+checkpoints/
+artifacts/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
