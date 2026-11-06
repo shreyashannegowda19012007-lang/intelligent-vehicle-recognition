@@ -91,8 +91,8 @@ git checkout -b feature/deep-learning-convnext
 Before committing, run the test suite to ensure no regressions:
 
 ```bash
-# Run lightweight unit tests (no dataset required)
-pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -v
+# Run lightweight unit tests (no dataset required, 48 tests)
+pytest tests/test_initialization.py tests/test_annotations.py tests/test_classical_cv.py tests/test_preprocessing.py tests/test_splits.py -v
 
 # Run the complete test suite (when Stanford Cars dataset is available locally)
 pytest tests/ -v

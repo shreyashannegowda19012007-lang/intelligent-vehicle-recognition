@@ -26,7 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           # Pre-install CPU-only PyTorch to avoid heavy CUDA binaries in CI
           pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-          pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+          # Filter out pinned CUDA torch packages so CPU torch is retained in CI
+          grep -v -E "^(torch==|torchvision==|--extra-index-url)" requirements.txt > ci-requirements.txt
+          pip install -r ci-requirements.txt
 
       - name: Verify Package Imports
         run: |
@@ -34,6 +36,6 @@ jobs:
 
       - name: Run Unit Tests (Non-Dataset Dependent)
         run: |
-          # Executes automated unit tests for preprocessing, transforms, splits, and initialization
+          # Executes automated unit tests for preprocessing, transforms, splits, annotations, classical CV, and initialization
           # that do not depend on the large local Stanford Cars dataset images or GPU hardware
-          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -k "not test_configuration_loading and not test_pytorch_dataset_sample_loading" -v
+          pytest tests/test_initialization.py tests/test_annotations.py tests/test_classical_cv.py tests/test_preprocessing.py tests/test_splits.py -v

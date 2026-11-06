@@ -86,9 +86,12 @@ car_devkit.tgz
 
 # Generated image datasets & image crops
 data/cache/
-data/yolo/
+data/yolo/images/
+data/yolo/labels/
 data/crops/
-data/processed/detection/
+data/processed/detection/images/
+data/processed/detection/labels/
+data/processed/detection/*.txt
 data/reports/visualizations/
 data/*.json
 data/processed/metadata/vehicle_manifest.json

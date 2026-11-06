@@ -311,8 +311,8 @@ python scripts/evaluate_detector.py --weights models/detection/yolov8n_vehicle/w
 
 Run the complete test suite:
 ```bash
-# Run lightweight unit tests (no dataset required)
-pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -v
+# Run lightweight unit tests (no dataset required, 48 tests)
+pytest tests/test_initialization.py tests/test_annotations.py tests/test_classical_cv.py tests/test_preprocessing.py tests/test_splits.py -v
 
 # Run the full test suite (127 tests, requires local dataset)
 pytest tests/ -v
