@@ -78,6 +78,8 @@ class HybridEvaluator:
         dl_latencies: list[float] = []
         cl_latencies: list[float] = []
         dec_latencies: list[float] = []
+        dl_top5_hits = 0
+        cl_top5_hits = 0
         agreement_count = 0
 
         for s in samples:
@@ -91,6 +93,9 @@ class HybridEvaluator:
             dl_latencies.append((time.perf_counter() - t_dl) * 1000.0)
             dl_preds.append(dl_res.get("class_id", -1))
             dl_confs.append(float(dl_res.get("confidence", 0.0)))
+            dl_top5_cids = [item.get("class_id") for item in dl_res.get("top_5", [])]
+            if true_cid in dl_top5_cids:
+                dl_top5_hits += 1
 
             # 2. Classical prediction
             t_cl = time.perf_counter()
@@ -98,6 +103,9 @@ class HybridEvaluator:
             cl_latencies.append((time.perf_counter() - t_cl) * 1000.0)
             cl_preds.append(cl_res.get("class_id", -1))
             cl_scores.append(float(cl_res.get("score", 0.0)))
+            cl_top5_cids = [item.get("class_id") for item in cl_res.get("top_5", [])]
+            if true_cid in cl_top5_cids:
+                cl_top5_hits += 1
 
             # 3. Hybrid decisions for each strategy
             for strat in eval_strategies:
@@ -120,16 +128,27 @@ class HybridEvaluator:
 
         total_evaluated = len(y_true)
 
+        # Compute model sizes
+        dl_size_mb = getattr(self.pipeline.dl_adapter, "get_model_size_mb", lambda: 0.0)()
+        cl_size_mb = getattr(self.pipeline.classical_adapter, "get_model_size_mb", lambda: 0.0)()
+        det_size_mb = getattr(self.pipeline.detector_adapter, "get_model_size_mb", lambda: 0.0)()
+
         # Compute metrics
         results: dict[str, Any] = {
             "total_samples": total_evaluated,
             "classifier_agreement_rate": round(agreement_count / max(1, total_evaluated), 4),
+            "detector": {
+                "available": True,
+                "model_size_mb": det_size_mb,
+            },
             "classical_ml": {
                 "available": self.pipeline.classical_adapter.is_available,
+                "model_size_mb": cl_size_mb,
                 "mean_latency_ms": round(float(np.mean(cl_latencies)), 2) if cl_latencies else 0.0,
             },
             "deep_learning": {
                 "available": self.pipeline.dl_adapter.is_available,
+                "model_size_mb": dl_size_mb,
                 "mean_latency_ms": round(float(np.mean(dl_latencies)), 2) if dl_latencies else 0.0,
             },
             "hybrid_strategies": {},
@@ -140,11 +159,17 @@ class HybridEvaluator:
             dl_metrics = calculate_classification_metrics(y_true, dl_preds, decoder=self.decoder)
             results["deep_learning"].update({
                 "top1_accuracy": dl_metrics["top1_accuracy"],
+                "top5_accuracy": round(dl_top5_hits / max(1, total_evaluated), 4),
                 "make_accuracy": dl_metrics["attribute_metrics"]["make_accuracy"],
                 "model_accuracy": dl_metrics["attribute_metrics"]["model_accuracy"],
                 "year_accuracy": dl_metrics["attribute_metrics"]["year_accuracy"],
+                "macro_precision": dl_metrics["macro_precision"],
+                "weighted_precision": dl_metrics["weighted_precision"],
+                "macro_recall": dl_metrics["macro_recall"],
+                "weighted_recall": dl_metrics["weighted_recall"],
                 "macro_f1": dl_metrics["macro_f1"],
                 "weighted_f1": dl_metrics["weighted_f1"],
+                "confusion_matrix_top_errors": dl_metrics.get("confused_pairs", [])[:10],
             })
 
         # Classical Metrics
@@ -152,11 +177,17 @@ class HybridEvaluator:
             cl_metrics = calculate_classification_metrics(y_true, cl_preds, decoder=self.decoder)
             results["classical_ml"].update({
                 "top1_accuracy": cl_metrics["top1_accuracy"],
+                "top5_accuracy": round(cl_top5_hits / max(1, total_evaluated), 4),
                 "make_accuracy": cl_metrics["attribute_metrics"]["make_accuracy"],
                 "model_accuracy": cl_metrics["attribute_metrics"]["model_accuracy"],
                 "year_accuracy": cl_metrics["attribute_metrics"]["year_accuracy"],
+                "macro_precision": cl_metrics["macro_precision"],
+                "weighted_precision": cl_metrics["weighted_precision"],
+                "macro_recall": cl_metrics["macro_recall"],
+                "weighted_recall": cl_metrics["weighted_recall"],
                 "macro_f1": cl_metrics["macro_f1"],
                 "weighted_f1": cl_metrics["weighted_f1"],
+                "confusion_matrix_top_errors": cl_metrics.get("confused_pairs", [])[:10],
             })
 
         # Hybrid Metrics for each strategy
@@ -165,12 +196,18 @@ class HybridEvaluator:
             strat_metrics = calculate_classification_metrics(y_true, preds, decoder=self.decoder)
             results["hybrid_strategies"][strat.value] = {
                 "top1_accuracy": strat_metrics["top1_accuracy"],
+                "top5_accuracy": round(dl_top5_hits / max(1, total_evaluated), 4),
                 "make_accuracy": strat_metrics["attribute_metrics"]["make_accuracy"],
                 "model_accuracy": strat_metrics["attribute_metrics"]["model_accuracy"],
                 "year_accuracy": strat_metrics["attribute_metrics"]["year_accuracy"],
+                "macro_precision": strat_metrics["macro_precision"],
+                "weighted_precision": strat_metrics["weighted_precision"],
+                "macro_recall": strat_metrics["macro_recall"],
+                "weighted_recall": strat_metrics["weighted_recall"],
                 "macro_f1": strat_metrics["macro_f1"],
                 "weighted_f1": strat_metrics["weighted_f1"],
                 "mean_confidence": round(float(np.mean(hybrid_confs[strat.value])), 4) if hybrid_confs[strat.value] else 0.0,
+                "confusion_matrix_top_errors": strat_metrics.get("confused_pairs", [])[:10],
             }
 
         return results

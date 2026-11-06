@@ -75,11 +75,14 @@ class HybridDecisionEngine:
             dl_cid = dl_pred.get("class_id", -1)
             cv_cid = classical_pred.get("class_id", -2)
 
-            class_match = (dl_cid == cv_cid and dl_cid >= 0) or (
-                str(dl_pred.get("predicted_class", "")).strip().lower()
-                == str(classical_pred.get("predicted_class", "")).strip().lower()
-                and dl_pred.get("predicted_class") not in {"Unknown", ""}
-            )
+            if dl_cid >= 0 and cv_cid >= 0:
+                class_match = (dl_cid == cv_cid)
+            else:
+                class_match = (
+                    str(dl_pred.get("predicted_class", "")).strip().lower()
+                    == str(classical_pred.get("predicted_class", "")).strip().lower()
+                    and dl_pred.get("predicted_class") not in {"Unknown", ""}
+                )
 
             make_match = (
                 str(dl_pred.get("make", "")).strip().lower()
@@ -179,10 +182,24 @@ class HybridDecisionEngine:
                     # Both calibrated probabilities
                     s_dl = float(dl_pred.get("confidence", 0.0))
                     s_cv = float(classical_pred.get("confidence", 0.0))
-                    fused_conf = round(norm_w_dl * s_dl + norm_w_cv * s_cv, 4)
 
-                    # Choose class candidate with higher weighted score
-                    primary_pred = dl_pred if (norm_w_dl * s_dl >= norm_w_cv * s_cv) else classical_pred
+                    if agreement:
+                        # Both models predict the same class: valid linear opinion pool
+                        fused_conf = round(norm_w_dl * s_dl + norm_w_cv * s_cv, 4)
+                        primary_pred = dl_pred
+                    else:
+                        # Models disagree: select class candidate with higher weighted score
+                        w_dl_score = norm_w_dl * s_dl
+                        w_cv_score = norm_w_cv * s_cv
+                        if w_dl_score >= w_cv_score:
+                            primary_pred = dl_pred
+                            denom = w_dl_score + w_cv_score
+                            fused_conf = round(w_dl_score / denom, 4) if denom > 0 else round(s_dl, 4)
+                        else:
+                            primary_pred = classical_pred
+                            denom = w_dl_score + w_cv_score
+                            fused_conf = round(w_cv_score / denom, 4) if denom > 0 else round(s_cv, 4)
+
                     final_prediction = {
                         "class_id": primary_pred.get("class_id", -1),
                         "predicted_class": primary_pred.get("predicted_class", "Unknown"),

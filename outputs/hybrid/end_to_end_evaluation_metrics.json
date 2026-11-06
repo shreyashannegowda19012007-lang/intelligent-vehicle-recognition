@@ -1,7 +1,7 @@
 {
   "samples_evaluated": 10,
   "detection_rate": 0.1,
-  "mean_iou": 1.0,
+  "mean_iou": 0.1641,
   "gt_crop_accuracy": 0.0,
   "yolo_crop_accuracy": 0.0,
   "end_to_end_accuracy": 0.0,

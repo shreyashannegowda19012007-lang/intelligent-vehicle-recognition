@@ -198,12 +198,34 @@ class HybridVehiclePipeline:
 
         # 2. YOLO Vehicle Detection
         t_det_start = time.perf_counter()
-        det_result = self.detector_adapter.detect_vehicles(
-            image_input=rgb_img,
-            conf=conf_threshold,
-            iou=iou_threshold,
-        )
+        try:
+            det_result = self.detector_adapter.detect_vehicles(
+                image_input=rgb_img,
+                conf=conf_threshold,
+                iou=iou_threshold,
+            )
+        except Exception as e:
+            logger.error("YOLO detector crashed during process_image: %s", e)
+            total_elapsed = round((time.perf_counter() - t_total_start) * 1000.0, 2)
+            return {
+                "status": "error",
+                "image": {"width": orig_w, "height": orig_h},
+                "vehicle_count": 0,
+                "vehicles": [],
+                "performance": {
+                    "detection_time_ms": round((time.perf_counter() - t_det_start) * 1000.0, 2),
+                    "classical_time_ms": 0.0,
+                    "deep_learning_time_ms": 0.0,
+                    "classification_time_ms": 0.0,
+                    "decision_time_ms": 0.0,
+                    "total_time_ms": total_elapsed,
+                },
+                "warnings": [f"YOLO detector execution failed: {e}"],
+            }
         detection_time_ms = round((time.perf_counter() - t_det_start) * 1000.0, 2)
+
+        if det_result.get("error"):
+            pipeline_warnings.append(f"Detector warning: {det_result['error']}")
 
         detections = det_result.get("detections", [])
         if len(detections) == 0:
@@ -332,3 +354,35 @@ class HybridVehiclePipeline:
             },
             "warnings": pipeline_warnings,
         }
+
+    def process_batch(
+        self,
+        images: list[str | Path | Image.Image | np.ndarray | Any],
+        conf_threshold: float | None = None,
+        iou_threshold: float | None = None,
+        decision_strategy: DecisionStrategy | None = None,
+    ) -> list[dict[str, Any]]:
+        """
+        Execute hybrid vehicle recognition across a batch of images.
+        Reuses initialized models and pipelines while isolating per-image failures.
+
+        Args:
+            images: List of image paths, PIL Images, or numpy arrays.
+            conf_threshold: Optional detection confidence threshold override.
+            iou_threshold: Optional detection IoU threshold override.
+            decision_strategy: Optional strategy override.
+
+        Returns:
+            List of unified pipeline response dictionaries.
+        """
+        results: list[dict[str, Any]] = []
+        for img in images:
+            results.append(
+                self.process_image(
+                    image_input=img,
+                    conf_threshold=conf_threshold,
+                    iou_threshold=iou_threshold,
+                    decision_strategy=decision_strategy,
+                )
+            )
+        return results

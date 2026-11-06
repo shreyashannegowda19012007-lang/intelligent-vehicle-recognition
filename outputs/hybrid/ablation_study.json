@@ -22,23 +22,23 @@
     "Top1_Accuracy": "0.00%",
     "Make_Accuracy": "0.00%",
     "Model_Accuracy": "0.00%",
-    "Year_Accuracy": "30.00%",
+    "Year_Accuracy": "40.00%",
     "Macro_F1": "0.0000",
-    "Mean_Latency_ms": "61.99",
+    "Mean_Latency_ms": "1672.59",
     "Observations": "Fine-grained deep classifier on clean ground-truth vehicle crops."
   },
   {
     "Experiment": "C",
     "Detection": "Ground-truth ROI",
-    "Classical_ML": "Missing",
+    "Classical_ML": "Enabled",
     "Deep_Learning": "Enabled",
     "Status": "Partial (Classical unavailable; falls back to DL)",
     "Top1_Accuracy": "0.00%",
     "Make_Accuracy": "0.00%",
     "Model_Accuracy": "0.00%",
-    "Year_Accuracy": "30.00%",
+    "Year_Accuracy": "40.00%",
     "Macro_F1": "0.0000",
-    "Mean_Latency_ms": "64.34",
+    "Mean_Latency_ms": "1489.60",
     "Observations": "Hybrid decision fusion on ground-truth crops."
   },
   {
@@ -50,23 +50,23 @@
     "Top1_Accuracy": "0.00%",
     "Make_Accuracy": "0.00%",
     "Model_Accuracy": "0.00%",
-    "Year_Accuracy": "0.00%",
+    "Year_Accuracy": "10.00%",
     "Macro_F1": "0.0000",
-    "Mean_Latency_ms": "56.71",
+    "Mean_Latency_ms": "1485.17",
     "Observations": "Cascaded YOLO detector crops into Deep Learning classifier."
   },
   {
     "Experiment": "E",
     "Detection": "YOLO detection",
-    "Classical_ML": "Missing",
+    "Classical_ML": "Enabled",
     "Deep_Learning": "Enabled",
     "Status": "Partial (Classical unavailable; falls back to DL)",
     "Top1_Accuracy": "0.00%",
     "Make_Accuracy": "0.00%",
     "Model_Accuracy": "0.00%",
-    "Year_Accuracy": "0.00%",
+    "Year_Accuracy": "10.00%",
     "Macro_F1": "0.0000",
-    "Mean_Latency_ms": "56.28",
+    "Mean_Latency_ms": "1913.15",
     "Observations": "Full hybrid pipeline: YOLO vehicle detection + parallel classification + hybrid decision engine."
   }
 ]

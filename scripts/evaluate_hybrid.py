@@ -91,8 +91,8 @@ def generate_synthetic_samples(num_samples: int = 20) -> list[dict]:
     if cand_sample.is_file():
         samples.append({
             "image": cand_sample,
-            "true_class_id": 0,
-            "bbox": (22, 229, 805, 750),
+            "true_class_id": 13,  # Audi TTS Coupe 2012 per verified annotations
+            "bbox": (38, 115, 568, 374),
         })
 
     for i in range(len(samples), num_samples):

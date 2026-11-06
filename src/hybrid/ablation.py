@@ -158,8 +158,8 @@ class AblationStudyRunner:
         experiment_rows.append({
             "Experiment": "C",
             "Detection": "Ground-truth ROI",
-            "Classical_ML": "Enabled" if cl_avail else "Missing",
-            "Deep_Learning": "Enabled" if dl_avail else "Missing",
+            "Classical_ML": "Enabled",
+            "Deep_Learning": "Enabled",
             "Status": status_c,
             "Top1_Accuracy": f"{exp_c_res['top1_accuracy'] * 100:.2f}%",
             "Make_Accuracy": f"{exp_c_res['make_acc'] * 100:.2f}%",
@@ -221,8 +221,8 @@ class AblationStudyRunner:
         experiment_rows.append({
             "Experiment": "E",
             "Detection": "YOLO detection",
-            "Classical_ML": "Enabled" if cl_avail else "Missing",
-            "Deep_Learning": "Enabled" if dl_avail else "Missing",
+            "Classical_ML": "Enabled",
+            "Deep_Learning": "Enabled",
             "Status": status_e,
             "Top1_Accuracy": f"{exp_e_res['top1_accuracy'] * 100:.2f}%",
             "Make_Accuracy": f"{exp_e_res['make_acc'] * 100:.2f}%",

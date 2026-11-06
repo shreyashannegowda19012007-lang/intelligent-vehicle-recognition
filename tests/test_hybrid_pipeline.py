@@ -388,8 +388,23 @@ def test_hybrid_decision_strategy_c_score_fusion_calibrated_and_uncalibrated():
         classical_pred=cl_cal,
         strategy_override=DecisionStrategy.SCORE_FUSION,
     )
-    # w_dl=0.7, s_dl=0.9; w_cl=0.3, s_cl=0.8 -> 0.7*0.9 + 0.3*0.8 = 0.63 + 0.24 = 0.87
+    # Both predict class 1: w_dl=0.7, s_dl=0.9; w_cl=0.3, s_cl=0.8 -> 0.7*0.9 + 0.3*0.8 = 0.63 + 0.24 = 0.87
     assert res_cal["final_prediction"]["confidence"] == pytest.approx(0.87, abs=1e-3)
+    assert res_cal["final_prediction"]["class_id"] == 1
+
+    # Case 3: Calibrated classical model with DISAGREEMENT -> selects winning candidate with normalized relative confidence
+    cl_disagree = MockClassicalAdapter(class_id=2, make="Audi", model="A4", year=2015, score=0.80, is_calibrated=True).predict_crop(None)
+    res_disagree = engine.decide(
+        vehicle_id=1,
+        bbox={"x1": 0, "y1": 0, "x2": 50, "y2": 50},
+        detection_info={"class_name": "car", "confidence": 0.9},
+        dl_pred=dl,
+        classical_pred=cl_disagree,
+        strategy_override=DecisionStrategy.SCORE_FUSION,
+    )
+    # w_dl*s_dl = 0.63, w_cl*s_cl = 0.24 -> class 1 wins; normalized conf = 0.63 / (0.63 + 0.24) = 0.7241
+    assert res_disagree["final_prediction"]["class_id"] == 1
+    assert res_disagree["final_prediction"]["confidence"] == pytest.approx(0.7241, abs=1e-3)
 
 
 def test_missing_classifier_artifacts_graceful_handling():
@@ -529,3 +544,137 @@ def test_vehicle_failure_isolation():
     # Falls back gracefully to classical prediction
     assert v["final_prediction"]["make"] == "BMW"
     assert v["deep_learning_prediction"]["status"] == "error"
+
+
+def test_pipeline_batch_processing():
+    pipeline = HybridVehiclePipeline(
+        detector=MockDetectorAdapter(),
+        dl_classifier=MockDLAdapter(),
+        classical_predictor=MockClassicalAdapter(),
+    )
+    imgs = [
+        np.zeros((100, 100, 3), dtype=np.uint8),
+        np.ones((120, 120, 3), dtype=np.uint8) * 128,
+    ]
+    batch_res = pipeline.process_batch(imgs)
+    assert len(batch_res) == 2
+    for r in batch_res:
+        assert r["status"] == "success"
+        assert r["vehicle_count"] == 1
+
+
+def test_detector_failure_isolation():
+    class CrashingDetector:
+        def detect_vehicles(self, image_input, conf=None, iou=None):
+            raise RuntimeError("Fatal CUDA detector crash")
+
+    pipeline = HybridVehiclePipeline(
+        detector=CrashingDetector(),
+        dl_classifier=MockDLAdapter(),
+        classical_predictor=MockClassicalAdapter(),
+    )
+    res = pipeline.process_image(np.zeros((100, 100, 3), dtype=np.uint8))
+    assert res["status"] == "error"
+    assert res["vehicle_count"] == 0
+    assert any("fatal cuda detector crash" in w.lower() for w in res["warnings"])
+
+
+def test_detector_adapter_sequence_and_dict_bbox_formats():
+    # Sequence [x1, y1, x2, y2]
+    det_seq = MockDetectorAdapter([
+        {
+            "vehicle_id": 1,
+            "bbox": [10.2, 20.8, 200.4, 300.9],
+            "confidence": 0.90,
+            "class_name": "car",
+            "roi": None,
+        }
+    ])
+    adapter = DetectorAdapter(detector=det_seq)
+    res = adapter.detect_vehicles(np.zeros((480, 640, 3), dtype=np.uint8))
+    b = res["detections"][0]["bbox"]
+    assert b["x1"] == 10 and b["y1"] == 21 and b["x2"] == 200 and b["y2"] == 301
+
+    # Dictionary with xmin, ymin, xmax, ymax
+    det_xmin = MockDetectorAdapter([
+        {
+            "vehicle_id": 1,
+            "bbox": {"xmin": 15, "ymin": 25, "xmax": 215, "ymax": 325},
+            "confidence": 0.88,
+            "class_name": "car",
+            "roi": None,
+        }
+    ])
+    adapter2 = DetectorAdapter(detector=det_xmin)
+    res2 = adapter2.detect_vehicles(np.zeros((480, 640, 3), dtype=np.uint8))
+    b2 = res2["detections"][0]["bbox"]
+    assert b2["x1"] == 15 and b2["y1"] == 25 and b2["x2"] == 215 and b2["y2"] == 325
+
+
+def test_evaluator_crop_metrics_complete_schema():
+    from src.hybrid.evaluator import HybridEvaluator
+
+    pipeline = HybridVehiclePipeline(
+        detector=MockDetectorAdapter(),
+        dl_classifier=MockDLAdapter(class_id=1, make="Audi", model="A4", year=2015, confidence=0.9),
+        classical_predictor=MockClassicalAdapter(class_id=1, make="Audi", model="A4", year=2015, score=0.8, is_calibrated=True),
+    )
+    evaluator = HybridEvaluator(pipeline=pipeline)
+    samples = [
+        {"image": np.zeros((100, 100, 3), dtype=np.uint8), "true_class_id": 1},
+        {"image": np.zeros((100, 100, 3), dtype=np.uint8), "true_class_id": 2},
+    ]
+    res = evaluator.evaluate_on_crops(samples)
+
+    # Verify DL metrics schema completeness per Prompt Section 8
+    dl_m = res["deep_learning"]
+    assert "top1_accuracy" in dl_m
+    assert "top5_accuracy" in dl_m
+    assert "make_accuracy" in dl_m
+    assert "model_accuracy" in dl_m
+    assert "year_accuracy" in dl_m
+    assert "macro_precision" in dl_m
+    assert "weighted_precision" in dl_m
+    assert "macro_recall" in dl_m
+    assert "weighted_recall" in dl_m
+    assert "macro_f1" in dl_m
+    assert "weighted_f1" in dl_m
+    assert "model_size_mb" in dl_m
+    assert "confusion_matrix_top_errors" in dl_m
+
+    # Verify Hybrid strategies contain full schema
+    for strat_key, strat_m in res["hybrid_strategies"].items():
+        assert "top1_accuracy" in strat_m
+        assert "top5_accuracy" in strat_m
+        assert "macro_precision" in strat_m
+        assert "macro_recall" in strat_m
+        assert "confusion_matrix_top_errors" in strat_m
+
+
+def test_robustness_all_eight_conditions():
+    from src.hybrid.robustness import HybridRobustnessEvaluator
+
+    pipeline = HybridVehiclePipeline(
+        detector=MockDetectorAdapter(),
+        dl_classifier=MockDLAdapter(),
+        classical_predictor=MockClassicalAdapter(),
+    )
+    robustness = HybridRobustnessEvaluator(pipeline=pipeline)
+    test_img = np.zeros((120, 160, 3), dtype=np.uint8)
+    samples = [{"image": test_img, "true_class_id": 42}]
+
+    metrics = robustness.evaluate_corruptions(samples)
+
+    expected_conditions = {
+        "baseline",
+        "low_resolution_4x",
+        "mild_blur",
+        "low_light",
+        "overexposed",
+        "low_contrast",
+        "partial_occlusion",
+        "multiple_vehicles",
+        "detector_crop_error",
+        "visually_similar_models",
+    }
+    assert expected_conditions.issubset(set(metrics.keys()))

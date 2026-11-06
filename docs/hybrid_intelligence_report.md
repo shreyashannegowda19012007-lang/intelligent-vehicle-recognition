@@ -188,7 +188,7 @@ Artifacts saved to:
 
 ## 6. Robustness & Failure Analysis
 
-Evaluated against seven visual perturbation conditions:
+Evaluated against comprehensive visual perturbation and scene stress conditions:
 1. Baseline
 2. Low-resolution (4x downsampling)
 3. Mild Gaussian blur (k=7)
@@ -196,6 +196,9 @@ Evaluated against seven visual perturbation conditions:
 5. Overexposure / glare (1.8x brightness)
 6. Low contrast / haze (0.4x contrast)
 7. Partial occlusion (30% bounding patch)
+8. Multi-vehicle scenes (adjacent vehicle compositing)
+9. Detector crop boundary errors (20% boundary truncation)
+10. Visually similar trim ambiguity (subtle hue/chroma perturbation)
 
 Four representative failure cases with full root-cause attribution were documented and saved in `outputs/hybrid/failure_cases/`:
 - `failure_01_severe_blur_feature_loss`: Blur erodes high-frequency grille/headlight gradients (Classification stage).
@@ -207,13 +210,16 @@ Four representative failure cases with full root-cause attribution were document
 
 ## 7. Verification & Test Suite
 
-All 12 automated unit and integration tests in `tests/test_hybrid_pipeline.py` and 76 tests across core test suites passed with 100% success rate:
+All 17 automated unit and integration tests in `tests/test_hybrid_pipeline.py` and 76 tests across core test suites passed with 100% success rate:
 - Image validation (valid, invalid, corrupted, empty, float, grayscale, RGBA).
 - YOLO coordinate adaptation & restoration.
-- Bounding-box clamping and ROI extraction.
+- Bounding-box clamping and ROI extraction across dict and sequence formats.
 - Classical and deep-learning classifier integration.
-- Strategies A, B, and C decision fusion logic.
+- Strategies A, B, and C decision fusion logic (including calibrated consensus and disagreement normalized arbitration).
 - Disagreement handling without invented probabilities.
 - Graceful degradation when artifacts are missing.
 - Multi-vehicle and zero-vehicle scene handling.
+- Configurable batch processing (`process_batch`).
+- Detector and classifier failure containment and isolation.
+- Comprehensive metric calculation (Top-1, Top-5, Make/Model/Year, Precision, Recall, Macro/Weighted F1, Model size, Confusion matrix).
 - Output schema compliance and latency measurement.

@@ -81,13 +81,39 @@ class HybridRobustnessEvaluator:
         out[y1 : y1 + ph, x1 : x1 + pw] = 0
         return out
 
+    @staticmethod
+    def perturb_multiple_vehicles(image: np.ndarray) -> np.ndarray:
+        """Create a multi-vehicle scene by placing two vehicles side by side."""
+        h, w = image.shape[:2]
+        canvas = np.zeros((h, w * 2, 3), dtype=np.uint8)
+        canvas[:, :w] = image
+        canvas[:, w:] = cv2.flip(image, 1)
+        return cv2.resize(canvas, (w, h))
+
+    @staticmethod
+    def perturb_detector_crop_error(image: np.ndarray, crop_fraction: float = 0.20) -> np.ndarray:
+        """Simulate detector crop boundary error by truncating vehicle perimeter."""
+        h, w = image.shape[:2]
+        dy = max(1, int(h * crop_fraction))
+        dx = max(1, int(w * crop_fraction))
+        cropped = image[dy:, dx:]
+        return cv2.resize(cropped, (w, h))
+
+    @staticmethod
+    def perturb_visually_similar_models(image: np.ndarray) -> np.ndarray:
+        """Simulate subtle inter-trim vehicle ambiguity via subtle color/hue shift."""
+        hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV).astype(np.float32)
+        hsv[:, :, 0] = (hsv[:, :, 0] + 8.0) % 180.0
+        rgb = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2RGB)
+        return rgb
+
     def evaluate_corruptions(
         self,
         samples: list[dict[str, Any]],
         output_dir: str | Path | None = None,
     ) -> dict[str, Any]:
         """
-        Evaluate hybrid pipeline on baseline vs. corrupted image sets.
+        Evaluate hybrid pipeline on baseline vs. corrupted image sets across 8 canonical conditions.
 
         Returns:
             Dictionary mapping corruption condition to detection rate and classification accuracy.
@@ -100,6 +126,9 @@ class HybridRobustnessEvaluator:
             "overexposed": lambda img: self.perturb_brightness_high(img, 1.8),
             "low_contrast": lambda img: self.perturb_contrast_low(img, 0.4),
             "partial_occlusion": lambda img: self.perturb_partial_occlusion(img, 0.30),
+            "multiple_vehicles": lambda img: self.perturb_multiple_vehicles(img),
+            "detector_crop_error": lambda img: self.perturb_detector_crop_error(img, 0.20),
+            "visually_similar_models": lambda img: self.perturb_visually_similar_models(img),
         }
 
         report: dict[str, Any] = {}

@@ -110,6 +110,16 @@ class DeepLearningAdapter(BaseClassifierAdapter):
             return p_root.resolve()
         return p
 
+    def get_model_size_mb(self) -> float:
+        """Return deep learning model checkpoint file size in MB."""
+        ckpt_path = getattr(self.classifier, "checkpoint_path", None)
+        if ckpt_path and Path(ckpt_path).is_file():
+            return round(Path(ckpt_path).stat().st_size / (1024.0 * 1024.0), 2)
+        cand = self.root / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt"
+        if cand.is_file():
+            return round(cand.stat().st_size / (1024.0 * 1024.0), 2)
+        return 0.0
+
     def predict_crop(self, crop: np.ndarray | Image.Image | str | Path) -> dict[str, Any]:
         if not self.is_available or self.classifier is None:
             return {
@@ -231,6 +241,13 @@ class ClassicalAdapter(BaseClassifierAdapter):
             return p_root.resolve()
         return None
 
+    def get_model_size_mb(self) -> float:
+        """Return classical model checkpoint file size in MB."""
+        model_path = getattr(self.predictor, "model_path", None)
+        if model_path and Path(model_path).is_file():
+            return round(Path(model_path).stat().st_size / (1024.0 * 1024.0), 2)
+        return 0.0
+
     def predict_crop(self, crop: np.ndarray | Image.Image | str | Path) -> dict[str, Any]:
         if not self.is_available or self.predictor is None:
             return {
@@ -349,6 +366,35 @@ class DetectorAdapter:
                 return cand.resolve()
         return "yolov8n.pt"
 
+    def get_model_size_mb(self) -> float:
+        """Return YOLO detector model file size in MB."""
+        pt_path = getattr(self.detector, "model_path", None)
+        if pt_path and Path(pt_path).is_file():
+            return round(Path(pt_path).stat().st_size / (1024.0 * 1024.0), 2)
+        yolo_pt = self.root / "yolov8n.pt"
+        if yolo_pt.is_file():
+            return round(yolo_pt.stat().st_size / (1024.0 * 1024.0), 2)
+        return 0.0
+
+    @staticmethod
+    def _parse_bbox(b: Any, orig_w: int, orig_h: int) -> dict[str, int]:
+        """Convert dictionary or sequence bbox into clamped integer coordinates."""
+        if isinstance(b, dict):
+            raw_x1 = b.get("x1", b.get("xmin", 0))
+            raw_y1 = b.get("y1", b.get("ymin", 0))
+            raw_x2 = b.get("x2", b.get("xmax", orig_w))
+            raw_y2 = b.get("y2", b.get("ymax", orig_h))
+        elif isinstance(b, (list, tuple)) and len(b) >= 4:
+            raw_x1, raw_y1, raw_x2, raw_y2 = b[0], b[1], b[2], b[3]
+        else:
+            raw_x1, raw_y1, raw_x2, raw_y2 = 0, 0, orig_w, orig_h
+
+        x1 = max(0, min(orig_w - 1, int(round(raw_x1))))
+        y1 = max(0, min(orig_h - 1, int(round(raw_y1))))
+        x2 = max(x1 + 1, min(orig_w, int(round(raw_x2))))
+        y2 = max(y1 + 1, min(orig_h, int(round(raw_y2))))
+        return {"x1": x1, "y1": y1, "x2": x2, "y2": y2}
+
     def detect_vehicles(
         self,
         image_input: str | Path | Image.Image | np.ndarray,
@@ -374,36 +420,43 @@ class DetectorAdapter:
                 "inference_time_ms": float
             }
         """
-        if hasattr(self.detector, "detect_vehicles"):
-            det_result = self.detector.detect_vehicles(
-                image_input=image_input,
-                conf=conf,
-                iou=iou,
-            )
-        else:
-            det_result = self.detector.detect(
-                image=image_input,
-                conf=conf,
-                iou=iou,
-                extract_rois=True,
-            )
+        t0 = time.perf_counter()
+        try:
+            if hasattr(self.detector, "detect_vehicles"):
+                det_result = self.detector.detect_vehicles(
+                    image_input=image_input,
+                    conf=conf,
+                    iou=iou,
+                )
+            else:
+                det_result = self.detector.detect(
+                    image=image_input,
+                    conf=conf,
+                    iou=iou,
+                    extract_rois=True,
+                )
+        except Exception as e:
+            logger.error("DetectorAdapter detection failed: %s", e)
+            h = getattr(image_input, "shape", [480, 640])[0] if isinstance(image_input, np.ndarray) else 480
+            w = getattr(image_input, "shape", [480, 640])[1] if isinstance(image_input, np.ndarray) else 640
+            return {
+                "image_width": w,
+                "image_height": h,
+                "detections": [],
+                "inference_time_ms": round((time.perf_counter() - t0) * 1000.0, 2),
+                "error": str(e),
+            }
 
-        orig_w = det_result["image_width"]
-        orig_h = det_result["image_height"]
+        orig_w = det_result.get("image_width", 640)
+        orig_h = det_result.get("image_height", 480)
 
         formatted_detections: list[dict[str, Any]] = []
         for idx, det in enumerate(det_result.get("detections", [])):
-            b = det["bbox"]
-            # Ensure coordinates are integers clamped strictly inside original image bounds
-            x1 = max(0, min(orig_w - 1, int(round(b["x1"]))))
-            y1 = max(0, min(orig_h - 1, int(round(b["y1"]))))
-            x2 = max(x1 + 1, min(orig_w, int(round(b["x2"]))))
-            y2 = max(y1 + 1, min(orig_h, int(round(b["y2"]))))
-
+            b = self._parse_bbox(det.get("bbox", {}), orig_w, orig_h)
             formatted_detections.append({
                 "vehicle_id": idx + 1,
-                "bbox": {"x1": x1, "y1": y1, "x2": x2, "y2": y2},
-                "confidence": round(float(det["confidence"]), 4),
+                "bbox": b,
+                "confidence": round(float(det.get("confidence", 0.0)), 4),
                 "class_name": str(det.get("class_name", "car")),
                 "roi": det.get("roi"),
             })
@@ -412,5 +465,40 @@ class DetectorAdapter:
             "image_width": orig_w,
             "image_height": orig_h,
             "detections": formatted_detections,
-            "inference_time_ms": det_result.get("inference_time_ms", 0.0),
+            "inference_time_ms": det_result.get("inference_time_ms", round((time.perf_counter() - t0) * 1000.0, 2)),
         }
+
+    def detect_batch(
+        self,
+        images: list[str | Path | Image.Image | np.ndarray],
+        conf: float | None = None,
+        iou: float | None = None,
+    ) -> list[dict[str, Any]]:
+        """Run batch vehicle detection."""
+        if hasattr(self.detector, "detect_batch"):
+            try:
+                batch_raw = self.detector.detect_batch(images, conf=conf, iou=iou, extract_rois=True)
+                formatted_results = []
+                for det_result in batch_raw:
+                    orig_w = det_result.get("image_width", 640)
+                    orig_h = det_result.get("image_height", 480)
+                    formatted_dets = []
+                    for idx, det in enumerate(det_result.get("detections", [])):
+                        bbox = self._parse_bbox(det.get("bbox", {}), orig_w, orig_h)
+                        formatted_dets.append({
+                            "vehicle_id": idx + 1,
+                            "bbox": bbox,
+                            "confidence": round(float(det.get("confidence", 0.0)), 4),
+                            "class_name": str(det.get("class_name", "car")),
+                            "roi": det.get("roi"),
+                        })
+                    formatted_results.append({
+                        "image_width": orig_w,
+                        "image_height": orig_h,
+                        "detections": formatted_dets,
+                        "inference_time_ms": det_result.get("inference_time_ms", 0.0),
+                    })
+                return formatted_results
+            except Exception as e:
+                logger.warning("Batch detection failed (%s); falling back to sequential detection.", e)
+        return [self.detect_vehicles(img, conf=conf, iou=iou) for img in images]

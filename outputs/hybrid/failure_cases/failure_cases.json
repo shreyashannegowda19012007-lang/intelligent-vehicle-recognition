@@ -13,11 +13,11 @@
       "y2": 740
     },
     "ground_truth": {
-      "class_id": 0,
-      "class_name": "AM General Hummer SUV 2000",
-      "make": "AM General",
-      "model": "Hummer",
-      "year": 2000
+      "class_id": 13,
+      "class_name": "Audi TTS Coupe 2012",
+      "make": "Audi",
+      "model": "TTS",
+      "year": 2012
     },
     "classical_prediction": {
       "make": "Unknown",
@@ -53,11 +53,11 @@
       "y2": 858
     },
     "ground_truth": {
-      "class_id": 0,
-      "class_name": "AM General Hummer SUV 2000",
-      "make": "AM General",
-      "model": "Hummer",
-      "year": 2000
+      "class_id": 13,
+      "class_name": "Audi TTS Coupe 2012",
+      "make": "Audi",
+      "model": "TTS",
+      "year": 2012
     },
     "classical_prediction": {
       "make": "Unknown",
@@ -93,11 +93,11 @@
       "y2": 755
     },
     "ground_truth": {
-      "class_id": 0,
-      "class_name": "AM General Hummer SUV 2000",
-      "make": "AM General",
-      "model": "Hummer",
-      "year": 2000
+      "class_id": 13,
+      "class_name": "Audi TTS Coupe 2012",
+      "make": "Audi",
+      "model": "TTS",
+      "year": 2012
     },
     "classical_prediction": {
       "make": "Unknown",
@@ -133,11 +133,11 @@
       "y2": 0
     },
     "ground_truth": {
-      "class_id": 0,
-      "class_name": "AM General Hummer SUV 2000",
-      "make": "AM General",
-      "model": "Hummer",
-      "year": 2000
+      "class_id": 13,
+      "class_name": "Audi TTS Coupe 2012",
+      "make": "Audi",
+      "model": "TTS",
+      "year": 2012
     },
     "classical_prediction": {
       "make": "None",

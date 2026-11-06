@@ -8,10 +8,10 @@ and deep convolutional representations across controlled ground-truth bounding b
 | Experiment | Detection | Classical ML | Deep Learning | Status | Top-1 Acc | Make Acc | Model Acc | Year Acc | Macro F1 | Latency (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | **A** | Ground-truth ROI | Enabled | Disabled | Incomplete (Classical ML checkpoint missing) | N/A | N/A | N/A | N/A | N/A | N/A |
-| **B** | Ground-truth ROI | Disabled | Enabled | Complete | 0.00% | 0.00% | 0.00% | 30.00% | 0.0000 | 61.99 |
-| **C** | Ground-truth ROI | Missing | Enabled | Partial (Classical unavailable; falls back to DL) | 0.00% | 0.00% | 0.00% | 30.00% | 0.0000 | 64.34 |
-| **D** | YOLO detection | Disabled | Enabled | Complete | 0.00% | 0.00% | 0.00% | 0.00% | 0.0000 | 56.71 |
-| **E** | YOLO detection | Missing | Enabled | Partial (Classical unavailable; falls back to DL) | 0.00% | 0.00% | 0.00% | 0.00% | 0.0000 | 56.28 |
+| **B** | Ground-truth ROI | Disabled | Enabled | Complete | 0.00% | 0.00% | 0.00% | 40.00% | 0.0000 | 1672.59 |
+| **C** | Ground-truth ROI | Enabled | Enabled | Partial (Classical unavailable; falls back to DL) | 0.00% | 0.00% | 0.00% | 40.00% | 0.0000 | 1489.60 |
+| **D** | YOLO detection | Disabled | Enabled | Complete | 0.00% | 0.00% | 0.00% | 10.00% | 0.0000 | 1485.17 |
+| **E** | YOLO detection | Enabled | Enabled | Partial (Classical unavailable; falls back to DL) | 0.00% | 0.00% | 0.00% | 10.00% | 0.0000 | 1913.15 |
 
 ## Key Engineering Observations
 

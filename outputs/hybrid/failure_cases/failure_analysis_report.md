@@ -10,7 +10,7 @@ Each failure case is analyzed to pinpoint whether the defect originated during *
 
 - **Failure Origin Stage:** `classification`
 - **Likely Technical Cause:** Severe Gaussian blur removed high-frequency gradient signatures (grille mesh, headlight facets, badge contours), collapsing top-1 classification confidence.
-- **Ground Truth:** AM General Hummer 2000 (`AM General Hummer SUV 2000`)
+- **Ground Truth:** Audi TTS 2012 (`Audi TTS Coupe 2012`)
 - **Classical ML Prediction:** Unknown Unknown 0 (Score: 0.0)
 - **Deep Learning Prediction:** GMC Savana 2012 (Confidence: 0.2469)
 - **Final Hybrid Prediction:** GMC Savana 2012 (Confidence: 0.2469)
@@ -21,7 +21,7 @@ Each failure case is analyzed to pinpoint whether the defect originated during *
 
 - **Failure Origin Stage:** `cropping`
 - **Likely Technical Cause:** Synthetic foreground obstruction obscured 45% of vehicle body, preventing the detector from capturing canonical vehicle contours and causing partial ROI cropping.
-- **Ground Truth:** AM General Hummer 2000 (`AM General Hummer SUV 2000`)
+- **Ground Truth:** Audi TTS 2012 (`Audi TTS Coupe 2012`)
 - **Classical ML Prediction:** Unknown Unknown 0 (Score: 0.0)
 - **Deep Learning Prediction:** Bentley Continental GT 2007 (Confidence: 0.7059)
 - **Final Hybrid Prediction:** Bentley Continental GT 2007 (Confidence: 0.7059)
@@ -32,7 +32,7 @@ Each failure case is analyzed to pinpoint whether the defect originated during *
 
 - **Failure Origin Stage:** `detection`
 - **Likely Technical Cause:** Extreme darkness suppressed contrast below detector activation threshold, resulting in lowered detection confidence and localized ROI boundary shrinkage.
-- **Ground Truth:** AM General Hummer 2000 (`AM General Hummer SUV 2000`)
+- **Ground Truth:** Audi TTS 2012 (`Audi TTS Coupe 2012`)
 - **Classical ML Prediction:** Unknown Unknown 0 (Score: 0.0)
 - **Deep Learning Prediction:** MINI Cooper Roadster 2012 (Confidence: 0.0314)
 - **Final Hybrid Prediction:** MINI Cooper Roadster 2012 (Confidence: 0.0314)
@@ -43,7 +43,7 @@ Each failure case is analyzed to pinpoint whether the defect originated during *
 
 - **Failure Origin Stage:** `classification`
 - **Likely Technical Cause:** Subtle inter-model visual distinctions between consecutive production years and closely related trim packages became indiscernible after severe resolution reduction.
-- **Ground Truth:** AM General Hummer 2000 (`AM General Hummer SUV 2000`)
+- **Ground Truth:** Audi TTS 2012 (`Audi TTS Coupe 2012`)
 - **Classical ML Prediction:** None None 0 (Score: 0.0)
 - **Deep Learning Prediction:** None None 0 (Confidence: 0.0)
 - **Final Hybrid Prediction:** None None 0 (Confidence: 0.0)
