@@ -1,0 +1,62 @@
+{
+  "architecture": "resnet50",
+  "num_classes": 196,
+  "pretrained": true,
+  "dropout": 0.2,
+  "freeze_backbone": true,
+  "image_size": [
+    224,
+    224
+  ],
+  "crop_bbox": true,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "random_crop_scale": [
+    0.8,
+    1.0
+  ],
+  "horizontal_flip_p": 0.5,
+  "rotation_degrees": 15.0,
+  "color_jitter_brightness": 0.15,
+  "color_jitter_contrast": 0.15,
+  "color_jitter_saturation": 0.15,
+  "color_jitter_hue": 0.05,
+  "epochs": 3,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "optimizer": "adamw",
+  "scheduler": "cosine",
+  "lr_min": 1e-06,
+  "step_size": 5,
+  "gamma": 0.5,
+  "label_smoothing": 0.05,
+  "early_stopping_patience": 5,
+  "early_stopping_min_delta": 0.001,
+  "seed": 42,
+  "max_train_batches": 20,
+  "max_val_batches": 10,
+  "device": "auto",
+  "mixed_precision": true,
+  "num_workers": 0,
+  "train_split": "data/splits/train.csv",
+  "val_split": "data/splits/validation.csv",
+  "test_split": "data/splits/test.csv",
+  "class_mapping_csv": "data/metadata/class_mapping.csv",
+  "class_mapping_json": "data/processed/class_mapping.json",
+  "checkpoints_dir": "outputs/classification/checkpoints",
+  "metrics_dir": "outputs/classification/metrics",
+  "plots_dir": "outputs/classification/plots",
+  "failure_cases_dir": "outputs/classification/failure_cases",
+  "predictions_dir": "outputs/classification/predictions",
+  "best_checkpoint_path": "outputs/classification/checkpoints/best_checkpoint.pt",
+  "last_checkpoint_path": "outputs/classification/checkpoints/last_checkpoint.pt"
+}
