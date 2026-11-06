@@ -108,7 +108,8 @@ class DeepLearningAdapter(BaseClassifierAdapter):
         p_root = self.root / p
         if p_root.is_file():
             return p_root.resolve()
-        return p
+        logger.info("Deep checkpoint path not found on disk: %s. Using baseline pretrained classifier.", p)
+        return None
 
     def get_model_size_mb(self) -> float:
         """Return deep learning model checkpoint file size in MB."""
