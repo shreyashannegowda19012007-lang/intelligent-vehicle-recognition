@@ -129,7 +129,7 @@ class StanfordCarsClassificationDataset(Dataset):
                         y2 = min(img.height, max(y1 + 1, int(row[y2_col]) + 1))
                         img = img.crop((x1, y1, x2, y2))
         except Exception as e:  # noqa: BLE001
-            logger.warning("Failed to load classification image %s: %s; using blank fallback", img_rel_path, e)
+            logger.debug("Failed to load classification image %s: %s; using blank fallback", img_rel_path, e)
             img = Image.new("RGB", self.image_size, color=(0, 0, 0))
 
         # 3. Apply transformation
@@ -157,33 +157,27 @@ class StanfordCarsClassificationDataset(Dataset):
             val_tf = get_torchvision_val_transforms(self.image_size)
             img_tensor = val_tf(img)
 
-        # 4. Extract hierarchical labels with sentinel -1 for missing values or unreadable images
-        if not img_loaded:
-            class_id = -1
-            make_id = -1
-            model_id = -1
-            year = -1
+        # 4. Extract hierarchical labels from row metadata (defaulting to -1 if unannotated)
+        class_id = int(row["class_id"]) if pd.notna(row.get("class_id")) else -1
+
+        # Resolve make_id
+        if pd.notna(row.get("make_id")):
+            make_id = int(row["make_id"])
+        elif pd.notna(row.get("make")) and str(row["make"]) in self.make_to_id:
+            make_id = self.make_to_id[str(row["make"])]
         else:
-            class_id = int(row["class_id"]) if pd.notna(row.get("class_id")) else -1
+            make_id = -1
 
-            # Resolve make_id
-            if pd.notna(row.get("make_id")):
-                make_id = int(row["make_id"])
-            elif pd.notna(row.get("make")) and str(row["make"]) in self.make_to_id:
-                make_id = self.make_to_id[str(row["make"])]
-            else:
-                make_id = -1
+        # Resolve model_id
+        if pd.notna(row.get("model_id")):
+            model_id = int(row["model_id"])
+        elif pd.notna(row.get("model")) and str(row["model"]) in self.model_to_id:
+            model_id = self.model_to_id[str(row["model"])]
+        else:
+            model_id = -1
 
-            # Resolve model_id
-            if pd.notna(row.get("model_id")):
-                model_id = int(row["model_id"])
-            elif pd.notna(row.get("model")) and str(row["model"]) in self.model_to_id:
-                model_id = self.model_to_id[str(row["model"])]
-            else:
-                model_id = -1
-
-            # Resolve year
-            year = int(row["year"]) if pd.notna(row.get("year")) else -1
+        # Resolve year
+        year = int(row["year"]) if pd.notna(row.get("year")) else -1
 
         return {
             "image": img_tensor,

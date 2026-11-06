@@ -1,0 +1,58 @@
+{
+  "evaluated_samples_per_condition": 10,
+  "baseline_top1": 0.0,
+  "baseline_top5": 0.0,
+  "conditions": {
+    "baseline_clean": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0
+    },
+    "reduced_resolution": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "mild_blur": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "brightness_high": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "brightness_low": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "contrast_high": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "contrast_low": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    },
+    "partial_occlusion": {
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "accuracy_drop": 0.0,
+      "relative_drop_pct": 0.0
+    }
+  },
+  "failure_cases_summary": {
+    "total_failure_examples_documented": 10,
+    "cases_file": "outputs/classification/failure_cases/failure_cases.json"
+  }
+}

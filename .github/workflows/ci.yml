@@ -30,10 +30,10 @@ jobs:
 
       - name: Verify Package Imports
         run: |
-          python -c "import src; import src.classical_cv; import src.data; import src.detection; import src.utils; print('Core modules imported successfully.')"
+          python -c "import src; import src.classical_cv; import src.classification; import src.data; import src.detection; import src.utils; print('Core modules imported successfully.')"
 
       - name: Run Unit Tests (Non-Dataset Dependent)
         run: |
-          # Executes automated unit tests for preprocessing, transforms, splits, and initialization
+          # Executes automated unit tests for preprocessing, transforms, splits, and classification
           # that do not depend on the large local Stanford Cars dataset images or GPU hardware
-          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -k "not test_configuration_loading and not test_pytorch_dataset_sample_loading" -v
+          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py tests/test_classifier.py tests/test_class_mapping.py tests/test_inference.py tests/test_pipeline.py -k "not test_configuration_loading and not test_pytorch_dataset_sample_loading" -v
