@@ -32,8 +32,8 @@ jobs:
         run: |
           python -c "import src; import src.classical_cv; import src.data; import src.detection; import src.utils; print('Core modules imported successfully.')"
 
-      - name: Run Lightweight Unit Tests
+      - name: Run Unit Tests (Non-Dataset Dependent)
         run: |
-          # Executes tests that do not depend on the Stanford Cars raw dataset or GPU
-          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -v
-
+          # Executes automated unit tests for preprocessing, transforms, splits, and initialization
+          # that do not depend on the large local Stanford Cars dataset images or GPU hardware
+          pytest tests/test_initialization.py tests/test_preprocessing.py tests/test_splits.py -k "not test_configuration_loading and not test_pytorch_dataset_sample_loading" -v
