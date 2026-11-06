@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  },
+  "low_resolution_4x": {
+    "samples_evaluated": 10,
+    "detected_count": 0,
+    "detection_rate": 0.0,
+    "accuracy": 0.0
+  },
+  "mild_blur": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  },
+  "low_light": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  },
+  "overexposed": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  },
+  "low_contrast": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  },
+  "partial_occlusion": {
+    "samples_evaluated": 10,
+    "detected_count": 1,
+    "detection_rate": 0.1,
+    "accuracy": 0.0
+  }
+}

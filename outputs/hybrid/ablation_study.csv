@@ -1,0 +1,6 @@
+Experiment,Detection,Classical_ML,Deep_Learning,Status,Top1_Accuracy,Make_Accuracy,Model_Accuracy,Year_Accuracy,Macro_F1,Mean_Latency_ms,Observations
+A,Ground-truth ROI,Enabled,Disabled,Incomplete (Classical ML checkpoint missing),N/A,N/A,N/A,N/A,N/A,N/A,Classical ML model artifact (.joblib) not present in repository. Marked incomplete per task rules.
+B,Ground-truth ROI,Disabled,Enabled,Complete,0.00%,0.00%,0.00%,30.00%,0.0000,61.99,Fine-grained deep classifier on clean ground-truth vehicle crops.
+C,Ground-truth ROI,Missing,Enabled,Partial (Classical unavailable; falls back to DL),0.00%,0.00%,0.00%,30.00%,0.0000,64.34,Hybrid decision fusion on ground-truth crops.
+D,YOLO detection,Disabled,Enabled,Complete,0.00%,0.00%,0.00%,0.00%,0.0000,56.71,Cascaded YOLO detector crops into Deep Learning classifier.
+E,YOLO detection,Missing,Enabled,Partial (Classical unavailable; falls back to DL),0.00%,0.00%,0.00%,0.00%,0.0000,56.28,Full hybrid pipeline: YOLO vehicle detection + parallel classification + hybrid decision engine.

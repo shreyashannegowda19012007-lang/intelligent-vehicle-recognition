@@ -1,0 +1,46 @@
+# Hybrid Intelligence System Configuration
+# Combines YOLO vehicle detection, classical CV baseline, and deep fine-grained classifier
+
+pipeline:
+  name: "Hybrid-Vehicle-Recognition"
+  version: "1.0.0"
+
+decision:
+  # Strategy choices: "deep_learning_primary", "agreement_based", "score_fusion"
+  strategy: "deep_learning_primary"
+  fallback_strategy: "deep_learning_primary"
+  fusion_weights:
+    deep_learning: 0.70
+    classical: 0.30
+  confidence_rejection_threshold: 0.20
+  agreement_confidence_boost: 0.05
+  uncertainty_threshold: 0.35
+
+detection:
+  model_checkpoint: "yolov8n.pt"
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  device: "auto"
+  half: false
+  roi_target_size: [224, 224]
+  roi_padding_ratio: 0.05
+  roi_keep_aspect_ratio: true
+
+classification:
+  deep_learning:
+    checkpoint_path: "outputs/classification/checkpoints/best_checkpoint.pt"
+    device: "auto"
+    top_k: 5
+    temperature: 1.0
+  classical:
+    model_path: "models/classical/linear_svm_model.joblib"
+    pipeline_path: null
+    feature_config: "hog_color_lbp"
+    uncertainty_threshold: 0.30
+
+paths:
+  class_mapping: "data/processed/class_mapping.json"
+  outputs_dir: "outputs/hybrid"
+  metrics_dir: "outputs/hybrid/metrics"
+  failure_cases_dir: "outputs/hybrid/failure_cases"
+  predictions_dir: "outputs/hybrid/predictions"
