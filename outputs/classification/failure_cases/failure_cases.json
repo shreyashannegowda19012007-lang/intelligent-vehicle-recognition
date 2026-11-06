@@ -1,0 +1,178 @@
+[
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/01640.jpg",
+    "condition": "reduced_resolution",
+    "ground_truth": {
+      "class_id": 11,
+      "class_name": "Audi RS 4 Convertible 2008",
+      "make": "Audi",
+      "model": "RS 4",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "visually_similar_models",
+    "category_description": "Visually similar vehicle models with shared chassis/styling",
+    "likely_reason": "Shared corporate styling and badge aesthetic between Audi RS 4 and Audi S4."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/06509.jpg",
+    "condition": "reduced_resolution",
+    "ground_truth": {
+      "class_id": 21,
+      "class_name": "Audi S5 Coupe 2012",
+      "make": "Audi",
+      "model": "S5",
+      "year": 2012
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "visually_similar_models",
+    "category_description": "Visually similar vehicle models with shared chassis/styling",
+    "likely_reason": "Shared corporate styling and badge aesthetic between Audi S5 and Audi S4."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "reduced_resolution",
+    "ground_truth": {
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": 2012
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "poor_image_quality",
+    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
+    "likely_reason": "Environmental degradation (reduced_resolution) destroyed fine-grained badges and distinctive lighting accents."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "reduced_resolution",
+    "ground_truth": {
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
+      "make": "Acura",
+      "model": "TL Type-S",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "poor_image_quality",
+    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
+    "likely_reason": "Environmental degradation (reduced_resolution) destroyed fine-grained badges and distinctive lighting accents."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "partial_occlusion",
+    "ground_truth": {
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": 2012
+    },
+    "predicted": {
+      "class_id": 164,
+      "class_name": "Mercedes-Benz S-Class Sedan 2012",
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2012
+    },
+    "confidence": 0.0257,
+    "failure_category": "occlusion_partial_view",
+    "category_description": "Partial vehicle occlusion or obscured distinctive badges/grilles",
+    "likely_reason": "Synthetic occlusion masked the distinguishing vehicle badge and front grille silhouette."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "partial_occlusion",
+    "ground_truth": {
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
+      "make": "Acura",
+      "model": "TL Type-S",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 164,
+      "class_name": "Mercedes-Benz S-Class Sedan 2012",
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2012
+    },
+    "confidence": 0.0257,
+    "failure_category": "occlusion_partial_view",
+    "category_description": "Partial vehicle occlusion or obscured distinctive badges/grilles",
+    "likely_reason": "Synthetic occlusion masked the distinguishing vehicle badge and front grille silhouette."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "brightness_high",
+    "ground_truth": {
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": 2012
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "lighting_extreme",
+    "category_description": "Extreme contrast or extreme specular highlights/shadows",
+    "likely_reason": "Extreme lighting perturbation degraded structural contour clarity and texture details."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "brightness_high",
+    "ground_truth": {
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
+      "make": "Acura",
+      "model": "TL Type-S",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "lighting_extreme",
+    "category_description": "Extreme contrast or extreme specular highlights/shadows",
+    "likely_reason": "Extreme lighting perturbation degraded structural contour clarity and texture details."
+  }
+]

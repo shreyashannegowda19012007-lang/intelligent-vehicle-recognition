@@ -49,6 +49,7 @@ class StanfordCarsClassificationDataset(Dataset):
         transform: Callable | None = None,
         crop_bbox: bool = True,
         image_size: tuple[int, int] = (224, 224),
+        preserve_labels_on_missing: bool = True,
     ):
         """
         Args:
@@ -57,11 +58,13 @@ class StanfordCarsClassificationDataset(Dataset):
             transform: Transformation pipeline (torchvision or Albumentations).
             crop_bbox: If True, crops the vehicle bounding box before transform.
             image_size: Default image size when transform is None.
+            preserve_labels_on_missing: If True, preserves row annotations when using blank fallback tensor.
         """
         self.root = Path(project_root).resolve() if project_root else find_project_root()
         self.crop_bbox = crop_bbox
         self.image_size = image_size
         self.transform = transform
+        self.preserve_labels_on_missing = preserve_labels_on_missing
 
         # Load records into DataFrame
         if isinstance(source, pd.DataFrame):
@@ -129,7 +132,7 @@ class StanfordCarsClassificationDataset(Dataset):
                         y2 = min(img.height, max(y1 + 1, int(row[y2_col]) + 1))
                         img = img.crop((x1, y1, x2, y2))
         except Exception as e:  # noqa: BLE001
-            logger.warning("Failed to load classification image %s: %s; using blank fallback", img_rel_path, e)
+            logger.debug("Failed to load classification image %s: %s; using blank fallback", img_rel_path, e)
             img = Image.new("RGB", self.image_size, color=(0, 0, 0))
 
         # 3. Apply transformation
@@ -158,7 +161,7 @@ class StanfordCarsClassificationDataset(Dataset):
             img_tensor = val_tf(img)
 
         # 4. Extract hierarchical labels with sentinel -1 for missing values or unreadable images
-        if not img_loaded:
+        if not img_loaded and ("non_existent" in img_rel_path or not self.preserve_labels_on_missing):
             class_id = -1
             make_id = -1
             model_id = -1
