@@ -19,14 +19,14 @@ from src.utils.config import find_project_root
 @dataclass
 class ClassificationConfig:
     # Model parameters
-    architecture: str = "resnet50"
+    architecture: str = "convnext_tiny"
     num_classes: int = 196
     pretrained: bool = True
     dropout: float = 0.2
     freeze_backbone: bool = False
 
     # Image & Preprocessing parameters
-    image_size: tuple[int, int] = (224, 224)
+    image_size: tuple[int, int] = (320, 320)
     crop_bbox: bool = True
     mean: tuple[float, float, float] = (0.485, 0.456, 0.406)
     std: tuple[float, float, float] = (0.229, 0.224, 0.225)
@@ -75,7 +75,7 @@ class ClassificationConfig:
     plots_dir: str = "outputs/classification/plots"
     failure_cases_dir: str = "outputs/classification/failure_cases"
     predictions_dir: str = "outputs/classification/predictions"
-    best_checkpoint_path: str = "outputs/classification/checkpoints/best_checkpoint.pt"
+    best_checkpoint_path: str = "models/classification/convnext_best.pt"
     last_checkpoint_path: str = "outputs/classification/checkpoints/last_checkpoint.pt"
 
     def to_dict(self) -> dict[str, Any]:

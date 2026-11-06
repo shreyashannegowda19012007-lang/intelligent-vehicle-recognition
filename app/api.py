@@ -11,11 +11,13 @@ from __future__ import annotations
 import logging
 import os
 import time
+from pathlib import Path
 from typing import Any
 
 import uvicorn
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from app.utils import analyze_model_agreement, decode_image_bytes
@@ -106,6 +108,17 @@ def health_check() -> dict[str, Any]:
     }
 
 
+@app.get("/sample-image")
+def get_sample_image(path: str) -> FileResponse:
+    """Serve sample dataset images for browser automation and evaluation inspection."""
+    p = Path(path)
+    if not p.is_file():
+        p = find_project_root() / path
+    if not p.is_file():
+        raise HTTPException(status_code=404, detail="Sample image not found.")
+    return FileResponse(p)
+
+
 @app.get("/models")
 def get_models() -> dict[str, Any]:
     """Return catalog of active models and empirical performance benchmarks."""
@@ -120,15 +133,24 @@ def get_models() -> dict[str, Any]:
                 "status": "production_ready",
             },
             {
+                "id": "convnext_tiny",
+                "role": "Primary Fine-Grained Classification (ConvNeXt-Tiny)",
+                "val_accuracy": 0.8943,
+                "epochs_trained": 15,
+                "checkpoint": "models/classification/convnext_best.pt",
+                "size_mb": 320.32,
+                "status": "production_primary",
+            },
+            {
                 "id": "resnet50",
-                "role": "Fine-Grained Classification",
+                "role": "Legacy Fine-Grained Classification Baseline",
                 "top1_accuracy": 0.0049,
                 "top5_accuracy": 0.0237,
                 "make_accuracy": 0.0712,
                 "year_accuracy": 0.5892,
                 "latency_ms": 55.56,
                 "size_mb": 91.21,
-                "status": "production_ready",
+                "status": "baseline_fallback",
             },
             {
                 "id": "classical_cv",
@@ -237,6 +259,7 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
             "model_comparison": {
                 "classical_ml": classical_pred,
                 "resnet50": deep_pred,
+                "convnext_tiny": deep_pred,
                 "hybrid": hybrid_pred,
                 "agreement": agreement,
             },
@@ -265,6 +288,7 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
                 "model_comparison": {
                     "classical_ml": classical_pred,
                     "resnet50": deep_pred,
+                    "convnext_tiny": deep_pred,
                     "hybrid": hybrid_pred,
                     "agreement": agreement,
                 },

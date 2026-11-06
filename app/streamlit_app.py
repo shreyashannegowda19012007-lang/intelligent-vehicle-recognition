@@ -9,9 +9,15 @@ from __future__ import annotations
 import io
 import logging
 import os
+import sys
 import time
 from pathlib import Path
 from typing import Any
+
+# Ensure repository root is on sys.path for standalone Streamlit execution
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 import pandas as pd
 import requests
@@ -189,6 +195,7 @@ def run_inference_embedded(
             "model_comparison": {
                 "classical_ml": classical_pred,
                 "resnet50": deep_pred,
+                "convnext_tiny": deep_pred,
                 "hybrid": hybrid_pred,
                 "agreement": agreement,
             },
@@ -216,6 +223,7 @@ def run_inference_embedded(
                 "model_comparison": {
                     "classical_ml": classical_pred,
                     "resnet50": deep_pred,
+                    "convnext_tiny": deep_pred,
                     "hybrid": hybrid_pred,
                     "agreement": agreement,
                 },
@@ -250,7 +258,7 @@ def main() -> None:
 
         st.subheader("Model Telemetry")
         st.write(f"- **Detector**: YOLOv8n (0.995 mAP50)")
-        st.write(f"- **Classifier**: ResNet-50 (196 classes)")
+        st.write(f"- **Classifier**: ConvNeXt-Tiny (196 classes)")
         st.write(f"- **Classical**: HOG + Color + LBP (SVM)")
         st.write(f"- **Fusion**: Hybrid Decision Fusion")
         st.write(f"- **Device**: `{get_device('auto')}`")
@@ -411,7 +419,7 @@ def main() -> None:
 
             # Comparison Table
             c_ml = comp.get("classical_ml", {})
-            r_net = comp.get("resnet50", {})
+            dl_pred = comp.get("convnext_tiny", comp.get("resnet50", {}))
             hyb = comp.get("hybrid", {})
 
             comp_data = [
@@ -424,12 +432,12 @@ def main() -> None:
                     "Pipeline Latency": "0.015 ms",
                 },
                 {
-                    "Model Stream": "ResNet-50 (Deep Learning Backbone)",
-                    "Predicted Make": r_net.get("make", "Unknown"),
-                    "Predicted Model": r_net.get("model", "Unknown"),
-                    "Year": r_net.get("year", 0),
-                    "Confidence": f"{r_net.get('confidence', 0.0)*100:.1f}%",
-                    "Pipeline Latency": f"{r_net.get('inference_time_ms', 55.6):.1f} ms",
+                    "Model Stream": "Deep Learning (ConvNeXt-Tiny Primary)",
+                    "Predicted Make": dl_pred.get("make", "Unknown"),
+                    "Predicted Model": dl_pred.get("model", "Unknown"),
+                    "Year": dl_pred.get("year", 0),
+                    "Confidence": f"{dl_pred.get('confidence', 0.0)*100:.1f}%",
+                    "Pipeline Latency": f"{dl_pred.get('inference_time_ms', 55.6):.1f} ms",
                 },
                 {
                     "Model Stream": "Full Hybrid Pipeline (Decision Fusion)",

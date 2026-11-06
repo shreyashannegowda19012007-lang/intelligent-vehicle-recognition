@@ -102,11 +102,17 @@ class VehicleClassificationModel(nn.Module):
             return model, in_features
 
         elif arch == "convnext_tiny":
-            weights = tv_models.ConvNeXt_Tiny_Weights.DEFAULT if pretrained else None
-            model = tv_models.convnext_tiny(weights=weights)
-            in_features = model.classifier[2].in_features
-            model.classifier = nn.Identity()
-            return model, in_features
+            try:
+                import timm
+                model = timm.create_model("convnext_tiny", pretrained=pretrained, num_classes=0)
+                in_features = model.num_features
+                return model, in_features
+            except Exception:
+                weights = tv_models.ConvNeXt_Tiny_Weights.DEFAULT if pretrained else None
+                model = tv_models.convnext_tiny(weights=weights)
+                in_features = model.classifier[2].in_features
+                model.classifier = nn.Identity()
+                return model, in_features
 
         raise ValueError(f"Unhandled architecture: {arch}")
 
@@ -117,12 +123,14 @@ class VehicleClassificationModel(nn.Module):
         elif self.architecture in {"efficientnet_b0", "efficientnet_b2"}:
             self.backbone.classifier = self.classifier_head
         elif self.architecture == "convnext_tiny":
-            # ConvNeXt classifier has [LayerNorm2d, Flatten, Linear]
-            self.backbone.classifier = nn.Sequential(
-                tv_models.convnext.LayerNorm2d(self.in_features, eps=1e-6),
-                nn.Flatten(1),
-                self.classifier_head,
-            )
+            if hasattr(self.backbone, "classifier"):
+                # Torchvision ConvNeXt classifier has [LayerNorm2d, Flatten, Linear]
+                self.backbone.classifier = nn.Sequential(
+                    tv_models.convnext.LayerNorm2d(self.in_features, eps=1e-6),
+                    nn.Flatten(1),
+                    self.classifier_head,
+                )
+            # For timm backbone with num_classes=0, head is already Identity and classifier_head is called directly
 
     def freeze_backbone_parameters(self) -> None:
         """Freeze all backbone parameters except the classification head."""
@@ -139,6 +147,9 @@ class VehicleClassificationModel(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass returning raw class logits of shape (B, num_classes)."""
+        if self.architecture == "convnext_tiny" and not hasattr(self.backbone, "classifier"):
+            feats = self.backbone(x)
+            return self.classifier_head(feats)
         return self.backbone(x)
 
     def forward_with_features(
@@ -168,6 +179,18 @@ class VehicleClassificationModel(nn.Module):
             feats = torch.flatten(h, 1)
             logits = self.classifier_head(feats)
             return logits, feats
+
+        elif self.architecture == "convnext_tiny":
+            if hasattr(self.backbone, "classifier"):
+                feats = self.backbone.features(x)
+                feats = self.backbone.avgpool(feats)
+                feats = torch.flatten(feats, 1)
+                logits = self.classifier_head(feats)
+                return logits, feats
+            else:
+                feats = self.backbone(x)
+                logits = self.classifier_head(feats)
+                return logits, feats
 
         # Generic fallback
         logits = self.forward(x)

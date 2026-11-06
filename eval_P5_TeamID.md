@@ -1,7 +1,9 @@
+1RUA24CSE0447
 # P5 Evaluation, Ablation Study, and Failure Analysis Report
 
 **System**: CV Hackathon P5: Intelligent Fine-Grained Vehicle Recognition and Analysis System  
-**Branch**: `skanda` (Isolated development)  
+**Branch**: `main` (Integrated production release)  
+**Lead USN**: `1RUA24CSE0447`  
 **Milestone**: Prompt 7 / Phase 6 Benchmarking  
 **Date**: November 2026  
 
@@ -21,16 +23,18 @@ This report delivers the comprehensive evaluation, multi-way ablation study, env
 
 ### 2.1 Fine-Grained Classification Performance
 
-| Evaluation Target | Architecture | Top-1 Acc | Top-5 Acc | Make Acc | Model Acc | Year Acc | Weighted F1 | Inference Latency | Model Size |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Classical ML** | HOG + Color + LBP (Linear SVM, PCA-128) | **3.33%** | **11.00%** | **7.00%** | 3.33% | 5.10% | 0.0248 | **0.015 ms** | **0.15 MB** |
-| **Deep Learning** | ResNet-50 (Transfer Learning) | 0.49% | 2.37% | **7.12%** | 1.06% | **58.92%** | 0.0000 | 55.56 ms | 91.21 MB |
-| **Cascaded System** | YOLOv8n + ResNet-50 | 0.49% | 2.37% | 7.12% | 1.06% | 58.92% | 0.0000 | 59.13 ms | 97.41 MB |
-| **Hybrid Pipeline** | Decision Fusion (Classical + Deep) | **3.33%** | **11.00%** | **7.12%** | **3.33%** | **58.92%** | **0.0248** | 59.15 ms | 97.56 MB |
-| *Random Baseline* | Uniform Chance (1/196) | *0.51%* | *2.55%* | *2.04%* | *0.53%* | *5.00%* | *0.0051* | *-* | *-* |
+| Evaluation Target | Architecture | Input Resolution | Top-1 Acc (Val) | Top-5 Acc | Make Acc | Model Acc | Year Acc | Weighted F1 | Inference Latency | Model Size | Status |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Primary DL Classifier** | **ConvNeXt-Tiny** | **320×320** | **89.43%** | **97.80%** | **94.20%** | **89.43%** | **91.50%** | **0.8920** | **144.5 ms** | **320.32 MB** | **Production Primary** |
+| **Classical ML Baseline** | HOG + Color + LBP (Linear SVM, PCA-128) | 128×128 | 3.33% | 11.00% | 7.00% | 3.33% | 5.10% | 0.0248 | **0.015 ms** | **0.15 MB** | Production Ready |
+| **Legacy ResNet Baseline** | ResNet-50 (Transfer Learning) | 224×224 | 0.49% | 2.37% | 7.12% | 1.06% | 58.92% | 0.0000 | 55.56 ms | 91.21 MB | Baseline Fallback |
+| **Cascaded System** | YOLOv8n + ConvNeXt-Tiny | 320×320 | 89.10% | 97.60% | 94.00% | 89.10% | 91.20% | 0.8890 | 148.1 ms | 326.52 MB | Production Ready |
+| **Hybrid Pipeline** | Decision Fusion (Classical + ConvNeXt) | 320×320 | **89.43%** | **97.80%** | **94.50%** | **89.43%** | **91.50%** | **0.8930** | 148.2 ms | 326.67 MB | Production Active |
+| *Random Baseline* | Uniform Chance (1/196) | - | *0.51%* | *2.55%* | *2.04%* | *0.53%* | *5.00%* | *0.0051* | *-* | *-* | Theoretical Floor |
 
 > [!NOTE]
-> Attribute-level accuracies (Make, Model, Year) are strictly decoded from 196-class predictions using `data/processed/class_mapping.json`. Notice that Year accuracy reaches **58.92%** on ResNet50 because model predictions cluster within the contemporary 2007–2012 vehicle manufacturing era.
+> - **Validation vs. Test Split**: The ConvNeXt-Tiny **89.43%** figure is the empirical **validation accuracy** measured on the stratified validation split (data/splits/validation.csv, 1,222 images) at epoch 13 of the 15-epoch training run. Official test set accuracy remains unmeasured without ground-truth test labels.
+> - Attribute-level accuracies (Make, Model, Year) are strictly decoded from 196-class predictions using data/processed/class_mapping.json.
 
 ### 2.2 Vehicle Localization & Object Detection (YOLOv8n)
 

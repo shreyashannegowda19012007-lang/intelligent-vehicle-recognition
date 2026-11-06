@@ -26,7 +26,7 @@ In strict adherence to repository hygiene and cloud deployment limits:
 - **No Heavy Binaries in Git**: Model weight files (`.pt`, `.joblib`) are excluded via `.gitignore` and `.dockerignore`.
 - **Dynamic Checkpoint Acquisition**:
   1. **YOLOv8n Vehicle Detector (6.2 MB)**: Ultralytics automatically downloads the official nano checkpoint (`yolov8n.pt`) on first invocation if custom fine-tuned weights (`models/detection/best.pt`) are not mounted.
-  2. **ResNet50 Deep Classifier (91.2 MB)**: Pretrained torchvision/timm weights are loaded dynamically or fetched from external release storage via `scripts/download_models.py`.
+  2. **ConvNeXt-Tiny Deep Classifier (320.3 MB)**: Hosted on external cloud storage (e.g. GitHub Releases, HuggingFace Hub, or AWS S3) and fetched via `scripts/download_models.py` or configured via `CONVNEXT_CHECKPOINT_URL`. Falls back gracefully to baseline architecture if external checkpoint is unavailable.
   3. **Automated Fetch Script**: Run `python scripts/download_models.py` during deployment build phases.
 
 ---
@@ -61,11 +61,12 @@ Configure these variables in your platform's dashboard or local `.env` file (see
    - Click **"New app"**.
    - Select:
      - **Repository**: `intelligent-vehicle-recognition`
-     - **Branch**: `skanda`
+     - **Branch**: `main`
      - **Main file path**: `app/streamlit_app.py`
    - Under **Advanced settings**:
      - Python version: `3.11`
      - Add environment variable: `DEVICE=cpu`
+     - Add environment variable: `CONVNEXT_CHECKPOINT_URL=<URL to hosted convnext_best.pt>`
 3. **Deploy**:
    - Click **"Deploy!"**.
    - Streamlit Cloud will parse `requirements.txt`, install dependencies, and launch the web dashboard at your generated public URL (`https://<app-name>.streamlit.app`).

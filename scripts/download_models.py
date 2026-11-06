@@ -34,7 +34,7 @@ DEFAULT_STORAGE_BASE = os.getenv(
 
 MODEL_CATALOG: dict[str, dict[str, Any]] = {
     "yolov8n_detector": {
-        "local_path": PROJECT_ROOT / "models" / "detection" / "yolov8n.pt",
+        "local_path": PROJECT_ROOT / "yolov8n.pt" if (PROJECT_ROOT / "yolov8n.pt").is_file() else PROJECT_ROOT / "models" / "detection" / "yolov8n.pt",
         "url": f"{DEFAULT_STORAGE_BASE}/yolov8n.pt",
         "size_mb": 6.2,
         "required_for": "Vehicle localization and bounding box extraction",
@@ -44,6 +44,12 @@ MODEL_CATALOG: dict[str, dict[str, Any]] = {
         "url": os.getenv("RESNET50_CHECKPOINT_URL", ""),
         "size_mb": 97.5,
         "required_for": "Deep learning fine-grained vehicle classification (Stanford Cars 196 classes)",
+    },
+    "convnext_tiny_stanford_cars": {
+        "local_path": PROJECT_ROOT / "models" / "classification" / "convnext_best.pt",
+        "url": os.getenv("CONVNEXT_CHECKPOINT_URL", ""),
+        "size_mb": 320.32,
+        "required_for": "Primary deep learning fine-grained vehicle classification (ConvNeXt-Tiny, 196 classes)",
     },
 }
 

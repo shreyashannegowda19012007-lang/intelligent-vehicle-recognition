@@ -63,18 +63,39 @@ class RobustnessAnalyzer:
 
         if checkpoint_path is not None:
             p = self.root / checkpoint_path if not Path(checkpoint_path).is_file() else Path(checkpoint_path)
-            checkpoint = torch.load(p, map_location=self.device)
+            checkpoint = torch.load(p, map_location=self.device, weights_only=False)
             cfg_dict = checkpoint.get("config", {})
             self.config = ClassificationConfig.from_dict(cfg_dict) if cfg_dict else ClassificationConfig()
+            state_dict = checkpoint.get("state_dict", checkpoint)
             arch = checkpoint.get("architecture", self.config.architecture)
-            self.model = build_classification_model(
-                architecture=arch,
-                num_classes=checkpoint.get("num_classes", self.config.num_classes),
-                pretrained=False,
-                dropout=self.config.dropout,
+            num_classes = checkpoint.get("num_classes", self.config.num_classes)
+
+            is_timm_convnext = (
+                "stem.0.weight" in state_dict
+                or "head.fc.weight" in state_dict
+                or "convnext" in str(p).lower()
+                or str(arch).lower() == "convnext_tiny"
             )
-            self.model.load_state_dict(checkpoint["state_dict"])
-            self.model.to(self.device)
+
+            if is_timm_convnext:
+                import timm
+
+                num_classes = num_classes if num_classes == 196 else 196
+                self.config.architecture = "convnext_tiny"
+                self.config.num_classes = num_classes
+                self.config.image_size = (320, 320)
+                self.model = timm.create_model("convnext_tiny", num_classes=num_classes, pretrained=False)
+                self.model.load_state_dict(state_dict, strict=True)
+                self.model.to(self.device)
+            else:
+                self.model = build_classification_model(
+                    architecture=arch,
+                    num_classes=num_classes,
+                    pretrained=False,
+                    dropout=self.config.dropout,
+                )
+                self.model.load_state_dict(state_dict)
+                self.model.to(self.device)
         elif model is not None:
             self.model = model.to(self.device)
             self.config = config or ClassificationConfig()

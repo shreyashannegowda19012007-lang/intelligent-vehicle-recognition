@@ -22,13 +22,13 @@ detection:
   iou_threshold: 0.45
   device: "auto"
   half: false
-  roi_target_size: [224, 224]
+  roi_target_size: [320, 320]
   roi_padding_ratio: 0.05
   roi_keep_aspect_ratio: true
 
 classification:
   deep_learning:
-    checkpoint_path: "outputs/classification/checkpoints/best_checkpoint.pt"
+    checkpoint_path: "models/classification/convnext_best.pt"
     device: "auto"
     top_k: 5
     temperature: 1.0

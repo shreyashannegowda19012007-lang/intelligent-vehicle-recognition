@@ -50,7 +50,7 @@ class HybridConfig:
     roi_keep_aspect_ratio: bool = True
 
     # Classifier settings
-    dl_checkpoint_path: str | Path | None = "outputs/classification/checkpoints/best_checkpoint.pt"
+    dl_checkpoint_path: str | Path | None = "models/classification/convnext_best.pt"
     dl_device: str = "auto"
     dl_temperature: float = 1.0
     classical_model_path: str | Path | None = "models/classical/svm/linear_svm_hog_color_lbp_pca128_model.joblib"
@@ -106,10 +106,10 @@ class HybridConfig:
             detector_iou_threshold=float(det_cfg.get("iou_threshold", 0.45)),
             detector_device=det_cfg.get("device", "auto"),
             detector_half=bool(det_cfg.get("half", False)),
-            roi_target_size=tuple(det_cfg.get("roi_target_size", (224, 224))),
+            roi_target_size=tuple(det_cfg.get("roi_target_size", (320, 320))),
             roi_padding_ratio=float(det_cfg.get("roi_padding_ratio", 0.05)),
             roi_keep_aspect_ratio=bool(det_cfg.get("roi_keep_aspect_ratio", True)),
-            dl_checkpoint_path=dl_cfg.get("checkpoint_path", "outputs/classification/checkpoints/best_checkpoint.pt"),
+            dl_checkpoint_path=dl_cfg.get("checkpoint_path", "models/classification/convnext_best.pt"),
             dl_device=dl_cfg.get("device", "auto"),
             dl_temperature=float(dl_cfg.get("temperature", 1.0)),
             classical_model_path=cv_cfg.get("model_path", "models/classical/linear_svm_model.joblib"),

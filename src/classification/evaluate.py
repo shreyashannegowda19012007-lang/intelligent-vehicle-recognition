@@ -79,13 +79,33 @@ class ClassifierEvaluator:
             raise FileNotFoundError(f"Checkpoint file not found: {path}")
 
         logger.info("Loading evaluation model checkpoint from %s on %s...", path, self.device)
-        checkpoint = torch.load(path, map_location=self.device)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
 
         cfg_dict = checkpoint.get("config", {})
         config = ClassificationConfig.from_dict(cfg_dict) if cfg_dict else ClassificationConfig()
 
+        state_dict = checkpoint.get("state_dict", checkpoint)
         arch = checkpoint.get("architecture", config.architecture)
         num_classes = checkpoint.get("num_classes", config.num_classes)
+
+        is_timm_convnext = (
+            "stem.0.weight" in state_dict
+            or "head.fc.weight" in state_dict
+            or "convnext" in str(path).lower()
+            or str(arch).lower() == "convnext_tiny"
+        )
+
+        if is_timm_convnext:
+            import timm
+
+            num_classes = num_classes if num_classes == 196 else 196
+            config.architecture = "convnext_tiny"
+            config.num_classes = num_classes
+            config.image_size = (320, 320)
+            model = timm.create_model("convnext_tiny", num_classes=num_classes, pretrained=False)
+            model.load_state_dict(state_dict, strict=True)
+            model.to(self.device)
+            return model, config
 
         model = build_classification_model(
             architecture=arch,
@@ -93,7 +113,7 @@ class ClassifierEvaluator:
             pretrained=False,
             dropout=config.dropout,
         )
-        model.load_state_dict(checkpoint["state_dict"])
+        model.load_state_dict(state_dict)
         model.to(self.device)
         return model, config
 

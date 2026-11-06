@@ -1,7 +1,7 @@
 # System Design Document: Intelligent Fine-Grained Vehicle Recognition System
 
 **System**: CV Hackathon P5: Intelligent Fine-Grained Vehicle Recognition and Analysis System  
-**Branch**: `skanda`  
+**Branch**: `main`  
 **Date**: November 2026  
 **Status**: Production-Ready / Submission Candidate  
 
@@ -16,7 +16,7 @@ The system architecture combines:
 2. **Context-Preserving ROI Extraction**: Aspect-ratio preserving letterbox extraction with safety margins.
 3. **Dual Feature Extraction & Classification**:
    - **Classical CV Stream**: Handcrafted visual descriptors (HOG, Color Histograms, LBP) classified with Linear SVM / Random Forest.
-   - **Deep Learning Stream**: Deep convolutional neural network (ResNet-50) fine-tuned for fine-grained 196-class taxonomy.
+   - **Deep Learning Stream**: ConvNeXt-Tiny primary classifier (320×320, 89.43% val acc) with ResNet-50 baseline support for fine-grained 196-class taxonomy.
 4. **Hybrid Decision Fusion**: Ensembling classical edge/color signals with deep semantic posteriors.
 5. **Decoupled Serving & Interactive UI**: Asynchronous FastAPI REST engine paired with an interactive Streamlit dashboard.
 
@@ -53,10 +53,10 @@ flowchart TD
         end
 
         subgraph DEEP_STREAM["Deep Learning Stream"]
-            F2 --> K["Normalized 224x224 RGB Tensor\n(ImageNet Mean/Std)"]
-            K --> L["ResNet-50 Backbone\n(23.9M params, 91.2 MB)"]
+            F2 --> K["Normalized 320x320 RGB Tensor\n(ImageNet Mean/Std)"]
+            K --> L["ConvNeXt-Tiny Backbone\n(27.8M params, 320.3 MB)"]
             L --> M["Fine-Grained Classification Head\n(196 Classes, Dropout=0.20)"]
-            M -->|Softmax Logits & Posteriors| N["ResNet50 Predictions\n(Year Acc: 58.92%, 55.56 ms)"]
+            M -->|Softmax Logits & Posteriors| N["ConvNeXt Predictions\n(Top-1 Val: 89.43%, 144.5 ms)"]
         end
     end
 

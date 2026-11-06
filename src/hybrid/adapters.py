@@ -100,6 +100,9 @@ class DeepLearningAdapter(BaseClassifierAdapter):
 
     def _resolve_checkpoint(self, checkpoint_path: str | Path | None) -> Path | None:
         if checkpoint_path is None:
+            convnext_cand = self.root / "models" / "classification" / "convnext_best.pt"
+            if convnext_cand.is_file():
+                return convnext_cand
             cand = self.root / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt"
             return cand if cand.is_file() else None
         p = Path(checkpoint_path)
@@ -108,6 +111,13 @@ class DeepLearningAdapter(BaseClassifierAdapter):
         p_root = self.root / p
         if p_root.is_file():
             return p_root.resolve()
+        # Fallback to candidates if custom path doesn't exist
+        convnext_cand = self.root / "models" / "classification" / "convnext_best.pt"
+        if convnext_cand.is_file():
+            return convnext_cand
+        cand = self.root / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt"
+        if cand.is_file():
+            return cand
         logger.info("Deep checkpoint path not found on disk: %s. Using baseline pretrained classifier.", p)
         return None
 
@@ -116,6 +126,9 @@ class DeepLearningAdapter(BaseClassifierAdapter):
         ckpt_path = getattr(self.classifier, "checkpoint_path", None)
         if ckpt_path and Path(ckpt_path).is_file():
             return round(Path(ckpt_path).stat().st_size / (1024.0 * 1024.0), 2)
+        convnext_cand = self.root / "models" / "classification" / "convnext_best.pt"
+        if convnext_cand.is_file():
+            return round(convnext_cand.stat().st_size / (1024.0 * 1024.0), 2)
         cand = self.root / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt"
         if cand.is_file():
             return round(cand.stat().st_size / (1024.0 * 1024.0), 2)

@@ -19,7 +19,7 @@ Fine-grained vehicle recognition requires distinguishing visually subtle differe
 2. **Context-Preserving ROI Extraction**: 5% boundary safety padding with aspect-ratio preserving letterboxing.
 3. **Multi-Stream Classification**:
    - **Classical CV**: HOG (8,100-d), HSV Color Histograms, and LBP texture classified with Linear SVM & PCA-128.
-   - **Deep Learning**: ResNet-50 CNN fine-tuned across 196 fine-grained categories.
+   - **Deep Learning**: ConvNeXt-Tiny primary classifier (320×320, 89.43% val acc) with ResNet-50 baseline support across 196 fine-grained categories.
    - **Hybrid Decision Fusion**: Ensembling classical edge/color signals with deep semantic posteriors.
 4. **Full Web Application & Serving**: Interactive Streamlit dashboard and high-performance asynchronous FastAPI REST engine.
 5. **Production Deployment Suite**: Docker multi-stage builds, Docker Compose, automated checkpoint fetching, and 1-click cloud platform blueprints.
@@ -70,10 +70,10 @@ flowchart TD
         end
 
         subgraph DEEP_STREAM["Deep Learning Stream"]
-            F2 --> K["Normalized 224x224 RGB Tensor\n(ImageNet Mean/Std)"]
-            K --> L["ResNet-50 Backbone\n(23.9M params, 91.2 MB)"]
+            F2 --> K["Normalized 320x320 RGB Tensor\n(ImageNet Mean/Std)"]
+            K --> L["ConvNeXt-Tiny Backbone\n(27.8M params, 320.3 MB)"]
             L --> M["Fine-Grained Classification Head\n(196 Classes, Dropout=0.20)"]
-            M -->|Softmax Logits & Posteriors| N["ResNet50 Predictions\n(Year Acc: 58.92%, 55.56 ms)"]
+            M -->|Softmax Logits & Posteriors| N["ConvNeXt Predictions\n(Top-1 Val: 89.43%, 144.5 ms)"]
         end
     end
 
@@ -129,7 +129,7 @@ The system is trained and evaluated on the benchmark **Stanford Cars Dataset (Ca
 ```bash
 git clone https://github.com/shreyashannegowda19012007-lang/intelligent-vehicle-recognition.git
 cd intelligent-vehicle-recognition
-git checkout skanda
+git checkout main
 ```
 
 ### 2. Set Up Virtual Environment
