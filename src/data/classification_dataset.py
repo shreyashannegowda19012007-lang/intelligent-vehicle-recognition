@@ -69,6 +69,9 @@ class StanfordCarsClassificationDataset(Dataset):
         # Load records into DataFrame
         if isinstance(source, pd.DataFrame):
             self.df = source.copy()
+        elif isinstance(source, (str, Path)) and (Path(source).is_dir() or (self.root / Path(source)).is_dir()):
+            folder_dir = Path(source) if Path(source).is_dir() else (self.root / Path(source))
+            self.df = self._scan_dataset_dir(folder_dir)
         elif isinstance(source, (str, Path)):
             self.df = load_manifest_df(source)
         elif isinstance(source, list):
@@ -94,6 +97,44 @@ class StanfordCarsClassificationDataset(Dataset):
             return dict(zip(df_m["model"], df_m["model_id"], strict=False))
         return {}
 
+    def _scan_dataset_dir(self, folder: Path) -> pd.DataFrame:
+        """Scan directory formatted as <class_name>/*.jpg and build DataFrame."""
+        classes_json = self.root / "data" / "classes.json"
+        name_to_meta: dict[str, dict[str, Any]] = {}
+        if classes_json.is_file():
+            import json
+            try:
+                with open(classes_json, "r", encoding="utf-8") as f:
+                    cdata = json.load(f)
+                    name_to_meta = {c["raw_name"]: c for c in cdata.get("classes", [])}
+            except Exception as e:
+                logger.warning("Failed to load classes.json in _scan_dataset_dir: %s", e)
+
+        rows = []
+        for class_dir in sorted(folder.iterdir()):
+            if not class_dir.is_dir():
+                continue
+            c_name = class_dir.name.replace("C_V", "C/V")
+            meta = name_to_meta.get(c_name, {})
+            for img_p in sorted(class_dir.glob("*.jpg")):
+                try:
+                    rel_p = img_p.relative_to(self.root)
+                    img_str = str(rel_p).replace("\\", "/")
+                except ValueError:
+                    img_str = str(img_p).replace("\\", "/")
+
+                rows.append({
+                    "image_path": img_str,
+                    "class_id": meta.get("class_id", -1),
+                    "class_name": meta.get("raw_name", c_name),
+                    "make": meta.get("make", ""),
+                    "model": meta.get("model", ""),
+                    "year": meta.get("year", -1),
+                    "make_id": meta.get("make_id", -1),
+                    "model_id": meta.get("model_id", -1),
+                })
+        return pd.DataFrame(rows)
+
     def __len__(self) -> int:
         return len(self.df)
 
@@ -104,6 +145,25 @@ class StanfordCarsClassificationDataset(Dataset):
         full_p = self.root / p
         if full_p.is_file():
             return full_p
+
+        # Check if indexed in Stanford Dataset directory
+        if not hasattr(self, "_file_cache"):
+            self._file_cache: dict[str, Path] = {}
+            stanford_dir = self.root / "Stanford Dataset"
+            if stanford_dir.is_dir():
+                for ext in ("*.jpg", "*.jpeg", "*.png"):
+                    for fp in stanford_dir.rglob(ext):
+                        self._file_cache[fp.name] = fp
+
+        # Try matching filename or padded stem (e.g. 01875.jpg -> 001875.jpg)
+        filename = p.name
+        if filename in self._file_cache:
+            return self._file_cache[filename]
+
+        padded_name = p.stem.zfill(6) + p.suffix
+        if padded_name in self._file_cache:
+            return self._file_cache[padded_name]
+
         raise FileNotFoundError(f"Image not found at {raw_path} or {full_p}")
 
     def __getitem__(self, idx: int) -> dict[str, Any]:

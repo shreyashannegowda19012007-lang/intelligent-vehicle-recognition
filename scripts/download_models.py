@@ -39,6 +39,12 @@ MODEL_CATALOG: dict[str, dict[str, Any]] = {
         "size_mb": 6.2,
         "required_for": "Vehicle localization and bounding box extraction",
     },
+    "resnet50_stanford_cars": {
+        "local_path": PROJECT_ROOT / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt",
+        "url": os.getenv("RESNET50_CHECKPOINT_URL", ""),
+        "size_mb": 97.5,
+        "required_for": "Deep learning fine-grained vehicle classification (Stanford Cars 196 classes)",
+    },
 }
 
 
@@ -84,6 +90,9 @@ def ensure_models_available(force: bool = False) -> bool:
             continue
 
         url = meta["url"]
+        if not url:
+            logger.info("Model '%s' has no remote URL configured (RESNET50_CHECKPOINT_URL). Train via Colab or provide checkpoint locally at: %s", model_key, loc_path)
+            continue
         success = download_file(url, loc_path)
         if not success:
             logger.warning("Could not automatically download '%s' from %s.", model_key, url)
