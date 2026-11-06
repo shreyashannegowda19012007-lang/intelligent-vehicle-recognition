@@ -484,3 +484,28 @@ def test_predict_dataframe_full_top5_columns(synthetic_image: np.ndarray, projec
         for rank in range(2, 6):
             assert f"top{rank}_class_id" in preds_df.columns
             assert f"top{rank}_score" in preds_df.columns
+
+
+def test_predictor_pil_image_and_auto_pipeline_resolution(project_root: Path):
+    """Verify ClassicalVehiclePredictor accepts PIL Image and resolves pipeline automatically."""
+    from PIL import Image
+    from src.hybrid.adapters import ClassicalAdapter
+
+    model_p = project_root / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_pca128_model.joblib"
+    if model_p.is_file():
+        # 1. Test auto-resolution of pipeline without explicit pipeline_path
+        pred = ClassicalVehiclePredictor(model_path=model_p, project_root=project_root)
+        assert pred.pipeline is not None
+
+        # 2. Test prediction directly from PIL Image
+        pil_img = Image.new("RGB", (224, 224), color=(128, 128, 128))
+        res = pred.predict(pil_img)
+        assert "class_id" in res
+        assert "predicted_class" in res or "class_name" in res
+        assert "confidence" in res
+        assert len(res.get("top_5", [])) == 5
+
+        # 3. Test ClassicalAdapter auto-resolution
+        adapter = ClassicalAdapter()
+        assert adapter.is_available is True
+

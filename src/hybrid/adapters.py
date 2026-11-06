@@ -210,9 +210,16 @@ class ClassicalAdapter(BaseClassifierAdapter):
                 try:
                     from src.classical_cv.predictor import ClassicalVehiclePredictor
 
+                    resolved_pipeline = pipeline_path
+                    if resolved_pipeline is None:
+                        model_stem = resolved_model.stem.replace("_model", "")
+                        cand_pipe = self.root / "models" / "classical" / "scalers" / f"{model_stem}_pipeline.joblib"
+                        if cand_pipe.is_file():
+                            resolved_pipeline = cand_pipe
+
                     self.predictor = ClassicalVehiclePredictor(
                         model_path=resolved_model,
-                        pipeline_path=pipeline_path,
+                        pipeline_path=resolved_pipeline,
                         class_mapping_path=class_mapping_path,
                         project_root=self.root,
                     )
@@ -229,9 +236,14 @@ class ClassicalAdapter(BaseClassifierAdapter):
 
     def _resolve_model(self, model_path: str | Path | None) -> Path | None:
         if model_path is None:
-            cand = self.root / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_model.joblib"
-            if cand.is_file():
-                return cand
+            cands = [
+                self.root / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_pca128_model.joblib",
+                self.root / "models" / "classical" / "svm" / "linear_svm_all_test_model.joblib",
+                self.root / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_model.joblib",
+            ]
+            for cand in cands:
+                if cand.is_file():
+                    return cand.resolve()
             return None
         p = Path(model_path)
         if p.is_file():
@@ -239,6 +251,9 @@ class ClassicalAdapter(BaseClassifierAdapter):
         p_root = self.root / p
         if p_root.is_file():
             return p_root.resolve()
+        p_svm = self.root / "models" / "classical" / "svm" / p.name
+        if p_svm.is_file():
+            return p_svm.resolve()
         return None
 
     def get_model_size_mb(self) -> float:

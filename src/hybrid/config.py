@@ -53,8 +53,8 @@ class HybridConfig:
     dl_checkpoint_path: str | Path | None = "outputs/classification/checkpoints/best_checkpoint.pt"
     dl_device: str = "auto"
     dl_temperature: float = 1.0
-    classical_model_path: str | Path | None = "models/classical/linear_svm_model.joblib"
-    classical_pipeline_path: str | Path | None = None
+    classical_model_path: str | Path | None = "models/classical/svm/linear_svm_hog_color_lbp_pca128_model.joblib"
+    classical_pipeline_path: str | Path | None = "models/classical/scalers/linear_svm_hog_color_lbp_pca128_pipeline.joblib"
     classical_uncertainty_threshold: float = 0.30
     top_k: int = 5
 

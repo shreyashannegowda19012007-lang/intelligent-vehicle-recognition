@@ -80,6 +80,8 @@ class HybridVehiclePipeline:
             from src.classical_cv.predictor import ClassicalVehiclePredictor
 
             candidate_paths = [
+                self.root / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_pca128_model.joblib",
+                self.root / "models" / "classical" / "svm" / "linear_svm_all_test_model.joblib",
                 self.root / "models" / "classical" / "linear_svm_hog_color_lbp_pca128.joblib",
                 self.root / "models" / "classical" / "linear_svm_hog_only_pca128.joblib",
                 self.root / "models" / "classical" / "linear_svm.joblib",

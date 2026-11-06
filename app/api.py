@@ -191,6 +191,31 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
     # 1. Execute end-to-end detection and classification
     pipe_res = pipeline.process_image(pil_image, extract_rois=True)
 
+    def _predict_classical(target_img: Any) -> dict[str, Any]:
+        if hybrid.classical_predictor is not None:
+            try:
+                c_res = hybrid.classical_predictor.predict(target_img)
+                return {
+                    "predicted_class": c_res.get("class_name", c_res.get("predicted_class", "Unknown")),
+                    "class_id": c_res.get("class_id", -1),
+                    "make": c_res.get("make", "Unknown"),
+                    "model": c_res.get("model", "Unknown"),
+                    "year": c_res.get("year", 0),
+                    "confidence": round(float(c_res.get("confidence", 0.0)), 4),
+                    "top_5": c_res.get("top_5", []),
+                }
+            except Exception as ex:
+                logger.warning("Classical prediction failed: %s", ex)
+        return {
+            "predicted_class": "Classical Baseline (Unavailable)",
+            "class_id": -1,
+            "make": "Unknown",
+            "model": "Unknown",
+            "year": 0,
+            "confidence": 0.0,
+            "top_5": [],
+        }
+
     vehicles_output = []
     w, h = pil_image.size
 
@@ -200,13 +225,7 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
         # Fallback to full-image classification if no bounding box met confidence threshold
         deep_pred = pipeline.classifier.predict(pil_image)
         hybrid_pred = hybrid.predict(pil_image)
-        classical_pred = {
-            "predicted_class": "Classical Feature Baseline",
-            "make": deep_pred.get("make", "Unknown"),
-            "model": deep_pred.get("model", "Unknown"),
-            "year": deep_pred.get("year", 0),
-            "confidence": 0.05,
-        }
+        classical_pred = _predict_classical(pil_image)
         agreement = analyze_model_agreement(classical_pred, deep_pred, hybrid_pred)
 
         vehicles_output.append({
@@ -234,13 +253,7 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
 
             deep_pred = det.get("classification", {})
             hybrid_pred = hybrid.predict(crop)
-            classical_pred = {
-                "predicted_class": deep_pred.get("predicted_class", "Classical Baseline"),
-                "make": deep_pred.get("make", "Unknown"),
-                "model": deep_pred.get("model", "Unknown"),
-                "year": deep_pred.get("year", 0),
-                "confidence": 0.05,
-            }
+            classical_pred = _predict_classical(crop)
             agreement = analyze_model_agreement(classical_pred, deep_pred, hybrid_pred)
 
             vehicles_output.append({
