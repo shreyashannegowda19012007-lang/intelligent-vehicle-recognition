@@ -36,7 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--optimizer", type=str, default="adamw", choices=["adamw", "adam", "sgd"], help="Optimizer")
     parser.add_argument("--scheduler", type=str, default="cosine", choices=["cosine", "step", "plateau", "none"], help="LR scheduler")
     parser.add_argument("--device", type=str, default="auto", help="Execution device ('auto', 'cuda', 'cpu')")
-    parser.add_argument("--mixed-precision", action="store_true", default=True, help="Enable AMP mixed precision on GPU")
+    parser.add_argument("--mixed-precision", action=argparse.BooleanOptionalAction, default=True, help="Enable AMP mixed precision on GPU")
     parser.add_argument("--resume", type=str, default=None, help="Path to checkpoint to resume training from")
     parser.add_argument("--freeze-backbone", action="store_true", default=False, help="Freeze backbone weights during initial training")
     parser.add_argument("--max-train-batches", type=int, default=None, help="Optional maximum training batches per epoch (for fast debugging/CPU runs)")

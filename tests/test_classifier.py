@@ -62,3 +62,22 @@ def test_model_forward_with_features():
     logits, feats = model.forward_with_features(x)
     assert logits.shape == (2, 196)
     assert feats.shape == (2, 512)
+
+
+def test_temperature_scaling_1d_and_2d_logits():
+    from src.classification.calibration import ModelWithTemperature
+
+    base_model = build_classification_model("resnet18", num_classes=196, pretrained=False)
+    m = ModelWithTemperature(base_model)
+
+    # 1. Test 1D logits tensor (196,)
+    l_1d = torch.randn(196)
+    scaled_1d = m.temperature_scale(l_1d)
+    assert scaled_1d.shape == (196,)
+    assert not torch.isnan(scaled_1d).any()
+
+    # 2. Test 2D batch logits tensor (4, 196)
+    l_2d = torch.randn(4, 196)
+    scaled_2d = m.temperature_scale(l_2d)
+    assert scaled_2d.shape == (4, 196)
+    assert not torch.isnan(scaled_2d).any()

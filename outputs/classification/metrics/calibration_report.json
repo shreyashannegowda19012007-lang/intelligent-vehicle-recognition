@@ -1,0 +1,7 @@
+{
+  "optimal_temperature": 1.5,
+  "nll_before": 5.2829,
+  "nll_after": 5.2798,
+  "ece_before": 0.0021,
+  "ece_after": 0.0014
+}

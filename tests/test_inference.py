@@ -78,7 +78,46 @@ def test_inference_graceful_handling_invalid_inputs(dummy_classifier: VehicleCla
     res_empty = dummy_classifier.predict(empty_arr)
     assert res_empty["confidence"] == 0.0
     assert res_empty["predicted_class"] == "Unknown"
+    assert res_empty["class_id"] == -1
     assert "error" in res_empty
+
+    # Non-existent file
+    res_nofile = dummy_classifier.predict("non_existent/path/car_does_not_exist.jpg")
+    assert res_nofile["confidence"] == 0.0
+    assert res_nofile["predicted_class"] == "Unknown"
+    assert res_nofile["class_id"] == -1
+
+    # Empty 0-element tensor
+    res_empty_t = dummy_classifier.predict(torch.zeros(0))
+    assert res_empty_t["confidence"] == 0.0
+    assert res_empty_t["class_id"] == -1
+
+
+def test_inference_advanced_tensor_shapes_and_formats(dummy_classifier: VehicleClassifier):
+    # 1. Channels-last 3D tensor (H, W, 3)
+    t_cl = torch.randn(224, 224, 3)
+    r1 = dummy_classifier.predict(t_cl)
+    assert 0 <= r1["class_id"] < 196
+
+    # 2. 2D grayscale tensor (H, W)
+    t_gray = torch.randn(180, 180)
+    r2 = dummy_classifier.predict(t_gray)
+    assert 0 <= r2["class_id"] < 196
+
+    # 3. 4D channels-last tensor (1, H, W, 3)
+    t_4d_cl = torch.randn(1, 224, 224, 3)
+    r3 = dummy_classifier.predict(t_4d_cl)
+    assert 0 <= r3["class_id"] < 196
+
+    # 4. Unnormalized uint8 tensor in [0, 255]
+    t_uint8 = torch.randint(0, 256, (3, 200, 200), dtype=torch.uint8)
+    r4 = dummy_classifier.predict(t_uint8)
+    assert 0 <= r4["class_id"] < 196
+
+    # 5. Non-square aspect ratio tensor (3, 100, 320)
+    t_banner = torch.randn(3, 100, 320)
+    r5 = dummy_classifier.predict(t_banner)
+    assert 0 <= r5["class_id"] < 196
 
 
 def test_inference_batch(dummy_classifier: VehicleClassifier):

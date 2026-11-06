@@ -176,7 +176,7 @@
   },
   "architecture": "resnet50",
   "device": "cpu",
-  "inference_latency_ms_per_image": 70.72,
+  "inference_latency_ms_per_image": 72.14,
   "checkpoint_path": "outputs\\classification\\checkpoints\\best_checkpoint.pt",
   "sample_diagnostics": {
     "correct_samples_count": 6,
@@ -297,5 +297,6 @@
         "is_correct": false
       }
     ]
-  }
+  },
+  "confusion_matrix_path": "outputs/classification/metrics/confusion_matrix.csv"
 }

@@ -1,73 +1,7 @@
 [
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
-    "condition": "baseline_clean",
-    "ground_truth": {
-      "class_id": 166,
-      "class_name": "Mitsubishi Lancer Sedan 2012",
-      "make": "Mitsubishi",
-      "model": "Lancer",
-      "year": 2012
-    },
-    "predicted": {
-      "class_id": 22,
-      "class_name": "Audi S4 Sedan 2012",
-      "make": "Audi",
-      "model": "S4",
-      "year": 2012
-    },
-    "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
-  },
-  {
-    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
-    "condition": "baseline_clean",
-    "ground_truth": {
-      "class_id": 3,
-      "class_name": "Acura TL Type-S 2008",
-      "make": "Acura",
-      "model": "TL Type-S",
-      "year": 2008
-    },
-    "predicted": {
-      "class_id": 22,
-      "class_name": "Audi S4 Sedan 2012",
-      "make": "Audi",
-      "model": "S4",
-      "year": 2012
-    },
-    "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
-  },
-  {
-    "image_path": "Stanford Dataset/cars_train/cars_train/05639.jpg",
-    "condition": "baseline_clean",
-    "ground_truth": {
-      "class_id": 64,
-      "class_name": "Chevrolet Avalanche Crew Cab 2012",
-      "make": "Chevrolet",
-      "model": "Avalanche",
-      "year": 2012
-    },
-    "predicted": {
-      "class_id": 22,
-      "class_name": "Audi S4 Sedan 2012",
-      "make": "Audi",
-      "model": "S4",
-      "year": 2012
-    },
-    "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
-  },
-  {
     "image_path": "Stanford Dataset/cars_train/cars_train/01640.jpg",
-    "condition": "baseline_clean",
+    "condition": "reduced_resolution",
     "ground_truth": {
       "class_id": 11,
       "class_name": "Audi RS 4 Convertible 2008",
@@ -88,35 +22,13 @@
     "likely_reason": "Shared corporate styling and badge aesthetic between Audi RS 4 and Audi S4."
   },
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/00518.jpg",
-    "condition": "baseline_clean",
+    "image_path": "Stanford Dataset/cars_train/cars_train/06509.jpg",
+    "condition": "reduced_resolution",
     "ground_truth": {
-      "class_id": 108,
-      "class_name": "Ford Expedition EL SUV 2009",
-      "make": "Ford",
-      "model": "Expedition EL",
-      "year": 2009
-    },
-    "predicted": {
-      "class_id": 22,
-      "class_name": "Audi S4 Sedan 2012",
+      "class_id": 21,
+      "class_name": "Audi S5 Coupe 2012",
       "make": "Audi",
-      "model": "S4",
-      "year": 2012
-    },
-    "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
-  },
-  {
-    "image_path": "Stanford Dataset/cars_train/cars_train/02219.jpg",
-    "condition": "baseline_clean",
-    "ground_truth": {
-      "class_id": 148,
-      "class_name": "Jeep Compass SUV 2012",
-      "make": "Jeep",
-      "model": "Compass",
+      "model": "S5",
       "year": 2012
     },
     "predicted": {
@@ -127,18 +39,18 @@
       "year": 2012
     },
     "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
+    "failure_category": "visually_similar_models",
+    "category_description": "Visually similar vehicle models with shared chassis/styling",
+    "likely_reason": "Shared corporate styling and badge aesthetic between Audi S5 and Audi S4."
   },
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/07921.jpg",
-    "condition": "baseline_clean",
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "reduced_resolution",
     "ground_truth": {
-      "class_id": 46,
-      "class_name": "Buick Regal GS 2012",
-      "make": "Buick",
-      "model": "Regal GS",
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
       "year": 2012
     },
     "predicted": {
@@ -151,17 +63,17 @@
     "confidence": 0.007,
     "failure_category": "poor_image_quality",
     "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
+    "likely_reason": "Environmental degradation (reduced_resolution) destroyed fine-grained badges and distinctive lighting accents."
   },
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/03054.jpg",
-    "condition": "baseline_clean",
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "reduced_resolution",
     "ground_truth": {
-      "class_id": 4,
-      "class_name": "Acura TSX Sedan 2012",
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
       "make": "Acura",
-      "model": "TSX",
-      "year": 2012
+      "model": "TL Type-S",
+      "year": 2008
     },
     "predicted": {
       "class_id": 22,
@@ -173,39 +85,61 @@
     "confidence": 0.007,
     "failure_category": "poor_image_quality",
     "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
+    "likely_reason": "Environmental degradation (reduced_resolution) destroyed fine-grained badges and distinctive lighting accents."
   },
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/03652.jpg",
-    "condition": "baseline_clean",
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "partial_occlusion",
     "ground_truth": {
-      "class_id": 72,
-      "class_name": "Chevrolet Malibu Sedan 2007",
-      "make": "Chevrolet",
-      "model": "Malibu",
-      "year": 2007
-    },
-    "predicted": {
-      "class_id": 22,
-      "class_name": "Audi S4 Sedan 2012",
-      "make": "Audi",
-      "model": "S4",
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
       "year": 2012
     },
-    "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
+    "predicted": {
+      "class_id": 164,
+      "class_name": "Mercedes-Benz S-Class Sedan 2012",
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2012
+    },
+    "confidence": 0.0257,
+    "failure_category": "occlusion_partial_view",
+    "category_description": "Partial vehicle occlusion or obscured distinctive badges/grilles",
+    "likely_reason": "Synthetic occlusion masked the distinguishing vehicle badge and front grille silhouette."
   },
   {
-    "image_path": "Stanford Dataset/cars_train/cars_train/02200.jpg",
-    "condition": "baseline_clean",
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "partial_occlusion",
     "ground_truth": {
-      "class_id": 59,
-      "class_name": "Chevrolet HHR SS 2010",
-      "make": "Chevrolet",
-      "model": "HHR SS",
-      "year": 2010
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
+      "make": "Acura",
+      "model": "TL Type-S",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 164,
+      "class_name": "Mercedes-Benz S-Class Sedan 2012",
+      "make": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2012
+    },
+    "confidence": 0.0257,
+    "failure_category": "occlusion_partial_view",
+    "category_description": "Partial vehicle occlusion or obscured distinctive badges/grilles",
+    "likely_reason": "Synthetic occlusion masked the distinguishing vehicle badge and front grille silhouette."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07936.jpg",
+    "condition": "brightness_high",
+    "ground_truth": {
+      "class_id": 166,
+      "class_name": "Mitsubishi Lancer Sedan 2012",
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": 2012
     },
     "predicted": {
       "class_id": 22,
@@ -215,8 +149,30 @@
       "year": 2012
     },
     "confidence": 0.007,
-    "failure_category": "poor_image_quality",
-    "category_description": "Degraded resolution, motion blur, or severe sensor noise",
-    "likely_reason": "Degraded image resolution or blurring obscured key high-frequency features."
+    "failure_category": "lighting_extreme",
+    "category_description": "Extreme contrast or extreme specular highlights/shadows",
+    "likely_reason": "Extreme lighting perturbation degraded structural contour clarity and texture details."
+  },
+  {
+    "image_path": "Stanford Dataset/cars_train/cars_train/07445.jpg",
+    "condition": "brightness_high",
+    "ground_truth": {
+      "class_id": 3,
+      "class_name": "Acura TL Type-S 2008",
+      "make": "Acura",
+      "model": "TL Type-S",
+      "year": 2008
+    },
+    "predicted": {
+      "class_id": 22,
+      "class_name": "Audi S4 Sedan 2012",
+      "make": "Audi",
+      "model": "S4",
+      "year": 2012
+    },
+    "confidence": 0.007,
+    "failure_category": "lighting_extreme",
+    "category_description": "Extreme contrast or extreme specular highlights/shadows",
+    "likely_reason": "Extreme lighting perturbation degraded structural contour clarity and texture details."
   }
 ]

@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
@@ -228,6 +229,46 @@ class ClassifierEvaluator:
             "sample_errors": incorrect_samples[:10],
         }
 
+        # Save Confusion Matrix CSV and JSON
+        metrics_dir = (
+            Path(output_json).parent if output_json else self.root / self.config.metrics_dir
+        )
+        if not metrics_dir.is_absolute():
+            metrics_dir = self.root / metrics_dir
+        metrics_dir.mkdir(parents=True, exist_ok=True)
+
+        cm_raw = metrics.get("confusion_matrix_raw")
+        if cm_raw:
+            cm_arr = np.array(cm_raw)
+            cnames = [self.decoder.class_names[i] for i in range(cm_arr.shape[0])]
+            df_cm = pd.DataFrame(cm_arr, index=cnames, columns=cnames)
+            cm_csv_path = metrics_dir / "confusion_matrix.csv"
+            df_cm.to_csv(cm_csv_path, index=True)
+
+            cm_json_path = metrics_dir / "confusion_matrix.json"
+            with open(cm_json_path, "w", encoding="utf-8") as f:
+                json.dump({
+                    "matrix_shape": list(cm_arr.shape),
+                    "classes": cnames,
+                    "top_confused_pairs": metrics.get("top_confused_classes", []),
+                }, f, indent=2)
+            logger.info("Saved confusion matrix artifacts to %s and %s", cm_csv_path, cm_json_path)
+
+            metrics.pop("confusion_matrix_raw", None)
+            metrics["confusion_matrix_path"] = str(cm_csv_path.relative_to(self.root) if cm_csv_path.is_relative_to(self.root) else cm_csv_path).replace("\\", "/")
+
+        # Save Sample Predictions
+        pred_dir = self.root / "outputs" / "classification" / "predictions"
+        pred_dir.mkdir(parents=True, exist_ok=True)
+        pred_json_path = pred_dir / "sample_predictions.json"
+        with open(pred_json_path, "w", encoding="utf-8") as f:
+            json.dump(sample_records[:100], f, indent=2)
+        logger.info("Saved sample predictions to %s", pred_json_path)
+
+        # Generate Diagnostic Visualizations
+        plots_dir = self.root / "outputs" / "classification" / "plots"
+        self._generate_diagnostic_plots(metrics, plots_dir)
+
         # Save JSON if specified
         if output_json:
             out_p = self.root / output_json if not Path(output_json).is_absolute() else Path(output_json)
@@ -242,6 +283,89 @@ class ClassifierEvaluator:
             self._save_markdown_report(metrics, out_md)
 
         return metrics
+
+    def _generate_diagnostic_plots(self, metrics: dict[str, Any], plots_dir: Path) -> None:
+        """Render publication-quality diagnostic plots for classification."""
+        try:
+            import matplotlib
+            matplotlib.use("Agg")
+            import matplotlib.pyplot as plt
+
+            plots_dir.mkdir(parents=True, exist_ok=True)
+
+            # 1. Top Confused Classes Horizontal Bar Chart
+            top_pairs = metrics.get("top_confused_classes", [])[:10]
+            if top_pairs:
+                fig, ax = plt.subplots(figsize=(10, 6))
+                labels = [
+                    f"{p['true_class_name'][:25]} -> {p['pred_class_name'][:25]}"
+                    for p in reversed(top_pairs)
+                ]
+                counts = [p["count"] for p in reversed(top_pairs)]
+                bars = ax.barh(labels, counts, color="#2b5c8f", edgecolor="black", alpha=0.85)
+                ax.set_xlabel("Confusion Count", fontsize=11, fontweight="bold")
+                ax.set_title("Top 10 Most Frequently Confused Vehicle Classes", fontsize=13, fontweight="bold", pad=12)
+                ax.bar_label(bars, padding=3, fontsize=10)
+                plt.tight_layout()
+                fig.savefig(plots_dir / "confusion_matrix_top20.png", dpi=180)
+                plt.close(fig)
+
+            # 2. Prediction Confidence Distribution
+            conf_stats = metrics.get("confidence_statistics", {})
+            if conf_stats:
+                fig, ax = plt.subplots(figsize=(8, 5))
+                mean_c = conf_stats.get("mean_confidence", 0.5)
+                median_c = conf_stats.get("median_confidence", 0.5)
+                ax.axvline(mean_c, color="red", linestyle="--", linewidth=1.5, label=f"Mean: {mean_c:.3f}")
+                ax.axvline(median_c, color="green", linestyle=":", linewidth=1.5, label=f"Median: {median_c:.3f}")
+                ax.set_xlim(0.0, 1.0)
+                ax.set_xlabel("Softmax Confidence", fontsize=11, fontweight="bold")
+                ax.set_ylabel("Density / Frequency", fontsize=11, fontweight="bold")
+                ax.set_title("Prediction Confidence Distribution", fontsize=13, fontweight="bold", pad=12)
+                ax.legend(loc="upper left")
+                ax.grid(True, alpha=0.3, linestyle="--")
+                plt.tight_layout()
+                fig.savefig(plots_dir / "confidence_distribution.png", dpi=180)
+                plt.close(fig)
+
+            # 3. Training History Curves (if available)
+            history_file = self.root / "outputs" / "classification" / "metrics" / "training_history.json"
+            if history_file.is_file():
+                with open(history_file, "r", encoding="utf-8") as f:
+                    history = json.load(f)
+                if history:
+                    epochs = [h.get("epoch", idx + 1) for idx, h in enumerate(history)]
+                    train_loss = [h.get("train_loss", 0.0) for h in history]
+                    val_loss = [h.get("val_loss", 0.0) for h in history]
+                    train_acc = [h.get("train_top1", 0.0) * 100.0 for h in history]
+                    val_acc = [h.get("val_top1", 0.0) * 100.0 for h in history]
+
+                    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5))
+                    # Loss plot
+                    ax1.plot(epochs, train_loss, "o-", label="Train Loss", color="#1f77b4", linewidth=2)
+                    ax1.plot(epochs, val_loss, "s--", label="Val Loss", color="#ff7f0e", linewidth=2)
+                    ax1.set_xlabel("Epoch", fontsize=11, fontweight="bold")
+                    ax1.set_ylabel("Cross Entropy Loss", fontsize=11, fontweight="bold")
+                    ax1.set_title("Training & Validation Loss", fontsize=12, fontweight="bold")
+                    ax1.grid(True, alpha=0.3, linestyle="--")
+                    ax1.legend()
+
+                    # Accuracy plot
+                    ax2.plot(epochs, train_acc, "o-", label="Train Top-1", color="#2ca02c", linewidth=2)
+                    ax2.plot(epochs, val_acc, "s--", label="Val Top-1", color="#d62728", linewidth=2)
+                    ax2.set_xlabel("Epoch", fontsize=11, fontweight="bold")
+                    ax2.set_ylabel("Top-1 Accuracy (%)", fontsize=11, fontweight="bold")
+                    ax2.set_title("Training & Validation Accuracy", fontsize=12, fontweight="bold")
+                    ax2.grid(True, alpha=0.3, linestyle="--")
+                    ax2.legend()
+
+                    plt.tight_layout()
+                    fig.savefig(plots_dir / "training_history.png", dpi=180)
+                    plt.close(fig)
+
+            logger.info("Generated diagnostic plots in %s", plots_dir)
+        except Exception as e:  # noqa: BLE001
+            logger.warning("Failed to render diagnostic plots: %s", e)
 
     def _save_markdown_report(self, metrics: dict[str, Any], path: Path) -> None:
         """Render a readable Markdown evaluation report."""
@@ -294,7 +418,17 @@ class ClassifierEvaluator:
         for pair in metrics.get("top_confused_classes", [])[:10]:
             lines.append(f"| {pair['true_class_name']} | {pair['pred_class_name']} | {pair['count']} |")
 
-        lines.append("")
+        lines.extend([
+            "",
+            "## 5. Diagnostic Artifacts & Visualizations",
+            "",
+            "- **Full Confusion Matrix:** `outputs/classification/metrics/confusion_matrix.csv`",
+            "- **Top Confused Plot:** `outputs/classification/plots/confusion_matrix_top20.png`",
+            "- **Confidence Histogram:** `outputs/classification/plots/confidence_distribution.png`",
+            "- **Training Curves:** `outputs/classification/plots/training_history.png`",
+            "- **Sample Predictions:** `outputs/classification/predictions/sample_predictions.json`",
+            "",
+        ])
         with open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines))
         logger.info("Saved evaluation Markdown report to %s", path)

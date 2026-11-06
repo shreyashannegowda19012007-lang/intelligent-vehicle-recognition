@@ -326,27 +326,30 @@ class RobustnessAnalyzer:
         stress_failures: list[dict[str, Any]],
     ) -> list[dict[str, Any]]:
         """
-        Categorize concrete failure cases into the 5 failure classes specified by the design.
+        Categorize concrete failure cases across the 5 canonical failure modes specified by the design.
+        Ensures diverse representation of visually similar models, differing model years,
+        poor quality, occlusion, and lighting extremes.
         """
-        curated: list[dict[str, Any]] = []
+        by_category: dict[str, list[dict[str, Any]]] = {
+            cat: [] for cat in FAILURE_CATEGORIES
+        }
 
-        pool = clean_failures + stress_failures
-        # Deduplicate
+        # Interleave stress failures and clean failures to maximize perturbation diversity
+        pool = stress_failures + clean_failures
         seen_pairs = set()
 
         for sample in pool:
             t_id = sample["true_class_id"]
             p_id = sample["pred_class_id"]
-            key = (t_id, p_id)
+            cond = sample.get("condition", "baseline_clean")
+            key = (t_id, p_id, cond)
             if key in seen_pairs:
                 continue
             seen_pairs.add(key)
 
             t_info = self.decoder.get_info(t_id)
             p_info = self.decoder.get_info(p_id)
-            cond = sample.get("condition", "baseline_clean")
 
-            # Determine failure reason
             category = "poor_image_quality"
             reason = "Degraded image resolution or blurring obscured key high-frequency features."
 
@@ -368,6 +371,9 @@ class RobustnessAnalyzer:
             elif cond in {"brightness_high", "brightness_low", "contrast_high", "contrast_low"}:
                 category = "lighting_extreme"
                 reason = "Extreme lighting perturbation degraded structural contour clarity and texture details."
+            elif cond in {"reduced_resolution", "mild_blur"}:
+                category = "poor_image_quality"
+                reason = f"Environmental degradation ({cond}) destroyed fine-grained badges and distinctive lighting accents."
 
             entry = {
                 "image_path": sample["image_path"],
@@ -391,9 +397,23 @@ class RobustnessAnalyzer:
                 "category_description": FAILURE_CATEGORIES.get(category, ""),
                 "likely_reason": reason,
             }
-            curated.append(entry)
+            by_category[category].append(entry)
 
-            if len(curated) >= 10:
-                break
+        # Curate up to 2-3 items from each represented category to ensure breadth
+        curated: list[dict[str, Any]] = []
+        for cat in FAILURE_CATEGORIES:
+            entries = by_category.get(cat, [])
+            curated.extend(entries[:2])
+
+        # If total is less than 5, backfill from remaining
+        if len(curated) < 5:
+            for cat, entries in by_category.items():
+                for e in entries[2:]:
+                    if e not in curated:
+                        curated.append(e)
+                    if len(curated) >= 10:
+                        break
+                if len(curated) >= 10:
+                    break
 
         return curated

@@ -37,6 +37,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--save-vis", type=str, default="outputs/detection/visualizations", help="Directory to save visual overlays")
     parser.add_argument("--save-rois", type=str, default="outputs/detection/visualizations/rois", help="Directory to save ROI crops")
     parser.add_argument("--classifier", type=str, default=None, help="Optional path to classification checkpoint (e.g. outputs/classification/checkpoints/best_checkpoint.pt)")
+    parser.add_argument("--classifier-only", action="store_true", default=False, help="Run pure fine-grained classification directly on the input image(s) without YOLO detection")
     parser.add_argument("--output-json", type=str, default=None, help="Optional output JSON path")
     return parser.parse_args()
 
@@ -52,6 +53,28 @@ def main() -> int:
     else:
         logger.error("Input path does not exist: %s", input_path)
         return 1
+
+    if args.classifier_only:
+        classifier = VehicleClassifier(
+            checkpoint_path=args.classifier,
+            device=args.device,
+        )
+        all_results = []
+        for img_p in image_files:
+            logger.info("Classifying %s...", img_p.name)
+            res = classifier.predict(img_p)
+            res["image"] = str(img_p.relative_to(PROJECT_ROOT) if img_p.is_relative_to(PROJECT_ROOT) else img_p).replace("\\", "/")
+            all_results.append(res)
+
+        if args.output_json:
+            out_json_p = PROJECT_ROOT / args.output_json
+            out_json_p.parent.mkdir(parents=True, exist_ok=True)
+            with open(out_json_p, "w", encoding="utf-8") as f:
+                json.dump(all_results if len(all_results) > 1 else all_results[0], f, indent=2)
+            logger.info("Saved prediction results to %s", out_json_p)
+        else:
+            print(json.dumps(all_results if len(all_results) > 1 else all_results[0], indent=2))
+        return 0
 
     detector = VehicleDetector(
         model_path=args.model,

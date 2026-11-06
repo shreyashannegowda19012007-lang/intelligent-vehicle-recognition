@@ -34,7 +34,8 @@ class ModelWithTemperature(nn.Module):
 
     def temperature_scale(self, logits: torch.Tensor) -> torch.Tensor:
         """Scale logits by 1/T."""
-        # Expand temperature to match logits shape
+        if logits.ndim == 1:
+            return logits / self.temperature
         temperature = self.temperature.unsqueeze(1).expand(logits.size(0), logits.size(1))
         return logits / temperature
 
