@@ -46,7 +46,6 @@ logger = logging.getLogger(__name__)
 # Configure Streamlit page layout & browser tab
 st.set_page_config(
     page_title="AEROVISION AI — Vehicle Recognition Platform",
-    page_icon="🚘",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -742,12 +741,12 @@ def main() -> None:
 
     # Primary View Navigation Tabs
     tab_studio, tab_consensus, tab_lab, tab_benchmarks, tab_failures, tab_telemetry = st.tabs([
-        "⚡ Recognition Studio",
-        "⚖️ Model Consensus",
-        "🔬 Vision Filter Lab",
-        "📊 Benchmarks & Ablation",
-        "⚠️ Failure Taxonomy",
-        "📡 API & Telemetry",
+        "Recognition Studio",
+        "Model Consensus",
+        "Vision Filter Lab",
+        "Benchmarks & Ablation",
+        "Failure Taxonomy",
+        "API & Telemetry",
     ])
 
     # =========================================================================
