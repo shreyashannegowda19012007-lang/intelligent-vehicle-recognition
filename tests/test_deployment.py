@@ -112,3 +112,25 @@ def test_model_downloader_script():
     readme = PROJECT_ROOT / "README.md"
     assert len(compute_file_sha256(readme)) == 64
 
+
+def test_streamlit_cloud_deployment_configuration():
+    """Verify Streamlit Community Cloud CPU deployment files, python version, and wheels."""
+    python_ver_file = PROJECT_ROOT / ".python-version"
+    assert python_ver_file.is_file(), ".python-version file is required for Streamlit Cloud"
+    py_ver = python_ver_file.read_text(encoding="utf-8").strip()
+    assert py_ver.startswith("3.12"), f"Expected Python 3.12, got: {py_ver}"
+
+    packages_file = PROJECT_ROOT / "packages.txt"
+    assert packages_file.is_file(), "packages.txt is required for Debian system dependencies"
+    packages = packages_file.read_text(encoding="utf-8")
+    assert "libgl1" in packages
+    assert "libglib2.0-0" in packages
+
+    req_file = PROJECT_ROOT / "requirements.txt"
+    req_content = req_file.read_text(encoding="utf-8")
+    assert "--extra-index-url https://download.pytorch.org/whl/cpu" in req_content
+    assert "torch==2.5.1+cpu" in req_content
+    assert "torchvision==0.20.1+cpu" in req_content
+    assert "opencv-python-headless" in req_content
+
+

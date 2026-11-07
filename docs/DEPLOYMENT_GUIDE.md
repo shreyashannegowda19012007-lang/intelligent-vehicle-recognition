@@ -55,21 +55,22 @@ Configure these variables in your platform's dashboard or local `.env` file (see
 ### Procedure A: Deploy to Streamlit Community Cloud (Zero-Cost, 1-Click)
 
 1. **Prerequisites**:
-   - Push all commits to your GitHub branch (`skanda`).
+   - Push all commits to your GitHub branch (`main`).
+   - Repository includes `.python-version` (pinned to `3.12`), `packages.txt` (`libgl1`, `libglib2.0-0`, `libgomp1`), and CPU-optimized `requirements.txt` (`torch==2.5.1+cpu`, `torchvision==0.20.1+cpu`).
 2. **Setup on Streamlit Cloud**:
    - Visit [share.streamlit.io](https://share.streamlit.io/) and sign in with GitHub.
    - Click **"New app"**.
    - Select:
-     - **Repository**: `intelligent-vehicle-recognition`
+     - **Repository**: `shreyashannegowda19012007-lang/intelligent-vehicle-recognition`
      - **Branch**: `main`
      - **Main file path**: `app/streamlit_app.py`
    - Under **Advanced settings**:
-     - Python version: `3.11`
+     - Python version: `3.12` (selected automatically via `.python-version`)
      - Add environment variable: `DEVICE=cpu`
-     - Add environment variable: `CONVNEXT_CHECKPOINT_URL=<URL to hosted convnext_best.pt>`
+     - Add environment variable (optional): `CONVNEXT_CHECKPOINT_URL=<URL to hosted convnext_best.pt>`
 3. **Deploy**:
    - Click **"Deploy!"**.
-   - Streamlit Cloud will parse `requirements.txt`, install dependencies, and launch the web dashboard at your generated public URL (`https://<app-name>.streamlit.app`).
+   - Streamlit Cloud will read `.python-version`, install system libraries from `packages.txt`, install PyTorch CPU wheels from `https://download.pytorch.org/whl/cpu`, and launch the web dashboard at your generated public URL (`https://<app-name>.streamlit.app`).nerated public URL (`https://<app-name>.streamlit.app`).
 
 ---
 
