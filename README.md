@@ -184,19 +184,29 @@ python scripts/download_models.py --model resnet50
 
 ## 7. Running the Application
 
-### Option A: Streamlit Interactive Web Application
-Launch the rich visual dashboard:
+### Option A: Streamlit Interactive Web Application (Aerovision AI SaaS)
+Launch the redesigned production-grade automotive vision SaaS platform:
 ```bash
 streamlit run app/streamlit_app.py
 ```
 Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-**Features**:
-- Drag-and-drop image upload (JPEG, PNG, WebP up to 25 MB).
-- Original image with rendered bounding boxes, labels, and confidence tags.
-- Detailed vehicle attribute cards: Make, Model, Production Year.
-- Top-5 prediction table with confidence bars.
-- Multi-model comparison matrix (Classical ML vs. ResNet50 vs. Hybrid Fusion) with consensus badges.
+**Core Capabilities & Views**:
+- **Aerovision AI Design System**: Dark luxury SaaS UI (`#0A0E17` obsidian canvas, `#111827` slate containers, `#3B82F6` electric blue accents) with responsive mobile stacking.
+- **Top Brand Navbar & Live Telemetry**: Dynamic engine health badge (`CUDA:0 ACCELERATED` or `FASTAPI REST ONLINE`).
+- **1-Click Verification Presets**: 5 instant real vehicle samples (Audi TTS, Acura TL, Dodge Dakota, Hyundai Sonata, Mitsubishi Lancer) + drag-and-drop custom upload.
+- **Vehicle Identity Hero Card**: Prominent make badge, model, year, taxonomy ID, and dual animated gradient confidence meters.
+- **⚡ Recognition Studio**: YOLOv8n localization overlay, 5% ROI extraction crop, and Top-5 prediction table with probability meters.
+- **⚖️ Model Consensus**: ConvNeXt-Tiny Deep Learning vs HOG+Color+LBP Classical SVM multi-stream decision fusion and agreement delta.
+- **🔬 Computer Vision Filter Lab**: Interactive CLAHE, Bilateral filtering, Laplacian edge detection, and RGB/HSV/CIELAB color space decomposition.
+- **📊 Benchmarks & Ablation**: Stanford Cars quantitative metrics, latency breakdown, and module ablation matrix.
+- **⚠️ Forensic Failure Taxonomy**: Empirical 49-Make confusion matrix heatmap and fine-grained visual ambiguity diagnostics.
+- **📡 Telemetry & REST API**: Live NVIDIA GPU VRAM monitor, interactive curl command, and JSON payload response schema preview.
+
+To run automated browser visual regression QA:
+```bash
+python scripts/capture_all_screenshots.py
+```
 
 ### Option B: FastAPI REST Engine
 Launch the asynchronous API server:

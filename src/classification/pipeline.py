@@ -95,13 +95,25 @@ class VehicleRecognitionPipeline:
         pipeline_detections: list[dict[str, Any]] = []
 
         # 2. Classification Stage for each detected vehicle ROI
+        img_w = det_result.get("image_width", 0)
+        img_h = det_result.get("image_height", 0)
         for det in det_result["detections"]:
-            roi = det.get("roi")
-            if roi is not None and getattr(roi, "size", 0) > 0:
-                cls_res = self.classifier.predict(roi)
+            bbox = det.get("bbox", {})
+            x1, y1 = max(0, bbox.get("x1", 0)), max(0, bbox.get("y1", 0))
+            x2 = min(img_w, bbox.get("x2", img_w)) if img_w else bbox.get("x2", 0)
+            y2 = min(img_h, bbox.get("y2", img_h)) if img_h else bbox.get("y2", 0)
+
+            # Prefer direct high-fidelity crop from source image when available
+            if hasattr(image_input, "crop") and x2 > x1 and y2 > y1:
+                crop_img = image_input.crop((x1, y1, x2, y2))
+                cls_res = self.classifier.predict(crop_img)
             else:
-                # If no ROI extracted or empty box, fallback to classifying the full image
-                cls_res = self.classifier.predict(image_input)
+                roi = det.get("roi")
+                if roi is not None and getattr(roi, "size", 0) > 0:
+                    cls_res = self.classifier.predict(roi)
+                else:
+                    # If no ROI extracted or empty box, fallback to classifying the full image
+                    cls_res = self.classifier.predict(image_input)
 
             pipeline_detections.append({
                 "bbox": det["bbox"],

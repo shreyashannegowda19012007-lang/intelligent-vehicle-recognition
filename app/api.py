@@ -249,13 +249,14 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
         hybrid_pred = hybrid.predict(pil_image)
         classical_pred = _predict_classical(pil_image)
         agreement = analyze_model_agreement(classical_pred, deep_pred, hybrid_pred)
+        system_pred = hybrid_pred if hybrid_pred.get("confidence", 0.0) > 0 else deep_pred
 
         vehicles_output.append({
             "vehicle_index": 1,
             "bbox": {"x1": 0, "y1": 0, "x2": w, "y2": h},
             "detection_confidence": 0.50,
             "is_full_frame_fallback": True,
-            "primary_prediction": deep_pred,
+            "primary_prediction": system_pred,
             "model_comparison": {
                 "classical_ml": classical_pred,
                 "resnet50": deep_pred,
@@ -275,16 +276,19 @@ async def analyze_vehicle(file: UploadFile = File(...)) -> dict[str, Any]:
             crop = pil_image.crop((x1, y1, x2, y2)) if (x2 > x1 and y2 > y1) else pil_image
 
             deep_pred = det.get("classification", {})
+            if not deep_pred or "top_5" not in deep_pred:
+                deep_pred = pipeline.classifier.predict(crop)
             hybrid_pred = hybrid.predict(crop)
             classical_pred = _predict_classical(crop)
             agreement = analyze_model_agreement(classical_pred, deep_pred, hybrid_pred)
+            system_pred = hybrid_pred if hybrid_pred.get("confidence", 0.0) > 0 else deep_pred
 
             vehicles_output.append({
                 "vehicle_index": idx,
                 "bbox": bbox,
                 "detection_confidence": det_conf,
                 "is_full_frame_fallback": False,
-                "primary_prediction": deep_pred,
+                "primary_prediction": system_pred,
                 "model_comparison": {
                     "classical_ml": classical_pred,
                     "resnet50": deep_pred,

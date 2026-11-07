@@ -115,14 +115,31 @@ class HybridVehiclePipeline:
         # Deep classification prediction
         deep_res = self.classifier.predict(image, top_k=top_k)
 
-        # If classical model is available, perform late probability blend
+        # If classical model is available, perform principled decision fusion
         if self.classical_predictor is not None:
             try:
                 classical_res = self.classical_predictor.predict(image, top_k=top_k)
-                combined_conf = (
-                    self.fusion_weights[0] * deep_res["confidence"]
-                    + self.fusion_weights[1] * classical_res["confidence"]
-                )
+                dl_class = deep_res.get("predicted_class")
+                cl_class = classical_res.get("predicted_class")
+                dl_make = deep_res.get("make")
+                cl_make = classical_res.get("make")
+                dl_conf = float(deep_res.get("confidence", 0.0))
+                cl_conf = float(classical_res.get("confidence", 0.0))
+
+                # Check hierarchical agreement
+                if dl_class == cl_class and dl_class not in ("Unknown", ""):
+                    # Full class consensus: confidence agreement boost
+                    combined_conf = min(0.99, round(dl_conf + 0.05, 4))
+                    fusion_status = "full_consensus"
+                elif dl_make == cl_make and dl_make not in ("Unknown", ""):
+                    # Make consensus: moderate boost
+                    combined_conf = min(0.99, round(dl_conf + 0.02, 4))
+                    fusion_status = "make_consensus"
+                else:
+                    # Disagreement: trust deep learning classifier as primary high-capacity model
+                    combined_conf = dl_conf
+                    fusion_status = "dl_primary_arbitration"
+
                 latency_ms = round((time.perf_counter() - t_start) * 1000.0, 2)
                 return {
                     "predicted_class": deep_res["predicted_class"],
@@ -133,8 +150,8 @@ class HybridVehiclePipeline:
                     "confidence": round(combined_conf, 4),
                     "top_5": deep_res.get("top_5", []),
                     "inference_time_ms": latency_ms,
-                    "fusion_mode": "late_score_fusion",
-                    "components_used": ["resnet50", "classical_svm"],
+                    "fusion_mode": fusion_status,
+                    "components_used": ["convnext_tiny", "classical_svm"],
                 }
             except Exception as e:
                 logger.warning("Classical branch failed during hybrid inference: %s", e)
@@ -151,7 +168,7 @@ class HybridVehiclePipeline:
             "top_5": deep_res.get("top_5", []),
             "inference_time_ms": latency_ms,
             "fusion_mode": "deep_dominant_late_fusion",
-            "components_used": ["resnet50"],
+            "components_used": ["convnext_tiny"],
             "note": "Classical model weights pending; hybrid execution used deep feature head.",
         }
 
