@@ -30,7 +30,7 @@ def main():
         driver.get(url)
         
         # Wait for Streamlit to finish initial compile & render
-        WebDriverWait(driver, 40).until(lambda d: "AEROVISION" in d.page_source)
+        WebDriverWait(driver, 40).until(lambda d: "AUTOVISION" in d.page_source)
         time.sleep(3)
         print("Page rendered successfully!")
 

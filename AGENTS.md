@@ -1,12 +1,12 @@
-# Aerovision AI — Frontend Design System & Development Conventions
+# AutoVision AI — Frontend Design System & Development Conventions
 
-This document establishes stable project-wide UI/UX conventions, component architecture, styling tokens, and critical backend protection rules for the Aerovision AI Computer Vision platform.
+This document establishes stable project-wide UI/UX conventions, component architecture, styling tokens, and critical backend protection rules for the AutoVision AI Computer Vision platform.
 
 ---
 
 ## 1. Design System Tokens & Colors
 
-Aerovision AI follows a **Dark Luxury Automotive SaaS** visual aesthetic designed for high-density computer vision intelligence displays:
+AutoVision AI follows a **Dark Luxury Automotive SaaS** visual aesthetic designed for high-density computer vision intelligence displays:
 
 | Token Name | Hex Value | Usage / Semantic Role |
 | :--- | :--- | :--- |

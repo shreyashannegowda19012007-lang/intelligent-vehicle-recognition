@@ -1,5 +1,5 @@
 """
-AEROVISION AI - Intelligent Fine-Grained Vehicle Recognition Platform.
+AUTOVISION AI - Intelligent Fine-Grained Vehicle Recognition Platform.
 Modern, SaaS-grade Streamlit web interface for autonomous vehicle localization,
 fine-grained multi-attribute classification, filter inspection, and multi-model consensus.
 """
@@ -45,7 +45,7 @@ logger = logging.getLogger(__name__)
 
 # Configure Streamlit page layout & browser tab
 st.set_page_config(
-    page_title="AEROVISION AI — Vehicle Recognition Platform",
+    page_title="AUTOVISION AI — Vehicle Recognition Platform",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -678,7 +678,7 @@ def render_brand_navbar(api_online: bool, device_label: str) -> None:
             <div class="brand-identity">
                 <div class="brand-logo-icon">AV</div>
                 <div>
-                    <div class="brand-title">AEROVISION AI</div>
+                    <div class="brand-title">AUTOVISION AI</div>
                     <div class="brand-subtitle">Fine-Grained Automotive Vision Intelligence</div>
                 </div>
             </div>
@@ -1305,7 +1305,7 @@ def main() -> None:
         f"""
         <div class="saas-footer">
             <div>
-                <strong>AEROVISION AI</strong> • National Computer Vision Hackathon 2026 • Problem Statement P5
+                <strong>AUTOVISION AI</strong> • National Computer Vision Hackathon 2026 • Problem Statement P5
             </div>
             <div style="display: flex; gap: 8px;">
                 <span class="footer-badge">YOLOv8n + ConvNeXt-Tiny</span>

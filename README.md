@@ -184,7 +184,7 @@ python scripts/download_models.py --model resnet50
 
 ## 7. Running the Application
 
-### Option A: Streamlit Interactive Web Application (Aerovision AI SaaS)
+### Option A: Streamlit Interactive Web Application (AutoVision AI SaaS)
 Launch the redesigned production-grade automotive vision SaaS platform:
 ```bash
 streamlit run app/streamlit_app.py
@@ -192,7 +192,7 @@ streamlit run app/streamlit_app.py
 Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 **Core Capabilities & Views**:
-- **Aerovision AI Design System**: Dark luxury SaaS UI (`#0A0E17` obsidian canvas, `#111827` slate containers, `#3B82F6` electric blue accents) with responsive mobile stacking.
+- **AutoVision AI Design System**: Dark luxury SaaS UI (`#0A0E17` obsidian canvas, `#111827` slate containers, `#3B82F6` electric blue accents) with responsive mobile stacking.
 - **Top Brand Navbar & Live Telemetry**: Dynamic engine health badge (`CUDA:0 ACCELERATED` or `FASTAPI REST ONLINE`).
 - **1-Click Verification Presets**: 5 instant real vehicle samples (Audi TTS, Acura TL, Dodge Dakota, Hyundai Sonata, Mitsubishi Lancer) + drag-and-drop custom upload.
 - **Vehicle Identity Hero Card**: Prominent make badge, model, year, taxonomy ID, and dual animated gradient confidence meters.

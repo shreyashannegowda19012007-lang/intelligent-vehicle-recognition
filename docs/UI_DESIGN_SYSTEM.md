@@ -1,7 +1,7 @@
-# Aerovision AI — Complete UI/UX Specification & Design System
+# AutoVision AI — Complete UI/UX Specification & Design System
 
 ## 1. Executive Summary
-The Aerovision AI interface represents a modern, production-grade automotive vision SaaS application built for the National Computer Vision Hackathon 2026 (Problem Statement P5: Intelligent Fine-Grained Vehicle Recognition and Analysis System).
+The AutoVision AI interface represents a modern, production-grade automotive vision SaaS application built for the National Computer Vision Hackathon 2026 (Problem Statement P5: Intelligent Fine-Grained Vehicle Recognition and Analysis System).
 
 This document serves as the comprehensive visual and technical reference for the frontend implementation, component architecture, responsive design tokens, and visual assets.
 
