@@ -35,3 +35,4 @@ print(f"Hybrid pipeline Top-1: {hyb_res['predicted_class']} ({hyb_res['confidenc
 print(f"Consensus agreement: {hyb_res.get('agreement', 'N/A')}")
 
 print("\nALL DEPLOYMENT REASSEMBLY & INFERENCE CHECKS PASSED!")
+

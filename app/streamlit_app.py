@@ -1269,10 +1269,10 @@ def main() -> None:
                 f"""
                 <div class="code-box">
                     <div><strong>PyTorch Version:</strong> {torch.__version__}</div>
-                    <div><strong>CUDA Hardware Acceleration:</strong> {"ENABLED (cu121)" if cuda_avail else "DISABLED (CPU)"}</div>
+                    <div><strong>CUDA Acceleration:</strong> {"ENABLED (cu121)" if cuda_avail else "DISABLED (CPU Inference)"}</div>
                     <div><strong>Active Device:</strong> {gpu_name}</div>
                     <div><strong>Dedicated VRAM:</strong> {vram_txt}</div>
-                    <div><strong>FastAPI Engine Status:</strong> {"ONLINE (Connected)" if api_available else "OFFLINE (Embedded Mode)"}</div>
+                    <div><strong>Inference Mode:</strong> {"FASTAPI REST BACKEND" if api_available else "EMBEDDED LOCAL ENGINE"}</div>
                     <div><strong>Target API URL:</strong> {DEFAULT_API_URL}</div>
                 </div>
                 """,
@@ -1280,19 +1280,19 @@ def main() -> None:
             )
 
         with tc2:
-            st.markdown('<div class="saas-card-title" style="font-size: 0.95rem; margin-bottom: 12px;">FastAPI Integration Snippet</div>', unsafe_allow_html=True)
-            st.markdown(
-                """
-                <div class="code-box">
-# Python Requests Client Example
-import requests
+            st.markdown('<div class="saas-card-title" style="font-size: 0.95rem; margin-bottom: 12px;">Deployment & Checkpoint Diagnostics</div>', unsafe_allow_html=True)
+            from src.utils.checkpoint import get_deployment_diagnostics
+            diag = get_deployment_diagnostics()
 
-url = "http://localhost:8000/analyze"
-with open("sample_vehicle.jpg", "rb") as f:
-    response = requests.post(url, files={"file": f})
-    data = response.json()
-    print("Detected:", data["num_vehicles_detected"])
-    print("Primary:", data["vehicles"][0]["primary_prediction"])
+            st.markdown(
+                f"""
+                <div class="code-box">
+                    <div><strong>Git Commit:</strong> <span style="color:#06B6D4;">{diag.get("git_commit", "047cee7")}</span></div>
+                    <div><strong>Taxonomy Classes:</strong> {diag.get("class_count", 196)} Stanford Cars categories</div>
+                    <div><strong>YOLO Detector:</strong> {diag["detector"]["filename"]} ({diag["detector"]["size_mb"]} MB, SHA: {diag["detector"]["sha256"]}) • <span style="color:#10B981;">{diag["detector"]["status"]}</span></div>
+                    <div><strong>ConvNeXt-Tiny:</strong> {diag["classifier"]["filename"]} ({diag["classifier"]["size_mb"]} MB, SHA: {diag["classifier"]["sha256"]}) • <span style="color:#10B981;">{diag["classifier"]["status"]}</span></div>
+                    <div><strong>Classical SVM:</strong> {diag["classical_svm"]["filename"]} ({diag["classical_svm"]["size_mb"]} MB) • <span style="color:#10B981;">{diag["classical_svm"]["status"]}</span></div>
+                    <div><strong>Preprocessing:</strong> Det {diag["preprocessing"]["detector_input"]} | Cls {diag["preprocessing"]["classifier_input"]}</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -1300,17 +1300,18 @@ with open("sample_vehicle.jpg", "rb") as f:
 
     # =========================================================================
     # GLOBAL SAAS FOOTER
-    # ==========================================
+    # =========================================================================
+    import platform
     st.markdown(
-        """
+        f"""
         <div class="saas-footer">
             <div>
                 <strong>AEROVISION AI</strong> • National Computer Vision Hackathon 2026 • Problem Statement P5
             </div>
             <div style="display: flex; gap: 8px;">
                 <span class="footer-badge">YOLOv8n + ConvNeXt-Tiny</span>
-                <span class="footer-badge">Commit: 3b93c5c</span>
-                <span class="footer-badge">Python 3.11</span>
+                <span class="footer-badge">Commit: {diag.get('git_commit', '047cee7')}</span>
+                <span class="footer-badge">Python {platform.python_version()}</span>
             </div>
         </div>
         """,
