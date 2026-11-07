@@ -21,3 +21,4 @@ print('Running hybrid on CPU...')
 hyb_res = hyb_cpu.predict(img)
 print(f"Hybrid pred on CPU: {hyb_res['predicted_class']} ({hyb_res['confidence']*100:.1f}%)")
 print('CPU inference successfully validated!')
+

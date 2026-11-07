@@ -134,3 +134,31 @@ def test_streamlit_cloud_deployment_configuration():
     assert "opencv-python-headless" in req_content
 
 
+def test_deployment_checkpoints_presence_and_assembly():
+    """Verify production model checkpoints, detector weights, classical models, and reassembly."""
+    from src.utils.checkpoint import ensure_convnext_checkpoint
+
+    # 1. Detector
+    detector_path = PROJECT_ROOT / "models" / "detection" / "best.pt"
+    assert detector_path.is_file(), f"Trained YOLO detector must exist at {detector_path}"
+
+    # 2. Classical models
+    svm_model = PROJECT_ROOT / "models" / "classical" / "svm" / "linear_svm_hog_color_lbp_pca128_model.joblib"
+    svm_pipe = PROJECT_ROOT / "models" / "classical" / "scalers" / "linear_svm_hog_color_lbp_pca128_pipeline.joblib"
+    assert svm_model.is_file(), f"Classical SVM model must exist at {svm_model}"
+    assert svm_pipe.is_file(), f"Classical SVM pipeline must exist at {svm_pipe}"
+
+    # 3. ConvNeXt split parts
+    part0 = PROJECT_ROOT / "models" / "classification" / "convnext_best.pt.part0"
+    part1 = PROJECT_ROOT / "models" / "classification" / "convnext_best.pt.part1"
+    assert part0.is_file(), "convnext_best.pt.part0 must exist for git deployment"
+    assert part1.is_file(), "convnext_best.pt.part1 must exist for git deployment"
+    assert part0.stat().st_size < 100 * 1024 * 1024, "Part0 must be under 100MB for GitHub"
+    assert part1.stat().st_size < 100 * 1024 * 1024, "Part1 must be under 100MB for GitHub"
+
+    # 4. Checkpoint reassembly
+    convnext_ckpt = ensure_convnext_checkpoint(PROJECT_ROOT)
+    assert convnext_ckpt.is_file(), f"Reassembled ConvNeXt checkpoint must exist at {convnext_ckpt}"
+
+
+

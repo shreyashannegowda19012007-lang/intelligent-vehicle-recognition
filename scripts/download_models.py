@@ -88,6 +88,9 @@ def ensure_models_available(force: bool = False) -> bool:
     """
     Verify all required model checkpoints exist locally, downloading any missing items.
     """
+    from src.utils.checkpoint import ensure_convnext_checkpoint
+    ensure_convnext_checkpoint(PROJECT_ROOT)
+
     all_ready = True
     for model_key, meta in MODEL_CATALOG.items():
         loc_path: Path = meta["local_path"]
@@ -115,6 +118,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    from src.utils.checkpoint import ensure_convnext_checkpoint
+    ensure_convnext_checkpoint(PROJECT_ROOT)
+
     args = parse_args()
     if args.check_only:
         ready = True

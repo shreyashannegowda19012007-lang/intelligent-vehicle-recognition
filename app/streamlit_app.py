@@ -534,6 +534,9 @@ SAMPLE_PRESETS = [
 @st.cache_resource(show_spinner=False)
 def load_embedded_pipelines() -> tuple[VehicleRecognitionPipeline, HybridVehiclePipeline]:
     """Cache pipeline instances for standalone in-process inference."""
+    from src.utils.checkpoint import ensure_convnext_checkpoint
+    ensure_convnext_checkpoint()
+
     detector_weights = os.getenv("YOLO_MODEL_PATH")
     classifier_ckpt = os.getenv("CLASSIFIER_CHECKPOINT_PATH")
     pipeline = VehicleRecognitionPipeline(

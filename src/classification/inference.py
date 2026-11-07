@@ -82,7 +82,8 @@ class VehicleClassifier:
             self.checkpoint_path = None
         else:
             # Prioritize ConvNeXt checkpoint, then ResNet50 checkpoint, or build pretrained baseline
-            convnext_ckpt = self.root / "models" / "classification" / "convnext_best.pt"
+            from src.utils.checkpoint import ensure_convnext_checkpoint
+            convnext_ckpt = ensure_convnext_checkpoint(self.root)
             default_ckpt = self.root / "outputs" / "classification" / "checkpoints" / "best_checkpoint.pt"
             if convnext_ckpt.is_file():
                 self.checkpoint_path = convnext_ckpt
